@@ -2,3 +2,5 @@
 
 
 We are working hard to prepare a Community platform enabling you to work with: docker, feature model, project with components, e2e tests and AWS deployment scripts. Stay tuned!
+
+In the meantime, checkout [Product Page](https://www.websight.io)
