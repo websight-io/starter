@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="ws:Page">
+    <jcr:content
+        jcr:primaryType="ws:PageContent"
+        jcr:title="Products"
+        sling:resourceType="howlite/components/page"
+        ws:template="/libs/howlite/templates/contentpage">
+        <rootcontainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="howlite/components/rootcontainer/fixedrootcontainer">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/headerreference"/>
+            <maincontainer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/maincontainer">
+                <herosection
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--featured-banner">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgColSize="6"
+                        lgImageSrc="/content/luna/assets/images/product/Silver Ring.png"
+                        mdColSize="12"
+                        openInNewTab="false"
+                        smColSize="12"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        lgColSize="6"
+                        mdColSize="12"
+                        smColSize="12">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h1"
+                            headingSize="hl-title__heading--size-1"
+                            title="Setting Engagement Ring in Silver"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            text="&lt;p>Luna Soleste® pear-shaped halo engagement ring with a diamond platinum band.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>From $7,900&lt;/strong>&lt;/p>"/>
+                        <ctaslist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/ctaslist">
+                            <cta1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="howlite/components/cta"
+                                classes="hl-cta--primary"
+                                displayIcon="false"
+                                label="Select a diamond"
+                                openInNewTab="false"/>
+                            <cta2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="howlite/components/cta"
+                                classes="hl-cta--text"
+                                displayIcon="false"
+                                label="Speak to an expert"
+                                openInNewTab="false"/>
+                        </ctaslist>
+                    </container>
+                </herosection>
+                <pagesection
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Description"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        text="&lt;p>Just as the sun’s rays radiate outward, casting light in every direction, so too does this engagement ring. With a scintillating halo of brilliant round-shaped centre stone, light is gathered and mirrored throughout the design, resulting in an unrivaled display of brilliance. Flawlessly engineered, the setting virtually disappears and allows the brilliant diamond to float above the band and into the light, resulting in a ring so beautiful it has been a symbol of the world’s greatest love stories for over 120 years.&lt;/p>&lt;p>At Luna, we ethically source our diamonds. Integrity and social responsibility are at the core of our sourcing practices.&lt;/p>"/>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/product/Ring in a hand.png"
+                        openInNewTab="false"/>
+                </pagesection>
+                <pagesection_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        classes="hl-cards-list--text-centered"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-4"
+                        isSlider="false"
+                        itemsPerRowLg="3"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="1">
+                        <card1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>We want you to have the ring of your dreams.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/payment-plans.svg"
+                            title="Payment Plans"/>
+                        <card2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Let us tell someone special what you’re wishing for.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/drop-a-hint.svg"
+                            title="Drop a Hint"/>
+                        <card3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>We offer complimentary resizing for all Tiffany engagement rings.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/ring-resizing.svg"
+                            title="Ring Resizing"/>
+                    </cardslist>
+                </pagesection_1>
+                <pagesection_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Related Products"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-5"
+                        isSlider="true"
+                        itemsPerRowLg="3"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="1">
+                        <card1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>This delightful engagement ring features a glittering diamond gallery that wraps around the center gem.  &lt;br>&lt;br>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/Viviana Diamond Engagement Ring.png"
+                            title="Viviana Diamond Engagement Ring"/>
+                        <card2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;br>&lt;/p>&lt;p>&lt;br>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/Diamond Cut Ankle.png"
+                            title="Veronece 18K Clad 10″ Diamond Cut Ankle"/>
+                        <card3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>You play with patterns, now it’s time to texturize. Our Mini Infinity Ring meets a Modern Cigar Band to create the fashion-forward jewelry pair you never knew you needed.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,600&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/The Texture Ring Set.png"
+                            title="The Texture Ring Set"/>
+                        <card4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>With an intensity that rivals the night sky, Luna Victoria celebrates the blazing brilliance of Luna diamonds.&lt;br>&lt;br>&lt;strong>$1,800&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/product/Diamond Vine Ring In Platinum.png"
+                            title="Diamond Vine Ring In Platinum"/>
+                    </cardslist>
+                </pagesection_2>
+            </maincontainer>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/footerreference"/>
+        </rootcontainer>
+    </jcr:content>
+</jcr:root>

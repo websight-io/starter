@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="ws:Page">
+    <jcr:content
+        jcr:primaryType="ws:PageContent"
+        jcr:title="About Us"
+        sling:resourceType="howlite/components/page"
+        ws:template="/libs/howlite/templates/contentpage">
+        <rootcontainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="howlite/components/rootcontainer/fixedrootcontainer">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/headerreference"/>
+            <maincontainer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/maincontainer">
+                <pagesection
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h1"
+                        headingSize="hl-title__heading--size-1"
+                        title="Our Story"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        text="&lt;p>Stunning, stylish and within reach&lt;/p>"/>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/aboutus/hero-image-our-story.png"
+                        openInNewTab="false"/>
+                </pagesection>
+                <pagesection_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Where It All Began"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        text="&lt;p>Founded In 1986, Luna Owned &amp;amp; Operated Business Has Become A House-Hold Name In States All Over The USA As Well As Countries All Over The World.&lt;/p>&lt;p>For those that rather the full immersion of the in store experience we welcome your company and look forward to meeting you face to face. Being located in the 47 street diamond district, known to be the largest diamond.&lt;/p>&lt;p>Based in the heart of New York’s Diamond District, also known as the NYC diamond district, Luna has some of the most competitively priced in the market. It is our goal to supply our clients.&lt;/p>"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgColSize="4"
+                            lgImageSrc="/content/luna/assets/images/aboutus/AboutUs6.png"
+                            mdColSize="4"
+                            openInNewTab="false"
+                            smColSize="4"/>
+                        <image_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgColSize="4"
+                            lgImageSrc="/content/luna/assets/images/aboutus/promo-necles-1.png"
+                            mdColSize="4"
+                            openInNewTab="false"
+                            smColSize="4"/>
+                        <image_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgColSize="4"
+                            lgImageSrc="/content/luna/assets/images/aboutus/AboutUs8.png"
+                            mdColSize="4"
+                            openInNewTab="false"
+                            smColSize="4"/>
+                    </container>
+                </pagesection_1>
+                <pagesection_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--bleeding-image">
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        lgColSize="5"
+                        mdColSize="6"
+                        smColSize="12">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h2"
+                            headingSize="hl-title__heading--size-3"
+                            title="We know jewellery &amp; we know our customers"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            lgColSize="12"
+                            text="&lt;p>Whether in deep or deck, diamonds level up any look, studs work in any situations. Graphic links and gold rings hold their own an look even better together.&lt;/p>&lt;p>Too muchis never enough. It’s called a good statement for a reason.&lt;/p>"/>
+                    </container>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgColSize="6"
+                        lgOffset="1"
+                        lgImageSrc="/content/luna/assets/images/aboutus/Jewellery set.png"
+                        mdColSize="6"
+                        openInNewTab="false"
+                        smColSize="12"/>
+                </pagesection_2>
+                <pagesection_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--bleeding-image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgColSize="6"
+                        lgImageSrc="/content/luna/assets/images/aboutus/Ring-creation-process.png"
+                        mdColSize="6"
+                        openInNewTab="false"
+                        smColSize="12"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        displayType="grid"
+                        lgColSize="5"
+                        lgOffset="1"
+                        mdColSize="6"
+                        smColSize="12">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h2"
+                            headingSize="hl-title__heading--size-2"
+                            title="A Luna Ring"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            text="&lt;p>Every Luna ring is the result of artistic passion and technical precision. Our nearly 1,500 in-house master artisans personally ensure your diamond is crafted to the absolute highest standards.&lt;/p>"/>
+                        <cta
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--text"
+                            displayIcon="true"
+                            label="Discover More"
+                            openInNewTab="false"/>
+                    </container>
+                </pagesection_3>
+                <pagesection_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--bleeding-image">
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        lgColSize="5"
+                        mdColSize="6"
+                        smColSize="12">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h2"
+                            headingSize="hl-title__heading--size-2"
+                            title="Responsibly Sourced"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            text="&lt;p>As a longtime leader in sustainable luxury, we obtain the majority of our diamonds and precious metals from known mines and sources, because we believe that traceability is the best way to help ensure environmentally and socially responsible practices.&lt;/p>"/>
+                        <cta
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--text"
+                            displayIcon="true"
+                            label="Learn More"
+                            openInNewTab="false"/>
+                    </container>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgColSize="6"
+                        lgOffset="1"
+                        lgImageSrc="/content/luna/assets/images/aboutus/Errings.png"
+                        mdColSize="6"
+                        openInNewTab="false"
+                        smColSize="12"/>
+                </pagesection_4>
+                <pagesection_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        classes="hl-title--centered"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Why People Choose Us"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        classes="hl-cards-list--text-centered"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-4"
+                        isSlider="false"
+                        itemsPerRowLg="3"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="1">
+                        <card1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/aboutus/customer-service.svg"
+                            title="Customer Service"/>
+                        <card2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/aboutus/easy-returns.svg"
+                            title="Easy Returns"/>
+                        <card3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/aboutus/security-payment.svg"
+                            title="Security Payment"/>
+                    </cardslist>
+                </pagesection_5>
+                <pagesection_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--call-to-action">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/aboutus/pearl bracelet.png"
+                        openInNewTab="false"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-3"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        title="Luna’s Philosophy that  Beauty and Strength Exist in Both Union and Individuality"/>
+                    <ctaslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/ctaslist">
+                        <cta_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--primary"
+                            displayIcon="false"
+                            label="New collection"
+                            openInNewTab="false"/>
+                        <cta
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--text"
+                            displayIcon="false"
+                            label="Get in touch"
+                            openInNewTab="false"/>
+                    </ctaslist>
+                </pagesection_6>
+            </maincontainer>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/footerreference"/>
+        </rootcontainer>
+    </jcr:content>
+</jcr:root>

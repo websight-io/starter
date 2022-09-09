@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="ws:Page">
+    <jcr:content
+        jcr:primaryType="ws:PageContent"
+        jcr:title="Catalog"
+        sling:resourceType="howlite/components/page"
+        ws:template="/libs/howlite/templates/contentpage">
+        <rootcontainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="howlite/components/rootcontainer/fixedrootcontainer">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/headerreference"/>
+            <maincontainer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/maincontainer">
+                <pagesection
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h1"
+                        headingSize="hl-title__heading--size-1"
+                        title="Our Catalog"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        text="&lt;p>Stunning, stylish and within reach&lt;/p>"/>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/catalog/Our Catalog.png"
+                        openInNewTab="false"/>
+                </pagesection>
+                <pagesection_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Bestsellers"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        text="&lt;p>Explore what others have created and find inspiration for your own.&lt;/p>"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-5"
+                        isSlider="true"
+                        itemsPerRowLg="3"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="1">
+                        <card_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>A true design masterpiece, the Luna® Setting is the world’s most iconic engagement ring.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Setting Engagement Ring in Silver.png"
+                            title="Setting Engagement Ring in Silver"/>
+                        <card_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Featuring v-shaped details, the nesting band ring is the perfect complement to all Tiffany engagement ring styles.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Nesting Narrow Band Ring.png"
+                            title="Nesting Narrow Band Ring"/>
+                        <card_3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Layer Cake Necklace Set.png"
+                            title="Layer Cake Necklace Set"/>
+                    </cardslist>
+                </pagesection_1>
+                <pagesection_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="All Products"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        text="&lt;p>Search our unrivaled selection of expertly crafted fine jewellery for the perfect gifts. Discover silver earrings, classic pearls, diamond necklaces and more.&lt;/p>"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-5"
+                        isSlider="false"
+                        itemsPerRowLg="3"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="1">
+                        <card_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Inspired by linear beauty, the Diamond Hoop collection epitomizes modern simplicity.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,850&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Diamond Hoop Single-Row Bangle.png"
+                            title="Diamond Hoop Single-Row Bangle"/>
+                        <card_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>With an intensity that rivals the night sky, Tiffany Victoria celebrates the blazing brilliance of Tiffany diamonds.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,800&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Diamond Vine Ring In Platinum.png"
+                            title="Diamond Vine Ring In Platinum"/>
+                        <card_3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>With beautifully sculpted leaves in 18k gold, Paloma honors the olive branch, a symbol of peace and abundance.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,450&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Olive Leaf Band Ring.png"
+                            title="Olive Leaf Band Ring"/>
+                        <card_4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>This delightful engagement ring features a glittering diamond gallery that wraps around the center gem.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Viviana Diamond Engagement Ring.png"
+                            title="Viviana Diamond Engagement Ring"/>
+                        <card_5
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Tiffany HardWear is elegantly subversive and captures the spirit of the women of New York City.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Ball Bypass Bracelet.png"
+                            title="Ball Bypass Bracelet"/>
+                        <card_6
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Style this adjustable chain with other pendants of varying lengths for a look that’s sure to turn heads.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Color By The Yard Emerald Pendant.png"
+                            title="Color By The Yard Emerald Pendant"/>
+                        <card_7
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>You play with patterns, now it’s time to texturize. Our Mini Infinity Ring meets a Modern Cigar Band to create the fashion-forward jewelry pair you never knew you needed.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,800&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/The Texture Ring Set.png"
+                            title="The Texture Ring Set"/>
+                        <card_8
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Diamonds dazzle against the leaves in a design inspired by the olive branch, a symbol of peace and abundance.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$1,400&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Olive Leaf Earrings.png"
+                            title="Olive Leaf Earrings"/>
+                        <card_9
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Inspired by the olive branch, a symbol of peace and abundance. In 18k gold with a round brilliant diamond.&lt;br>&lt;br>&lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/catalog/Olive Leaf Pendant.png"
+                            title="Olive Leaf Pendant"/>
+                    </cardslist>
+                    <cta
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cta"
+                        classes="hl-cta--text"
+                        displayIcon="false"
+                        label="View All"
+                        openInNewTab="false"/>
+                </pagesection_2>
+                <pagesection_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--call-to-action">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/catalog/diamond earing.png"
+                        openInNewTab="false"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        title="Luna’s Philosophy that  Beauty and Strength Exist in Both Union and Individuality"/>
+                    <ctaslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/ctaslist">
+                        <cta_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--primary"
+                            displayIcon="false"
+                            label="New collection"
+                            openInNewTab="false"/>
+                        <cta
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--text"
+                            displayIcon="false"
+                            label="Get in touch"
+                            openInNewTab="false"/>
+                    </ctaslist>
+                </pagesection_6>
+            </maincontainer>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/footerreference"/>
+        </rootcontainer>
+    </jcr:content>
+</jcr:root>

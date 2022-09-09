@@ -1,0 +1,72 @@
+# Copyright (C) 2022 Dynamic Solutions
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+version: "3.9"
+
+services:
+  wsce:
+    image: ds/wsce-luna:latest
+    ports:
+      - "8080:8080"
+    environment:
+      WS_LUNA_LOG_LEVEL: "info"
+      WS_ADMIN_USERNAME: "wsadmin"
+      MONGODB_HOST: "mongo"
+      MONGODB_PORT: 27017
+      MONGODB_USERNAME: "mongoadmin"
+    volumes:
+      - wsce_logs:/websight/logs
+      - site_repository:/websight/docroot
+    secrets:
+      - source: mongo_password
+        target: mongo.password
+    depends_on:
+      - mongo
+
+  # MongoDB
+  mongo:
+    image: mongo:4.4.6
+    deploy:
+      resources:
+        limits:
+          cpus: '1'
+          memory: 4096M
+    ports:
+      - "27017:27017"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD_FILE=/run/secrets/mongo.password
+    volumes:
+      - mongo_repository:/data/db
+    secrets:
+      - source: mongo_password
+        target: mongo.password
+
+
+  # HTTP Server
+  nginx:
+    image: ds/nginx-luna:latest
+    ports:
+      - "80:80"
+    volumes:
+      - site_repository:/usr/share/nginx/html:ro
+
+volumes:
+  wsce_logs:
+  mongo_repository:
+  site_repository:
+
+secrets:
+  mongo_password:
+    file: ./mongo_password.txt

@@ -1,0 +1,33 @@
+{
+  "name": "websight-e2e-tests",
+  "version": "0.0.1",
+  "description": "WebSight distribution functional and visual tests.",
+  "main": "index.js",
+  "scripts": {
+    "dev": "cypress open --browser chrome",
+    "test": "cypress run --browser chrome",
+    "test:formatting": "prettier --check . && eslint **/*.ts",
+    "test:visual": "percy exec -- cypress run",
+    "format": "prettier --write .",
+    "format:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
+    "rebuild-content": "cd ../content && mvn clean install -P autoInstallPackage"
+  },
+  "devDependencies": {
+    "@4tw/cypress-drag-drop": "^2.1.0",
+    "@percy/cli": "^1.10.1",
+    "@percy/cypress": "^3.1.2",
+    "@types/jest": "^28.1.8",
+    "@types/node": "^18.7.15",
+    "@typescript-eslint/eslint-plugin": "^5.35.1",
+    "chai": "^4.3.6",
+    "cypress": "^10.7.0",
+    "eslint": "^8.23.0",
+    "eslint-plugin-chai-friendly": "^0.7.2",
+    "eslint-plugin-cypress": "^2.12.1",
+    "onchange": "^7.1.0",
+    "prettier": "^2.7.1",
+    "ts-jest": "^28.0.8",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.8.2"
+  }
+}

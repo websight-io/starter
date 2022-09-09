@@ -1,0 +1,552 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="ws:Page">
+    <jcr:content
+        jcr:primaryType="ws:PageContent"
+        jcr:title="Homepage"
+        sling:resourceType="howlite/components/page"
+        ws:template="/libs/howlite/templates/homepage">
+        <rootcontainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="howlite/components/rootcontainer">
+            <header
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/header">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    lgImageSrc="/content/luna/assets/images/LUNA.svg"
+                    openInNewTab="false"
+                    showLink="true"
+                    url="/content/luna/pages/Homepage"/>
+                <navigation jcr:primaryType="nt:unstructured">
+                    <menuItems jcr:primaryType="nt:unstructured">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            label="Blog"
+                            openInNewTab="false"/>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            label="Products"
+                            link="/content/luna/pages/Products"
+                            openInNewTab="false"/>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            label="Catalog"
+                            link="/content/luna/pages/Catalog"
+                            openInNewTab="false"/>
+                        <_x0034_
+                            jcr:primaryType="nt:unstructured"
+                            label="About"
+                            link="/content/luna/pages/About-Us"
+                            openInNewTab="false"/>
+                    </menuItems>
+                </navigation>
+                <cta
+                    jcr:primaryType="nt:unstructured"
+                    displayIcon="true"
+                    label="Contact Us"
+                    openInNewTab="false"/>
+            </header>
+            <maincontainer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/maincontainer">
+                <herosection
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--featured-banner">
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        lgColSize="6"
+                        mdColSize="12"
+                        smColSize="12">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h1"
+                            headingSize="hl-title__heading--size-1"
+                            title="Jewelry Decorates Your Beauty"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            lgColSize="10"
+                            text="&lt;p>Our jewellery designers are happy to assist you in &lt;br>the creation of your perfect gold jewel.&lt;/p>"/>
+                        <ctaslist
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/ctaslist">
+                            <cta1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="howlite/components/cta"
+                                classes="hl-cta--primary"
+                                displayIcon="false"
+                                label="New collection"
+                                openInNewTab="false"/>
+                            <cta2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="howlite/components/cta"
+                                classes="hl-cta--text"
+                                displayIcon="false"
+                                label="Get in touch"
+                                openInNewTab="false"/>
+                        </ctaslist>
+                    </container>
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgColSize="6"
+                        lgImageSrc="/content/luna/assets/images/homepage/Necles-hero-image.png"
+                        mdColSize="12"
+                        openInNewTab="false"
+                        smColSize="12"/>
+                    <logoscloud
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/logoscloud">
+                        <image1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgImageSrc="/content/luna/assets/images/homepage/Logo 1.svg"
+                            openInNewTab="false"/>
+                        <image2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgImageSrc="/content/luna/assets/images/homepage/Logo 2.svg"
+                            openInNewTab="false"/>
+                        <image3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgImageSrc="/content/luna/assets/images/homepage/Logo 3.svg"
+                            openInNewTab="false"/>
+                        <image4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgImageSrc="/content/luna/assets/images/homepage/Logo 4.svg"
+                            openInNewTab="false"/>
+                        <image5
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgImageSrc="/content/luna/assets/images/homepage/Logo 5.svg"
+                            openInNewTab="false"/>
+                    </logoscloud>
+                </herosection>
+                <pagesection
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        title="Meet our New Grand Luxor Jewelry Collection"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-4"
+                        isSlider="false"
+                        itemsPerRowLg="2"
+                        itemsPerRowMd="2"
+                        itemsPerRowSm="1">
+                        <card1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaLabel="DISCOVER MORE"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Amadeus-collection.png"
+                            title="Amadeus Collection"/>
+                        <card2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaLabel="DISCOVER MORE"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Margot-collection.png"
+                            title="Margot Collection"/>
+                    </cardslist>
+                </pagesection>
+                <contentimagefullwidth
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--featured-content">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/homepage/Bracelets.png"
+                        openInNewTab="false"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h2"
+                            headingSize="hl-title__heading--size-2"
+                            lgColSize="5"
+                            lgOffset="1"
+                            mdColSize="12"
+                            smColSize="12"
+                            title="About Luna"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            lgColSize="6"
+                            mdColSize="12"
+                            smColSize="12"
+                            text="&lt;p>Founded In 1986, Luna Owned &amp;amp; Operated Business Has Become A House-Hold Name In States All Over The USA As Well As Countries All Over The World.&lt;/p>&lt;p>For those that rather the full immersion of the in store experience we welcome your company and look forward to meeting you face to face. Being located in the 47 street diamond district, known to be the largest diamond.&lt;/p>&lt;p>Based in the heart of New York’s Diamond District, also known as the NYC diamond district, Luna has some of the most competitively priced in the market. It is our goal to supply our clients.&lt;/p>"/>
+                    </container>
+                </contentimagefullwidth>
+                <pagesection_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Discover our Bestsellers"/>
+                    <richtext
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/richtext"
+                        text="&lt;p>Explore what others have created and find inspiration for your own&lt;/p>"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-5"
+                        isSlider="true"
+                        itemsPerRowLg="3"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="1">
+                        <card1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Tiffany HardWear is elegantly subversive and captures the spirit of the women of New York City. Sleek and simple drop earrings add modern edge to any look.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,800&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Ball Hook Earrings.png"
+                            title="Ball Hook Earrings"/>
+                        <card2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Featuring v-shaped details, the nesting band ring is the perfect complement to all Tiffany engagement ring styles.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Nesting Narrow Band Ring.png"
+                            title="Nesting Narrow Band Ring"/>
+                        <card3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Layer Cake Necklace Set.png"
+                            title="Layer Cake Necklace Set"/>
+                        <card4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>Tiffany round diamonds catch the light and make it dance. Bracelet in 18k rose gold with a round brilliant diamond. 7″ long.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
+                            title="Diamonds By The Yard Bracelet"/>
+                        <card5
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>A striking display of diamonds scales the ear in this elegant climber earring design.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Diamond Vine Climber Earrings.png"
+                            title="Diamond Vine Climber Earrings"/>
+                    </cardslist>
+                </pagesection_1>
+                <herosection_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--bleeding-image">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgColSize="6"
+                        lgImageSrc="/content/luna/assets/images/homepage/Diamond ring.png"
+                        mdColSize="6"
+                        openInNewTab="false"
+                        smColSize="12"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        lgColSize="5"
+                        lgOffset="1"
+                        mdColSize="6"
+                        smColSize="12">
+                        <title
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/title"
+                            headingLevel="h2"
+                            headingSize="hl-title__heading--size-2"
+                            title="Beauty Enchanted  in Diamonds"/>
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            text="&lt;p>Whether in deep or deck, diamonds level up any look, studs work in any situations. Graphic links and gold rings hold their own an look even better together.&lt;/p>&lt;p>Too muchis never enough. It’s called a good statement for a reason.&lt;/p>"/>
+                    </container>
+                </herosection_1>
+                <pagesection_2
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        classes="hl-title--centered"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Shape of Gemstone"/>
+                    <cardslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/cardslist"
+                        classes="hl-cards-list--text-centered"
+                        headingLevel="h3"
+                        headingSize="hl-title__heading--size-6"
+                        isSlider="false"
+                        itemsPerRowLg="6"
+                        itemsPerRowMd="3"
+                        itemsPerRowSm="2">
+                        <card1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Round.svg"
+                            title="Round"/>
+                        <card2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Emerald.svg"
+                            title="Emerald"/>
+                        <card3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Oval.svg"
+                            title="Oval"/>
+                        <card4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Pear.svg"
+                            title="Pear"/>
+                        <card5
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Marquise.svg"
+                            title="Marquise"/>
+                        <card6
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cardslist/card"
+                            content="&lt;p>&lt;/p>"
+                            ctaDisplayIcon="false"
+                            ctaOpenInNewTab="false"
+                            image="/content/luna/assets/images/homepage/Cushion.svg"
+                            title="Cushion"/>
+                    </cardslist>
+                </pagesection_2>
+                <pagesection_3
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--bleeding-image">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Custom Made Engagement Rings"/>
+                    <container
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/container"
+                        lgColSize="12">
+                        <richtext
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/richtext"
+                            lgColSize="5"
+                            mdColSize="6"
+                            text="&lt;h3>Consultation&lt;/h3>&lt;p>Book a meeting to share your engagement ring ideas, timeline and budget. Financing available.&lt;/p>&lt;p>&lt;/p>&lt;h3>Design&lt;/h3>&lt;p>See sketched designs and estimates and give us feedback. We’ll revise until we’ve nailed the design and source additional stones if needed.&lt;/p>&lt;p>&lt;/p>&lt;h3>Production&lt;/h3>&lt;p>Your ring is architected and precisely engineered with CAD, cast in metal, and the stones are set by hand.&lt;/p>"/>
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/image"
+                            lgColSize="6"
+                            lgOffset="1"
+                            lgImageSrc="/content/luna/assets/images/homepage/Design-process.png"
+                            mdColSize="6"
+                            openInNewTab="false"
+                            smColSize="12"/>
+                    </container>
+                </pagesection_3>
+                <pagesection_4
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-2"
+                        title="Frequently Asked Questions"/>
+                    <accordion
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/accordion">
+                        <accordionitem_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/accordion/accordionitem"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, elit eu pretium gravida, arcu odio sollicitudin erat, at ornare risus nulla a velit. Donec auctor dui eu malesuada rutrum. Donec et dapibus lectus. Aliquam tempor mauris libero. Duis lorem mauris, semper vel volutpat sed, consectetur quis leo. Nam purus est, blandit eget vulputate vitae, euismod in lorem. Morbi porta non est sed accumsan. Quisque sed consectetur augue.&lt;/p>"
+                            title="Does LUNA also have a catalogue?"/>
+                        <accordionitem_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/accordion/accordionitem"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, elit eu pretium gravida, arcu odio sollicitudin erat, at ornare risus nulla a velit. Donec auctor dui eu malesuada rutrum. Donec et dapibus lectus. Aliquam tempor mauris libero. Duis lorem mauris, semper vel volutpat sed, consectetur quis leo. Nam purus est, blandit eget vulputate vitae, euismod in lorem. Morbi porta non est sed accumsan. Quisque sed consectetur augue.&lt;/p>"
+                            title="What is the standard quality of LUNA jewellery?"/>
+                        <accordionitem_3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/accordion/accordionitem"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, elit eu pretium gravida, arcu odio sollicitudin erat, at ornare risus nulla a velit. Donec auctor dui eu malesuada rutrum. Donec et dapibus lectus. Aliquam tempor mauris libero. Duis lorem mauris, semper vel volutpat sed, consectetur quis leo. Nam purus est, blandit eget vulputate vitae, euismod in lorem. Morbi porta non est sed accumsan. Quisque sed consectetur augue.&lt;/p>"
+                            title="Can I change the ring size after the start of the production process?"/>
+                        <accordionitem
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/accordion/accordionitem"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, elit eu pretium gravida, arcu odio sollicitudin erat, at ornare risus nulla a velit. Donec auctor dui eu malesuada rutrum. Donec et dapibus lectus. Aliquam tempor mauris libero. Duis lorem mauris, semper vel volutpat sed, consectetur quis leo. Nam purus est, blandit eget vulputate vitae, euismod in lorem. Morbi porta non est sed accumsan. Quisque sed consectetur augue.&lt;/p>"
+                            title=" Can you engrave my ring?"/>
+                        <accordionitem_4
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/accordion/accordionitem"
+                            content="&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, elit eu pretium gravida, arcu odio sollicitudin erat, at ornare risus nulla a velit. Donec auctor dui eu malesuada rutrum. Donec et dapibus lectus. Aliquam tempor mauris libero. Duis lorem mauris, semper vel volutpat sed, consectetur quis leo. Nam purus est, blandit eget vulputate vitae, euismod in lorem. Morbi porta non est sed accumsan. Quisque sed consectetur augue.&lt;/p>"
+                            title=" What diamonds does LUNA use?"/>
+                    </accordion>
+                </pagesection_4>
+                <pagesection_5
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection">
+                    <quote
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/quote"
+                        authorDescription="Adelaide, Australia"
+                        authorImage="/content/luna/assets/images/homepage/Janet.png"
+                        authorName="Janet"
+                        quoteText="&lt;p>Luna’s Jewellery never ceases to amaze me - I love her originality and thoughtfulness. Her website is often my first port of call if I want something special for myself or a friend.&lt;/p>"
+                        showImage="true"/>
+                </pagesection_5>
+                <pagesection_6
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="howlite/components/pagesection"
+                    classes="hl-page-section--call-to-action">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/homepage/Hands with jewelry.png"
+                        openInNewTab="false"/>
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/title"
+                        headingLevel="h2"
+                        headingSize="hl-title__heading--size-4"
+                        lgColSize="8"
+                        lgOffset="2"
+                        mdColSize="12"
+                        smColSize="12"
+                        title="Luna’s Philosophy that  Beauty and Strength Exist in Both Union and Individuality"/>
+                    <ctaslist
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/ctaslist">
+                        <cta_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--primary"
+                            displayIcon="false"
+                            label="New collection"
+                            openInNewTab="false"/>
+                        <cta
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="howlite/components/cta"
+                            classes="hl-cta--text"
+                            displayIcon="false"
+                            label="Get in touch"
+                            openInNewTab="false"/>
+                    </ctaslist>
+                </pagesection_6>
+            </maincontainer>
+            <footer
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="howlite/components/footer"
+                copyright="&lt;p>© 2022 BrandName. All rights reserved.&lt;/p>">
+                <image
+                    jcr:primaryType="nt:unstructured"
+                    lgImageSrc="/content/luna/assets/images/LUNA.svg"
+                    openInNewTab="false"
+                    showLink="true"
+                    url="/content/luna/pages/Homepage"/>
+                <navigation jcr:primaryType="nt:unstructured">
+                    <menuItems jcr:primaryType="nt:unstructured">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            label="Pricing"
+                            openInNewTab="false"/>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            label="Features"
+                            link="\0"
+                            openInNewTab="false"/>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            label="Products"
+                            link="/content/luna/pages/Products"
+                            openInNewTab="false"/>
+                        <_x0034_
+                            jcr:primaryType="nt:unstructured"
+                            label="About"
+                            link="/content/luna/pages/About-Us"
+                            openInNewTab="false"/>
+                        <_x0035_
+                            jcr:primaryType="nt:unstructured"
+                            openInNewTab="false"/>
+                        <_x0036_
+                            jcr:primaryType="nt:unstructured"
+                            openInNewTab="false"/>
+                    </menuItems>
+                </navigation>
+                <socialLinks jcr:primaryType="nt:unstructured">
+                    <socialLinkItems jcr:primaryType="nt:unstructured">
+                        <_x0031_
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-linkedin"
+                            url="linkedin.com"/>
+                        <_x0032_
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-facebook"
+                            url="facebook.com"/>
+                        <_x0033_
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-twitter"
+                            url="twitter.com"/>
+                        <_x0034_
+                            jcr:primaryType="nt:unstructured"
+                            icon="icon-instagram"
+                            url="instagram.com"/>
+                    </socialLinkItems>
+                </socialLinks>
+            </footer>
+        </rootcontainer>
+    </jcr:content>
+</jcr:root>

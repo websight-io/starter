@@ -1,0 +1,7 @@
+node_modules
+build
+cypress
+node
+target
+
+launcher
