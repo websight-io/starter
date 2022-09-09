@@ -1,0 +1,280 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<project xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd" xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>pl.ds.luna</groupId>
+    <artifactId>luna-parent</artifactId>
+    <version>1.0.0-SNAPSHOT</version>
+  </parent>
+
+  <artifactId>luna-distribution</artifactId>
+  <name>Luna Project: Distribution</name>
+  <description>Luna distribution that builds the Docker Image for the projects running on WebSight.</description>
+
+  <dependencies>
+    <dependency>
+      <groupId>pl.ds.luna</groupId>
+      <artifactId>luna-content</artifactId>
+      <version>${project.parent.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.luna</groupId>
+      <artifactId>luna-core</artifactId>
+      <version>${project.parent.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.luna</groupId>
+      <artifactId>luna-ui-apps</artifactId>
+      <version>${project.parent.version}</version>
+      <type>pom</type>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.websight</groupId>
+      <artifactId>websight-ice-distribution</artifactId>
+      <version>${websight.starter.version}</version>
+      <classifier>wsce</classifier>
+      <type>slingosgifeature</type>
+    </dependency>
+  </dependencies>
+
+  <build>
+    <plugins>
+      <plugin>
+        <artifactId>maven-clean-plugin</artifactId>
+        <version>3.2.0</version>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${basedir}</directory>
+              <includes>
+                <include>launcher/**</include>
+                <include>coverage.ec</include>
+              </includes>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>slingfeature-maven-plugin</artifactId>
+        <version>1.6.6</version>
+        <extensions>true</extensions>
+        <configuration>
+          <replacePropertyVariables>
+            howlite.version,luna.version
+          </replacePropertyVariables>
+          <aggregates>
+            <aggregate>
+              <classifier>wsce-luna</classifier>
+              <filesInclude>*.json</filesInclude>
+              <title>Luna feature</title>
+              <includeArtifact>
+                <groupId>pl.ds.websight</groupId>
+                <artifactId>websight-ice-distribution</artifactId>
+                <version>${websight.starter.version}</version>
+                <classifier>wsce</classifier>
+                <type>slingosgifeature</type>
+              </includeArtifact>
+              <variablesOverrides>
+                <websight.config.admin.omitAdminPw>${websight.admin.omitAdminPw}</websight.config.admin.omitAdminPw>
+              </variablesOverrides>
+            </aggregate>
+          </aggregates>
+          <scans>
+            <scan>
+              <includeClassifier>wsce-luna</includeClassifier>
+            </scan>
+          </scans>
+          <repositories>
+            <repository>
+              <includeClassifier>wsce-luna</includeClassifier>
+            </repository>
+          </repositories>
+          <outputDir>target</outputDir>
+        </configuration>
+        <executions>
+          <execution>
+            <id>aggregate-features</id>
+            <phase>prepare-package</phase>
+            <goals>
+              <goal>aggregate-features</goal>
+              <goal>analyse-features</goal>
+              <goal>attach-features</goal>
+              <goal>attach-featurearchives</goal>
+            </goals>
+          </execution>
+          <execution>
+            <id>create-repository</id>
+            <phase>package</phase>
+            <goals>
+              <goal>repository</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <artifactId>maven-dependency-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>prepare-feature-launcher</id>
+            <goals>
+              <goal>get</goal>
+              <goal>copy</goal>
+            </goals>
+            <phase>package</phase>
+            <configuration>
+              <!-- 1.1.28 and newer versions don't work out-of-the-box due to SLING-10956 -->
+              <artifact>org.apache.sling:org.apache.sling.feature.launcher:1.1.26</artifact>
+              <stripVersion>true</stripVersion>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>default</id>
+      <activation>
+        <activeByDefault>true</activeByDefault>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <configuration>
+              <images>
+                <image>
+                  <name>${docker.wsce.name}:${docker.wsce.tag}</name>
+                  <build>
+                    <dockerFile>src/main/docker/wsce/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+                <image>
+                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                  <build>
+                    <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+              </images>
+            </configuration>
+            <executions>
+              <execution>
+                <id>build-docker-image</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+    <profile>
+      <id>release</id>
+      <distributionManagement>
+        <snapshotRepository>
+          <id>websight-internal-maven-snapshot-repo</id>
+          <name>websight-internal-maven-snapshot-repo</name>
+          <url>https://websight-internal-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-snapshot-repo/</url>
+        </snapshotRepository>
+        <repository>
+          <id>websight-maven-repo</id>
+          <name>websight-maven-repo</name>
+          <url>https://websight-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-repo/</url>
+        </repository>
+      </distributionManagement>
+      <properties>
+        <docker.skip>false</docker.skip>
+        <docker.wsce.name>public.ecr.aws/ds/websight-ce-alpha</docker.wsce.name>
+        <docker.wsce.tag>${timestamp}</docker.wsce.tag>
+        <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
+        <docker.nginx.tag>${timestamp}</docker.nginx.tag>
+        <docker.skip.push>false</docker.skip.push>
+        <websight.admin.username>wsadmin</websight.admin.username>
+        <websight.admin.password>wsadmin</websight.admin.password>
+        <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <configuration>
+              <skip>${docker.skip}</skip>
+              <images>
+                <image>
+                  <name>${docker.wsce.name}:${docker.wsce.tag}</name>
+                  <build>
+                    <buildx>
+                      <platforms>
+                        <platform>linux/amd64</platform>
+                        <platform>linux/arm64</platform>
+                      </platforms>
+                    </buildx>
+                    <dockerFile>src/main/docker/wsce/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+                <image>
+                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                  <build>
+                    <buildx>
+                      <platforms>
+                        <platform>linux/amd64</platform>
+                        <platform>linux/arm64</platform>
+                      </platforms>
+                    </buildx>
+                    <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+              </images>
+            </configuration>
+            <executions>
+              <execution>
+                <id>build-docker-image</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>push-docker-image</id>
+                <phase>deploy</phase>
+                <goals>
+                  <goal>push</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
+</project>

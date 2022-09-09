@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24.0004 29.3333C26.8294 29.3333 29.5425 28.2095 31.5429 26.2091C33.5433 24.2088 34.6671 21.4956 34.6671 18.6667C34.6671 15.8377 33.5433 13.1246 31.5429 11.1242C29.5425 9.12381 26.8294 8 24.0004 8C21.1715 8 18.4584 9.12381 16.458 11.1242C14.4576 13.1246 13.3338 15.8377 13.3338 18.6667C13.3338 21.4956 14.4576 24.2088 16.458 26.2091C18.4584 28.2095 21.1715 29.3333 24.0004 29.3333V29.3333Z" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M15.8482 31.2076C12.6962 32.7377 10.0385 35.124 8.17903 38.0936C6.31955 41.0632 5.33339 44.4963 5.33334 48C5.33334 48 4.74406 36.5986 15.8482 31.2076ZM15.8482 31.2076C19.0002 29.6775 22.5192 29.0654 26.0028 29.4413C29.4863 29.8173 32.7937 31.166 35.5467 33.3333C35.5467 33.3333 27.9998 26.0016 15.8482 31.2076ZM45.3333 34.6667H50.6667M56.9707 44.552L57.76 49.8853C57.8723 50.6434 57.8199 51.4167 57.6063 52.1527C57.3928 52.8887 57.0232 53.57 56.5226 54.1503C56.0221 54.7306 55.4023 55.1961 54.7057 55.5153C54.009 55.8345 53.2517 55.9998 52.4853 56H43.5147C42.7483 55.9998 41.991 55.8345 41.2944 55.5153C40.5977 55.1961 39.9779 54.7306 39.4774 54.1503C38.9768 53.57 38.6072 52.8887 38.3937 52.1527C38.1801 51.4167 38.1277 50.6434 38.24 49.8853L39.0293 44.552C39.2167 43.2869 39.8524 42.1312 40.8206 41.2957C41.7889 40.4601 43.0251 40.0003 44.304 40H51.696C52.9749 40.0003 54.2111 40.4601 55.1794 41.2957C56.1476 42.1312 56.7833 43.2869 56.9707 44.552Z" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight"
+    jcr:primaryType="ws:Asset">
+    <jcr:content
+        jcr:primaryType="ws:AssetContent">
+        <metadata jcr:primaryType="nt:unstructured"/>
+    </jcr:content>
+</jcr:root>

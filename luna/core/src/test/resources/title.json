@@ -1,0 +1,18 @@
+{
+  "default": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "luna/components/title"
+  },
+  "complex": {
+    "jcr:primaryType": "nt:unstructured",
+    "title": "Title",
+    "subtitle": "Subtitle",
+    "headingLevel": "h1",
+    "headingSize": "hl-title__heading--size-1",
+    "classes": "title-class other-title-class",
+    "smColSize": 12,
+    "mdColSize": 6,
+    "lgColSize": 3,
+    "sling:resourceType": "luna/components/title"
+  }
+}
