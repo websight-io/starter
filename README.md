@@ -1,9 +1,7 @@
-# WebSight Starter is going to be launched on 29th of September
+# WebSight Starter
+
+WebSight Starter is a sample project built on top of the [Websight Starter](https://github.com/websight-io/starter). It contains sample content build with usage of [Howlite](https://github.com/websight-io/howlite) components and a demo page called _Luna_.
+
+For more details please check [our Product Page](https://www.websight.io)
 
 
-We are working hard to prepare a community platform enabling you to work with: docker, feature model, project with components, e2e tests and AWS deployment scripts. To let you create your own projects using WebSight.
-
-Stay tuned!
-
-
-In the meantime, checkout [our Product Page](https://www.websight.io)
