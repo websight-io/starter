@@ -101,15 +101,16 @@ jobs:
           mkdir -p ~/.m2/repository
           cp .github/settings.xml ~/.m2/settings.xml
           echo "CODEARTIFACT_AUTH_TOKEN=${CODEARTIFACT_AUTH_TOKEN}" >> $GITHUB_ENV
+      - name: Prepare file structure for Howlite
+        run: |
+          mkdir -p ~/.m2/repository/pl/ds/howlite
       - name: Download Howlite artifact
         uses: actions/download-artifact@v3
         with:
           name: howlite
-      - name: Move howlite artifact
+          path: ~/.m2/repository/pl/ds/howlite
+      - name: Display structure of Howlite
         run: |
-          mkdir -p ~/.m2/repository/pl/ds/howlite
-          ls -al howlite_artifacts
-          mv -a howlite_artifacts/. ~/.m2/repository/pl/ds/howlite
           ls -al ~/.m2/repository/pl/ds/howlite
       - name: Update snapshot version
         env:
