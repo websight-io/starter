@@ -13,8 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-
-import { selectors, testIds } from '../support/consts';
+import { testIds } from '../support/consts';
 
 const paths = {
   title: 'ComponentOverlay_rootcontainer/maincontainer/pagesection/title'
@@ -32,30 +31,25 @@ describe('Title component', function () {
       .first().children().children()
       .should('have.length', 1)
       .first()
-      .should('have.class', 'hl-title__heading')
-      .should('have.class', 'hl-title__heading--size-4')
+      .should('have.css', "font-size", "31.248px")
       .should('have.text', 'Add your heading here')
       .parent().parent()
       .next().children().children()
       .should('have.length', 2)
       .first()
-      .should('have.class', 'hl-title__heading')
-      .should('have.class', 'hl-title__heading--size-4')
+      .should('have.css', "font-size", "20px")
       .should('have.text', 'Additional overline text filled')
       .next()
-      .should('have.class', 'hl-title__heading')
-      .should('have.class', 'hl-title__heading--size-3')
+      .should('have.css', "font-size", "39.056px")
       .should('have.text', 'Heading With H3 level and L size')
       .parent().parent()
       .next().children().children()
       .should('have.length', 2)
       .first()
-      .should('have.class', 'hl-title__heading')
-      .should('have.class', 'hl-title__heading--size-4')
+      .should('have.css', "font-size", "20px")
       .should('have.text', 'Resized to 6 cols on L breakpoint')
       .next()
-      .should('have.class', 'hl-title__heading')
-      .should('have.class', 'hl-title__heading--size-1')
+      .should('have.css', "font-size", "95.37px")
       .should('have.text', 'Heading With H2 level and XXL size')
 
     cy.percySnapshotPreview('Title preview');
@@ -73,7 +67,7 @@ describe('Title component', function () {
 
     cy.getByTestId(paths.title)
       .click()
-      .find(selectors.overlayName)
+      .find('span.name')
       .should('have.text', 'Luna Title');
 
     cy.percySnapshotPageEditor('Title editor');

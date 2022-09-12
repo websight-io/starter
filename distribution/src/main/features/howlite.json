@@ -2,7 +2,7 @@
   "bundles": [
     {
       "id": "pl.ds.howlite:howlite-core:${howlite.version}",
-      "start-order": "20"
+      "start-order": "25"
     }
   ],
   "content-packages:ARTIFACTS|true": [

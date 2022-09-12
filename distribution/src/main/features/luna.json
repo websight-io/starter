@@ -20,7 +20,7 @@
   "bundles": [
     {
       "id": "pl.ds.luna:luna-core:${luna.version}",
-      "start-order": "20"
+      "start-order": "25"
     }
   ],
   "content-packages:ARTIFACTS|true": [
