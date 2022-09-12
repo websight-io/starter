@@ -70,6 +70,7 @@ jobs:
           path: ~/.m2/repository/pl/ds/howlite
 
   build-and-test:
+    needs: build-howlite
     runs-on: ubuntu-latest
 
     steps:
