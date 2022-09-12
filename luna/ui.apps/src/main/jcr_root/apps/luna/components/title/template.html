@@ -16,7 +16,7 @@
 <template data-sly-template.title="${ @ model}">
     <header class="hl-title ${model.classes @ join=' '}">
         <sly data-sly-test="${model.showSubtitle && model.subtitle}">
-            <h6 class="hl-title__heading hl-title__heading--size-4">${model.subtitle}</h6>
+            <h6 class="hl-title__heading hl-title__heading--size-6">${model.subtitle}</h6>
         </sly>
         <h2 data-sly-element="${model.headingLevel}" class="hl-title__heading ${model.headingSize}">${model.title}</h2>
     </header>
