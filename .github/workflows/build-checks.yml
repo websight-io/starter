@@ -63,13 +63,13 @@ jobs:
         run: |
           git clone https://github.com/websight-io/howlite.git
           mvn -f howlite/pom.xml --batch-mode clean install
-          mkdir howlite/artifacts
-          cp -a ~/.m2/repository/pl/ds/howlite/. ./howlite/artifacts
+          mkdir howlite_artifacts
+          cp -a ~/.m2/repository/pl/ds/howlite/. howlite_artifacts
       - name: Upload Howlite artifact
         uses: actions/upload-artifact@v3
         with:
           name: howlite
-          path: ./howlite/artifacts
+          path: howlite_artifacts
 
   build-and-test:
     needs: build-howlite
@@ -108,8 +108,8 @@ jobs:
       - name: Move howlite artifact
         run: |
           mkdir -p ~/.m2/repository/pl/ds/howlite
-          ls -al artifacts
-          mv -a artifacts/. ~/.m2/repository/pl/ds/howlite
+          ls -al howlite_artifacts
+          mv -a howlite_artifacts/. ~/.m2/repository/pl/ds/howlite
           ls -al ~/.m2/repository/pl/ds/howlite
       - name: Update snapshot version
         env:
