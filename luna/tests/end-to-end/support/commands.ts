@@ -25,6 +25,16 @@ Cypress.Commands.add('getByTestId', (testId) => {
   return cy.get(`[data-testid=${prepareTestId(testId)}]`);
 });
 
+Cypress.Commands.add(
+    'findByTestId',
+    {
+      prevSubject: true
+    },
+    (subject, testId) => {
+      return subject.find(`[data-testid=${prepareTestId(testId)}]`);
+    }
+);
+
 Cypress.Commands.add('login', () => {
   const authUrl = `${
     Cypress.env('baseUrl') || ''

@@ -23,6 +23,7 @@ declare global {
   namespace Cypress {
     interface Chainable {
       getByTestId(testId: string): Chainable<JQuery<HTMLElement>>;
+      findByTestId(testId: string): Chainable<JQuery<HTMLElement>>;
       login(): void;
       percySnapshotWithAuth(name: string, options?: SnapshotOptions): void;
       percySnapshotPreview(name: string, options?: SnapshotOptions): void;
