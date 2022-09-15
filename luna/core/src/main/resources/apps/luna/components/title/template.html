@@ -14,10 +14,10 @@
     limitations under the License.
 */-->
 <template data-sly-template.title="${ @ model}">
-    <header class="hl-title ${model.classes @ join=' '}">
+    <header class="hl-title ${model.classes @ join=' '}" data-testid="component_${resource.name}">
         <sly data-sly-test="${model.showSubtitle && model.subtitle}">
-            <h6 class="hl-title__heading hl-title__heading--size-6">${model.subtitle}</h6>
+            <h6 class="hl-title__heading hl-title__heading--size-6" data-testid="overtitle">${model.subtitle}</h6>
         </sly>
-        <h2 data-sly-element="${model.headingLevel}" class="hl-title__heading ${model.headingSize}">${model.title}</h2>
+        <h2 data-sly-element="${model.headingLevel}" class="hl-title__heading ${model.headingSize}" data-testid="title">${model.title}</h2>
     </header>
 </template>

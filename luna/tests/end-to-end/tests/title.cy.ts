@@ -26,30 +26,34 @@ describe('Title component', function () {
   it('renders correctly in preview mode', function () {
     cy.visit('/content/luna-test/pages/Title.html');
 
-    cy.get('section')
-      .first().children().children()
-      .should('have.length', 1)
-      .first()
-      .should('have.css', "font-size", "31.248px")
+    cy.getByTestId('component_title')
+      .findByTestId('title')
+      .should('have.css', 'font-size', '31.248px')
       .should('have.text', 'Add your heading here')
-      .parent().parent()
-      .next().children().children()
-      .should('have.length', 2)
-      .first()
-      .should('have.css', "font-size", "20px")
-      .should('have.text', 'Additional overline text filled')
-      .next()
+
+    cy.getByTestId('component_title')
+      .findByTestId('overtitle')
+      .should('not.exist')
+
+    cy.getByTestId('component_title1')
+      .findByTestId('title')
       .should('have.css', "font-size", "39.056px")
       .should('have.text', 'Heading With H3 level and L size')
-      .parent().parent()
-      .next().children().children()
-      .should('have.length', 2)
-      .first()
+
+    cy.getByTestId('component_title1')
+      .findByTestId('overtitle')
       .should('have.css', "font-size", "20px")
-      .should('have.text', 'Resized to 6 cols on L breakpoint')
-      .next()
+      .should('have.text', 'Additional overline text filled')
+
+    cy.getByTestId('component_title2')
+      .findByTestId('title')
       .should('have.css', "font-size", "95.37px")
       .should('have.text', 'Heading With H2 level and XXL size')
+
+    cy.getByTestId('component_title2')
+      .findByTestId('overtitle')
+      .should('have.css', "font-size", "20px")
+      .should('have.text', 'Resized to 6 cols on L breakpoint')
 
     cy.percySnapshotPreview('Title preview');
   });
