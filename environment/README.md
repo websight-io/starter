@@ -30,4 +30,4 @@ Services are available with URLs:
 - [localhost](http://localhost/) - the published pages
 
 ## References
-Look for more information in [WebSight Starter](https://bitbucket.org/teamds-workspace/websight-starter/src/main/envs/local/).
+Look for more information in [WebSight Starter](https://github.com/websight-io/starter).

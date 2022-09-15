@@ -32,4 +32,4 @@ and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (us
 Press `CTRL + C` to stop the application.
 
 ## References
-Please see the [Websight Starter docs](https://bitbucket.org/teamds-workspace/websight-starter).
+Please see the [Websight Starter docs](https://github.com/websight-io/starter).

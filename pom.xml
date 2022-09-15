@@ -38,9 +38,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git@bitbucket.org:teamds-workspace/luna-project.git</connection>
-    <developerConnection>scm:git@bitbucket.org:teamds-workspace/luna-project.git</developerConnection>
-    <url>https://bitbucket.org/teamds-workspace/luna-project.git</url>
+    <connection>scm:git@github.com:websight-io/luna-project.git</connection>
+    <developerConnection>scm:git@github.com:websight-io/luna-project.git</developerConnection>
+    <url>https://github.com/websight-io/luna-project.git</url>
     <tag>HEAD</tag>
   </scm>
 

@@ -9,11 +9,6 @@ The following section describes the release process for the Websight Community E
 
 You should see all the released images here: [https://gallery.ecr.aws/ds/websight-ce-alpha](https://gallery.ecr.aws/ds/websight-ce-alpha).
 
-### Automated
-> Until the docker `buildx` plugin is not configured in Bitbucket pipelines on cloud runners, we can not take advantage of this automation. More details [here](https://community.atlassian.com/t5/Bitbucket-questions/Docker-buildx/qaq-p/1813275)
-
-~~Run `release-websight-ce` pipeline.~~
-
 ### Manual
 > #### Prerequisites
 > - Docker
@@ -24,7 +19,7 @@ You should see all the released images here: [https://gallery.ecr.aws/ds/websigh
 1. Remove all locally stored WebSight snapshots by running: `rm -rf ~/.m2/repository/pl/ds`.
 2. Clone the latest version of [Howlite](https://github.com/websight-io/howlite) from `main` branch. Build it by running `mvn clean install`.
 3. Sign in to AWS ECR `aws ecr-public get-login-password --region us-east-1 | docker login --username AWS --password-stdin public.ecr.aws/ds`
-4. Clone the latest version of [Luna Project](https://bitbucket.org/teamds-workspace/luna-project/src). Build from `main` branch. Build it running `mvn clean deploy -Prelease,-default`.
+4. Clone the latest version of [Luna Project](https://github.com/websight-io/luna-project). Build from `main` branch. Build it running `mvn clean deploy -Prelease,-default`.
 
 ### Verify
 
