@@ -5,7 +5,7 @@ WebSight Starter is a sample project built on top of the [Websight Starter](http
 For more details please check [our Product Page](https://www.websight.io)
 
 ## How to run
-See the [`environment`](https://bitbucket.org/teamds-workspace/luna-project/src/main/environment/).
+See the [`environment`](https://github.com/websight-io/luna-project/src/main/environment/).
 
 ## Structure
 
@@ -14,4 +14,4 @@ See the [`environment`](https://bitbucket.org/teamds-workspace/luna-project/src/
 - `environment` - contains scripts and instruction on how to run Luna local environment using Docker Compose
 
 ## Releasing
-See [RELEASING](https://bitbucket.org/teamds-workspace/luna-project/src/main/RELEASING.md).
+See [RELEASING](https://github.com/websight-io/luna-project/src/main/RELEASING.md).
