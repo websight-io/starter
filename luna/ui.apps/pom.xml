@@ -41,7 +41,7 @@
                     <validatorsSettings>
                         <jackrabbit-filter>
                             <options>
-                                <validRoots>/apps/luna</validRoots>
+                                <validRoots>/apps</validRoots>
                             </options>
                         </jackrabbit-filter>
                     </validatorsSettings>
