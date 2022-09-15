@@ -13,7 +13,6 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-import { testIds } from '../support/consts';
 
 const paths = {
   title: 'ComponentOverlay_rootcontainer/maincontainer/pagesection/title'
@@ -72,7 +71,7 @@ describe('Title component', function () {
 
     cy.percySnapshotPageEditor('Title editor');
 
-    cy.getByTestId(testIds.editIcon).click();
+    cy.getByTestId('ToolbarOption_Edit').click();
 
     cy.getByTestId('RadioElement_h1').click();
     cy.getByTestId('RadioElement_hl-title__heading--size-2').click();
@@ -82,7 +81,7 @@ describe('Title component', function () {
 
     cy.percySnapshotDialog('Title dialog');
 
-    cy.getByTestId(testIds.dialogSubmitButton).click();
+    cy.getByTestId('Action_Submit').click();
     cy.wait('@saveProperties');
 
     cy.request(
