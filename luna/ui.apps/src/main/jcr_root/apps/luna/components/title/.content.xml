@@ -2,5 +2,4 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
           jcr:primaryType="ws:Component"
           jcr:title="Luna Title"
-          instanceResourceType="howlite/components/title"
           sling:resourceSuperType="howlite/components/title"/>
