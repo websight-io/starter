@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>pl.ds.luna</groupId>
+  <artifactId>luna-parent</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <name>Luna Project Parent</name>
+  <packaging>pom</packaging>
+
+  <modules>
+    <module>luna</module>
+    <module>distribution</module>
+  </modules>
+
+  <licenses>
+    <license>
+      <name>Apache License Version 2.0</name>
+      <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+    </license>
+  </licenses>
+
+  <scm>
+    <connection>scm:git@github.com:websight-io/luna-project.git</connection>
+    <developerConnection>scm:git@github.com:websight-io/luna-project.git</developerConnection>
+    <url>https://github.com/websight-io/luna-project.git</url>
+    <tag>HEAD</tag>
+  </scm>
+
+  <organization>
+    <name>Dynamic Solutions sp. z o.o. sp. k.</name>
+    <url>https://websight.io</url>
+  </organization>
+
+  <properties>
+    <!-- generic -->
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+    <maven.compiler.source>17</maven.compiler.source>
+    <maven.compiler.target>17</maven.compiler.target>
+
+    <!-- base docker distributions -->
+    <docker.wsce.name>ds/wsce-luna</docker.wsce.name>
+    <docker.wsce.tag>latest</docker.wsce.tag>
+    <docker.nginx.name>ds/nginx-luna</docker.nginx.name>
+    <docker.nginx.tag>latest</docker.nginx.tag>
+
+    <!-- admin user default credentials for tests -->
+    <websight.admin.username>wsadmin</websight.admin.username>
+    <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
+
+    <!-- WebSight Starter -->
+    <websight.starter.version>2.0.0-SNAPSHOT</websight.starter.version>
+
+    <!-- Luna -->
+    <howlite.version>1.0.0-SNAPSHOT</howlite.version>
+    <luna.version>${project.version}</luna.version>
+
+    <timestamp>${maven.build.timestamp}</timestamp>
+    <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <version>0.14</version>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <excludes>
+                <exclude>**/*.md</exclude>
+                <exclude>**/*.json</exclude>
+                <exclude>**/*.txt</exclude>
+                <exclude>**/.content.xml</exclude>
+                <exclude>howlite-artifacts/**</exclude>
+              </excludes>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+    <pluginManagement>
+      <plugins>
+        <plugin>
+          <groupId>io.fabric8</groupId>
+          <artifactId>docker-maven-plugin</artifactId>
+          <version>0.40.1</version>
+          <configuration>
+            <skip>${docker.skip}</skip>
+          </configuration>
+        </plugin>
+      </plugins>
+    </pluginManagement>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>release</id>
+      <distributionManagement>
+        <snapshotRepository>
+          <id>websight-internal-maven-snapshot-repo</id>
+          <name>websight-internal-maven-snapshot-repo</name>
+          <url>https://websight-internal-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-snapshot-repo/</url>
+        </snapshotRepository>
+        <repository>
+          <id>websight-maven-repo</id>
+          <name>websight-maven-repo</name>
+          <url>https://websight-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-repo/</url>
+        </repository>
+      </distributionManagement>
+    </profile>
+  </profiles>
+
+</project>

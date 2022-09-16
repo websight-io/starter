@@ -1,0 +1,31 @@
+{
+  "configurations": {
+    "org.apache.sling.commons.log.LogManager.factory.config~luna.log": {
+      "org.apache.sling.commons.log.packagingDataEnabled": true,
+      "org.apache.sling.commons.log.pattern": "%d{dd.MM.yyyy HH:mm:ss.SSS} *%level* [%thread] %logger %msg%n",
+      "org.apache.sling.commons.log.level": "$[env:WS_LUNA_LOG_LEVEL;default=info]",
+      "org.apache.sling.commons.log.file": "logs/luna.log",
+      "org.apache.sling.commons.log.file.number:Integer": "8",
+      "org.apache.sling.commons.log.file.size": "'.'yyyy-MM-dd",
+      "org.apache.sling.commons.log.names": [
+        "pl.ds.howlite",
+        "pl.ds.luna"
+      ],
+      "org.apache.sling.commons.log.additiv": true
+    },
+    "pl.ds.websight.publishing.staticprocessor.PagePublishProcessor": {
+      "shorten.paths": true
+    }
+  },
+  "bundles": [
+    {
+      "id": "pl.ds.luna:luna-core:${luna.version}",
+      "start-order": "25"
+    }
+  ],
+  "content-packages:ARTIFACTS|true": [
+    "pl.ds.luna:luna-ui-apps:zip:${luna.version}",
+    "pl.ds.luna:luna-content:zip:${luna.version}"
+  ]
+}
+  
