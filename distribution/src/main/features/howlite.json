@@ -4,9 +4,6 @@
       "id": "pl.ds.howlite:howlite-core:${howlite.version}",
       "start-order": "25"
     }
-  ],
-  "content-packages:ARTIFACTS|true": [
-    "pl.ds.howlite:howlite-ui-apps:zip:${howlite.version}"
   ]
 }
   

@@ -51,12 +51,6 @@
     </dependency>
     <dependency>
       <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-ui-apps</artifactId>
-      <version>${luna.version}</version>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>pl.ds.luna</groupId>
       <artifactId>luna-tests-content</artifactId>
       <version>${luna.version}</version>
       <type>pom</type>
