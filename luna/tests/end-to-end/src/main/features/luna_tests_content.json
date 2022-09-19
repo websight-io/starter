@@ -10,8 +10,6 @@
     }
   ],
   "content-packages:ARTIFACTS|true": [
-    "pl.ds.howlite:howlite-ui-apps:zip:${howlite.version}",
-    "pl.ds.luna:luna-ui-apps:zip:${luna.version}",
     "pl.ds.luna:luna-tests-content:zip:${luna.version}"
   ]
 }

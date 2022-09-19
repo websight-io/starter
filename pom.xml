@@ -91,6 +91,7 @@
             </goals>
             <configuration>
               <excludes>
+                <exclude>**/*.bnd</exclude>
                 <exclude>**/*.md</exclude>
                 <exclude>**/*.json</exclude>
                 <exclude>**/*.txt</exclude>
