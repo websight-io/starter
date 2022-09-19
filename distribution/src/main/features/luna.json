@@ -24,7 +24,6 @@
     }
   ],
   "content-packages:ARTIFACTS|true": [
-    "pl.ds.luna:luna-ui-apps:zip:${luna.version}",
     "pl.ds.luna:luna-content:zip:${luna.version}"
   ]
 }

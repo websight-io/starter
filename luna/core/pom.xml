@@ -43,20 +43,6 @@
                         <goals>
                             <goal>bnd-process</goal>
                         </goals>
-                        <configuration>
-                            <bnd><![CDATA[
-                                        Bundle-Category: ${componentGroupName}
-                                        Bundle-Developers: Dynamic Solutions sp. z o.o. sp. k.
-                                        Bundle-Description : ${project.name}
-                                        Bundle-Vendor: Dynamic Solutions sp. z o.o. sp. k.
-                                            -exportcontents: \
-                                            pl.ds.luna.components.models \
-                                            ${removeall;${packages;VERSIONED};${packages;CONDITIONAL}}
-                                            -noextraheaders: true
-                                            -snapshot: SNAPSHOT
-                                            -plugin org.apache.sling.bnd.models.ModelsScannerPlugin
-                                ]]></bnd>
-                        </configuration>
                     </execution>
                 </executions>
             </plugin>
@@ -96,6 +82,10 @@
         <dependency>
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.api</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.osgi</groupId>
+            <artifactId>org.osgi.annotation.versioning</artifactId>
         </dependency>
 
         <!-- TEST -->

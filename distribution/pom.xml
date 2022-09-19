@@ -42,12 +42,6 @@
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-ui-apps</artifactId>
-      <version>${project.parent.version}</version>
-      <type>pom</type>
-    </dependency>
-    <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-ice-distribution</artifactId>
       <version>${websight.starter.version}</version>
