@@ -116,7 +116,7 @@ jobs:
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         if: ${{ github.event_name == 'schedule' }}
-        run: mvn -f tests/end-to-end/pom.xml versions:update-properties
+        run: mvn -f luna/tests/end-to-end/pom.xml versions:update-properties
       - name: Build and test with Maven
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
