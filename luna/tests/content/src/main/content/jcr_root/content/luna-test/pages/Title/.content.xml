@@ -25,7 +25,7 @@
                 <pagesection_1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="howlite/components/pagesection">
-                    <title
+                    <title1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="luna/components/title"
                         headingLevel="h3"
@@ -34,10 +34,10 @@
                         subtitle="Additional overline text filled"
                         title="Heading With H3 level and L size"/>
                 </pagesection_1>
-                <pagesection_1_1
+                <pagesection_2
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="howlite/components/pagesection">
-                    <title
+                    <title2
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="luna/components/title"
                         headingLevel="h2"
@@ -51,7 +51,7 @@
                         showSubtitle="true"
                         subtitle="Resized to 6 cols on L breakpoint"
                         title="Heading With H2 level and XXL size"/>
-                </pagesection_1_1>
+                </pagesection_2>
             </maincontainer>
             <footer
                 jcr:primaryType="nt:unstructured"
