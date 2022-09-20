@@ -121,5 +121,3 @@ jobs:
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         run: mvn --batch-mode --update-snapshots clean install -P e2e
-      - name: Upload coverage to Codecov
-        uses: codecov/codecov-action@v3
