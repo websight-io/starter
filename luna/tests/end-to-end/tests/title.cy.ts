@@ -32,7 +32,7 @@ describe('Title component', function () {
       .should('have.text', 'Add your heading here')
 
     cy.getByTestId('component_title')
-      .findByTestId('overtitle')
+      .findByTestId('overline')
       .should('not.exist')
 
     cy.getByTestId('component_title1')
@@ -41,7 +41,7 @@ describe('Title component', function () {
       .should('have.text', 'Heading With H3 level and L size')
 
     cy.getByTestId('component_title1')
-      .findByTestId('overtitle')
+      .findByTestId('overline')
       .should('have.css', "font-size", "20px")
       .should('have.text', 'Additional overline text filled')
 
@@ -51,7 +51,7 @@ describe('Title component', function () {
       .should('have.text', 'Heading With H2 level and XXL size')
 
     cy.getByTestId('component_title2')
-      .findByTestId('overtitle')
+      .findByTestId('overline')
       .should('have.css', "font-size", "20px")
       .should('have.text', 'Resized to 6 cols on L breakpoint')
 
