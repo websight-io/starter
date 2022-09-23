@@ -43,9 +43,9 @@
     </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
-      <artifactId>websight-ice-distribution</artifactId>
-      <version>${websight.starter.version}</version>
-      <classifier>wsce</classifier>
+      <artifactId>websight-cms-ce-feature</artifactId>
+      <version>${websight.cms.version}</version>
+      <classifier>community</classifier>
       <type>slingosgifeature</type>
     </dependency>
   </dependencies>
@@ -78,29 +78,27 @@
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
-              <classifier>wsce-luna</classifier>
-              <filesInclude>*.json</filesInclude>
+              <classifier>websight-cms-luna</classifier>
               <title>Luna feature</title>
+              <filesInclude>*.json</filesInclude>
+              <filesInclude>oak/oak_persistence_mongods.json</filesInclude>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
-                <artifactId>websight-ice-distribution</artifactId>
-                <version>${websight.starter.version}</version>
-                <classifier>wsce</classifier>
+                <artifactId>websight-cms-ce-feature</artifactId>
+                <version>${websight.cms.version}</version>
+                <classifier>community</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
-              <variablesOverrides>
-                <websight.config.admin.omitAdminPw>${websight.admin.omitAdminPw}</websight.config.admin.omitAdminPw>
-              </variablesOverrides>
             </aggregate>
           </aggregates>
           <scans>
             <scan>
-              <includeClassifier>wsce-luna</includeClassifier>
+              <includeClassifier>websight-cms-luna</includeClassifier>
             </scan>
           </scans>
           <repositories>
             <repository>
-              <includeClassifier>wsce-luna</includeClassifier>
+              <includeClassifier>websight-cms-luna</includeClassifier>
             </repository>
           </repositories>
           <outputDir>target</outputDir>
@@ -160,9 +158,9 @@
             <configuration>
               <images>
                 <image>
-                  <name>${docker.wsce.name}:${docker.wsce.tag}</name>
+                  <name>${docker.luna.name}:${docker.luna.tag}</name>
                   <build>
-                    <dockerFile>src/main/docker/wsce/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
@@ -204,13 +202,12 @@
       </distributionManagement>
       <properties>
         <docker.skip>false</docker.skip>
-        <docker.wsce.name>public.ecr.aws/ds/websight-ce-alpha</docker.wsce.name>
-        <docker.wsce.tag>${timestamp}</docker.wsce.tag>
+        <docker.luna.name>public.ecr.aws/ds/websight-ce-alpha</docker.luna.name>
+        <docker.luna.tag>${timestamp}</docker.luna.tag>
         <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
         <docker.nginx.tag>${timestamp}</docker.nginx.tag>
         <docker.skip.push>false</docker.skip.push>
-        <websight.admin.username>wsadmin</websight.admin.username>
-        <websight.admin.password>wsadmin</websight.admin.password>
+
         <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
       </properties>
       <build>
@@ -222,7 +219,7 @@
               <skip>${docker.skip}</skip>
               <images>
                 <image>
-                  <name>${docker.wsce.name}:${docker.wsce.tag}</name>
+                  <name>${docker.luna.name}:${docker.luna.tag}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -230,7 +227,7 @@
                         <platform>linux/arm64</platform>
                       </platforms>
                     </buildx>
-                    <dockerFile>src/main/docker/wsce/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/luna/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>

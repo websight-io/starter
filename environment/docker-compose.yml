@@ -15,8 +15,8 @@
 version: "3.9"
 
 services:
-  wsce:
-    image: ds/wsce-luna:latest
+  cms:
+    image: ds/websight-cms-luna:latest
     ports:
       - "8080:8080"
     environment:
@@ -26,7 +26,7 @@ services:
       MONGODB_PORT: 27017
       MONGODB_USERNAME: "mongoadmin"
     volumes:
-      - wsce_logs:/websight/logs
+      - cms_logs:/websight/logs
       - site_repository:/websight/docroot
     secrets:
       - source: mongo_password
@@ -63,7 +63,7 @@ services:
       - site_repository:/usr/share/nginx/html:ro
 
 volumes:
-  wsce_logs:
+  cms_logs:
   mongo_repository:
   site_repository:
 
