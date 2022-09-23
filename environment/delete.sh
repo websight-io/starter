@@ -16,6 +16,6 @@
 
 docker compose down
 
-docker volume rm environment_wsce_logs
+docker volume rm environment_cms_logs
 docker volume rm environment_mongo_repository
 docker volume rm environment_site_repository

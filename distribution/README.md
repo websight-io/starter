@@ -23,8 +23,8 @@ to assemble the distribution, build a Docker image and run integration tests.
 ### Running as JVM application
 ```bash
 mvn clean install
-docker run -p 27017:27017 mongo:4.4.6
-java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-wsce-luna.json
+docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=mongoadmin mongo:4.4.6
+java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-websight-cms-luna.json
 ```
 
 and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (use default `wsadmin/wsadmin` password).

@@ -30,41 +30,24 @@
   <packaging>pom</packaging>
 
   <properties>
-    <websight.ice.version>2.0.0-SNAPSHOT</websight.ice.version>
-    <howlite.version>1.0.0-SNAPSHOT</howlite.version>
-
     <it.startTimeoutSeconds>30</it.startTimeoutSeconds>
   </properties>
 
   <dependencies>
     <dependency>
-      <groupId>pl.ds.websight</groupId>
-      <artifactId>websight-ice-distribution</artifactId>
-      <version>${websight.ice.version}</version>
-      <classifier>wsce</classifier>
+      <groupId>pl.ds.luna</groupId>
+      <artifactId>luna-distribution</artifactId>
+      <version>${project.version}</version>
+      <classifier>websight-cms-luna</classifier>
       <type>slingosgifeature</type>
     </dependency>
     <dependency>
       <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-core</artifactId>
-      <version>${luna.version}</version>
-    </dependency>
-    <dependency>
-      <groupId>pl.ds.luna</groupId>
       <artifactId>luna-tests-content</artifactId>
-      <version>${luna.version}</version>
-      <type>pom</type>
+      <version>${project.version}</version>
+      <type>zip</type>
     </dependency>
   </dependencies>
-
-  <profiles>
-    <profile>
-      <id>e2e</id>
-      <properties>
-        <e2e.skip>false</e2e.skip>
-      </properties>
-    </profile>
-  </profiles>
 
   <build>
     <plugins>
@@ -90,32 +73,27 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            luna.version,howlite.version
+            luna.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
-              <classifier>luna-tests</classifier>
+              <classifier>websight-cms-luna-tests</classifier>
               <filesInclude>*.json</filesInclude>
               <title>Luna with test data</title>
               <includeArtifact>
-                <groupId>pl.ds.websight</groupId>
-                <artifactId>websight-ice-distribution</artifactId>
-                <version>${websight.ice.version}</version>
-                <classifier>wsce</classifier>
+                <groupId>pl.ds.luna</groupId>
+                <artifactId>luna-distribution</artifactId>
+                <version>${project.version}</version>
+                <classifier>websight-cms-luna</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
             </aggregate>
           </aggregates>
           <scans>
             <scan>
-              <includeClassifier>luna-tests</includeClassifier>
+              <includeClassifier>websight-cms-luna-tests</includeClassifier>
             </scan>
           </scans>
-          <repositories>
-            <repository>
-              <includeClassifier>luna-tests</includeClassifier>
-            </repository>
-          </repositories>
           <outputDir>target</outputDir>
           <selection/>
           <extension/>
@@ -163,7 +141,7 @@
             <phase>pre-integration-test</phase>
             <configuration>
               <portNames>
-                <portName>wsce.port</portName>
+                <portName>cms.port</portName>
                 <portName>mongo.port</portName>
               </portNames>
             </configuration>
@@ -218,17 +196,17 @@
         <configuration>
           <launches>
             <launch>
-              <id>luna-tests</id>
+              <id>websight-cms-luna-tests</id>
               <feature>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>${project.artifactId}</artifactId>
                 <version>${project.version}</version>
-                <classifier>luna-tests</classifier>
+                <classifier>websight-cms-luna-tests</classifier>
                 <type>slingosgifeature</type>
               </feature>
               <launcherArguments>
                 <frameworkProperties>
-                  <org.osgi.service.http.port>${wsce.port}</org.osgi.service.http.port>
+                  <org.osgi.service.http.port>${cms.port}</org.osgi.service.http.port>
                 </frameworkProperties>
               </launcherArguments>
               <environmentVariables>
@@ -310,7 +288,7 @@
               <skip>${e2e.skip}</skip>
               <arguments>cypress run test:ci</arguments>
               <environmentVariables>
-                <CYPRESS_baseUrl>http://localhost:${wsce.port}</CYPRESS_baseUrl>
+                <CYPRESS_baseUrl>http://localhost:${cms.port}</CYPRESS_baseUrl>
                 <CYPRESS_loginUsername>${websight.admin.username}</CYPRESS_loginUsername>
                 <CYPRESS_loginPassword>${websight.admin.password}</CYPRESS_loginPassword>
                 <TERM>xterm</TERM>
