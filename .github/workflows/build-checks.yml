@@ -55,7 +55,7 @@ jobs:
         run: |
           export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain websight --domain-owner ${{ secrets.AWS_ACCOUNT_ID }} --query authorizationToken --output text`
           mkdir -p ~/.m2/repository
-          cp .github/settings.xml ~/.m2/settings.xml
+          curl -s https://ws-dev-public.s3.eu-central-1.amazonaws.com/settings-code-artifact-deploy.xml --output ~/.m2/settings.xml
           echo "CODEARTIFACT_AUTH_TOKEN=${CODEARTIFACT_AUTH_TOKEN}" >> $GITHUB_ENV
       - name: Clone and build Howlite
         env:
@@ -99,7 +99,7 @@ jobs:
         run: |
           export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain websight --domain-owner ${{ secrets.AWS_ACCOUNT_ID }} --query authorizationToken --output text`
           mkdir -p ~/.m2/repository
-          cp .github/settings.xml ~/.m2/settings.xml
+          curl -s https://ws-dev-public.s3.eu-central-1.amazonaws.com/settings-code-artifact-deploy.xml --output ~/.m2/settings.xml
           echo "CODEARTIFACT_AUTH_TOKEN=${CODEARTIFACT_AUTH_TOKEN}" >> $GITHUB_ENV
       - name: Prepare file structure for Howlite
         run: |
@@ -116,7 +116,7 @@ jobs:
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
         if: ${{ github.event_name == 'schedule' }}
-        run: mvn -f luna/tests/end-to-end/pom.xml versions:update-properties
+        run: mvn -f distribution/pom.xml versions:update-properties
       - name: Build and test with Maven
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}

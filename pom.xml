@@ -28,6 +28,7 @@
   <modules>
     <module>luna</module>
     <module>distribution</module>
+    <module>tests</module>
   </modules>
 
   <licenses>
@@ -57,17 +58,18 @@
     <maven.compiler.target>17</maven.compiler.target>
 
     <!-- base docker distributions -->
-    <docker.wsce.name>ds/wsce-luna</docker.wsce.name>
-    <docker.wsce.tag>latest</docker.wsce.tag>
+    <docker.luna.name>ds/websight-cms-luna</docker.luna.name>
+    <docker.luna.tag>latest</docker.luna.tag>
     <docker.nginx.name>ds/nginx-luna</docker.nginx.name>
     <docker.nginx.tag>latest</docker.nginx.tag>
 
     <!-- admin user default credentials for tests -->
     <websight.admin.username>wsadmin</websight.admin.username>
-    <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
+    <websight.admin.password>wsadmin</websight.admin.password>
 
     <!-- WebSight Starter -->
-    <websight.starter.version>2.0.0-SNAPSHOT</websight.starter.version>
+    <mongo.container.image>mongo:4.4.6</mongo.container.image>
+    <websight.cms.version>0.1.1</websight.cms.version>
 
     <!-- Luna -->
     <howlite.version>1.0.0-SNAPSHOT</howlite.version>
@@ -75,6 +77,7 @@
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+    <e2e.skip>true</e2e.skip>
   </properties>
 
   <build>
@@ -132,6 +135,12 @@
           <url>https://websight-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-repo/</url>
         </repository>
       </distributionManagement>
+    </profile>
+    <profile>
+      <id>e2e</id>
+      <properties>
+        <e2e.skip>false</e2e.skip>
+      </properties>
     </profile>
   </profiles>
 

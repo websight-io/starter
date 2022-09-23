@@ -1,0 +1,19 @@
+{
+  "bundles": [
+    {
+      "id": "com.h2database:h2-mvstore:1.4.200",
+      "start-order": "15"
+    },
+    {
+      "id": "org.mongodb:mongo-java-driver:3.12.10",
+      "start-order": "15"
+    }
+  ],
+  "configurations": {
+    "org.apache.jackrabbit.oak.plugins.document.DocumentNodeStoreService": {
+      "db": "sling",
+      "mongouri": "mongodb://$[env:MONGODB_USERNAME;default=mongoadmin]:$[secret:mongo.password;default=mongoadmin;type=String]@$[env:MONGODB_HOST;default=localhost]:$[env:MONGODB_PORT;type=Integer;default=27017]",
+      "leaseCheckMode": "$[env:LEASE_CHECK_MODE;default=STRICT]"
+    }
+  }
+}
