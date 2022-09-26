@@ -126,7 +126,8 @@
         <plugin>
           <groupId>io.fabric8</groupId>
           <artifactId>docker-maven-plugin</artifactId>
-          <version>0.40.2</version>
+          <!-- Please do not upgrade to 0.40.2 as there is an issue with multi-platforms support -->
+          <version>0.40.1</version>
           <configuration>
             <skip>${docker.skip}</skip>
           </configuration>
@@ -137,9 +138,43 @@
 
   <profiles>
     <profile>
-      <id>e2e</id>
+      <id>ci</id>
       <properties>
         <docker.skip>false</docker.skip>
+      </properties>
+    </profile>
+    <profile>
+      <id>release</id>
+      <properties>
+        <docker.luna.name>public.ecr.aws/ds/websight-ce-alpha</docker.luna.name>
+        <docker.luna.tag>${timestamp}</docker.luna.tag>
+        <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
+        <docker.nginx.tag>${timestamp}</docker.nginx.tag>
+        <docker.skip.push>false</docker.skip.push>
+      </properties>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>io.fabric8</groupId>
+              <artifactId>docker-maven-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>push-docker-image</id>
+                  <phase>deploy</phase>
+                  <goals>
+                    <goal>push</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+    <profile>
+      <id>e2e</id>
+      <properties>
         <e2e.skip>false</e2e.skip>
       </properties>
     </profile>

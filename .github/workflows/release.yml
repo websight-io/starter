@@ -61,7 +61,11 @@ jobs:
           chmod 0600 ~/.ssh/id_rsa
           mkdir -p ~/.m2
           curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
+      - name: Set up QEMU # https://github.com/docker/buildx/issues/499
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
       - name: Create tag and bump version
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml install release:prepare
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml release:prepare -P ci,release
       - name: Release to ECR
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -Prelease,-default
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -P ci,release

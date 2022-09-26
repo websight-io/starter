@@ -200,15 +200,7 @@
       </build>
     </profile>
     <profile>
-      <id>release</id>
-      <properties>
-        <docker.skip>false</docker.skip>
-        <docker.luna.name>public.ecr.aws/ds/websight-ce-alpha</docker.luna.name>
-        <docker.luna.tag>${timestamp}</docker.luna.tag>
-        <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
-        <docker.nginx.tag>${timestamp}</docker.nginx.tag>
-        <docker.skip.push>false</docker.skip.push>
-      </properties>
+      <id>ci</id>
       <build>
         <plugins>
           <plugin>
@@ -251,13 +243,6 @@
                 <phase>package</phase>
                 <goals>
                   <goal>build</goal>
-                </goals>
-              </execution>
-              <execution>
-                <id>push-docker-image</id>
-                <phase>deploy</phase>
-                <goals>
-                  <goal>push</goal>
                 </goals>
               </execution>
             </executions>
