@@ -188,18 +188,6 @@
     </profile>
     <profile>
       <id>release</id>
-      <distributionManagement>
-        <snapshotRepository>
-          <id>websight-internal-maven-snapshot-repo</id>
-          <name>websight-internal-maven-snapshot-repo</name>
-          <url>https://websight-internal-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-snapshot-repo/</url>
-        </snapshotRepository>
-        <repository>
-          <id>websight-maven-repo</id>
-          <name>websight-maven-repo</name>
-          <url>https://websight-299371835903.d.codeartifact.eu-central-1.amazonaws.com/maven/maven-repo/</url>
-        </repository>
-      </distributionManagement>
       <properties>
         <docker.skip>false</docker.skip>
         <docker.luna.name>public.ecr.aws/ds/websight-ce-alpha</docker.luna.name>
@@ -207,8 +195,6 @@
         <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
         <docker.nginx.tag>${timestamp}</docker.nginx.tag>
         <docker.skip.push>false</docker.skip.push>
-
-        <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
       </properties>
       <build>
         <plugins>
