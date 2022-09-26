@@ -213,7 +213,7 @@
                         <platform>linux/arm64</platform>
                       </platforms>
                     </buildx>
-                    <dockerFile>src/main/docker/luna/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
