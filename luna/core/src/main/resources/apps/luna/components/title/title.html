@@ -13,7 +13,11 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-<sly data-sly-use.model="pl.ds.luna.components.models.LunaTitleComponent"
-     data-sly-use.template="./template.html"
-     data-sly-call="${template.title @ model=model}">
+<sly data-sly-use.model="pl.ds.luna.components.models.LunaTitleComponent">
+  <header class="hl-title ${model.classes @ join=' '}" data-testid="component_${resource.name}">
+    <sly data-sly-test="${model.showSubtitle && model.subtitle}">
+      <h6 class="hl-title__heading hl-title__heading--size-6" data-testid="overline">${model.subtitle}</h6>
+    </sly>
+    <h2 data-sly-element="${model.headingLevel}" class="hl-title__heading ${model.headingSize}" data-testid="title">${model.title}</h2>
+  </header>
 </sly>

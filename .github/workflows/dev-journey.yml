@@ -148,9 +148,9 @@ jobs:
             assertThat(model.getOverlineSize()).isEqualTo("hl-title__heading--size-3");\
             ' ./luna/core/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java
           
-          echo "Update template.html"
+          echo "Update title.html"
           
-          sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./luna/core/src/main/resources/apps/luna/components/title/template.html
+          sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./luna/core/src/main/resources/apps/luna/components/title/title.html
             
             
             echo "Add dialog"
