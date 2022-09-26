@@ -38,9 +38,13 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-
+      
+      - name: Set up QEMU # https://github.com/docker/buildx/issues/499
+        uses: docker/setup-qemu-action@v2
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v2
       - name: Build and test with Maven
         run: |
               mkdir -p ~/.m2
               curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
-              mvn --batch-mode -s ~/.m2/settings-websight-public.xml clean install -P e2e
+              mvn --batch-mode -s ~/.m2/settings-websight-public.xml clean verify -P ci,e2e
