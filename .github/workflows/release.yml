@@ -17,9 +17,6 @@ name: Release Luna
 on:
   workflow_dispatch:
 
-env:
-  AWS_REGION: "eu-central-1"
-
 permissions:
   id-token: write
   contents: read
@@ -48,14 +45,14 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_TO_ASSUME }}
-          role-session-name: HowliteRelease
-          aws-region: ${{ env.AWS_REGION }}
+          role-session-name: LunaRelease
+          aws-region: us-east-1
       - name: Login to Amazon ECR Public
         id: login-ecr-public
         uses: aws-actions/amazon-ecr-login@v1
         with:
           registry-type: public
-      - name: Create tag and bump version
+      - name: Configure Git and Maven settings
         run: |
           git config --global user.email "github.actions@ds.pl"
           git config --global user.name "GitHub Actions"
@@ -64,9 +61,7 @@ jobs:
           chmod 0600 ~/.ssh/id_rsa
           mkdir -p ~/.m2
           curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
-          mvn --batch-mode -s ~/.m2/settings-websight-public.xml release:prepare -Prelease
+      - name: Create tag and bump version
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml install release:prepare
       - name: Release to ECR
-        run: |
-          mkdir -p ~/.m2
-          curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
-          mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -Prelease,-default
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -Prelease,-default
