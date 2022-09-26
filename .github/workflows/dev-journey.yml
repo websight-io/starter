@@ -189,7 +189,7 @@ jobs:
             ' > ./luna/core/src/main/resources/apps/luna/components/title/dialog/.content.json
       - name: Install changes
         run: |
-          mvn -f ./luna/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallBundle
+          mvn -f ./luna/core/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallBundle
       - name: Validate if functional tests detect changes
         run: |
           mvn -f ./tests/content/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallPackage

@@ -21,7 +21,7 @@
 
   <groupId>pl.ds.luna</groupId>
   <artifactId>luna-parent</artifactId>
-  <version>1.0.0-SNAPSHOT</version>
+  <version>0.1.0-SNAPSHOT</version>
   <name>Luna Project Parent</name>
   <packaging>pom</packaging>
 
@@ -72,7 +72,7 @@
     <websight.cms.version>0.1.1</websight.cms.version>
 
     <!-- Luna -->
-    <howlite.version>1.0.0-SNAPSHOT</howlite.version>
+    <howlite.version>0.1.1</howlite.version>
     <luna.version>${project.version}</luna.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
