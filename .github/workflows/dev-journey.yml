@@ -1,0 +1,214 @@
+# Copyright (C) 2022 Dynamic Solutions
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Dev journey
+
+on:
+  workflow_dispatch:
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  build-howlite:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Cache local Maven repository
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Prepare Maven settings
+        run: |
+          mkdir -p ~/.m2
+          curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
+      - name: Clone and build Howlite
+        run: |
+          git clone https://github.com/websight-io/howlite.git
+          mvn -f howlite/pom.xml --batch-mode -s ~/.m2/settings-websight-public.xml clean install -P e2e
+          mkdir howlite_artifacts
+          cp -a ~/.m2/repository/pl/ds/howlite/. howlite_artifacts
+      - name: Upload Howlite artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: howlite
+          path: howlite_artifacts
+
+  dev-journey:
+    needs: build-howlite
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+      - name: Cache local Maven repository
+        uses: actions/cache@v3
+        with:
+          path: ~/.m2/repository
+          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+          restore-keys: |
+            ${{ runner.os }}-maven-
+      - name: Prepare Maven settings
+        run: |
+          mkdir -p ~/.m2
+          curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
+      - name: Prepare file structure for Howlite
+        run: |
+          mkdir -p ~/.m2/repository/pl/ds/howlite
+      - name: Download Howlite artifact
+        uses: actions/download-artifact@v3
+        with:
+          name: howlite
+          path: ~/.m2/repository/pl/ds/howlite
+      - name: Display structure of Howlite
+        run: |
+          ls -al ~/.m2/repository/pl/ds/howlite
+      - name: Build and test with Maven
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml --update-snapshots clean install -P e2e
+      - name: Run environment
+        run: |
+          pwd
+          docker compose -f ./environment/docker-compose.yml up -d
+          sleep 10
+      - name: Verify environment
+        run: | 
+          curl 'http://localhost:8080/apps/websight-authentication/j_security_check' --data-raw '_charset_=UTF-8&resource=%2F&j_username=wsadmin&j_password=wsadmin' -ipv4 --cookie-jar websight.auth --retry-delay 1 --retry 10
+          checkPage() {
+              echo "Check page $1"
+              if curl $1 -ipv4 --cookie websight.auth | grep 'Resource dumped by HtmlRenderer'; then 
+                  echo "Dumped resource found on $1"
+                  failure
+              fi
+          }
+          checkPage 'http://localhost:8080/content/luna/pages/Homepage.html'
+          checkPage 'http://localhost:8080/content/luna/pages/Products.html'
+          checkPage 'http://localhost:8080/content/luna/pages/Catalog.html'
+          checkPage 'http://localhost:8080/content/luna/pages/About-Us.html'
+      - name: Prepare project changes
+        run: |
+          echo "Update LunaTitleComponent.java"
+          sed -i '/^package pl.ds.luna.components.models;/a\
+          \
+          import javax.inject.Inject;' ./luna/core/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
+  
+          sed -i '/^import org.apache.sling.api.resource.Resource;/a\
+          import org.apache.sling.models.annotations.Default;\
+          ' ./luna/core/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
+
+          sed -i '/^public class LunaTitleComponent extends TitleComponent {/a\
+            \
+            @Inject\
+            @Default(values = {"hl-title__heading--size-5"})\
+            private String overlineSize;\
+            \
+            public String getOverlineSize(){\
+            return overlineSize;\
+          }\
+            ' ./luna/core/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
+          
+          echo "Update title.json"
+          
+          sed -i '/"headingSize": "hl-title__heading--size-1"/a\
+                                           "overlineSize": "hl-title__heading--size-3",\
+            ' ./luna/core/src/test/resources/title.json
+          
+          echo "Update LunaTitleComponentTest.java"
+          
+          sed -i '/assertThat(model.getHeadingSize()).isEqualTo("hl-title__heading--size-4");/a\
+            assertThat(model.getOverlineSize()).isEqualTo("hl-title__heading--size-5");\
+            ' ./luna/core/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java 
+          
+          sed -i '/assertThat(model.getHeadingSize()).isEqualTo("hl-title__heading--size-1");/a\
+            assertThat(model.getOverlineSize()).isEqualTo("hl-title__heading--size-3");\
+            ' ./luna/core/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java
+          
+          echo "Update template.html"
+          
+          sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./luna/core/src/main/resources/apps/luna/components/title/template.html
+            
+            
+            echo "Add dialog"
+            
+            mkdir -p ./luna/core/src/main/resources/apps/luna/components/title/dialog
+            
+            echo '{
+          "sling:resourceType": "wcm/dialogs/dialog",
+          "tabs": {
+            "sling:resourceType": "wcm/dialogs/components/tabs",
+            "generalTab": {
+              "sling:resourceType": "wcm/dialogs/components/tab",
+              "container": {
+                "sling:resourceType": "wcm/dialogs/components/container",
+                "overlineSize": {
+                  "sling:resourceType": "wcm/dialogs/components/include",
+                  "sling:orderBefore": "overline",
+                  "path": "/libs/howlite/components/common/headingsize",
+                  "include": {
+                    "sling:resourceSuperType": "/libs/howlite/components/common/headingsize",
+                    "label": "Overline size",
+                    "name": "overlineSize",
+                    "description": "Changes font size",
+                    "s": {
+                      "selected": true
+                    },
+                    "m": {
+                      "selected": false
+                    }
+                  }
+                }
+              }
+            }
+          }
+          }
+            ' > ./luna/core/src/main/resources/apps/luna/components/title/dialog/.content.json
+      - name: Install changes
+        run: |
+          mvn -f ./luna/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallBundle
+      - name: Validate if functional tests detect changes
+        run: |
+          mvn -f ./tests/content/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallPackage
+          if npm run-script test --prefix tests/end-to-end | grep "1 failed"; then
+              echo "Project changes detected"
+          else
+              echo "Project changes not detected"
+              failure
+          fi
+      - name: Update functional tests
+        run: |
+          sed -i "/have.css/s/20px/25.008px/g" ./tests/end-to-end/tests/title.cy.ts
+          sed -i "/showSubtitle:/a\
+                  overlineSize: 'hl-title__heading--size-5',\
+          " ./tests/end-to-end/tests/title.cy.ts
+          mvn -f ./tests/content/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallPackage
+      - name: Validate functional tests
+        run: |
+          npm run-script test --prefix ./tests/end-to-end
+      - name: Stop environment
+        if: always()
+        run: docker compose -f ./environment/docker-compose.yml down
