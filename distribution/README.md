@@ -1,5 +1,5 @@
-# Luna distribution
-It builds a Luna distribution containing all dependencies, configurations and running scripts (including WebSight and Howlite). 
+# Distribution
+It builds a WebSight distribution containing all dependencies, configurations, running scripts, sample Howlite components and Luna content. 
 
 The release artifacts are:
 - `slingosgifeature` file (descriptor for all projects that extend our distribution)
@@ -32,4 +32,4 @@ and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (us
 Press `CTRL + C` to stop the application.
 
 ## References
-Please see the [Websight Starter docs](https://github.com/websight-io/starter).
+Please see the [Websight](https://www.websight.io/).
