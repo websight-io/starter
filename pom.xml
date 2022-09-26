@@ -139,6 +139,7 @@
     <profile>
       <id>e2e</id>
       <properties>
+        <docker.skip>false</docker.skip>
         <e2e.skip>false</e2e.skip>
       </properties>
     </profile>
