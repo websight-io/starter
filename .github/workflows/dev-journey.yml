@@ -102,40 +102,39 @@ jobs:
             assertThat(model.getOverlineSize()).isEqualTo("hl-title__heading--size-3");\
             ' ./luna/core/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java
           
-          echo "Update title.html"
+          echo "Update lunatitle.html"
           
-          sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./luna/core/src/main/resources/apps/luna/components/title/title.html
+          sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./luna/core/src/main/resources/apps/luna/components/lunatitle/lunatitle.html
             
-            
-            echo "Add dialog"
-            
-            mkdir -p ./luna/core/src/main/resources/apps/luna/components/title/dialog
-            
-            echo '{
-              "tabs": {
-                "generalTab": {
-                  "container": {
-                    "overlineSize": {
-                      "sling:resourceType": "wcm/dialogs/components/include",
-                      "sling:orderBefore": "overline",
-                      "path": "/libs/howlite/components/common/headingsize",
-                      "include": {
-                        "sling:resourceSuperType": "/libs/howlite/components/common/headingsize",
-                        "label": "Overline size",
-                        "name": "overlineSize",
-                        "description": "Changes font size",
-                        "s": {
-                          "selected": true
-                        },
-                        "m": {
-                          "selected": false
-                        }
+          echo "Add dialog"
+          
+          mkdir -p ./luna/core/src/main/resources/apps/luna/components/lunatitle/dialog
+          
+          echo '{
+            "tabs": {
+              "generalTab": {
+                "container": {
+                  "overlineSize": {
+                    "sling:resourceType": "wcm/dialogs/components/include",
+                    "sling:orderBefore": "overline",
+                    "path": "/libs/howlite/components/common/headingsize",
+                    "include": {
+                      "sling:resourceSuperType": "/libs/howlite/components/common/headingsize",
+                      "label": "Overline size",
+                      "name": "overlineSize",
+                      "description": "Changes font size",
+                      "s": {
+                        "selected": true
+                      },
+                      "m": {
+                        "selected": false
                       }
                     }
                   }
                 }
               }
-            }' > ./luna/core/src/main/resources/apps/luna/components/title/dialog/.content.json
+            }
+          }' > ./luna/core/src/main/resources/apps/luna/components/lunatitle/dialog/.content.json
       - name: Install changes
         run: |
           mvn -f ./luna/core/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallBundle
@@ -150,10 +149,10 @@ jobs:
           fi
       - name: Update functional tests
         run: |
-          sed -i "/have.css/s/20px/25.008px/g" ./tests/end-to-end/tests/title.cy.ts
+          sed -i "/have.css/s/20px/25.008px/g" ./tests/end-to-end/tests/lunatitle.cy.ts
           sed -i "/showSubtitle:/a\
                   overlineSize: 'hl-title__heading--size-5',\
-          " ./tests/end-to-end/tests/title.cy.ts
+          " ./tests/end-to-end/tests/lunatitle.cy.ts
           mvn -f ./tests/content/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallPackage
       - name: Validate functional tests
         run: |

@@ -18,13 +18,13 @@ const paths = {
   title: 'ComponentOverlay_rootcontainer/maincontainer/pagesection/title'
 };
 
-describe('Title component', function () {
+describe('Luna Title component', function () {
   beforeEach(() => {
     cy.login();
   });
 
   it('renders correctly in preview mode', function () {
-    cy.visit('/content/luna-test/pages/Title.html');
+    cy.visit('/content/luna-test/pages/LunaTitle.html');
 
     cy.getByTestId('component_title')
       .findByTestId('title')
@@ -65,7 +65,7 @@ describe('Title component', function () {
     ).as('saveProperties');
 
     cy.visit(
-      '/apps/websight/index.html/content/luna-test/pages/Title::editor'
+      '/apps/websight/index.html/content/luna-test/pages/LunaTitle::editor'
     );
 
     cy.getByTestId(paths.title)
@@ -89,11 +89,11 @@ describe('Title component', function () {
     cy.wait('@saveProperties');
 
     cy.request(
-      '/content/luna-test/pages/Title/jcr:content/rootcontainer/maincontainer/pagesection/title.json'
+      '/content/luna-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title.json'
     )
       .its('body')
       .should('deep.eq', {
-        'sling:resourceType': 'luna/components/title',
+        'sling:resourceType': 'luna/components/lunatitle',
         title: 'New heading',
         showSubtitle: 'true',
         subtitle: 'New overline text',
