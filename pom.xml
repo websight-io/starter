@@ -41,7 +41,7 @@
     <connection>scm:git:git://github.com/websight-io/luna-project.git</connection>
     <developerConnection>scm:git:git@github.com:websight-io/luna-project.git</developerConnection>
     <url>https://github.com/websight-io/luna-project</url>
-    <tag>v0.1.0</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
@@ -56,27 +56,20 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <!-- base docker distributions -->
-    <docker.luna.name>ds/websight-cms-luna</docker.luna.name>
-    <docker.luna.tag>latest</docker.luna.tag>
-    <docker.nginx.name>ds/nginx-luna</docker.nginx.name>
-    <docker.nginx.tag>latest</docker.nginx.tag>
-
-    <!-- admin user default credentials for tests -->
-    <websight.admin.username>wsadmin</websight.admin.username>
-    <websight.admin.password>wsadmin</websight.admin.password>
-
-    <!-- WebSight Starter -->
-    <mongo.container.image>mongo:4.4.6</mongo.container.image>
     <websight.cms.version>0.1.2</websight.cms.version>
-
-    <!-- Luna -->
     <howlite.version>0.1.1</howlite.version>
     <luna.version>${project.version}</luna.version>
 
-    <timestamp>${maven.build.timestamp}</timestamp>
-    <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+    <!-- docker distribution -->
+    <docker.skip.push>true</docker.skip.push>
+    <docker.mongo.image>mongo:4.4.6</docker.mongo.image>
+    <docker.luna.image>ds/websight-cms-luna:latest</docker.luna.image>
+    <docker.nginx.image>ds/nginx-luna:latest</docker.nginx.image>
+
+    <!-- e2e tests-->
     <e2e.skip>true</e2e.skip>
+    <websight.admin.username>wsadmin</websight.admin.username>
+    <websight.admin.password>wsadmin</websight.admin.password>
   </properties>
 
   <build>
@@ -128,49 +121,17 @@
           <artifactId>docker-maven-plugin</artifactId>
           <!-- Please do not upgrade to 0.40.2 as there is an issue with multi-platforms support -->
           <version>0.40.1</version>
-          <configuration>
-            <skip>${docker.skip}</skip>
-          </configuration>
-        </plugin>
+        </plugin>    
       </plugins>
     </pluginManagement>
   </build>
 
   <profiles>
     <profile>
-      <id>ci</id>
-      <properties>
-        <docker.skip>false</docker.skip>
-      </properties>
-    </profile>
-    <profile>
       <id>release</id>
       <properties>
-        <docker.luna.name>public.ecr.aws/ds/websight-ce-alpha</docker.luna.name>
-        <docker.luna.tag>luna-@{project.version}</docker.luna.tag>
-        <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
-        <docker.nginx.tag>luna-@{project.version}</docker.nginx.tag>
-        <docker.skip.push>false</docker.skip.push>
+        <docker.skip>true</docker.skip>
       </properties>
-      <build>
-        <pluginManagement>
-          <plugins>
-            <plugin>
-              <groupId>io.fabric8</groupId>
-              <artifactId>docker-maven-plugin</artifactId>
-              <executions>
-                <execution>
-                  <id>push-docker-image</id>
-                  <phase>deploy</phase>
-                  <goals>
-                    <goal>push</goal>
-                  </goals>
-                </execution>
-              </executions>
-            </plugin>
-          </plugins>
-        </pluginManagement>
-      </build>
     </profile>
     <profile>
       <id>e2e</id>

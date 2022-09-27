@@ -65,7 +65,8 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - name: Create tag and bump version
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml release:prepare -P ci,release
-      - name: Release to ECR
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -P ci,release
+      - name: Validate & publish Luna artifacts
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -P ecr,-default
+      - name: Create tag, push images, bump version
+        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml release:prepare -P release
+

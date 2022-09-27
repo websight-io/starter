@@ -155,7 +155,7 @@
           <images>
             <image>
               <alias>mongo</alias>
-              <name>${mongo.container.image}</name>
+              <name>${docker.mongo.image}</name>
               <run>
                 <ports>
                   <port>${mongo.port}:27017</port>

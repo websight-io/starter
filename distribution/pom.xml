@@ -171,14 +171,14 @@
             <configuration>
               <images>
                 <image>
-                  <name>${docker.luna.name}:${docker.luna.tag}</name>
+                  <name>${docker.luna.image}</name>
                   <build>
                     <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
                 <image>
-                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                  <name>${docker.nginx.image}</name>
                   <build>
                     <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
@@ -200,17 +200,32 @@
       </build>
     </profile>
     <profile>
-      <id>ci</id>
+      <id>ecr</id>
+      <properties>
+        <docker.skip.push>false</docker.skip.push>
+      </properties>
       <build>
         <plugins>
+          <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+              <execution>
+                <id>parse-version</id>
+                <goals>
+                  <goal>parse-version</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
           <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
             <configuration>
-              <skip>${docker.skip}</skip>
               <images>
                 <image>
-                  <name>${docker.luna.name}:${docker.luna.tag}</name>
+                  <name>public.ecr.aws/ds/websight-ce-alpha:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -223,7 +238,7 @@
                   </build>
                 </image>
                 <image>
-                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                  <name>public.ecr.aws/ds/websight-nginx-alpha:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -243,6 +258,13 @@
                 <phase>package</phase>
                 <goals>
                   <goal>build</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>push-docker-image</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>push</goal>
                 </goals>
               </execution>
             </executions>
