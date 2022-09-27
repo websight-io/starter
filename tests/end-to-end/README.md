@@ -30,10 +30,6 @@ to run all tests in the background.
 > For local testing all Percy commands are skipped. It is critical to relay on Cypress tests, treating visual tests as some additional
 > testing layer, however, all critical business scenarios should contain checks in Cypress.
 
-The architecture for running Cypress locally looks like below:
-
-![Running functional tests locally](../docs/diagrams/generated/websight-e2e-testing-local.png)
-
 ## How to add new tests?
 
 Install all required dependencies and run auto formatter:
@@ -57,26 +53,6 @@ Before you commit your changes please run:
 npm run format
 npm run test
 ```
-
-## What scenarios are covered?
-
-### Redirection after login
-
-By default, the user should be redirected to `/apps/websight/index.html/content::spaces`. However, once user visited another resource and was
-redirected to the login page, then after logging in, use this location.
-
-Resource: `tests/authentication.spec.ts`
-
-### Restricting access to admin tools
-
-Anonymous users are not allowed to view admin tools. If the user is not logged in, he is redirected to the login page and then redirected
-back to the requested resource. Depending on the resource, the user should see content for logged-in users.
-
-Resource: `tests/authentication.spec.ts`
-
-## How to run in CI?
-
-![Running functional tests in CI](../docs/diagrams/generated/websight-e2e-testing-ci.png)
 
 ## References
 
