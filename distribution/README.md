@@ -1,11 +1,13 @@
 # Distribution
 It builds a WebSight distribution containing all dependencies, configurations, running scripts, sample Howlite components and Luna content. 
 
-The release artifacts are:
-- `slingosgifeature` file (descriptor for all projects that extend our distribution)
-- ICE Docker image.
+The builds two Docker images:
+
+- CMS with Luna - `ds/websight-cms-luna:latest`
+- HTTP server exposing published assets - `ds/nginx-luna:latest`
 
 ## Prerequisites
+
 - Java 17 & Maven
 - Docker Desktop
 
@@ -14,15 +16,15 @@ The release artifacts are:
 Run the command
 
 ```bash
-mvn clean install
+mvn -f pom.xml clean install
 ```
 
 to assemble the distribution, build a Docker image and run integration tests.
 
 ## How to run
 ### Running as JVM application
+
 ```bash
-mvn clean install
 docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=mongoadmin mongo:4.4.6
 java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-websight-cms-luna.json
 ```
