@@ -147,9 +147,9 @@
       <id>release</id>
       <properties>
         <docker.luna.name>public.ecr.aws/ds/websight-ce-alpha</docker.luna.name>
-        <docker.luna.tag>${timestamp}</docker.luna.tag>
+        <docker.luna.tag>luna-@{project.version}</docker.luna.tag>
         <docker.nginx.name>public.ecr.aws/ds/websight-nginx-alpha</docker.nginx.name>
-        <docker.nginx.tag>${timestamp}</docker.nginx.tag>
+        <docker.nginx.tag>@{project.version}</docker.nginx.tag>
         <docker.skip.push>false</docker.skip.push>
       </properties>
       <build>
