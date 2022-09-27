@@ -20,7 +20,7 @@
 
   <groupId>pl.ds.luna</groupId>
   <artifactId>luna-parent</artifactId>
-  <version>0.1.5</version>
+  <version>0.1.6-SNAPSHOT</version>
   <name>Luna Project Parent</name>
   <packaging>pom</packaging>
 
@@ -41,7 +41,7 @@
     <connection>scm:git:git://github.com/websight-io/luna-project.git</connection>
     <developerConnection>scm:git:git@github.com:websight-io/luna-project.git</developerConnection>
     <url>https://github.com/websight-io/luna-project</url>
-    <tag>v0.1.5</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
