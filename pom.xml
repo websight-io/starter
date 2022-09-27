@@ -68,7 +68,7 @@
 
     <!-- WebSight Starter -->
     <mongo.container.image>mongo:4.4.6</mongo.container.image>
-    <websight.cms.version>0.1.1</websight.cms.version>
+    <websight.cms.version>0.1.2</websight.cms.version>
 
     <!-- Luna -->
     <howlite.version>0.1.1</howlite.version>
