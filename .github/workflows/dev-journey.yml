@@ -23,41 +23,7 @@ permissions:
   contents: read
 
 jobs:
-  build-howlite:
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-      - name: Cache local Maven repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
-      - name: Prepare Maven settings
-        run: |
-          mkdir -p ~/.m2
-          curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
-      - name: Clone and build Howlite
-        run: |
-          git clone https://github.com/websight-io/howlite.git
-          mvn -f howlite/pom.xml --batch-mode -s ~/.m2/settings-websight-public.xml clean install -P e2e
-          mkdir howlite_artifacts
-          cp -a ~/.m2/repository/pl/ds/howlite/. howlite_artifacts
-      - name: Upload Howlite artifact
-        uses: actions/upload-artifact@v3
-        with:
-          name: howlite
-          path: howlite_artifacts
-
   dev-journey:
-    needs: build-howlite
     runs-on: ubuntu-latest
 
     steps:
@@ -74,37 +40,25 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: Prepare Maven settings
+
+      - name: Build and test with Maven
         run: |
           mkdir -p ~/.m2
           curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
-      - name: Prepare file structure for Howlite
-        run: |
-          mkdir -p ~/.m2/repository/pl/ds/howlite
-      - name: Download Howlite artifact
-        uses: actions/download-artifact@v3
-        with:
-          name: howlite
-          path: ~/.m2/repository/pl/ds/howlite
-      - name: Display structure of Howlite
-        run: |
-          ls -al ~/.m2/repository/pl/ds/howlite
-      - name: Build and test with Maven
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml --update-snapshots clean install -P e2e
+          mvn --batch-mode -s ~/.m2/settings-websight-public.xml clean verify -P e2e
       - name: Run environment
         run: |
-          pwd
           docker compose -f ./environment/docker-compose.yml up -d
           sleep 10
       - name: Verify environment
         run: | 
           curl 'http://localhost:8080/apps/websight-authentication/j_security_check' --data-raw '_charset_=UTF-8&resource=%2F&j_username=wsadmin&j_password=wsadmin' -ipv4 --cookie-jar websight.auth --retry-delay 1 --retry 10
           checkPage() {
-              echo "Check page $1"
-              if curl $1 -ipv4 --cookie websight.auth | grep 'Resource dumped by HtmlRenderer'; then 
-                  echo "Dumped resource found on $1"
-                  failure
-              fi
+            echo "Check page $1"
+            if curl $1 -ipv4 --cookie websight.auth | grep 'Resource dumped by HtmlRenderer'; then 
+              echo "Dumped resource found on $1"
+              exit 1
+            fi
           }
           checkPage 'http://localhost:8080/content/luna/pages/Homepage.html'
           checkPage 'http://localhost:8080/content/luna/pages/Products.html'
@@ -158,35 +112,30 @@ jobs:
             mkdir -p ./luna/core/src/main/resources/apps/luna/components/title/dialog
             
             echo '{
-          "sling:resourceType": "wcm/dialogs/dialog",
-          "tabs": {
-            "sling:resourceType": "wcm/dialogs/components/tabs",
-            "generalTab": {
-              "sling:resourceType": "wcm/dialogs/components/tab",
-              "container": {
-                "sling:resourceType": "wcm/dialogs/components/container",
-                "overlineSize": {
-                  "sling:resourceType": "wcm/dialogs/components/include",
-                  "sling:orderBefore": "overline",
-                  "path": "/libs/howlite/components/common/headingsize",
-                  "include": {
-                    "sling:resourceSuperType": "/libs/howlite/components/common/headingsize",
-                    "label": "Overline size",
-                    "name": "overlineSize",
-                    "description": "Changes font size",
-                    "s": {
-                      "selected": true
-                    },
-                    "m": {
-                      "selected": false
+              "tabs": {
+                "generalTab": {
+                  "container": {
+                    "overlineSize": {
+                      "sling:resourceType": "wcm/dialogs/components/include",
+                      "sling:orderBefore": "overline",
+                      "path": "/libs/howlite/components/common/headingsize",
+                      "include": {
+                        "sling:resourceSuperType": "/libs/howlite/components/common/headingsize",
+                        "label": "Overline size",
+                        "name": "overlineSize",
+                        "description": "Changes font size",
+                        "s": {
+                          "selected": true
+                        },
+                        "m": {
+                          "selected": false
+                        }
+                      }
                     }
                   }
                 }
               }
-            }
-          }
-          }
-            ' > ./luna/core/src/main/resources/apps/luna/components/title/dialog/.content.json
+            }' > ./luna/core/src/main/resources/apps/luna/components/title/dialog/.content.json
       - name: Install changes
         run: |
           mvn -f ./luna/core/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallBundle
@@ -194,10 +143,10 @@ jobs:
         run: |
           mvn -f ./tests/content/pom.xml -s ~/.m2/settings-websight-public.xml clean install -P autoInstallPackage
           if npm run-script test --prefix tests/end-to-end | grep "1 failed"; then
-              echo "Project changes detected"
+            echo "Project changes detected"
           else
-              echo "Project changes not detected"
-              failure
+            echo "Project changes not detected"
+            exit 1  
           fi
       - name: Update functional tests
         run: |
