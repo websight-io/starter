@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.luna</groupId>
     <artifactId>luna-parent</artifactId>
-    <version>0.1.6-SNAPSHOT</version>
+    <version>1.0.0-SNAPSHOT</version>
   </parent>
 
   <artifactId>luna-distribution</artifactId>
@@ -225,7 +225,7 @@
             <configuration>
               <images>
                 <image>
-                  <name>public.ecr.aws/ds/websight-ce-alpha:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
+                  <name>public.ecr.aws/ds/websight-cms-ce:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -238,7 +238,7 @@
                   </build>
                 </image>
                 <image>
-                  <name>public.ecr.aws/ds/websight-nginx-alpha:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
+                  <name>public.ecr.aws/ds/websight-nginx-ce:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
                   <build>
                     <buildx>
                       <platforms>
