@@ -45,7 +45,14 @@
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-cms-ce-feature</artifactId>
       <version>${websight.cms.version}</version>
-      <classifier>community</classifier>
+      <classifier>cms</classifier>
+      <type>slingosgifeature</type>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.websight</groupId>
+      <artifactId>websight-cms-ce-feature</artifactId>
+      <version>${websight.cms.version}</version>
+      <classifier>oak-node-store</classifier>
       <type>slingosgifeature</type>
     </dependency>
   </dependencies>
@@ -79,14 +86,20 @@
           <aggregates>
             <aggregate>
               <classifier>websight-cms-luna</classifier>
-              <title>Luna feature</title>
+              <title>WebSight CMS with Luna project</title>
               <filesInclude>*.json</filesInclude>
-              <filesInclude>oak/oak_persistence_mongods.json</filesInclude>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>
                 <version>${websight.cms.version}</version>
-                <classifier>community</classifier>
+                <classifier>cms</classifier>
+                <type>slingosgifeature</type>
+              </includeArtifact>
+              <includeArtifact>
+                <groupId>pl.ds.websight</groupId>
+                <artifactId>websight-cms-ce-feature</artifactId>
+                <version>${websight.cms.version}</version>
+                <classifier>oak-node-store</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
             </aggregate>
