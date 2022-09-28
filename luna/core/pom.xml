@@ -21,7 +21,7 @@
     <parent>
         <groupId>pl.ds.luna</groupId>
         <artifactId>luna-project</artifactId>
-        <version>1.0.0-SNAPSHOT</version>
+        <version>1.0.0</version>
     </parent>
 
     <artifactId>luna-core</artifactId>
