@@ -54,9 +54,12 @@ if [[ ! -f "${feature}" ]]; then
     exit 1
 fi
 
-echo "[INFO] Selected ${feature} for launching"
+docker_feature=$(find ${CACHE_DIR} -name "*docker.slingosgifeature")
 
-feature="${feature}"
+echo "[INFO] Selected ${feature} for launching"
+echo "[INFO] Automatically appended ${docker_feature}"
+
+feature="${feature},${docker_feature}"
 
 setupDefaults
 setupDebugOptions
