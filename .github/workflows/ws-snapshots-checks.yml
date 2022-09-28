@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: Build checks
+name: WS CMS + Howlite snapshots checks
 
 on:
   workflow_dispatch:
