@@ -1,6 +1,6 @@
 # WebSight Starter
 
-WebSight Starter is a sample project built on top of the [Websight CMS Community Edition](https://www.websight.io/). It contains sample content built with [Howlite](https://github.com/websight-io/howlite) components and a demo page called _Luna_.
+WebSight Starter is a sample project built on top of the [Websight CMS Community Edition](https://www.websight.io/). It contains a demo page called _Luna_ built with [Howlite](https://github.com/websight-io/howlite) components.
 
 For more details please check [our Product Page](https://www.websight.io)
 
