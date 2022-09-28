@@ -66,8 +66,8 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <websight.cms.version>0.2.0</websight.cms.version>
-    <howlite.version>0.2.0</howlite.version>
+    <websight.cms.version>1.0.0</websight.cms.version>
+    <howlite.version>1.0.0</howlite.version>
     <luna.version>${project.version}</luna.version>
 
     <!-- docker distribution -->
