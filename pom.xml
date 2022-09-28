@@ -38,9 +38,9 @@
   </licenses>
 
   <scm>
-    <connection>scm:git:git://github.com/websight-io/luna-project.git</connection>
-    <developerConnection>scm:git:git@github.com:websight-io/luna-project.git</developerConnection>
-    <url>https://github.com/websight-io/luna-project</url>
+    <connection>scm:git:git://github.com/websight-io/starter.git</connection>
+    <developerConnection>scm:git:git@github.com:websight-io/starter.git</developerConnection>
+    <url>https://github.com/websight-io/starter</url>
     <tag>HEAD</tag>
   </scm>
 

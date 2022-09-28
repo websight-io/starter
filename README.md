@@ -5,7 +5,7 @@ WebSight Starter is a sample project built on top of the [Websight CMS Community
 For more details please check [our Product Page](https://www.websight.io)
 
 ## How to run
-See the [`environment`](https://github.com/websight-io/luna-project/tree/main/environment).
+See the [`environment`](./environment).
 
 ## Structure
 
