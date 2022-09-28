@@ -59,14 +59,12 @@ jobs:
           mkdir -p ~/.ssh
           printf '%s\n' "${{ secrets.SSH_SECRET_KEY }}" > ~/.ssh/id_rsa
           chmod 0600 ~/.ssh/id_rsa
-          mkdir -p ~/.m2
-          curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
       - name: Set up QEMU # https://github.com/docker/buildx/issues/499
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
       - name: Validate & publish Luna artifacts
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml deploy -P ecr,-default
+        run: mvn --batch-mode deploy -P ecr,-default
       - name: Create tag, push images, bump version
-        run: mvn --batch-mode -s ~/.m2/settings-websight-public.xml release:prepare -P release
+        run: mvn --batch-mode release:prepare -P release
 

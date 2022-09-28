@@ -47,9 +47,7 @@ jobs:
       - name: Clone and build Howlite
         run: |
           git clone https://github.com/websight-io/howlite.git
-          mkdir -p ~/.m2
-          curl -s https://repo.websight.io/settings-websight-public.xml --output ~/.m2/settings-websight-public.xml
-          mvn --batch-mode -f howlite/pom.xml -s ~/.m2/settings-websight-public.xml clean install
+          mvn --batch-mode -f howlite/pom.xml clean install
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:

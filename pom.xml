@@ -49,6 +49,16 @@
     <url>https://websight.io</url>
   </organization>
 
+  <repositories>
+    <repository>
+      <id>websight-repo</id>
+      <url>https://repo.websight.io/maven/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
   <properties>
     <!-- generic -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
