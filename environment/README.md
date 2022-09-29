@@ -1,15 +1,8 @@
 # Local Environment
 
-**Prerequisites**
-
-> To use the latest version of WebSight you need access to AWS. Please follow the `AWS Account && CLI configuration` and `AWS CodeArtifact` instructions from https://bitbucket.org/teamds-workspace/websight-dev-tools/src/main/.
-
----
-
-Build the distribution & Docker images running the following commands from this directory:
+Build the distribution & Docker images running the following command from this directory:
 
 ```bash
-export CODEARTIFACT_AUTH_TOKEN=`aws codeartifact get-authorization-token --domain websight --domain-owner 299371835903 --query authorizationToken --output text`
 mvn -f ../pom.xml clean install
 ```
 
@@ -26,8 +19,8 @@ mvn -f ../pom.xml clean install
 
 Services are available with URLs:
 
-- [localhost:8080](http://localhost:8080/) - ICE admin panel (`wsadmin`/`wsadmin`)
-- [localhost](http://localhost/) - the published pages
+- [localhost:8080](http://localhost:8080/) - CMS admin panel (`wsadmin`/`wsadmin`)
+- [localhost](http://localhost/) - after publishing pages will be available on the standard `:80` port, e.g. http://localhost/Homepage.html
 
 ## References
-Look for more information in [WebSight](https://www.websight.io/).
+Look for more information on https://www.websight.io/.

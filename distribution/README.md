@@ -29,7 +29,7 @@ docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INIT
 java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-websight-cms-luna.json
 ```
 
-and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (use default `wsadmin/wsadmin` password).
+and open [localhost:8080](http://localhost:8080/) to see the CMS admin panel (use default `wsadmin/wsadmin` password).
 
 Press `CTRL + C` to stop the application.
 
