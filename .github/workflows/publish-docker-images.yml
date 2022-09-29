@@ -60,7 +60,7 @@ jobs:
         run: |
             git fetch --all
             git fetch --tags
-            CURRENT_VERSION=$(git describe --tags --abbrev=0)
+            CURRENT_VERSION=$(git tag | sort -V | tail -1)
             git checkout tags/${CURRENT_VERSION}
       - name: Validate & publish Luna artifacts
         run: mvn --batch-mode deploy -P ecr,-default
