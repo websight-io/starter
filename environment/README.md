@@ -21,6 +21,3 @@ Services are available with URLs:
 
 - [localhost:8080](http://localhost:8080/) - CMS admin panel (`wsadmin`/`wsadmin`)
 - [localhost](http://localhost/) - after publishing pages will be available on the standard `:80` port, e.g. http://localhost/Homepage.html
-
-## References
-Look for more information on https://www.websight.io/.
