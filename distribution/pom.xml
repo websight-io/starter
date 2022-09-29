@@ -208,25 +208,12 @@
       <build>
         <plugins>
           <plugin>
-            <groupId>org.codehaus.mojo</groupId>
-            <artifactId>build-helper-maven-plugin</artifactId>
-            <version>3.3.0</version>
-            <executions>
-              <execution>
-                <id>parse-version</id>
-                <goals>
-                  <goal>parse-version</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
             <configuration>
               <images>
                 <image>
-                  <name>public.ecr.aws/ds/websight-cms-ce:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
+                  <name>public.ecr.aws/ds/websight-cms-ce:luna-${project.vesion}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -239,7 +226,7 @@
                   </build>
                 </image>
                 <image>
-                  <name>public.ecr.aws/ds/websight-nginx-ce:luna-${parsedVersion.majorVersion}.${parsedVersion.minorVersion}.${parsedVersion.incrementalVersion}</name>
+                  <name>public.ecr.aws/ds/websight-nginx-ce:luna-${project.vesion}</name>
                   <build>
                     <buildx>
                       <platforms>

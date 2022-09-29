@@ -63,8 +63,13 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - name: Validate & publish Luna artifacts
-        run: mvn --batch-mode deploy -P ecr,-default
       - name: Create tag, push images, bump version
         run: mvn --batch-mode release:prepare -P release
-
+      - name: Checkout latest tag
+        run: |
+            git fetch --all
+            git fetch --tags
+            CURRENT_VERSION=$(git tag | sort -V | tail -1)
+            git checkout tags/${CURRENT_VERSION}
+      - name: Validate & publish Luna artifacts
+        run: mvn --batch-mode deploy -P ecr,-default
