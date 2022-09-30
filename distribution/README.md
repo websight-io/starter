@@ -16,7 +16,7 @@ The builds two Docker images:
 Run the command
 
 ```bash
-mvn -f pom.xml clean install
+../mvnw -f pom.xml clean install
 ```
 
 to assemble the distribution, build a Docker image and run integration tests.

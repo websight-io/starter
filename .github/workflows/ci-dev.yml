@@ -47,7 +47,7 @@ jobs:
       - name: Clone and build Howlite
         run: |
           git clone https://github.com/websight-io/howlite.git
-          mvn --batch-mode -f howlite/pom.xml clean install
+          ./mvnw --batch-mode -f howlite/pom.xml clean install
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -63,8 +63,8 @@ jobs:
       - name: Update snapshot version
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: mvn -f distribution/pom.xml versions:update-properties
+        run: ./mvnw -f distribution/pom.xml versions:update-properties
       - name: Build and test with Maven
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: mvn --batch-mode --update-snapshots clean install -P e2e
+        run: ./mvnw --batch-mode --update-snapshots clean install -P e2e
