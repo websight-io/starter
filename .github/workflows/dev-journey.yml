@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build and test with Maven
-        run: mvn --batch-mode clean verify -P e2e
+        run: ./mvnw --batch-mode clean verify -P e2e
       - name: Run environment
         run: |
           docker compose -f ./environment/docker-compose.yml up -d
@@ -133,10 +133,10 @@ jobs:
           }' > ./luna/core/src/main/resources/apps/luna/components/lunatitle/dialog/.content.json
       - name: Install changes
         run: |
-          mvn -f ./luna/core/pom.xml clean install -P autoInstallBundle
+          ./mvnw -f ./luna/core/pom.xml clean install -P autoInstallBundle
       - name: Validate if functional tests detect changes
         run: |
-          mvn -f ./tests/content/pom.xml clean install -P autoInstallPackage
+          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
           if npm run-script test --prefix tests/end-to-end | grep "1 failed"; then
             echo "Project changes detected"
           else
@@ -149,7 +149,7 @@ jobs:
           sed -i "/showSubtitle:/a\
                   overlineSize: 'hl-title__heading--size-5',\
           " ./tests/end-to-end/tests/lunatitle.cy.ts
-          mvn -f ./tests/content/pom.xml clean install -P autoInstallPackage
+          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
       - name: Validate functional tests
         run: |
           npm run-script test --prefix ./tests/end-to-end

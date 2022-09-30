@@ -31,7 +31,7 @@ For more details see our [Authoring Quick Start Guide](https://www.websight.io/d
 Run the command
 
 ```bash
-mvn clean verify -P e2e
+./mvnw clean verify -P e2e
 ```
 
 to build the sample websight, aggregate all required CMS dependencies, run end-to-end tests with Cypress, build Docker images (`ds/nginx-luna:latest`, `ds/websight-cms-luna:latest`).

@@ -3,15 +3,15 @@ Contains the luna project.
 
 Build
 ```
-mvn clean install
+../mvnw clean install
 ```
 
 Build with e2e tests
 ```
-mvn clean install -P e2e
+../mvnw clean install -P e2e
 ```
 
 Build with local deployment
 ```
-mvn clean install -P autoInstallBundle,autoInstallPackage
+../mvnw clean install -P autoInstallBundle,autoInstallPackage
 ```

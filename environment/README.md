@@ -3,7 +3,7 @@
 Build the distribution & Docker images running the following command from this directory:
 
 ```bash
-mvn -f ../pom.xml clean install
+../mvnw -f ../pom.xml clean install
 ```
 
 * Deploy the new environment with:

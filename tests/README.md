@@ -8,7 +8,7 @@ It contains:
 ## How to run
 
 ```bash
-mvn clean install -P e2e
+../mvnw clean install -P e2e
 ```
 
 Packs the content package, then builds a Docker image that contains the package. Finally, it runs the container with the created Docker image 

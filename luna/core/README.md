@@ -6,10 +6,10 @@ Module contains components logic for Luna components
 
 Build
 ```
-mvn clean install
+../../mvnw clean install
 ```
 
 Build with local deployment
 ```
-mvn clean install -P autoInstallBundle
+../../mvnw clean install -P autoInstallBundle
 ```
