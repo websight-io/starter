@@ -112,6 +112,7 @@
           <repositories>
             <repository>
               <includeClassifier>websight-cms-luna</includeClassifier>
+              <includeClassifier>docker</includeClassifier>
             </repository>
           </repositories>
           <outputDir>target</outputDir>
