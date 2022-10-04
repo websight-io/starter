@@ -24,7 +24,7 @@ RUN mkdir /websight && \
 VOLUME /websight/repository
 VOLUME /websight/docroot
 
-COPY src/main/docker/websight-cms/bin /websight/bin
+COPY src/main/docker/websight-cms-luna/bin /websight/bin
 RUN ["chmod", "+x", "/websight/bin/launch.sh"]
 COPY target/dependency/org.apache.sling.feature.launcher.jar /websight
 COPY target/artifacts/ /websight/cache/

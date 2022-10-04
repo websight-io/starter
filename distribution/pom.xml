@@ -173,7 +173,7 @@
                 <image>
                   <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
                   <build>
-                    <dockerFile>src/main/docker/websight-cms/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
@@ -220,7 +220,7 @@
                         <platform>linux/arm64</platform>
                       </platforms>
                     </buildx>
-                    <dockerFile>src/main/docker/websight-cms/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
