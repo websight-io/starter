@@ -19,15 +19,20 @@ services:
     image: ds/websight-cms-luna:latest
     ports:
       - "8080:8080"
+      - "5005:5005"
     environment:
-      WS_LUNA_LOG_LEVEL: "info"
       WS_ADMIN_USERNAME: "wsadmin"
       MONGODB_HOST: "mongo"
       MONGODB_PORT: 27017
       MONGODB_USERNAME: "mongoadmin"
+      # LEASE_CHECK_MODE: "LENIENT" is for local usage only. This option must not be used on servers.
+      # This is to avoid lost of connection to local mongo instace in some cases.
+      LEASE_CHECK_MODE: "LENIENT"
+      # WS_DEBUG: "true" is for local usage only. It enables java debugger.
+      WS_DEBUG: "true"
     volumes:
-      - cms_logs:/websight/logs
-      - site_repository:/websight/docroot
+      - luna-project_cms_logs:/websight/logs
+      - luna-project_site_repository:/websight/docroot
     secrets:
       - source: mongo_password
         target: mongo.password
@@ -46,9 +51,9 @@ services:
       - "27017:27017"
     environment:
       - MONGO_INITDB_ROOT_USERNAME=mongoadmin
-      - MONGO_INITDB_ROOT_PASSWORD_FILE=/run/secrets/mongo.password
+      - MONGO_INITDB_ROOT_PASSWORD=mongoadmin
     volumes:
-      - mongo_repository:/data/db
+      - luna-project_mongo_repository:/data/db
     secrets:
       - source: mongo_password
         target: mongo.password
@@ -60,12 +65,12 @@ services:
     ports:
       - "80:80"
     volumes:
-      - site_repository:/usr/share/nginx/html:ro
+      - luna-project_site_repository:/usr/share/nginx/html:ro
 
 volumes:
-  cms_logs:
-  mongo_repository:
-  site_repository:
+  luna-project_cms_logs:
+  luna-project_mongo_repository:
+  luna-project_site_repository:
 
 secrets:
   mongo_password:

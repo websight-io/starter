@@ -22,6 +22,7 @@
     <groupId>pl.ds.luna</groupId>
     <artifactId>luna-parent</artifactId>
     <version>1.0.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <modules>

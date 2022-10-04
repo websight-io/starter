@@ -25,7 +25,8 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>luna</module>
+    <module>application</module>
+    <module>content</module>
     <module>distribution</module>
     <module>tests</module>
   </modules>
@@ -66,20 +67,23 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <websight.cms.version>1.0.0</websight.cms.version>
-    <howlite.version>1.0.0</howlite.version>
-    <luna.version>${project.version}</luna.version>
+    <!-- base docker distributions -->
+    <docker.cms-project.name>ds/websight-cms-luna</docker.cms-project.name>
+    <docker.cms-project.tag>latest</docker.cms-project.tag>
+    <docker.nginx.name>ds/nginx-luna</docker.nginx.name>
+    <docker.nginx.tag>latest</docker.nginx.tag>
 
-    <!-- docker distribution -->
-    <docker.skip.push>true</docker.skip.push>
-    <docker.mongo.image>mongo:4.4.6</docker.mongo.image>
-    <docker.luna.image>ds/websight-cms-luna:latest</docker.luna.image>
-    <docker.nginx.image>ds/nginx-luna:latest</docker.nginx.image>
-
-    <!-- e2e tests-->
-    <e2e.skip>true</e2e.skip>
+    <!-- admin user default credentials for tests -->
     <websight.admin.username>wsadmin</websight.admin.username>
     <websight.admin.password>wsadmin</websight.admin.password>
+    <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
+
+    <!-- WebSight CMS Version -->
+    <websight.cms.version>1.0.0</websight.cms.version>
+
+    <timestamp>${maven.build.timestamp}</timestamp>
+    <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
+    <howlite.version>1.0.0</howlite.version>
   </properties>
 
   <build>
@@ -101,6 +105,7 @@
                 <exclude>**/*.json</exclude>
                 <exclude>**/*.txt</exclude>
                 <exclude>**/.content.xml</exclude>
+                <exclude>**/.node_version</exclude>
                 <exclude>howlite-artifacts/**</exclude>
               </excludes>
             </configuration>
@@ -135,20 +140,5 @@
       </plugins>
     </pluginManagement>
   </build>
-
-  <profiles>
-    <profile>
-      <id>release</id>
-      <properties>
-        <docker.skip>true</docker.skip>
-      </properties>
-    </profile>
-    <profile>
-      <id>e2e</id>
-      <properties>
-        <e2e.skip>false</e2e.skip>
-      </properties>
-    </profile>
-  </profiles>
 
 </project>

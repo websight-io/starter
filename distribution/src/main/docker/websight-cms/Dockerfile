@@ -24,12 +24,12 @@ RUN mkdir /websight && \
 VOLUME /websight/repository
 VOLUME /websight/docroot
 
-COPY src/main/docker/websight-cms-luna/bin /websight/bin
+COPY src/main/docker/websight-cms/bin /websight/bin
+RUN ["chmod", "+x", "/websight/bin/launch.sh"]
 COPY target/dependency/org.apache.sling.feature.launcher.jar /websight
 COPY target/artifacts/ /websight/cache/
 
-RUN apt-get update && apt-get -y install curl
-
+RUN apt-get update && apt-get install curl --assume-yes
 HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD curl --fail http://localhost:8080/system/health || exit 1
 
 WORKDIR /websight
