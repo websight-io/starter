@@ -23,7 +23,6 @@ For more details see our [Authoring Quick Start Guide](https://www.websight.io/d
 ### Prerequisites
 
 - [AdoptOpenJDK 17](https://adoptium.net/) with `x64`/`aarch64` architecture (on mac use `brew install openjdk@17`).
-- Maven 3.8.5+
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ### How to build
