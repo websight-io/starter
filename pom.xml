@@ -86,6 +86,16 @@
     <howlite.version>1.0.0</howlite.version>
   </properties>
 
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>pl.ds.websight</groupId>
+        <artifactId>websight-cms-ce-feature</artifactId>
+        <version>${websight.cms.version}</version>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
+
   <build>
     <plugins>
       <plugin>
@@ -125,6 +135,15 @@
         <version>3.0.0-M6</version>
         <configuration>
           <tagNameFormat>v@{project.version}</tagNameFormat>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.11.0</version>
+        <configuration>
+          <allowSnapshots>true</allowSnapshots>
+          <includeProperties>websight.cms.version</includeProperties>
         </configuration>
       </plugin>
     </plugins>
