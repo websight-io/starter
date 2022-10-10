@@ -55,13 +55,22 @@ docker compose up
     - `content` - contains content used for end to end tests
     - `end-to-end` - end-to-end tests validating distribution
 
-## Community
+## Contributing
+Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.
+
+## Community support
 
 To support us, you may follow the project at:
 
 * feel free to star this repository, open [issues](https://github.com/websight-io/starter/issues), and start [discussions](https://github.com/websight-io/starter/discussions)
 * [linkedin.com/company/websight-io/](https://www.linkedin.com/company/websight-io/)
 * [twitter.com/websight_io](https://twitter.com/websight_io)
+
+## Documentation
+See our dedicated repository for the [WebSight CMS documentation](https://github.com/websight-io/docs), or view our documentation live:
+
+- [User guide](https://www.websight.io/docs/quick-start/)
+- [Developer guide](https://www.websight.io/docs/developers/quick-start/)
 
 ## License
 
