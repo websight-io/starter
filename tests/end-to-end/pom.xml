@@ -332,14 +332,26 @@
           <nodeVersion>${node.version}</nodeVersion>
         </configuration>
       </plugin>
-
       <plugin>
-        <groupId>org.codehaus.mojo</groupId>
-        <artifactId>versions-maven-plugin</artifactId>
-        <version>2.11.0</version>
-        <configuration>
-          <allowSnapshots>true</allowSnapshots>
-        </configuration>
+        <groupId>org.apache.rat</groupId>
+        <artifactId>apache-rat-plugin</artifactId>
+        <executions>
+          <execution>
+            <phase>validate</phase>
+            <goals>
+              <goal>check</goal>
+            </goals>
+            <configuration>
+              <excludes>
+                <exclude>*.md</exclude>
+                <exclude>/.node_version</exclude>
+                <exclude>/node/**</exclude>
+                <exclude>/node_modules/**</exclude>
+                <exclude>/target/**</exclude>
+              </excludes>
+            </configuration>
+          </execution>
+        </executions>
       </plugin>
     </plugins>
   </build>
