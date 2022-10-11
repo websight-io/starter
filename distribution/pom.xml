@@ -28,6 +28,14 @@
   <name>Luna Project: Distribution</name>
   <description>Luna distribution that builds the Docker Image for the projects running on WebSight.</description>
 
+  <properties>
+    <!-- IT tests properties -->
+    <it.extra.bundles.count>81</it.extra.bundles.count>
+    <it.startTimeoutSeconds>30</it.startTimeoutSeconds>
+
+    <websight.base.version>1.2.15</websight.base.version>
+  </properties>
+
   <dependencies>
     <dependency>
       <groupId>pl.ds.luna</groupId>
@@ -54,6 +62,31 @@
       <version>${websight.cms.version}</version>
       <classifier>oak-node-store</classifier>
       <type>slingosgifeature</type>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.websight</groupId>
+      <artifactId>websight-base-sling-feature</artifactId>
+      <version>${websight.base.version}</version>
+      <type>test-jar</type>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>io.rest-assured</groupId>
+      <artifactId>rest-assured</artifactId>
+      <version>5.1.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.awaitility</groupId>
+      <artifactId>awaitility</artifactId>
+      <version>4.2.0</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.slf4j</groupId>
+      <artifactId>slf4j-simple</artifactId>
+      <version>1.7.36</version>
+      <scope>test</scope>
     </dependency>
   </dependencies>
 
@@ -109,12 +142,6 @@
               <includeClassifier>websight-cms-luna</includeClassifier>
             </scan>
           </scans>
-          <repositories>
-            <repository>
-              <includeClassifier>websight-cms-luna</includeClassifier>
-              <includeClassifier>docker</includeClassifier>
-            </repository>
-          </repositories>
           <outputDir>target</outputDir>
         </configuration>
         <executions>
@@ -151,6 +178,96 @@
               <!-- 1.1.28 and newer versions don't work out-of-the-box due to SLING-10956 -->
               <artifact>org.apache.sling:org.apache.sling.feature.launcher:1.1.26</artifact>
               <stripVersion>true</stripVersion>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>build-helper-maven-plugin</artifactId>
+        <version>3.3.0</version>
+        <executions>
+          <execution>
+            <id>reserve-network-port</id>
+            <goals>
+              <goal>reserve-network-port</goal>
+            </goals>
+            <phase>pre-integration-test</phase>
+            <configuration>
+              <portNames>
+                <portName>cms.port</portName>
+                <portName>mongo.port</portName>
+              </portNames>
+            </configuration>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>feature-launcher-maven-plugin</artifactId>
+        <version>0.1.2</version>
+        <configuration>
+          <launches>
+            <launch>
+              <id>websight-cms-luna</id>
+              <feature>
+                <groupId>${project.groupId}</groupId>
+                <artifactId>${project.artifactId}</artifactId>
+                <version>${project.version}</version>
+                <classifier>websight-cms-luna</classifier>
+                <type>slingosgifeature</type>
+              </feature>
+              <launcherArguments>
+                <frameworkProperties>
+                  <org.osgi.service.http.port>${cms.port}</org.osgi.service.http.port>
+                </frameworkProperties>
+              </launcherArguments>
+              <environmentVariables>
+                <MONGODB_PORT>${mongo.port}</MONGODB_PORT>
+                <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
+                <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
+              </environmentVariables>
+              <startTimeoutSeconds>${it.startTimeoutSeconds}</startTimeoutSeconds>
+            </launch>
+          </launches>
+        </configuration>
+        <executions>
+          <execution>
+            <goals>
+              <goal>start</goal>
+              <goal>stop</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-failsafe-plugin</artifactId>
+        <version>3.0.0-M7</version>
+        <configuration>
+          <dependenciesToScan>
+            <dependency>pl.ds.websight:websight-base-sling-feature</dependency>
+          </dependenciesToScan>
+          <systemPropertyVariables>
+            <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
+            <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
+            <WS_APPLICATION_VERSION>${project.version}</WS_APPLICATION_VERSION>
+          </systemPropertyVariables>
+          <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
+          <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+        </configuration>
+        <executions>
+          <execution>
+            <id>cms-integration-tests</id>
+            <goals>
+              <goal>integration-test</goal>
+              <goal>verify</goal>
+            </goals>
+            <configuration>
+              <systemPropertyVariables>
+                <WS_HTTP_PORT>${cms.port}</WS_HTTP_PORT>
+                <FEATURE_EXTRA_ACTIVE_BUNDLES_COUNT>${it.extra.bundles.count}</FEATURE_EXTRA_ACTIVE_BUNDLES_COUNT>
+              </systemPropertyVariables>
             </configuration>
           </execution>
         </executions>
