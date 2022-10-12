@@ -15,6 +15,14 @@
       "created_at": "2022-10-12T08:31:54Z",
       "repoId": 484844880,
       "pullRequestNo": 39
+    },
+    {
+      "name": "tomaszmichalak",
+      "id": 8047609,
+      "comment_id": 1275853213,
+      "created_at": "2022-10-12T09:18:44Z",
+      "repoId": 484844880,
+      "pullRequestNo": 42
     }
   ]
 }
