@@ -73,7 +73,6 @@ See our dedicated repository for the [WebSight CMS documentation](https://github
 - [Developer guide](https://www.websight.io/docs/developers/quick-start/)
 
 ## License
-
 WebSight Starter and [Howlite components](https://github.com/websight-io/howlite) are `open-source` with `Apache License 2.0` license.
 
 WebSight CMS Community Edition is free to use for everyone ([terms of use](https://www.websight.io/terms-of-use/)).
