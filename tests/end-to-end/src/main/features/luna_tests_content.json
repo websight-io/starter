@@ -1,5 +1,5 @@
 {
   "content-packages:ARTIFACTS|true": [
-    "pl.ds.luna:luna-tests-content:zip:${luna.version}"
+    "pl.ds.luna:luna-tests-content:zip:${project.version}"
   ]
 }

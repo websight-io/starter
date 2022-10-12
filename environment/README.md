@@ -1,23 +1,16 @@
-# Local Environment
+# Environments
 
-Build the distribution & Docker images running the following command from this directory:
+For local usage and development.
+See [`local`](./local)
 
-```bash
-../mvnw -f ../pom.xml clean install
-```
 
-* Deploy the new environment with:
-  ```bash
-  docker compose up
-  ```
-  > Note: hitting `ctrl+c` just stops the environment. It will not delete the content.
+You can pass the following system property variables to override settings:
 
-* Completely delete the environment (including content):
-  ```bash
-  sh delete.sh
-  ```
-
-Services are available with URLs:
-
-- [localhost:8080](http://localhost:8080/) - CMS admin panel (`wsadmin`/`wsadmin`)
-- [localhost](http://localhost/) - after publishing pages will be available on the standard `:80` port, e.g. http://localhost/Homepage.html
+| Env name                 | default value  | description                                                         |
+|--------------------------|----------------|---------------------------------------------------------------------|
+| `WS_ADMIN_USERNAME`      | `wsadmin`      | The username for the administrator.                                 |
+| `WS_ADMIN_PASSWORD`      | `wsadmin`      | The password for the administrator.                                 |
+| `WS_HTTP_PORT`           | `8080`         | The default port on which tests expect the application to run.      |
+| `WS_WEBSIGHT_LOG_LEVEL`  | `info`         | Log leve of websigh logger.                                         |
+| `PROJECT_LOG_LEVEL`      | `info`         | Log level of the Luna project logger.                               |
+| `LEASE_CHECK_MODE`       | `STRICT`       | The lease check mode. Available values are `STRICT` and `LENIENT`.  |

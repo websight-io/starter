@@ -3,7 +3,7 @@
     "org.apache.sling.commons.log.LogManager.factory.config~luna.log": {
       "org.apache.sling.commons.log.packagingDataEnabled": true,
       "org.apache.sling.commons.log.pattern": "%d{dd.MM.yyyy HH:mm:ss.SSS} *%level* [%thread] %logger %msg%n",
-      "org.apache.sling.commons.log.level": "$[env:WS_LUNA_LOG_LEVEL;default=info]",
+      "org.apache.sling.commons.log.level": "$[env:PROJECT_LOG_LEVEL;default=info]",
       "org.apache.sling.commons.log.file": "logs/luna.log",
       "org.apache.sling.commons.log.file.number:Integer": "8",
       "org.apache.sling.commons.log.file.size": "'.'yyyy-MM-dd",
@@ -19,12 +19,12 @@
   },
   "bundles": [
     {
-      "id": "pl.ds.luna:luna-core:${luna.version}",
+      "id": "pl.ds.luna:luna-backend:${project.version}",
       "start-order": "25"
     }
   ],
   "content-packages:ARTIFACTS|true": [
-    "pl.ds.luna:luna-content:zip:${luna.version}"
+    "pl.ds.luna:luna-content:zip:${project.version}"
   ]
 }
   
