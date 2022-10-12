@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.luna</groupId>
     <artifactId>luna-parent</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.0.1</version>
   </parent>
 
   <artifactId>luna-distribution</artifactId>
