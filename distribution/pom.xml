@@ -30,7 +30,7 @@
 
   <properties>
     <!-- IT tests properties -->
-    <it.extra.bundles.count>81</it.extra.bundles.count>
+    <it.extra.bundles.count>83</it.extra.bundles.count>
     <it.startTimeoutSeconds>30</it.startTimeoutSeconds>
 
     <websight.base.version>1.2.15</websight.base.version>
