@@ -37,7 +37,7 @@ to build the sample websight, aggregate all required CMS dependencies, run end-t
 
 ### How to run
 
-Once Docker images are ready, all you need is to run Docker Compose from the `environment` folder:
+Once Docker images are ready, all you need is to run Docker Compose from the `environment/local` folder:
 
 ```bash
 docker compose up
@@ -45,17 +45,32 @@ docker compose up
 
 ## Project structure
 
-- `luna` - contains Luna project with sample content
-- `distribution` - contains Luna distribution in form of a Docker image
-- `environment` - contains scripts and instruction on how to run Luna local environment using Docker Compose
+- `application` - components related code and scripts
+    - `backend` - contains application elements (components, templates, etc.) and Java code
+- `content` - contains sample content created with use of application
+- `distribution` - builds a distribution of the project - instance feature model and docker images for runtime components
+- `environment` - contains scripts and files used but build environment
+    - `local` - starts local environment
+- `tests` - responsible for the automatic distribution validation
+    - `content` - contains content used for end to end tests
+    - `end-to-end` - end-to-end tests validating distribution
 
-## Community
+## Contributing
+Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.
+
+## Community support
 
 To support us, you may follow the project at:
 
 * feel free to star this repository, open [issues](https://github.com/websight-io/starter/issues), and start [discussions](https://github.com/websight-io/starter/discussions)
 * [linkedin.com/company/websight-io/](https://www.linkedin.com/company/websight-io/)
 * [twitter.com/websight_io](https://twitter.com/websight_io)
+
+## Documentation
+See our dedicated repository for the [WebSight CMS documentation](https://github.com/websight-io/docs), or view our documentation live:
+
+- [User guide](https://www.websight.io/docs/quick-start/)
+- [Developer guide](https://www.websight.io/docs/developers/quick-start/)
 
 ## License
 
