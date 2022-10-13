@@ -44,10 +44,6 @@ jobs:
           key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
           restore-keys: |
             ${{ runner.os }}-maven-
-      - name: Clone and build Howlite
-        run: |
-          git clone https://github.com/websight-io/howlite.git
-          ./mvnw --batch-mode -f howlite/pom.xml clean install
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
