@@ -63,7 +63,7 @@ jobs:
       - name: Update snapshot version
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: ./mvnw -f distribution/pom.xml versions:update-properties
+        run: ./mvnw versions:update-properties
       - name: Build and test with Maven
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
