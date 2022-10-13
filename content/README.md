@@ -6,10 +6,10 @@ Module contains content with sample pages.
 
 Build
 ```
-../../mvnw clean install
+../mvnw clean install
 ```
 
 Build with local deployment
 ```
-../../mvnw clean install -P autoInstallPackage
+../mvnw clean install -P autoInstallPackage
 ```

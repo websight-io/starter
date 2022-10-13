@@ -16,5 +16,5 @@
 -->
 
 <workspaceFilter version="1.0">
-  <filter root="/content/luna"/>
+  <filter root="/content/luna" mode="merge"/>
 </workspaceFilter>

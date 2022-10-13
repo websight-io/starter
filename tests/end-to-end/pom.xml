@@ -21,7 +21,8 @@
   <parent>
     <groupId>pl.ds.luna</groupId>
     <artifactId>luna-tests</artifactId>
-    <version>1.0.1-SNAPSHOT</version>
+    <version>1.1.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>luna-tests-e2e</artifactId>
@@ -30,6 +31,14 @@
 
   <properties>
     <it.startTimeoutSeconds>30</it.startTimeoutSeconds>
+
+    <e2e.skip>true</e2e.skip>
+    <e2e.skip.cypress>true</e2e.skip.cypress>
+    <e2e.skip.visual>true</e2e.skip.visual>
+    <mongo.container.image>mongo:4.4.6</mongo.container.image>
+
+    <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
+    <node.version>v16.15.0</node.version>
   </properties>
 
   <dependencies>
@@ -44,7 +53,7 @@
       <groupId>pl.ds.luna</groupId>
       <artifactId>luna-tests-content</artifactId>
       <version>${project.version}</version>
-      <type>zip</type>
+      <type>pom</type>
     </dependency>
   </dependencies>
 
@@ -72,13 +81,13 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            luna.version
+            project.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
-              <classifier>websight-cms-luna-tests</classifier>
+              <classifier>luna-project-tests</classifier>
               <filesInclude>*.json</filesInclude>
-              <title>Luna with test data</title>
+              <title>Luna distribution with test data</title>
               <includeArtifact>
                 <groupId>pl.ds.luna</groupId>
                 <artifactId>luna-distribution</artifactId>
@@ -90,9 +99,14 @@
           </aggregates>
           <scans>
             <scan>
-              <includeClassifier>websight-cms-luna-tests</includeClassifier>
+              <includeClassifier>luna-project-tests</includeClassifier>
             </scan>
           </scans>
+          <repositories>
+            <repository>
+              <includeClassifier>luna-project-tests</includeClassifier>
+            </repository>
+          </repositories>
           <outputDir>target</outputDir>
           <selection />
           <extension />
@@ -150,12 +164,11 @@
       <plugin>
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
-        <version>0.40.1</version>
         <configuration>
           <images>
             <image>
               <alias>mongo</alias>
-              <name>${docker.mongo.image}</name>
+              <name>${mongo.container.image}</name>
               <run>
                 <ports>
                   <port>${mongo.port}:27017</port>
@@ -195,12 +208,12 @@
         <configuration>
           <launches>
             <launch>
-              <id>websight-cms-luna-tests</id>
+              <id>luna-project-tests</id>
               <feature>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>${project.artifactId}</artifactId>
                 <version>${project.version}</version>
-                <classifier>websight-cms-luna-tests</classifier>
+                <classifier>luna-project-tests</classifier>
                 <type>slingosgifeature</type>
               </feature>
               <launcherArguments>
@@ -284,7 +297,7 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
-              <skip>${e2e.skip}</skip>
+              <skip>${e2e.skip.cypress}</skip>
               <arguments>cypress run test:ci</arguments>
               <environmentVariables>
                 <CYPRESS_baseUrl>http://localhost:${cms.port}</CYPRESS_baseUrl>
@@ -295,12 +308,30 @@
               </environmentVariables>
             </configuration>
           </execution>
+          <execution>
+            <id>npx visual test</id>
+            <goals>
+              <goal>npx</goal>
+            </goals>
+            <phase>integration-test</phase>
+            <configuration>
+             <skip>${e2e.skip.visual}</skip>
+              <arguments>percy exec -- cypress run</arguments>
+              <environmentVariables>
+                <CYPRESS_baseUrl>http://localhost:${cms.port}</CYPRESS_baseUrl>
+                <CYPRESS_loginUsername>${websight.admin.username}</CYPRESS_loginUsername>
+                <CYPRESS_loginPassword>${websight.admin.password}</CYPRESS_loginPassword>
+                <PERCY_TOKEN>${env.PERCY_TOKEN}</PERCY_TOKEN>
+                <TERM>xterm</TERM>
+                <CI>1</CI>
+              </environmentVariables>
+            </configuration>
+          </execution>
         </executions>
         <configuration>
           <nodeVersion>${node.version}</nodeVersion>
         </configuration>
       </plugin>
-
       <plugin>
         <groupId>org.apache.rat</groupId>
         <artifactId>apache-rat-plugin</artifactId>
@@ -324,5 +355,24 @@
       </plugin>
     </plugins>
   </build>
+
+  <profiles>
+    <profile>
+      <id>e2e</id>
+      <properties>
+        <e2e.skip>false</e2e.skip>
+        <e2e.skip.cypress>false</e2e.skip.cypress>
+        <e2e.skip.visual>true</e2e.skip.visual>
+      </properties>
+    </profile>
+    <profile>
+      <id>e2e-visual</id>
+      <properties>
+        <e2e.skip>false</e2e.skip>
+        <e2e.skip.cypress>true</e2e.skip.cypress>
+        <e2e.skip.visual>false</e2e.skip.visual>
+      </properties>
+    </profile>
+  </profiles>
 
 </project>
