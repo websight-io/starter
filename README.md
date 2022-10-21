@@ -18,6 +18,38 @@ and then see the results on [localhost:8080/apps/websight/index.html/content::sp
 
 For more details see our [Authoring Quick Start Guide](https://www.websight.io/docs/quick-start/).
 
+## Websight Technologies
+
+Find out what technologies Dynamic Solutions team have used to design, build and launch WebSight.
+
+### CMS
+
+Websight CMS makes use of the following technologies:
+| | | | | | | | |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| <a href="https://www.java.com"><img src="/assets/technologies/java-logo.png" alt="Java" style="width:80px;" /></a> | <a href="https://felix.apache.org"><img src="/assets/technologies/osgi-logo.png" alt="OSGi" style="width:90px;" /></a> | <a href="https://sling.apache.org"><img src="/assets/technologies/sling-logo.png" alt="Apache Sling" style="width:70px;" /></a> | <a href="https://www.jackrabbit.apache.org"><img src="/assets/technologies/apachejackrabbit-logo.gif" alt="Apache Jackrabbit" style="width:90px;" /></a> | <a href="https://reactjs.org"><img src="/assets/technologies/react-logo.png" alt="ReactJS" style="width:90px;" /></a> | <a href="https://www.typescriptlang.org"><img src="/assets/technologies/typescript-logo.png" alt="TypeScript" style="width:50px;" /></a> | <a href="https://www.nginx.com"><img src="/assets/technologies/nginx-logo.png" alt="nginx" style="width:80px;" /></a> | <a href="https://www.mongodb.com"><img src="/assets/technologies/mongodb-logo.png" alt="MongoDB" style="width:90px;" /></a>
+
+### CMS Runtime
+
+The following technologies are used for running WebSight:
+| | |
+|:-:|:-:|
+| <a href="https://aws.amazon.com"><img src="/assets/technologies/aws-logo.png" alt="AWS" style="width:60px;" /></a>> | <a href="https://www.docker.com"><img src="/assets/technologies/docker-logo.png" alt="Docker" style="width:80px;" /></a> |
+
+### CMS Supportive
+
+The following technologies are used to support the process of delivery:
+| | | | | | | | | |
+|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+| <a href="https://www.gnu.org/software/bash"><img src="/assets/technologies/bash-logo.png" alt="Bash" style="width:50px;" /></a> | <a href="https://maven.apache.org"><img src="/assets/technologies/maven-logo.png" alt="Maven" style="width:70px;" /></a> | <a href="https://www.cypress.io"><img src="/assets/technologies/cypress-logo.png" alt="Cypress" style="width:70px;" /></a> | <a href="https://www.percy.io"><img src="/assets/technologies/percy-logo.png" alt="Percy.io" style="width:90px;" /></a> | <a href="https://bitbucket.org/product/features/pipelines"><img src="/assets/technologies/bitbucket-logo.png" alt="Bitbucket" style="width:75px;" /></a> | <a href="https://github.com/features/actions"><img src="/assets/technologies/github-logo.png" alt="Github Actions" style="width:60px;" /></a> | <a href="https://www.atlassian.com/software/confluence"><img src="/assets/technologies/confluence-logo.png" alt="Confluence" style="width:80px;" /></a> | <a href="https://www.atlassian.com/software/jira"><img src="/assets/technologies/jira-logo.png" alt="Jira" style="width:35px;" /></a> | <a href="https://yaml.org"><img src="/assets/technologies/yaml-logo.png" alt="YAML" style="width:50px;" /></a> |
+
+### Design and Prototype
+
+The following technologies are used in designing and prototyping:
+| | |
+|:-:|:-:|
+| <a href="https://www.figma.com"><img src="/assets/technologies/figma-logo.png" alt="Figma" style="width:80px;" /></a> | <a href="https://miro.com"><img src="/assets/technologies/miro-logo.png" alt="Miro" style="width:70px;" /></a> |
+
 ## Development
 
 ### Prerequisites
