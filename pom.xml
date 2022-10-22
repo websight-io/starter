@@ -99,29 +99,6 @@
   <build>
     <plugins>
       <plugin>
-        <groupId>org.apache.rat</groupId>
-        <artifactId>apache-rat-plugin</artifactId>
-        <version>0.14</version>
-        <executions>
-          <execution>
-            <phase>validate</phase>
-            <goals>
-              <goal>check</goal>
-            </goals>
-            <configuration>
-              <excludes>
-                <exclude>**/*.bnd</exclude>
-                <exclude>**/*.md</exclude>
-                <exclude>**/*.json</exclude>
-                <exclude>**/*.txt</exclude>
-                <exclude>**/.content.xml</exclude>
-                <exclude>howlite-artifacts/**</exclude>
-              </excludes>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
-      <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
         <version>3.0.0</version>
