@@ -20,7 +20,7 @@
 
   <groupId>pl.ds.luna</groupId>
   <artifactId>luna-parent</artifactId>
-  <version>1.1.1-SNAPSHOT</version>
+  <version>1.2.0-SNAPSHOT</version>
   <name>Luna Project Parent</name>
   <packaging>pom</packaging>
 

@@ -52,7 +52,7 @@
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-cms-ce-feature</artifactId>
       <version>${websight.cms.version}</version>
-      <classifier>oak-node-store</classifier>
+      <classifier>oak-document-store</classifier>
       <type>slingosgifeature</type>
     </dependency>
   </dependencies>
@@ -99,7 +99,7 @@
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>
                 <version>${websight.cms.version}</version>
-                <classifier>oak-node-store</classifier>
+                <classifier>oak-document-store</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
             </aggregate>
