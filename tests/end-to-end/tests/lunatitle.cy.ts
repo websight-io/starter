@@ -71,7 +71,7 @@ describe('Luna Title component', function () {
     cy.getByTestId(paths.title)
       .click()
       .find('span.name')
-      .should('have.text', 'Luna Title');
+      .should('contain.text', 'Luna Title');
 
     cy.percySnapshotPageEditor('Title editor');
 
