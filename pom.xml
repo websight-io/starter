@@ -84,6 +84,7 @@
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.1</howlite.version>
+    <mongo.container.image>mongo:4.4.6</mongo.container.image>
   </properties>
 
   <dependencyManagement>

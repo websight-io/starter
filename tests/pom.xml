@@ -26,6 +26,7 @@
   </parent>
 
   <modules>
+    <module>integration</module>
     <module>content</module>
     <module>end-to-end</module>
   </modules>
