@@ -38,7 +38,7 @@ Please see the [Websight](https://www.websight.io/).
 
 # Integration tests
 
-During module building there are running integration test.
+During module building, there are running integration tests.
 
 You can pass the following system property variables to override some settings of the websight-base-sling-feature test jar:
 
@@ -49,4 +49,4 @@ You can pass the following system property variables to override some settings o
 | WS_HTTP_PORT                       | 8080          | The default port on which tests expect the application to run.    | 
 | FEATURE_EXTRA_ACTIVE_BUNDLES_COUNT | 0             | The number of additional bundles the feature is expected to add.  |
 
-The most important is to set FEATURE_EXTRA_ACTIVE_BUNDLES_COUNT to the number of extra bundles you are expecing the feature model is providing in addition to the bundles form the base feature model.
+The most important is to set FEATURE_EXTRA_ACTIVE_BUNDLES_COUNT to the number of extra bundles you are expecting the feature model is providing in addition to the bundles from the base feature model.
