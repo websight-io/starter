@@ -23,6 +23,14 @@
       "created_at": "2022-10-12T12:54:31Z",
       "repoId": 484844880,
       "pullRequestNo": 44
+    },
+    {
+      "name": "radeklawgmin",
+      "id": 22235601,
+      "comment_id": 1295022478,
+      "created_at": "2022-10-28T13:47:34Z",
+      "repoId": 484844880,
+      "pullRequestNo": 51
     }
   ]
 }
