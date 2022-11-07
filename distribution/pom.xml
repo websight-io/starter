@@ -81,7 +81,7 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            howlite.version,project.version
+            howlite.version,project.version,bulma.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>

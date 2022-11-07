@@ -84,6 +84,7 @@
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.1</howlite.version>
+    <bulma.version>0.1.5-SNAPSHOT</bulma.version>
   </properties>
 
   <dependencyManagement>
@@ -131,7 +132,7 @@
           <artifactId>docker-maven-plugin</artifactId>
           <!-- Please do not upgrade to 0.40.2 as there is an issue with multi-platforms support -->
           <version>0.40.1</version>
-        </plugin>    
+        </plugin>
       </plugins>
     </pluginManagement>
   </build>
