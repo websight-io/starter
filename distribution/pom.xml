@@ -29,8 +29,6 @@
   <description>Luna distribution that builds the Docker Image for the projects running on WebSight.</description>
 
   <properties>
-    <websight.base.version>1.3.0</websight.base.version>
-
     <it.extra.bundles.count>83</it.extra.bundles.count>
     <it.startTimeoutSeconds>30</it.startTimeoutSeconds>
   </properties>
@@ -66,8 +64,8 @@
     <!-- Tests -->
     <dependency>
       <groupId>pl.ds.websight</groupId>
-      <artifactId>websight-base-sling-feature</artifactId>
-      <version>${websight.base.version}</version>
+      <artifactId>websight-cms-ce-feature</artifactId>
+      <version>${websight.cms.version}</version>
       <type>test-jar</type>
       <scope>test</scope>
     </dependency>
@@ -81,6 +79,13 @@
       <groupId>io.rest-assured</groupId>
       <artifactId>rest-assured</artifactId>
       <version>5.1.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.websight</groupId>
+      <artifactId>websight-base-sling-feature</artifactId>
+      <version>1.3.0</version>
+      <type>test-jar</type>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -337,12 +342,12 @@
             <version>3.0.0-M7</version>
             <configuration>
               <dependenciesToScan>
-                <dependency>pl.ds.websight:websight-base-sling-feature</dependency>
+                <dependency>pl.ds.websight:websight-cms-ce-feature</dependency>
               </dependenciesToScan>
               <systemPropertyVariables>
                 <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
                 <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
-                <WS_APPLICATION_VERSION>${project.version}</WS_APPLICATION_VERSION>
+                <WS_APPLICATION_VERSION>${websight.cms.version}</WS_APPLICATION_VERSION>
               </systemPropertyVariables>
               <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
               <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
