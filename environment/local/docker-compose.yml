@@ -64,7 +64,6 @@ services:
     image: ds/nginx-luna:latest
     ports:
       - "80:80"
-      - "81:81"
     volumes:
       - luna-project_site_repository:/usr/share/nginx/html:ro
 

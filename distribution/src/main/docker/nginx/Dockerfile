@@ -14,10 +14,5 @@
 
 FROM nginx
 
-EXPOSE 81
-
 COPY src/main/docker/nginx/default.conf /etc/nginx/conf.d/default.conf
-COPY src/main/docker/nginx/luna.conf /etc/nginx/conf.d/luna.conf
-COPY src/main/docker/nginx/bulma.conf /etc/nginx/conf.d/bulma.conf
 COPY src/main/docker/nginx/html/Homepage.html /usr/share/nginx/html/content/luna/pages/Homepage.html
-COPY src/main/docker/nginx/html/Personal.html /usr/share/nginx/html/content/bulma/pages/Personal.html
