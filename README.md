@@ -39,6 +39,15 @@ to build the sample websight, aggregate all required CMS dependencies, run end-t
 
 Once Docker images are ready, all you need is to run Docker Compose from the `environment/local` folder:
 
+You can access CMS via [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
+
+This project contains two spaces: 
+- Luna
+- Bulma - Personal Template
+
+Content published from `Luna` space is available at [localhost](http://localhost)
+Content published from `Bulma - Personal Template` space is available at [localhost:81](http://localhost:81)
+
 ```bash
 docker compose up
 ```
