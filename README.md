@@ -31,7 +31,7 @@ Websight CMS makes use of the following technologies:
 ### CMS Runtime
 
 The following technologies are used for running WebSight:
-| <a href="https://aws.amazon.com"><img src="/assets/technologies/aws-logo.png" alt="AWS" style="width:60px;" /></a>> | <a href="https://www.docker.com"><img src="/assets/technologies/docker-logo.png" alt="Docker" style="width:80px;" /></a> |
+| <a href="https://aws.amazon.com"><img src="/assets/technologies/aws-logo.png" alt="AWS" style="width:60px;" /></a> | <a href="https://www.docker.com"><img src="/assets/technologies/docker-logo.png" alt="Docker" style="width:80px;" /></a> |
 |:-:|:-:|
 
 ### CMS Supportive
