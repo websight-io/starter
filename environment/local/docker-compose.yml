@@ -36,6 +36,8 @@ services:
     secrets:
       - source: mongo_password
         target: mongo.password
+      - source: admin_password
+        target: admin.password
     depends_on:
       - mongo
 
@@ -75,3 +77,5 @@ volumes:
 secrets:
   mongo_password:
     file: ./mongo_password.txt
+  admin_password:
+    file: ./admin_password.txt
