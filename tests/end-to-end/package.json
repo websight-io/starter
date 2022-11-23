@@ -21,6 +21,7 @@
     "@typescript-eslint/eslint-plugin": "^5.35.1",
     "chai": "^4.3.6",
     "cypress": "^10.7.0",
+    "cypress-wait-until": "^1.7.2",
     "eslint": "^8.23.0",
     "eslint-plugin-chai-friendly": "^0.7.2",
     "eslint-plugin-cypress": "^2.12.1",

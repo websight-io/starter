@@ -19,6 +19,11 @@ const paths = {
 };
 
 describe('Luna Title component', function () {
+
+  before(() => {
+    cy.waitUntilInstanceIsUp();
+  })
+
   beforeEach(() => {
     cy.login();
   });

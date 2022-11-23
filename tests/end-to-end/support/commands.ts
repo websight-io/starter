@@ -15,6 +15,7 @@
  */
 
 import '@4tw/cypress-drag-drop';
+import 'cypress-wait-until';
 
 /**
  * Adds support for '/' in testId
@@ -36,8 +37,6 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add('login', () => {
-  cy.wait(10000);
-
   const authUrl = `${
     Cypress.env('baseUrl') || ''
   }/apps/websight-authentication/j_security_check`;
@@ -109,4 +108,12 @@ Cypress.Commands.add('percySnapshotDialog', (name: string, options) => {
     scope: '[data-testid^="ModalDialog_"][role="dialog"]',
     ...options
   });
+});
+
+Cypress.Commands.add('waitUntilInstanceIsUp', () => {
+  cy.waitUntil(() => cy.request({
+    method: 'GET',
+    url: `${Cypress.env('baseUrl') || ''}/system/healthcheck`,
+    failOnStatusCode: false
+  }).then(data => data.status === 200), { timeout: 10000 });
 });
