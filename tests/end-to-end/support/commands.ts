@@ -36,6 +36,8 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add('login', () => {
+  cy.wait(5000);
+
   const authUrl = `${
     Cypress.env('baseUrl') || ''
   }/apps/websight-authentication/j_security_check`;
