@@ -36,7 +36,7 @@ Cypress.Commands.add(
 );
 
 Cypress.Commands.add('login', () => {
-  cy.wait(5000);
+  cy.wait(10000);
 
   const authUrl = `${
     Cypress.env('baseUrl') || ''
