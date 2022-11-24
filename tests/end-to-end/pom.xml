@@ -291,6 +291,17 @@
             </configuration>
           </execution>
           <execution>
+            <id>npx wait</id>
+            <goals>
+              <goal>npx</goal>
+            </goals>
+            <phase>integration-test</phase>
+            <configuration>
+              <skip>${e2e.skip}</skip>
+              <arguments>wait-on http://localhost:${cms.port}/system/health</arguments>
+            </configuration>
+          </execution>
+          <execution>
             <id>npx test</id>
             <goals>
               <goal>npx</goal>
