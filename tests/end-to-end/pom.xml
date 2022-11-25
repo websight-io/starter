@@ -298,7 +298,7 @@
             <phase>integration-test</phase>
             <configuration>
               <skip>${e2e.skip}</skip>
-              <arguments>wait-on http://localhost:${cms.port}/system/health -t 10000</arguments>
+              <arguments>wait-on http://localhost:${cms.port}/system/health -t 60000</arguments>
             </configuration>
           </execution>
           <execution>
