@@ -1,0 +1,12 @@
+{
+  "bundles": [
+    {
+      "id": "pl.ds.bulma:bulma-backend:${bulma.version}",
+      "start-order": "25"
+    }
+  ],
+  "content-packages:ARTIFACTS|true": [
+    "pl.ds.bulma:bulma-content:zip:${bulma.version}"
+  ]
+}
+  
