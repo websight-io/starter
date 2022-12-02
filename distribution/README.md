@@ -42,15 +42,15 @@ During module building, there are running integration tests.
 
 You can pass the following system property variables to override some settings of the websight-cms-ce-feature test jar:
 
-| Env name                        | default value   | description                                                    |
-|---------------------------------|-----------------|----------------------------------------------------------------|
-| WS_ADMIN_USERNAME               | wsadmin         | The username for the administrator.                            |
-| WS_ADMIN_PASSWORD               | wsadmin         | The password for the administrator.                            |
-| WS_HTTP_PORT                    | 8080            | The default port on which tests expect the application to run. | 
-| WS_ERROR_LOG                    | /logs/error.log | The location of an error log file.                             | 
-| WS_APPLICATION_VERSION          | 8080            | WebSight CMS version.                                          | 
-| INSTALLED_PACKAGES_GROUP_{NAME} | -               | Installed packages group.                                      |
-| INSTALLED_PACKAGES_COUNT_{NAME} | Integer.MAX     | The number of installed packages for the corresponding group.  |
-| WS_DATABASE                     | MONGO           | The database type. Possible values: MONGO, TAR, OTHER          |
+| Env name                        | default value      | description                                                    |
+|---------------------------------|--------------------|----------------------------------------------------------------|
+| WS_ADMIN_USERNAME               | wsadmin            | The username for the administrator.                            |
+| WS_ADMIN_PASSWORD               | wsadmin            | The password for the administrator.                            |
+| WS_HTTP_PORT                    | 8080               | The default port on which tests expect the application to run. | 
+| WS_ERROR_LOG                    | /logs/error.log    | The location of an error log file.                             | 
+| WS_APPLICATION_VERSION          | 8080               | WebSight CMS version.                                          | 
+| INSTALLED_PACKAGES_GROUP_{NAME} | -                  | Installed packages group.                                      |
+| INSTALLED_PACKAGES_COUNT_{NAME} | Integer.MAX_VALUE  | The number of installed packages for the corresponding group.  |
+| WS_DATABASE                     | MONGO              | The database type. Possible values: MONGO, TAR, OTHER          |
 
 INSTALLED_PACKAGES_GROUP_{NAME} and INSTALLED_PACKAGES_COUNT_{NAME} can be set multiple times with different names.
