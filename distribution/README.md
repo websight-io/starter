@@ -40,7 +40,7 @@ Please see the [Websight](https://www.websight.io/).
 
 During module building, there are running integration tests.
 
-You can pass the following system property variables to override some settings of the websight-base-sling-feature test jar:
+You can pass the following system property variables to override some settings of the websight-cms-ce-feature test jar:
 
 | Env name                        | default value   | description                                                    |
 |---------------------------------|-----------------|----------------------------------------------------------------|
