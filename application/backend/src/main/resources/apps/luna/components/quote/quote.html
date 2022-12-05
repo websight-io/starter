@@ -15,5 +15,24 @@
 */-->
 
 <sly data-sly-use.model="pl.ds.luna.components.models.QuoteComponent">
-  <div class="quote">${model.text}</div>
+  <div class="quote">
+    <svg class="quote__quotation-marks" width="68" height="54" viewBox="0 0 68 54" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+      <path
+          d="M24.7193 54H0V36.148C0 28.9243 0.615782 23.2401 1.84735 19.0954C3.13756 14.8914 5.4834 11.1316 8.88486 7.81579C12.2863 4.5 16.6261 1.89474 21.9043 0L26.7426 10.3026C21.8163 11.9605 18.2682 14.2697 16.0983 17.2303C13.9871 20.1908 12.8728 24.1283 12.7555 29.0428H24.7193V54ZM65.9767 54H41.2574V36.148C41.2574 28.8651 41.8732 23.1513 43.1048 19.0066C44.395 14.8618 46.7408 11.1316 50.1423 7.81579C53.6024 4.5 57.9422 1.89474 63.1617 0L68 10.3026C63.0737 11.9605 59.5257 14.2697 57.3558 17.2303C55.2445 20.1908 54.1302 24.1283 54.0129 29.0428H65.9767V54Z"
+          fill="currentColor"/>
+    </svg>
+    <div class="quote__content">
+      <div>${model.text @ context='html'}</div>
+      <div class="quote__author">
+        <sly data-sly-test="${model.showImage}">
+          <img class="quote__author-image" src="${model.authorImage}" alt="${model.imageAlt}">
+        </sly>
+        <div class="quote__author-info">
+          <span class="quote__author-name">${model.authorName}</span>
+          <span class="quote__author-description">${model.authorDescription}</span>
+        </div>
+      </div>
+    </div>
+  </div>
 </sly>

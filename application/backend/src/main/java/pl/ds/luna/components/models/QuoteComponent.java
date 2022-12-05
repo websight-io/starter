@@ -29,14 +29,19 @@ public class QuoteComponent {
   @Default(values = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel dictum eros.")
   private String text;
 
+  @Inject
   private String authorName;
 
+  @Inject
   private String authorDescription;
 
+  @Inject
   private boolean showImage;
 
+  @Inject
   private String authorImage;
 
+  @Inject
   private String imageAlt;
 
   public String getText() {

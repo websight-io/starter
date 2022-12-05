@@ -1,4 +1,5 @@
 {
+  "group": "Bulma.io Components",
   "sling:resourceType": "ws:Component",
-  "title": "Quotee"
+  "title": "Quote"
 }
