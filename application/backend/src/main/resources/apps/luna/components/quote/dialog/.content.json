@@ -24,7 +24,7 @@
       "image": {
         "sling:resourceType": "wcm/dialogs/components/toggle",
         "name": "showImage",
-        "label": "Author\u2019s image"
+        "label": "Show author\u2019s image"
       },
       "container": {
         "sling:resourceType": "wcm/dialogs/components/container",
