@@ -15,7 +15,7 @@
 */-->
 
 <sly data-sly-use.model="pl.ds.luna.components.models.QuoteComponent">
-  <div class="quote">
+  <div class="quote" data-testid="component_${resource.name}">
     <svg class="quote__quotation-marks" width="68" height="54" viewBox="0 0 68 54" fill="none"
          xmlns="http://www.w3.org/2000/svg">
       <path
@@ -23,7 +23,7 @@
           fill="currentColor"/>
     </svg>
     <div class="quote__content">
-      <div>${model.text @ context='html'}</div>
+      <div data-testid="text">${model.text @ context='html'}</div>
       <div class="quote__author">
         <sly data-sly-test="${model.showImage}">
           <img class="quote__author-image" src="${model.authorImage}" alt="${model.imageAlt}">

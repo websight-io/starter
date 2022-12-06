@@ -17,4 +17,5 @@
 
 <workspaceFilter version="1.0">
   <filter root="/content/luna-test"/>
+  <filter root="/content/bulma-test"/>
 </workspaceFilter>
