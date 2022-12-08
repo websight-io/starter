@@ -25,7 +25,7 @@ describe('Quote component', function () {
   });
 
   it('renders correctly in preview mode', function () {
-    cy.visit('/content/bulma-test/pages/Quote.html');
+    cy.visit('/content/low-code-luna-test/pages/Quote.html');
 
     cy.getByTestId('component_quote')
     .findByTestId('text')
@@ -47,7 +47,7 @@ describe('Quote component', function () {
     cy.getByTestId('component_quote_1')
     .get('img')
     .should('have.attr', 'alt', 'Alt text')
-    .should('have.attr', 'src', '/content/bulma-test/assets/images/quote/Janet.png')
+    .should('have.attr', 'src', '/content/low-code-luna-test/assets/images/quote/Janet.png')
 
     cy.percySnapshotPreview('Quote preview');
   });
@@ -59,7 +59,7 @@ describe('Quote component', function () {
     ).as('saveProperties');
 
     cy.visit(
-        '/apps/websight/index.html/content/bulma-test/pages/Quote::editor'
+        '/apps/websight/index.html/content/low-code-luna-test/pages/Quote::editor'
     );
 
     cy.getByTestId(paths.title)
@@ -86,7 +86,7 @@ describe('Quote component', function () {
     cy.wait('@saveProperties');
 
     cy.request(
-        '/content/bulma-test/pages/Quote/jcr:content/pagecontainer/quote.json'
+        '/content/low-code-luna-test/pages/Quote/jcr:content/pagecontainer/quote.json'
     )
     .its('body')
     .should('deep.eq', {
@@ -96,7 +96,7 @@ describe('Quote component', function () {
       authorName: 'Author name',
       authorDescription: 'Author description',
       showImage: 'true',
-      authorImage: '/content/bulma-test/assets/images/quote/Janet.png',
+      authorImage: '/content/low-code-luna-test/assets/images/quote/Janet.png',
       imageAlt: 'Alt text'
     });
   });

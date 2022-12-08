@@ -20,7 +20,7 @@
         authorName="Author name"
         authorDescription="Author description"
         showImage="true"
-        authorImage="/content/bulma-test/assets/images/quote/Janet.png"
+        authorImage="/content/low-code-luna-test/assets/images/quote/Janet.png"
         imageAlt="Alt text"/>
     </pagecontainer>
   </jcr:content>
