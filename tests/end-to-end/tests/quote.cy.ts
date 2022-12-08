@@ -29,7 +29,6 @@ describe('Quote component', function () {
 
     cy.getByTestId('component_quote')
     .findByTestId('text')
-    // .should('have.css', 'font-size', '31.248px')
     .should('have.text', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam vel dictum eros.')
 
     cy.getByTestId('component_quote_1')
