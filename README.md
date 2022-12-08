@@ -75,6 +75,8 @@ CMS is available under: [localhost:8080/apps/websight/index.html/content::spaces
 
 Pages published from `Luna` space are available under [luna.127.0.0.1.nip.io](http://luna.127.0.0.1.nip.io/)
 
+Pages published from `No Code Luna` space are available under [no-code.luna.127.0.0.1.nip.io](http://no-code.luna.127.0.0.1.nip.io/)
+
 Pages published from `Bulma - Personal Template` space are available under [bulma.127.0.0.1.nip.io](http://bulma.127.0.0.1.nip.io/)
 
 ## Project structure
