@@ -1,0 +1,53 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "tabs": {
+    "sling:resourceType": "wcm/dialogs/components/tabs",
+    "generalTab": {
+      "sling:resourceType": "wcm/dialogs/components/tab",
+      "label": "General",
+      "quoteText": {
+        "sling:resourceType": "wcm/dialogs/components/richtext",
+        "name": "text",
+        "required": true,
+        "label": "Text"
+      },
+      "authorName": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "authorName",
+        "label": "Author\u2019s name"
+      },
+      "authorDescription": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "authorDescription",
+        "label": "Author\u2019s description"
+      },
+      "image": {
+        "sling:resourceType": "wcm/dialogs/components/toggle",
+        "name": "showImage",
+        "label": "Show author\u2019s image"
+      },
+      "container": {
+        "sling:resourceType": "wcm/dialogs/components/container",
+        "authorImage": {
+          "sling:resourceType": "wcm/dialogs/components/assetreference",
+          "mimeTypes": [
+            "image/*"
+          ],
+          "name": "authorImage",
+          "label": "Author\u2019s image"
+        },
+        "imageAlt": {
+          "sling:resourceType": "wcm/dialogs/components/textfield",
+          "name": "imageAlt",
+          "label": "Alt text"
+        },
+        "ws:display": {
+          "condition": {
+            "sourceName": "showImage",
+            "values": true
+          }
+        }
+      }
+    }
+  }
+}

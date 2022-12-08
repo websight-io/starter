@@ -137,7 +137,7 @@ jobs:
       - name: Validate if functional tests detect changes
         run: |
           ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
-          if npm run-script test --prefix tests/end-to-end | grep "1 failed"; then
+          if npm run-script test --prefix tests/end-to-end | grep "1 of [0-9]* failed"; then
             echo "Project changes detected"
           else
             echo "Project changes not detected"
