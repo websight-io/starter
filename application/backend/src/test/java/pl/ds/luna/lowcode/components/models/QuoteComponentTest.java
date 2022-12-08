@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.ds.luna.components.models;
+package pl.ds.luna.lowcode.components.models;
 
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -25,6 +25,7 @@ import org.apache.sling.testing.mock.sling.junit5.SlingContextExtension;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import pl.ds.luna.lowcode.components.models.QuoteComponent;
 
 @ExtendWith(SlingContextExtension.class)
 class QuoteComponentTest {

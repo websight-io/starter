@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.ds.luna.components.models;
+package pl.ds.luna.lowcode.components.models;
 
 import javax.inject.Inject;
 import org.apache.sling.api.resource.Resource;
