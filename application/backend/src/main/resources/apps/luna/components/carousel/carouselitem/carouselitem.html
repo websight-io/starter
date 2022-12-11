@@ -14,15 +14,14 @@
     limitations under the License.
 */-->
 
-<style>
-  .carousel {
-    overflow: hidden;
-  }
-</style>
-
 <sly data-sly-test="${resource.hasChildren}">
-  <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}">
+  <div class="carousel-item column is-4">
     <sly
         data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
   </div>
+</sly>
+<sly data-sly-test="${!resource.hasChildren}">
+  <sly data-sly-test.placeholderClasses='carousel-item column is-4'></sly>
+  <sly data-sly-use.lib="/libs/wcm/foundation/components/commons/templates.html"
+       data-sly-call="${lib.placeholder @ classes=placeholderClasses}"></sly>
 </sly>
