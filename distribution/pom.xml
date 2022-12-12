@@ -213,7 +213,7 @@
             <configuration>
               <images>
                 <image>
-                  <name>public.ecr.aws/ds/websight-cms-ce:starter-${project.version}</name>
+                  <name>public.ecr.aws/ds/websight-cms-starter:${project.version}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -226,7 +226,7 @@
                   </build>
                 </image>
                 <image>
-                  <name>public.ecr.aws/ds/websight-nginx-ce:starter-${project.version}</name>
+                  <name>public.ecr.aws/ds/websight-nginx-starter:${project.version}</name>
                   <build>
                     <buildx>
                       <platforms>
