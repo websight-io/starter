@@ -22,7 +22,7 @@ permissions:
   contents: read
 
 jobs:
-  release-luna:
+  release-starter:
     runs-on: ubuntu-latest
 
     steps:
@@ -45,7 +45,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_TO_ASSUME }}
-          role-session-name: LunaRelease
+          role-session-name: StarterRelease
           aws-region: us-east-1
       - name: Login to Amazon ECR Public
         id: login-ecr-public

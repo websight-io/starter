@@ -16,7 +16,7 @@ version: "3.9"
 
 services:
   cms:
-    image: ds/websight-cms-luna:latest
+    image: ds/websight-cms-starter:latest
     ports:
       - "8080:8080"
       - "5005:5005"
@@ -31,8 +31,8 @@ services:
       # WS_DEBUG: "true" is for local usage only. It enables java debugger.
       WS_DEBUG: "true"
     volumes:
-      - luna-project_cms_logs:/websight/logs
-      - luna-project_site_repository:/websight/docroot
+      - starter-project_cms_logs:/websight/logs
+      - starter-project_site_repository:/websight/docroot
     secrets:
       - source: mongo_password
         target: mongo.password
@@ -55,7 +55,7 @@ services:
       - MONGO_INITDB_ROOT_USERNAME=mongoadmin
       - MONGO_INITDB_ROOT_PASSWORD_FILE=/run/secrets/mongo.password
     volumes:
-      - luna-project_mongo_repository:/data/db
+      - starter-project_mongo_repository:/data/db
     secrets:
       - source: mongo_password
         target: mongo.password
@@ -63,18 +63,18 @@ services:
 
   # HTTP Server
   nginx:
-    image: ds/nginx-luna:latest
+    image: ds/websight-nginx-starter:latest
     ports:
       - "80:80"
       - "81:81"
       - "82:82"
     volumes:
-      - luna-project_site_repository:/usr/share/nginx/html:ro
+      - starter-project_site_repository:/usr/share/nginx/html:ro
 
 volumes:
-  luna-project_cms_logs:
-  luna-project_mongo_repository:
-  luna-project_site_repository:
+  starter-project_cms_logs:
+  starter-project_mongo_repository:
+  starter-project_site_repository:
 
 secrets:
   mongo_password:
