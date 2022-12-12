@@ -13,15 +13,16 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
-
-<sly data-sly-test="${resource.hasChildren}">
-  <div class="carousel-item column is-4">
-    <sly
-        data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
-  </div>
-</sly>
-<sly data-sly-test="${!resource.hasChildren}">
-  <sly data-sly-test.placeholderClasses='carousel-item column is-4'></sly>
-  <sly data-sly-use.lib="/libs/wcm/foundation/components/commons/templates.html"
-       data-sly-call="${lib.placeholder @ classes=placeholderClasses}"></sly>
+<sly data-sly-use.model="pl.ds.luna.lowcode.components.models.CarouselItemComponent">
+  <sly data-sly-test="${resource.hasChildren}">
+    <div class="carousel-item column ${model.columnClass}">
+      <sly
+          data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+    </div>
+  </sly>
+  <sly data-sly-test="${!resource.hasChildren}">
+    <sly data-sly-test.placeholderClasses='carousel-item column ${model.columnClass}'></sly>
+    <sly data-sly-use.lib="/libs/wcm/foundation/components/commons/templates.html"
+         data-sly-call="${lib.placeholder @ classes=placeholderClasses}"></sly>
+  </sly>
 </sly>

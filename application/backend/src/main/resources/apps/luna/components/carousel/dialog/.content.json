@@ -1,0 +1,18 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "tabs": {
+    "sling:resourceType": "wcm/dialogs/components/tabs",
+    "generalTab": {
+      "sling:resourceType": "wcm/dialogs/components/tab",
+      "label": "General",
+      "slidesToShow": {
+        "sling:resourceType": "wcm/dialogs/components/numberfield",
+        "name": "slidesToShow",
+        "label": "Slides to show",
+        "min": 1,
+        "max": 6,
+        "description": "The number of slides that is displayed in the carousel. Default is 3."
+      }
+    }
+  }
+}

@@ -17,12 +17,35 @@
 <style>
   .carousel {
     overflow: hidden;
+    position: relative;
   }
+
+  #prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    opacity: 0.6;
+    color: #000;
+  }
+
+  #nextButton {
+    right: 0%;
+  }
+
 </style>
 
 <sly data-sly-test="${resource.hasChildren}">
   <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}">
     <sly
         data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+    <span class="fa-stack fa-1x" id="prevButton">
+    <i class="fas fa-circle fa-stack-2x"></i>
+    <i class="fas fa-arrow-left fa-stack-1x fa-inverse" style="color: white;"></i>
+  </span>
+    <span class="fa-stack fa-1x" id="nextButton">
+    <i class="fas fa-circle fa-stack-2x"></i>
+    <i class="fas fa-arrow-right fa-stack-1x fa-inverse" style="color: white;"></i>
+  </span>
   </div>
 </sly>
