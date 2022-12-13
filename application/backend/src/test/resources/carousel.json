@@ -1,17 +1,11 @@
 {
   "default": {
     "jcr:primaryType": "nt:unstructured",
-    "sling:resourceType": "luna/components/quote",
-    "slidesToShow": 2
+    "sling:resourceType": "luna/components/carousel"
   },
   "complex": {
     "jcr:primaryType": "nt:unstructured",
-    "sling:resourceType": "luna/components/quote",
-    "text": "Text",
-    "authorName": "Author name",
-    "authorDescription": "Author description",
-    "showImage": true,
-    "authorImage": "/content/bulma/assets/images/personal/Janet.png",
-    "imageAlt": "Alt text"
+    "sling:resourceType": "luna/components/carousel",
+    "slidesToShow": 5
   }
 }

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package pl.ds.luna.lowcode.components.models;
+package pl.ds.luna.lowcode.components.models.carousel;
 
 import static java.util.Objects.requireNonNull;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -27,26 +27,36 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 
 @ExtendWith(SlingContextExtension.class)
-class CarouselComponentTest {
+class CarouselItemComponentTest {
 
-  private static final String PATH = "/content/carousel";
+  private static final String PATH = "/content";
 
   private final SlingContext context = new SlingContext(ResourceResolverType.RESOURCERESOLVER_MOCK);
 
+
   @BeforeEach
   public void init() {
-    context.addModelsForClasses(CarouselComponent.class);
+    context.addModelsForClasses(CarouselItemComponent.class);
     context.load().json(requireNonNull(
-        Thread.currentThread().getContextClassLoader().getResourceAsStream("carousel.json")), PATH);
+        Thread.currentThread().getContextClassLoader().getResourceAsStream("carouselitem.json")), PATH);
   }
 
   @Test
-  void defaultQuoteComponentModelTest() {
-    CarouselComponent model = requireNonNull(
-        context.resourceResolver().getResource(PATH + "/default")).adaptTo(CarouselComponent.class);
+  void threeSlidesCarouselItemComponentModelTest() {
+    CarouselItemComponent model = requireNonNull(
+        context.resourceResolver().getResource(PATH + "/carouselThreeSlides/carouselitem")).adaptTo(CarouselItemComponent.class);
 
     assertThat(model).isNotNull();
-    assertThat(model.getSlidesToShow()).isEqualTo(2);
+    assertThat(model.getColumnClass()).isEqualTo("is-4");
+  }
+
+  @Test
+  void fiveSlidesCarouselItemComponentModelTest() {
+    CarouselItemComponent model = requireNonNull(
+        context.resourceResolver().getResource(PATH + "/carouselFiveSlides/carouselitem")).adaptTo(CarouselItemComponent.class);
+
+    assertThat(model).isNotNull();
+    assertThat(model.getColumnClass()).isEqualTo("is-one-fifth");
   }
 
 }

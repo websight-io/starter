@@ -1,4 +1,4 @@
-package pl.ds.luna.lowcode.components.models;
+package pl.ds.luna.lowcode.components.models.carousel;
 
 import javax.annotation.PostConstruct;
 import javax.inject.Inject;
@@ -9,6 +9,11 @@ import org.apache.sling.models.annotations.injectorspecific.SlingObject;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class CarouselItemComponent {
+
+  private static final int BULMA_GRID_COLUMN_SIZE = 12;
+  private static final String BULMA_COLUMN_CLASS_PREFIX = "is-";
+  private static final String BULMA_COLUMN_ONE_FIFTH = "one-fifth";
+
 
   @Inject
   private String columnClass;
@@ -26,11 +31,11 @@ public class CarouselItemComponent {
 
     int slidesToShow = carouselComponent.getSlidesToShow();
 
-    columnClass  = "is-";
+    columnClass = BULMA_COLUMN_CLASS_PREFIX;
     if (slidesToShow == 5) {
-      columnClass += "one-fifth";
+      columnClass += BULMA_COLUMN_ONE_FIFTH;
     } else {
-      columnClass += String.valueOf(12 / slidesToShow);
+      columnClass += String.valueOf(BULMA_GRID_COLUMN_SIZE / slidesToShow);
     }
   }
 

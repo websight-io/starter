@@ -11,7 +11,7 @@
         "label": "Slides to show",
         "min": 1,
         "max": 6,
-        "description": "The number of slides that is displayed in the carousel. Default is 3."
+        "description": "The number of slides that is displayed in the carousel at once. Default is 3."
       }
     }
   }
