@@ -14,7 +14,7 @@
     limitations under the License.
 */-->
 
-<style>
+<style data-sly-test="${!wcmmode.isEdit}">
   .carousel {
     overflow: hidden;
     position: relative;
@@ -33,19 +33,25 @@
     right: 0%;
   }
 
+  #prevButton .fa-arrow-left, #nextButton .fa-arrow-right {
+    color: white;
+  }
+
 </style>
 
 <sly data-sly-test="${resource.hasChildren}">
   <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}">
     <sly
         data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
-    <span class="fa-stack fa-1x" id="prevButton">
-    <i class="fas fa-circle fa-stack-2x"></i>
-    <i class="fas fa-arrow-left fa-stack-1x fa-inverse" style="color: white;"></i>
-  </span>
-    <span class="fa-stack fa-1x" id="nextButton">
-    <i class="fas fa-circle fa-stack-2x"></i>
-    <i class="fas fa-arrow-right fa-stack-1x fa-inverse" style="color: white;"></i>
-  </span>
+    <sly data-sly-test="${!wcmmode.isEdit}">
+      <span class="fa-stack fa-1x" id="prevButton">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-arrow-left fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="fa-stack fa-1x" id="nextButton">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+      </span>
+    </sly>
   </div>
 </sly>

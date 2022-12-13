@@ -13,6 +13,7 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 */-->
+
 <sly data-sly-use.model="pl.ds.luna.lowcode.components.models.carousel.CarouselItemComponent">
   <sly data-sly-test.classes="carousel-item column ${model.columnClass}"></sly>
   <sly data-sly-test="${resource.hasChildren}">
@@ -22,8 +23,7 @@
     </div>
   </sly>
   <sly data-sly-test="${!resource.hasChildren}">
-    <sly data-sly-test.placeholderClasses='${classes}'></sly>
     <sly data-sly-use.lib="/libs/wcm/foundation/components/commons/templates.html"
-         data-sly-call="${lib.placeholder @ classes=placeholderClasses}"></sly>
+         data-sly-call="${lib.placeholder @ classes=classes}"></sly>
   </sly>
 </sly>
