@@ -33,18 +33,19 @@ class CarouselItemComponentTest {
 
   private final SlingContext context = new SlingContext(ResourceResolverType.RESOURCERESOLVER_MOCK);
 
-
   @BeforeEach
   public void init() {
     context.addModelsForClasses(CarouselItemComponent.class);
     context.load().json(requireNonNull(
-        Thread.currentThread().getContextClassLoader().getResourceAsStream("carouselitem.json")), PATH);
+            Thread.currentThread().getContextClassLoader().getResourceAsStream("carouselitem.json")),
+        PATH);
   }
 
   @Test
   void threeSlidesCarouselItemComponentModelTest() {
     CarouselItemComponent model = requireNonNull(
-        context.resourceResolver().getResource(PATH + "/threeSlidesCarousel/carouselitem")).adaptTo(CarouselItemComponent.class);
+        context.resourceResolver().getResource(PATH + "/threeSlidesCarousel/carouselitem")).adaptTo(
+        CarouselItemComponent.class);
 
     assertThat(model).isNotNull();
     assertThat(model.getColumnClass()).isEqualTo("is-4");
@@ -53,7 +54,8 @@ class CarouselItemComponentTest {
   @Test
   void fiveSlidesCarouselItemComponentModelTest() {
     CarouselItemComponent model = requireNonNull(
-        context.resourceResolver().getResource(PATH + "/fiveSlidesCarousel/carouselitem")).adaptTo(CarouselItemComponent.class);
+        context.resourceResolver().getResource(PATH + "/fiveSlidesCarousel/carouselitem")).adaptTo(
+        CarouselItemComponent.class);
 
     assertThat(model).isNotNull();
     assertThat(model.getColumnClass()).isEqualTo("is-one-fifth");

@@ -36,11 +36,11 @@
   #prevButton .fa-arrow-left, #nextButton .fa-arrow-right {
     color: white;
   }
-
 </style>
 
 <sly data-sly-test="${resource.hasChildren}">
-  <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}">
+  <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}"
+       data-testid="component_${resource.name}">
     <sly
         data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
     <sly data-sly-test="${!wcmmode.isEdit}">

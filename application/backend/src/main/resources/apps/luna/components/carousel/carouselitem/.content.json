@@ -3,5 +3,5 @@
   "group": "Bulma.io sub-components",
   "sling:resourceType": "ws:Component",
   "title": "Carousel Item",
-  "allowedComponents" : "Bulma.io Components"
+  "allowedComponents" : ["/apps/bulma/components/card"]
 }
