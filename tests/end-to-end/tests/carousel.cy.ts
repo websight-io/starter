@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_pagecontainer/carousel'
+  title: 'ComponentOverlay_pagecontainer/container/carousel'
 };
 
 describe('Carousel component', function () {
@@ -48,7 +48,7 @@ describe('Carousel component', function () {
   it('renders correctly in edit mode', function () {
     cy.intercept(
         'POST',
-        '**/pagecontainer/carousel.websight-dialogs-service.save-properties.action'
+        '**/pagecontainer/container/carousel.websight-dialogs-service.save-properties.action'
     ).as('saveProperties');
 
     cy.visit(
@@ -71,7 +71,7 @@ describe('Carousel component', function () {
     cy.wait('@saveProperties');
 
     cy.request(
-        '/content/low-code-luna-test/pages/Carousel/jcr:content/pagecontainer/carousel.json'
+        '/content/low-code-luna-test/pages/Carousel/jcr:content/pagecontainer/container/carousel.json'
     )
     .its('body')
     .should('deep.eq', {
