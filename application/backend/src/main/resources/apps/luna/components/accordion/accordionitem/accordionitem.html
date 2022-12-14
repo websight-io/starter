@@ -1,0 +1,33 @@
+<!--/*
+  ~
+  ~     Copyright (C) 2022 Dynamic Solutions
+  ~
+  ~     Licensed under the Apache License, Version 2.0 (the "License");
+  ~     you may not use this file except in compliance with the License.
+  ~     You may obtain a copy of the License at
+  ~
+  ~         http://www.apache.org/licenses/LICENSE-2.0
+  ~
+  ~     Unless required by applicable law or agreed to in writing, software
+  ~     distributed under the License is distributed on an "AS IS" BASIS,
+  ~     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  ~     See the License for the specific language governing permissions and
+  ~     limitations under the License.
+  ~
+*/-->
+
+<sly data-sly-use.model="pl.ds.luna.lowcode.components.models.AccordionItemComponent">
+  <div data-sly-unwrap="${!wcmmode.isEdit}"
+       style="padding-top: 10px; padding-bottom: 10px; margin: 10px;">
+    <article class="accordion">
+      <div class="accordion-header" data-target="${model.id}">
+        <p>${model.header}</p>
+      </div>
+      <div id="${model.id}" class="accordion-body">
+        <sly data-sly-list="${resource.children}">
+          <sly data-sly-resource="${item}"></sly>
+        </sly>
+      </div>
+    </article>
+  </div>
+</sly>
