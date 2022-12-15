@@ -68,6 +68,7 @@ services:
       - "80:80"
       - "81:81"
       - "82:82"
+      - "83:83"
     volumes:
       - luna-project_site_repository:/usr/share/nginx/html:ro
 
