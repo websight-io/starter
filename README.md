@@ -148,12 +148,12 @@ The following technologies are used in designing and prototyping:
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.figma.com" target="_blank">
-        <img src="assets/technologies/figma-logo.png" alt="Figma" width="100">
+        <img src="assets/technologies/figma-logo.png" alt="Figma" width="80">
       </a>
     </td>
     <td align="center" valign="middle">
       <a href="https://miro.com" target="_blank">
-        <img src="assets/technologies/miro-logo.png" alt="Miro" width="100">
+        <img src="assets/technologies/miro-logo.png" alt="Miro" width="80">
       </a>
     </td>            
   </tr>
