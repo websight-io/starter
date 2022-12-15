@@ -1,0 +1,6 @@
+{
+  "allowedChildren": ["/apps/luna/templates/basicpage"],
+  "sling:resourceType": "ws:PageTemplate",
+  "description": "Bulma",
+  "title": "Basic page"
+}
