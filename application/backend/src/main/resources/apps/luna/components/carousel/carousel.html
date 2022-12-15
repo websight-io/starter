@@ -1,0 +1,57 @@
+<!--/*
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<style data-sly-test="${!wcmmode.isEdit}">
+  .carousel {
+    overflow: hidden;
+    position: relative;
+  }
+
+  #prevButton, #nextButton {
+    position: absolute;
+    top: 50%;
+    margin-top: -20px;
+    cursor: pointer;
+    opacity: 0.6;
+    color: #000;
+  }
+
+  #nextButton {
+    right: 0%;
+  }
+
+  #prevButton .fa-arrow-left, #nextButton .fa-arrow-right {
+    color: white;
+  }
+</style>
+
+<sly data-sly-test="${resource.hasChildren}">
+  <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}"
+       data-testid="component_${resource.name}">
+    <sly
+        data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+    <sly data-sly-test="${!wcmmode.isEdit}">
+      <span class="fa-stack fa-1x" id="prevButton">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-arrow-left fa-stack-1x fa-inverse"></i>
+      </span>
+      <span class="fa-stack fa-1x" id="nextButton">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
+      </span>
+    </sly>
+  </div>
+</sly>
