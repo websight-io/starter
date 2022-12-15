@@ -79,6 +79,8 @@ Pages published from `No Code Luna` space are available under [no-code.luna.127.
 
 Pages published from `Bulma - Personal Template` space are available under [bulma.127.0.0.1.nip.io](http://bulma.127.0.0.1.nip.io/)
 
+Please notice that we use a [nip.io](https://nip.io). It helps with simulating a real production environment that uses subdomains without the necessity to edit the `hosts` file on local machines.
+
 ## Project structure
 
 - `application` - components related code and scripts
