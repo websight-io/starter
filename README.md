@@ -77,14 +77,14 @@ The following technologies are used for running WebSight:
   <tr>
     <td align="center" valign="middle">
       <a href="https://aws.amazon.com" target="_blank">
-        <img src="assets/technologies/aws-logo.png" alt="AWS" width="100">
+        <img src="assets/technologies/aws-logo.png" alt="AWS" width="80">
       </a>
     </td>
     <td align="center" valign="middle">
       <a href="https://www.docker.com" target="_blank">
-        <img src="assets/technologies/docker-logo.png" alt="Docker" width="100">
+        <img src="assets/technologies/docker-logo.png" alt="Docker" width="80">
       </a>
-    </td>            
+    </td>                 
   </tr>
 </table>
 
