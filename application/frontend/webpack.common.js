@@ -109,11 +109,11 @@ module.exports = {
                     copy: [
                         {
                             source: path.join(__dirname, 'dist/main'),
-                            destination: path.join(__dirname, '../backend/src/main/resources/apps/luna/web_root')
+                            destination: path.join(__dirname, 'src/main/resources/apps/luna/web_root')
                         },
                         {
                             source: path.join(__dirname, 'dist/author'),
-                            destination: path.join(__dirname, '../backend/src/main/resources/apps/luna/author')
+                            destination: path.join(__dirname, 'src/main/resources/apps/luna/author')
                         }
                     ]
                 }

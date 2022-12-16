@@ -1,2 +1,2 @@
-Sling-Bundle-Resources: /apps/luna/webroot
-WebSight-Apps-WebRoot: /apps/luna/webroot
+Sling-Bundle-Resources: /apps/luna/web_root;/apps/luna/author
+WebSight-Apps-WebRoot: /apps/luna/web_root
