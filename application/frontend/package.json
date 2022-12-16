@@ -1,0 +1,38 @@
+{
+  "name": "starter-frontend-module",
+  "version": "1.0.0",
+  "description": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "private": true,
+  "main": "src/main/webpack/site/main.ts",
+  "license": "SEE LICENSE IN LICENSE.txt",
+  "scripts": {
+    "prod": "webpack --config ./webpack.prod.js",
+    "watch": "webpack --config ./webpack.prod.js --watch",
+    "sync": "websight-localsync target-folder=dist provider-root-suffix=luna/web_root"
+  },
+  "devDependencies": {
+    "webpack": "^5.69.1",
+    "webpack-cli": "^4.9.1",
+    "css-minimizer-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^2.4.5",
+    "tsconfig-paths-webpack-plugin": "^3.2.0",
+    "copy-webpack-plugin": "^10.1.0",
+    "filemanager-webpack-plugin": "^6.1.7",
+    "clean-webpack-plugin": "^3.0.0",
+    "eslint-webpack-plugin": "^3.1.1",
+    "ts-loader": "^9.2.6",
+    "glob-import-loader": "^1.2.0",
+    "eslint": "^8.4.1",
+    "@typescript-eslint/eslint-plugin": "^5.7.0",
+    "css-loader": "^6.5.1",
+    "postcss": "^8.2.15",
+    "postcss-loader": "^3.0.0",
+    "sass": "^1.45.0",
+    "sass-loader": "^12.4.0",
+    "autoprefixer": "^9.2.1"
+  }
+}

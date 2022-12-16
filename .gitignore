@@ -5,6 +5,7 @@
 
 # Node artifact files
 node_modules/
+node/
 dist/
 
 # Compiled Java class files
@@ -22,6 +23,7 @@ dist/
 # JetBrains IDE
 .idea/
 .vscode
+.history
 *.iml
 
 # Unit test reports
