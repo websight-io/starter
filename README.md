@@ -25,7 +25,7 @@ Find out what technologies Dynamic Solutions team have used to design, build and
 ### CMS
 
 Websight CMS makes use of the following technologies:
-<table>
+<table style="margin: 0 auto">
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.java.com" target="_blank">
@@ -42,13 +42,18 @@ Websight CMS makes use of the following technologies:
         <img src="assets/technologies/sling-logo.png" alt="Apache Sling" width="100">
       </a>
     </td>
-    <td align="center" valign="middle">
-      <a href="https://www.jackrabbit.apache.org" target="_blank">
-        <img src="assets/technologies/jackrabbit-logo.png" alt="Apache Jackrabbit" width="100">
+        <td align="center" valign="middle">
+      <a href="https://www.nginx.com" target="_blank">
+        <img src="assets/technologies/nginx-logo.png" alt="nginx" width="100">
       </a>
     </td>
     </tr>
     <tr>
+        <td align="center" valign="middle">
+      <a href="https://www.jackrabbit.apache.org" target="_blank">
+        <img src="assets/technologies/jackrabbit-logo.png" alt="Apache Jackrabbit" width="100">
+      </a>
+    </td>
     <td align="center" valign="middle">
       <a href="https://reactjs.org" target="_blank">
         <img src="assets/technologies/react-logo.png" alt="ReactJS" width="100">
@@ -57,11 +62,6 @@ Websight CMS makes use of the following technologies:
     <td align="center" valign="middle">
       <a href="https://www.typescriptlang.org" target="_blank">
         <img src="assets/technologies/typescript-logo.png" alt="TypeScript" width="100">
-      </a>
-    </td>
-    <td align="center" valign="middle">
-      <a href="https://www.nginx.com" target="_blank">
-        <img src="assets/technologies/nginx-logo.png" alt="nginx" width="100">
       </a>
     </td>
     <td align="center" valign="middle">
@@ -75,16 +75,16 @@ Websight CMS makes use of the following technologies:
 ### CMS Runtime
 
 The following technologies are used for running WebSight:
-<table>
+<table style="margin: 0 auto">
   <tr>
     <td align="center" valign="middle">
       <a href="https://aws.amazon.com" target="_blank">
-        <img src="assets/technologies/aws-logo.png" alt="AWS" width="80">
+        <img src="assets/technologies/aws-logo.png" alt="AWS" width="100">
       </a>
     </td>
     <td align="center" valign="middle">
       <a href="https://www.docker.com" target="_blank">
-        <img src="assets/technologies/docker-logo.png" alt="Docker" width="80">
+        <img src="assets/technologies/docker-logo.png" alt="Docker" width="100">
       </a>
     </td>                 
   </tr>
@@ -93,7 +93,7 @@ The following technologies are used for running WebSight:
 ### CMS Supportive
 
 The following technologies are used to support the process of delivery:
-<table>
+<table style="margin: 0 auto">
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.gnu.org/software/bash" target="_blank">
@@ -115,13 +115,13 @@ The following technologies are used to support the process of delivery:
         <img src="assets/technologies/percy-logo.png" alt="Percy.io" width="100">
       </a>
     </td>
-    </tr>
-    <tr>
     <td align="center" valign="middle">
       <a href="https://bitbucket.org/product/features/pipelines" target="_blank">
         <img src="assets/technologies/bitbucket-logo.png" alt="Bitbucket" width="100">
       </a>
     </td>
+    </tr>
+    <tr>
     <td align="center" valign="middle">
       <a href="https://www.atlassian.com/software/confluence" target="_blank">
         <img src="assets/technologies/confluence-logo.png" alt="Confluence" width="100">
@@ -148,16 +148,16 @@ The following technologies are used to support the process of delivery:
 ### Design and Prototype
 
 The following technologies are used in designing and prototyping:
-<table>
+<table style="margin: 0 auto">
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.figma.com" target="_blank">
-        <img src="assets/technologies/figma-logo.png" alt="Figma" width="80">
+        <img src="assets/technologies/figma-logo.png" alt="Figma" width="100">
       </a>
     </td>
     <td align="center" valign="middle">
       <a href="https://miro.com" target="_blank">
-        <img src="assets/technologies/miro-logo.png" alt="Miro" width="80">
+        <img src="assets/technologies/miro-logo.png" alt="Miro" width="100">
       </a>
     </td>            
   </tr>
