@@ -15,24 +15,38 @@
  */
 
  .quote {
+    padding-left: .5rem;
+    padding-right: 1.5rem;
     &__quotation-marks {
 
     }
     &__content {
-
+        padding-left: 6rem;
+        font-size: 1.9rem;
+        font-weight: 900;
+        line-height: 2.5rem;
+        margin-top: 1.5rem;
     }
     &__author {
+        align-items: center;
+        display: flex;
+        margin-top: 2rem;
         &-image {
-            max-width: 30px;
+            max-width: 80px;
+            clip-path: circle();
+            margin-right: 1.5rem;
         }
         &-info {
-            
+            display: flex;
+            flex-direction: column;
         }
         &-name {
-            
+            font-size: 1.25rem;
+            line-height: 1.5rem;
         }
         &-description {
-            
+            font-size: 1.125rem;
+            line-height: 1.625rem;
         }
     }
  }
