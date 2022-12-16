@@ -3,4 +3,5 @@
   jcr:primaryType="ws:Pages"
   ws:template="/apps/bulma/templates/pagesspace">
   <Quote/>
+  <Carousel/>
 </jcr:root>
