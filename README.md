@@ -25,7 +25,7 @@ Find out what technologies Dynamic Solutions team have used to design, build and
 ### CMS
 
 Websight CMS makes use of the following technologies:
-<table style="margin: 0 auto">
+<table>
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.java.com" target="_blank">
@@ -75,7 +75,7 @@ Websight CMS makes use of the following technologies:
 ### CMS Runtime
 
 The following technologies are used for running WebSight:
-<table style="margin: 0 auto">
+<table>
   <tr>
     <td align="center" valign="middle">
       <a href="https://aws.amazon.com" target="_blank">
@@ -93,7 +93,7 @@ The following technologies are used for running WebSight:
 ### CMS Supportive
 
 The following technologies are used to support the process of delivery:
-<table style="margin: 0 auto">
+<table>
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.gnu.org/software/bash" target="_blank">
@@ -148,7 +148,7 @@ The following technologies are used to support the process of delivery:
 ### Design and Prototype
 
 The following technologies are used in designing and prototyping:
-<table style="margin: 0 auto">
+<table>
   <tr>
     <td align="center" valign="middle">
       <a href="https://www.figma.com" target="_blank">
