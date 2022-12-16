@@ -47,6 +47,8 @@ Websight CMS makes use of the following technologies:
         <img src="assets/technologies/jackrabbit-logo.png" alt="Apache Jackrabbit" width="100">
       </a>
     </td>
+    </tr>
+    <tr>
     <td align="center" valign="middle">
       <a href="https://reactjs.org" target="_blank">
         <img src="assets/technologies/react-logo.png" alt="ReactJS" width="100">
@@ -113,6 +115,8 @@ The following technologies are used to support the process of delivery:
         <img src="assets/technologies/percy-logo.png" alt="Percy.io" width="100">
       </a>
     </td>
+    </tr>
+    <tr>
     <td align="center" valign="middle">
       <a href="https://bitbucket.org/product/features/pipelines" target="_blank">
         <img src="assets/technologies/bitbucket-logo.png" alt="Bitbucket" width="100">
