@@ -1,0 +1,141 @@
+/*
+ * Copyright (C) 2022 Dynamic Solutions
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@use '../abstracts';
+@use 'sass:math';
+
+.hl-grid {
+  display: flex;
+  flex-wrap: wrap;
+
+  --gutter: 0px;
+
+  @include abstracts.media-breakpoint-up(md) {
+    --gutter: 1rem;
+  }
+  
+  @include abstracts.media-breakpoint-up(lg) {
+    --gutter: 1.875rem;
+  }
+}
+
+.hl-grid.hl-page-section {
+  @include abstracts.media-breakpoint-up(md) {
+    width: calc(100% + var(--gutter));
+    margin-left: calc(var(--gutter) / -2);
+    margin-right: calc(var(--gutter) / -2);
+  }
+}
+
+.hl-container {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.hl-grid-component {
+  margin-left: calc(var(--gutter) / 2);
+  margin-right: calc(var(--gutter) / 2);
+  width: calc(100% - var(--gutter));
+  flex-shrink: 0;
+}
+
+// Col width classes:
+
+@for $i from 1 through abstracts.$grid-columns - 1 {
+  /* same across all breakpoints */
+  .hl-cols-#{$i} {
+    width: percentage(math.div($i, 12));
+
+    &.hl-grid-component {
+      width: calc(percentage(math.div($i, 12))  - var(--gutter));
+    }
+  }
+
+  /* mobile only */
+  .hl-cols-sm-#{$i} {
+    @include abstracts.media-breakpoint-down(md) {
+      width: percentage(math.div($i, 12));
+    }
+  }
+
+  /* tablet only */
+  .hl-cols-md-#{$i} {
+    @include abstracts.media-breakpoint-between(md, lg) {
+      width: percentage(math.div($i, 12));
+
+      &.hl-grid-component {
+        width: calc(percentage(math.div($i, 12))  - var(--gutter));
+      }
+    }
+  }
+
+  /* desktop only */
+  .hl-cols-lg-#{$i} {
+    @include abstracts.media-breakpoint-up(lg) {
+      width: percentage(math.div($i, 12));
+
+      &.hl-grid-component {
+        width: calc(percentage(math.div($i, 12))  - var(--gutter));
+      }
+    }
+  }
+}
+
+// Offset classes:
+
+@for $i from 1 through abstracts.$grid-columns - 1 {
+    /* same across all breakpoints */
+    .hl-offset-#{$i} {
+      margin-left: percentage(math.div($i, 12));
+
+      &.hl-grid-component {
+        margin-left: calc(percentage(math.div($i, 12)) + var(--gutter) / 2 );
+      }
+    }
+
+    /* mobile only */
+    .hl-offset-sm-#{$i} {
+      @include abstracts.media-breakpoint-down(md) {
+        margin-left: percentage(math.div($i, 12));
+
+        &.hl-grid-component {
+          margin-left: calc(percentage(math.div($i, 12)) + var(--gutter) / 2);
+        }
+      }
+    }
+
+    /* tablet only */
+    .hl-offset-md-#{$i} {
+      @include abstracts.media-breakpoint-between(md, lg) {
+        margin-left: percentage(math.div($i, 12));
+
+        &.hl-grid-component {
+          margin-left: calc(percentage(math.div($i, 12)) + var(--gutter) / 2);
+        }
+      }
+    }
+
+    /* desktop only */
+    .hl-offset-lg-#{$i} {
+      @include abstracts.media-breakpoint-up(lg) {
+        margin-left: percentage(math.div($i, 12));
+
+        &.hl-grid-component {
+          margin-left: calc(percentage(math.div($i, 12)) + var(--gutter) / 2);
+        }
+      }
+    }
+}

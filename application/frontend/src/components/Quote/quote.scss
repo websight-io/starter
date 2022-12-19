@@ -13,40 +13,52 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+ @use 'sass:map';
+
+ @use '../../sass/abstracts';
 
  .quote {
-    padding-left: .5rem;
-    padding-right: 1.5rem;
+    @include abstracts.media-breakpoint-up(lg) {
+        padding-left: map.get(abstracts.$spacing, 'small-2');
+        padding-right: map.get(abstracts.$spacing, 'medium');
+      }
     &__quotation-marks {
+        margin-bottom: map.get(abstracts.$spacing, 'small-3');
 
+        path {
+          color: var(--color-primary);
+        }
     }
     &__content {
-        padding-left: 6rem;
-        font-size: 1.9rem;
-        font-weight: 900;
-        line-height: 2.5rem;
-        margin-top: 1.5rem;
+        @include abstracts.media-breakpoint-up(md) {
+            padding-left: 6rem;
+          }
+        &-text, &-text p {
+            color: var(--color-default);
+            @include abstracts.font-h4;
+        }
     }
     &__author {
-        align-items: center;
+        margin-top: map.get(abstracts.$spacing, 'medium-2');
         display: flex;
-        margin-top: 2rem;
+        align-items: center;
         &-image {
             max-width: 80px;
             clip-path: circle();
-            margin-right: 1.5rem;
+            margin-right: map.get(abstracts.$spacing, 'medium');
         }
         &-info {
+            margin-top: 0;
             display: flex;
             flex-direction: column;
         }
         &-name {
-            font-size: 1.25rem;
-            line-height: 1.5rem;
+            @include abstracts.font-h6;
         }
         &-description {
-            font-size: 1.125rem;
-            line-height: 1.625rem;
+            display: block;
+            color: var(--color-neutral-500);
+            @include abstracts.font-body(900)
         }
     }
  }

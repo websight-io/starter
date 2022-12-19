@@ -15,4 +15,8 @@
  *     limitations under the License.
  * -->
  */
- @import './components/Quote/quote.scss'
+
+@import './sass/global';
+@import './sass/base/index';
+@import './sass/theme/demo-content-theme.scss';
+@import './components/Quote/quote.scss';

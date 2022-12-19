@@ -1,0 +1,191 @@
+/*
+ * Copyright (C) 2022 Dynamic Solutions
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@use 'sass:map';
+@use './custom-bootstrap';
+@use './_functions.scss' as fns;
+
+$font-icon: 2rem;
+$font-regular: 1.125rem;
+$font-regular-small: 1rem;
+
+$font-caption: 0.875rem;
+$font-caption-small: 0.75rem;
+
+$font-weight-xbold: 800;
+$font-weight-xxbold: 900;
+
+$font-size-h1-md: 48.83px;
+$font-size-h1-lg: 95.37px;
+
+@mixin font-h1 {
+  font-size: $font-size-h1-md;
+  line-height: 1.2;
+  font-weight: $font-weight-xxbold;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    $breakpoint-lg: map.get(custom-bootstrap.$grid-breakpoints, 'lg');
+    $breakpoint-xl: map.get(custom-bootstrap.$grid-breakpoints, 'xl');
+    $breakpoint-diff: fns.strip-unit($breakpoint-xl - $breakpoint-lg);
+    $font-size-diff: fns.strip-unit($font-size-h1-lg - $font-size-h1-md);
+
+    font-size: calc(
+      #{$font-size-h1-md} + (#{$font-size-diff} * (100vw - #{$breakpoint-lg})) /
+        #{$breakpoint-diff}
+    );
+  }
+
+  @include custom-bootstrap.media-breakpoint-up(xl) {
+    font-size: $font-size-h1-lg;
+  }
+}
+
+@mixin font-h2 {
+  font-size: 2.441rem;
+  line-height: 3rem;
+  font-weight: $font-weight-xxbold;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 3.052rem;
+    line-height: 3.5rem;
+  }
+}
+
+@mixin font-h3 {
+  font-size: 1.953rem;
+  line-height: 2.5rem;
+  font-weight: $font-weight-xxbold;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 2.441rem;
+    line-height: 3rem;
+  }
+}
+
+@mixin font-h4 {
+  font-size: 1.563rem;
+  line-height: 2rem;
+  font-weight: $font-weight-xxbold;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.953rem;
+    line-height: 2.5rem;
+  }
+}
+
+@mixin font-h5 {
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+  font-weight: $font-weight-xxbold;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.563rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin font-h6 {
+  font-size: 1.125rem;
+  line-height: 1.375rem;
+  font-weight: $font-weight-xxbold;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.25rem;
+    line-height: 1.5rem;
+  }
+}
+
+@mixin font-body($font-weight: 400) {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: $font-weight;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.125rem;
+    line-height: 1.625rem;
+  }
+}
+
+
+@mixin font-body-s($font-weight: 400) {
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: $font-weight;
+}
+
+@mixin font-body-bold {
+  @include font-body($font-weight-xbold);
+}
+
+@mixin font-h1-content {
+  font-size: 2.027rem;
+  line-height: 2.75rem;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 2.281rem;
+    line-height: 3rem;
+  }
+}
+
+@mixin font-h2-content {
+  font-size: 1.802rem;
+  line-height: 2.5rem;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 2.027rem;
+    line-height: 2.75rem;
+  }
+}
+
+@mixin font-h3-content {
+  font-size: 1.602rem;
+  line-height: 2rem;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.802rem;
+    line-height: 2.5rem;
+  }
+}
+
+@mixin font-h4-content {
+  font-size: 1.424rem;
+  line-height: 1.75rem;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.602rem;
+    line-height: 2rem;
+  }
+}
+
+@mixin font-h5-content {
+  font-size: 1.266rem;
+  line-height: 1.5rem;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.424rem;
+    line-height: 1.75rem;
+  }
+}
+
+@mixin font-h6-content {
+  font-size: 1.125;
+  line-height: 1.375rem;
+
+  @include custom-bootstrap.media-breakpoint-up(lg) {
+    font-size: 1.266rem;
+    line-height: 1.5rem;
+  }
+}

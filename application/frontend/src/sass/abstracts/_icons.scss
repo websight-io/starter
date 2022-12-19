@@ -1,0 +1,47 @@
+/*
+ * Copyright (C) 2022 Dynamic Solutions
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@use './colors';
+
+$social-icon-size: 40px;
+
+@mixin social-icon {
+  text-decoration: none;
+  border-radius: 50%;
+  display: block;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  &:hover {
+    .hl-icon {
+      background-color: var(--color-default);
+      color: colors.$shades-0;
+    }
+  }
+
+  .hl-icon {
+    display: block;
+    border: 2px solid var(--color-default);
+    border-radius: 50%;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

@@ -103,6 +103,11 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: '[name]/[name].css'
         }),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: path.resolve(__dirname, SOURCE_ROOT + '/resources'), to: './main' }
+            ]
+        }),
         new FileManagerPlugin({
             events: {
                 onEnd: {
