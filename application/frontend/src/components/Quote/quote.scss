@@ -32,10 +32,16 @@
     &__content {
         @include abstracts.media-breakpoint-up(md) {
             padding-left: 6rem;
-          }
+        }
         &-text, &-text p {
+            margin-top: 1rem;
+            text-align: center;
             color: var(--color-default);
             @include abstracts.font-h4;
+            @include abstracts.media-breakpoint-up(md) {
+                text-align: start;
+                margin-top: 1.5rem;
+            }
         }
     }
     &__author {
