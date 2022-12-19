@@ -25,26 +25,145 @@ Find out what technologies Dynamic Solutions team have used to design, build and
 ### CMS
 
 Websight CMS makes use of the following technologies:
-| <a href="https://www.java.com"><img src="/assets/technologies/java-logo.png" alt="Java" style="width:80px;" /></a> | <a href="https://felix.apache.org"><img src="/assets/technologies/osgi-logo.png" alt="OSGi" style="width:90px;" /></a> | <a href="https://sling.apache.org"><img src="/assets/technologies/sling-logo.png" alt="Apache Sling" style="width:70px;" /></a> | <a href="https://www.jackrabbit.apache.org"><img src="/assets/technologies/jackrabbit-logo.png" alt="Apache Jackrabbit" style="width:90px;" /></a> | <a href="https://reactjs.org"><img src="/assets/technologies/react-logo.png" alt="ReactJS" style="width:90px;" /></a> | <a href="https://www.typescriptlang.org"><img src="/assets/technologies/typescript-logo.png" alt="TypeScript" style="width:50px;" /></a> | <a href="https://www.nginx.com"><img src="/assets/technologies/nginx-logo.png" alt="nginx" style="width:80px;" /></a> | <a href="https://www.mongodb.com"><img src="/assets/technologies/mongodb-logo.png" alt="MongoDB" style="width:90px;" /></a>
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://www.java.com" target="_blank">
+        <img src="assets/technologies/java-logo.png" alt="Java" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://felix.apache.org" target="_blank">
+        <img src="assets/technologies/osgi-logo.png" alt="OSGi" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://sling.apache.org" target="_blank">
+        <img src="assets/technologies/sling-logo.png" alt="Apache Sling" width="100">
+      </a>
+    </td>
+        <td align="center" valign="middle">
+      <a href="https://www.nginx.com" target="_blank">
+        <img src="assets/technologies/nginx-logo.png" alt="nginx" width="100">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://www.jackrabbit.apache.org" target="_blank">
+        <img src="assets/technologies/jackrabbit-logo.png" alt="Apache Jackrabbit" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://reactjs.org" target="_blank">
+        <img src="assets/technologies/react-logo.png" alt="ReactJS" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.typescriptlang.org" target="_blank">
+        <img src="assets/technologies/typescript-logo.png" alt="TypeScript" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.mongodb.com" target="_blank">
+        <img src="assets/technologies/mongodb-logo.png" alt="MongoDB" width="100">
+      </a>
+    </td>          
+  </tr>
+</table>
 
 ### CMS Runtime
 
 The following technologies are used for running WebSight:
-| <a href="https://aws.amazon.com"><img src="/assets/technologies/aws-logo.png" alt="AWS" style="width:60px;" /></a> | <a href="https://www.docker.com"><img src="/assets/technologies/docker-logo.png" alt="Docker" style="width:80px;" /></a> |
-|:-:|:-:|
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://aws.amazon.com" target="_blank">
+        <img src="assets/technologies/aws-logo.png" alt="AWS" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.docker.com" target="_blank">
+        <img src="assets/technologies/docker-logo.png" alt="Docker" width="100">
+      </a>
+    </td>                 
+  </tr>
+</table>
 
 ### CMS Supportive
 
 The following technologies are used to support the process of delivery:
-| <a href="https://www.gnu.org/software/bash"><img src="/assets/technologies/bash-logo.png" alt="Bash" style="width:50px;" /></a> | <a href="https://maven.apache.org"><img src="/assets/technologies/maven-logo.png" alt="Maven" style="width:70px;" /></a> | <a href="https://www.cypress.io"><img src="/assets/technologies/cypress-logo.png" alt="Cypress" style="width:70px;" /></a> | <a href="https://www.percy.io"><img src="/assets/technologies/percy-logo.png" alt="Percy.io" style="width:90px;" /></a> | <a href="https://bitbucket.org/product/features/pipelines"><img src="/assets/technologies/bitbucket-logo.png" alt="Bitbucket" style="width:75px;" /></a> | <a href="https://github.com/features/actions"><img src="/assets/technologies/github-logo.png" alt="Github Actions" style="width:60px;" /></a> | <a href="https://www.atlassian.com/software/confluence"><img src="/assets/technologies/confluence-logo.png" alt="Confluence" style="width:80px;" /></a> | <a href="https://www.atlassian.com/software/jira"><img src="/assets/technologies/jira-logo.png" alt="Jira" style="width:35px;" /></a> | <a href="https://yaml.org"><img src="/assets/technologies/yaml-logo.png" alt="YAML" style="width:50px;" /></a> |
-|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|:-:|
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://www.gnu.org/software/bash" target="_blank">
+        <img src="assets/technologies/bash-logo.png" alt="Bash" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://maven.apache.org" target="_blank">
+        <img src="assets/technologies/maven-logo.png" alt="Maven" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.cypress.io" target="_blank">
+        <img src="assets/technologies/cypress-logo.png" alt="Cypress" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.percy.io" target="_blank">
+        <img src="assets/technologies/percy-logo.png" alt="Percy.io" width="100">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://bitbucket.org/product/features/pipelines" target="_blank">
+        <img src="assets/technologies/bitbucket-logo.png" alt="Bitbucket" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.atlassian.com/software/confluence" target="_blank">
+        <img src="assets/technologies/confluence-logo.png" alt="Confluence" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://www.atlassian.com/software/jira" target="_blank">
+        <img src="assets/technologies/jira-logo.png" alt="Jira" width="100">
+      </a>
+    </td>
+        <td align="center" valign="middle">
+      <a href="https://github.com/features/actions" target="_blank">
+        <img src="assets/technologies/github-logo.png" alt="Github Actions" width="100">
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://yaml.org" target="_blank">
+        <img src="assets/technologies/yaml-logo.png" alt="YAML" width="100">
+      </a>
+    </td>         
+  </tr>
+</table>
 
 ### Design and Prototype
 
 The following technologies are used in designing and prototyping:
-| <a href="https://www.figma.com"><img src="/assets/technologies/figma-logo.png" alt="Figma" style="width:80px;" /></a> | <a href="https://miro.com"><img src="/assets/technologies/miro-logo.png" alt="Miro" style="width:70px;" /></a> |
-|:-:|:-:|
+<table align="center">
+  <tr>
+    <td align="center" valign="middle">
+      <a href="https://www.figma.com" target="_blank">
+        <img src="assets/technologies/figma-logo.png" alt="Figma" width="100">
+      </a>
+    </td>
+    <td align="center" valign="middle">
+      <a href="https://miro.com" target="_blank">
+        <img src="assets/technologies/miro-logo.png" alt="Miro" width="100">
+      </a>
+    </td>            
+  </tr>
+</table>
 
 ## Development
 
