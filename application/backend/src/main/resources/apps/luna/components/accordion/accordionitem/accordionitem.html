@@ -20,10 +20,8 @@
   <div data-sly-unwrap="${!wcmmode.isEdit}"
        style="padding-top: 10px; padding-bottom: 10px; margin: 10px;">
     <article class="accordion">
-      <div class="accordion-header" data-target="${model.id}">
-        <p>${model.header}</p>
-      </div>
-      <div id="${model.id}" class="accordion-body">
+      <div class="accordion-header" data-target="${model.id}" data-testid="header_${resource.name}">${model.header}</div>
+      <div id="${model.id}" class="accordion-body" data-testid="body_${resource.name}">
         <sly data-sly-list="${resource.children}">
           <sly data-sly-resource="${item}"></sly>
         </sly>
