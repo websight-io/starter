@@ -1,0 +1,5 @@
+{
+  "content-packages:ARTIFACTS|true": [
+    "pl.ds.starter:starter-tests-content:zip:${project.version}"
+  ]
+}

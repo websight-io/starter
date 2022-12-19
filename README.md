@@ -180,7 +180,7 @@ Run the command
 ./mvnw clean verify -P e2e
 ```
 
-to build the sample websight, aggregate all required CMS dependencies, run end-to-end tests with Cypress, build Docker images (`ds/nginx-luna:latest`, `ds/websight-cms-luna:latest`).
+to build the sample websight, aggregate all required CMS dependencies, run end-to-end tests with Cypress, build Docker images (`ds/websight-nginx-starter:latest`, `ds/websight-cms-starter:latest`).
 
 ### How to run
 

@@ -1,6 +1,6 @@
 ## Description:
 
-Module contains components logic for Luna components
+Module contains components logic for Starter components
 
 ## Usage:
 

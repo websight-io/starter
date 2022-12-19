@@ -24,7 +24,7 @@ RUN mkdir /websight && \
 VOLUME /websight/repository
 VOLUME /websight/docroot
 
-COPY src/main/docker/websight-cms-luna/bin /websight/bin
+COPY src/main/docker/websight-cms-starter/bin /websight/bin
 RUN ["chmod", "+x", "/websight/bin/launch.sh"]
 COPY target/dependency/org.apache.sling.feature.launcher.jar /websight
 COPY target/artifacts/ /websight/cache/
@@ -34,4 +34,4 @@ HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD curl --fail http:/
 
 WORKDIR /websight
 ENTRYPOINT [ "/websight/bin/launch.sh" ]
-CMD ["websight-cms-luna"]
+CMD ["websight-cms-starter"]
