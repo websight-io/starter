@@ -21,6 +21,10 @@
     {
       "id": "pl.ds.luna:luna-backend:${project.version}",
       "start-order": "25"
+    },
+    {
+      "id": "pl.ds.luna:luna-frontend:${project.version}",
+      "start-order": "25"
     }
   ],
   "content-packages:ARTIFACTS|true": [
