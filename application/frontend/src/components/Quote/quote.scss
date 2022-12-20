@@ -17,8 +17,9 @@
 
  @use '../../sass/abstracts';
 
+
  .quote {
-    @include abstracts.media-breakpoint-up(lg) {
+    @media screen and (min-width: 970px) {
         padding-left: map.get(abstracts.$spacing, 'small-2');
         padding-right: map.get(abstracts.$spacing, 'medium');
       }
@@ -30,7 +31,7 @@
         }
     }
     &__content {
-        @include abstracts.media-breakpoint-up(md) {
+        @media screen and (min-width: 768px) {
             padding-left: 6rem;
         }
         &-text, &-text p {
@@ -38,7 +39,7 @@
             text-align: center;
             color: var(--color-default);
             @include abstracts.font-h4;
-            @include abstracts.media-breakpoint-up(md) {
+            @media screen and (min-width: 768px) {
                 text-align: start;
                 margin-top: 1.5rem;
             }
@@ -64,7 +65,7 @@
         &-description {
             display: block;
             color: var(--color-neutral-500);
-            @include abstracts.font-body(900)
+            font-weight: 900;
         }
     }
  }

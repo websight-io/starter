@@ -35,8 +35,5 @@
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.1",
     "websight-localsync": "^1.1.0"
-  },
-  "dependencies": {
-    "bootstrap": "^5.2.3"
   }
 }

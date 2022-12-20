@@ -36,9 +36,8 @@ svg {
 // global styles
 body {
   background-color: var(--color-body-background);
-  min-height: 100vh;
   
-  @include abstracts.font-body;
+  // @include abstracts.font-body;
 
   &.primary-color {
     @each $name, $color in abstracts.$primary-colors {
