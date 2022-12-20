@@ -1,0 +1,83 @@
+/*
+ * Copyright (C) 2022 Dynamic Solutions
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@use '../../sass/abstracts';
+
+.hl-icon {
+  &.icon-arrow-left::before {
+    content: "\e800";
+  }
+
+  &.icon-arrow-right::before {
+    content: "\e801";
+  }
+
+  &.icon-arrow-up-right::before {
+    content: "\e802";
+  }
+
+  &.icon-check-circle::before {
+    content: "\e803";
+  }
+
+  &.icon-chevron-down::before {
+    content: "\e804";
+  }
+
+  &.icon-chevron-right::before {
+    content: "\e805";
+  }
+
+  &.icon-chevron-up::before {
+    content: "\e806";
+  }
+
+  &.icon-close::before {
+    content: "\e807";
+  }
+
+  &.icon-map-pin::before {
+    content: "\e808";
+  }
+
+  &.icon-menu::before {
+    content: "\e809";
+  }
+
+  &.icon-twitter::before {
+    content: "\e80a";
+  }
+
+  &.icon-scroll::before {
+    content: "\e80c";
+  }
+
+  &.icon-copy::before {
+    content: "\e812";
+  }
+
+  &.icon-facebook::before {
+    content: "\e80e";
+  }
+
+  &.icon-linkedin::before {
+    content: "\e80f";
+  }
+
+  &.icon-instagram::before {
+    content: "\e80b";
+  }
+}

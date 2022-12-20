@@ -23,7 +23,7 @@
           fill="currentColor"/>
     </svg>
     <div class="quote__content">
-      <div data-testid="text">${model.text @ context='html'}</div>
+      <div data-testid="text"class="quote__content-text">${model.text @ context='html'}</div>
       <div class="quote__author">
         <sly data-sly-test="${model.showImage}">
           <img class="quote__author-image" src="${model.authorImage}" alt="${model.imageAlt}">
