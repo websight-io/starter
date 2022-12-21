@@ -1,0 +1,27 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="64" height="64" fill="white"/>
+<path d="M41.1378 13.5212C46.3665 15.6434 50.6969 19.5241 53.3866 24.4983C56.0764 29.4724 56.9581 35.2303 55.8807 40.7852C54.8033 46.3401 51.8339 51.3461 47.4812 54.9452C43.1286 58.5444 37.6639 60.5126 32.0235 60.5126C26.3832 60.5126 20.9184 58.5444 16.5658 54.9452C12.2132 51.3461 9.24373 46.3401 8.16632 40.7852C7.08892 35.2303 7.97065 29.4724 10.6604 24.4983C13.3502 19.5241 17.6805 15.6434 22.9092 13.5212" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24.4112 1.18604H39.6371L44.7085 8.77684L32.0242 25.3817L19.3398 8.77684L24.4112 1.18604Z" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.0234 25.3817L37.0948 8.77684L33.2883 1.18604" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32.0245 25.3817L26.9531 8.77684L30.7596 1.18604" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M19.3398 8.77686H44.7085" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M50.2051 10.9829H57.818V18.6212" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M13.7946 62.814H6.18164V55.1758" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M57.8171 10.9712L6.2168 62.7429" stroke="#0F154A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

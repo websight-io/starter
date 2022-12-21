@@ -1,9 +1,9 @@
-# Luna tests
-This module is responsible for the automatic validation of the Luna components.
+# Starter tests
+This module is responsible for the automatic validation of the Starter components.
 
 It contains:
 - [content](./content) - providing the minimal set of components and pages used during testing
-- [end-to-end](./end-to-end) - end-to-end tests validating both Luna components on authoring and publication
+- [end-to-end](./end-to-end) - end-to-end tests validating both Starter components on authoring and publication
 
 ## How to run
 

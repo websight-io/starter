@@ -19,25 +19,25 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pl.ds.luna</groupId>
-    <artifactId>luna-parent</artifactId>
-    <version>2.1.4-SNAPSHOT</version>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>starter-parent</artifactId>
+    <version>1.6.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>luna-distribution</artifactId>
-  <name>Luna: Distribution</name>
-  <description>Luna distribution that builds the Docker Image for the projects running on WebSight.</description>
+  <artifactId>starter-distribution</artifactId>
+  <name>Starter: Distribution</name>
+  <description>Starter distribution that builds the Docker Image for the projects running on WebSight.</description>
 
   <dependencies>
     <dependency>
-      <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-content</artifactId>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-content</artifactId>
       <version>${project.parent.version}</version>
       <type>pom</type>
     </dependency>
     <dependency>
-      <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-backend</artifactId>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-backend</artifactId>
       <version>${project.parent.version}</version>
       <type>pom</type>
     </dependency>
@@ -85,8 +85,8 @@
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
-              <classifier>websight-cms-luna</classifier>
-              <title>WebSight CMS with Luna project</title>
+              <classifier>websight-cms-starter</classifier>
+              <title>Starter WebSight CMS project</title>
               <filesInclude>*.json</filesInclude>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
@@ -106,12 +106,12 @@
           </aggregates>
           <scans>
             <scan>
-              <includeClassifier>websight-cms-luna</includeClassifier>
+              <includeClassifier>websight-cms-starter</includeClassifier>
             </scan>
           </scans>
           <repositories>
             <repository>
-              <includeClassifier>websight-cms-luna</includeClassifier>
+              <includeClassifier>websight-cms-starter</includeClassifier>
               <includeClassifier>docker</includeClassifier>
             </repository>
           </repositories>
@@ -174,7 +174,7 @@
                 <image>
                   <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
                   <build>
-                    <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
@@ -213,7 +213,7 @@
             <configuration>
               <images>
                 <image>
-                  <name>public.ecr.aws/ds/websight-cms-ce:luna-${project.version}</name>
+                  <name>public.ecr.aws/ds/websight-cms-starter:${project.version}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -221,12 +221,12 @@
                         <platform>linux/arm64</platform>
                       </platforms>
                     </buildx>
-                    <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
+                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
                 <image>
-                  <name>public.ecr.aws/ds/websight-nginx-ce:luna-${project.version}</name>
+                  <name>public.ecr.aws/ds/websight-nginx-starter:${project.version}</name>
                   <build>
                     <buildx>
                       <platforms>

@@ -25,7 +25,7 @@ describe('Luna Title component', function () {
   });
 
   it('renders correctly in preview mode', function () {
-    cy.visit('/content/luna-test/pages/LunaTitle.html');
+    cy.visit('/content/starter-test/pages/LunaTitle.html');
 
     cy.getByTestId('component_title')
       .findByTestId('title')
@@ -66,7 +66,7 @@ describe('Luna Title component', function () {
     ).as('saveProperties');
 
     cy.visit(
-      '/apps/websight/index.html/content/luna-test/pages/LunaTitle::editor'
+      '/apps/websight/index.html/content/starter-test/pages/LunaTitle::editor'
     );
 
     cy.getByTestId(paths.title)
@@ -90,7 +90,7 @@ describe('Luna Title component', function () {
     cy.wait('@saveProperties');
 
     cy.request(
-      '/content/luna-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title.json'
+      '/content/starter-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title.json'
     )
       .its('body')
       .should('deep.eq', {
