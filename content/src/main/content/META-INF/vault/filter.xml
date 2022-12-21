@@ -18,4 +18,5 @@
 <workspaceFilter version="1.0">
   <filter root="/content/luna" mode="merge"/>
   <filter root="/content/nocodeluna" mode="merge"/>
+  <filter root="/content/lowcodeluna" mode="merge"/>
 </workspaceFilter>
