@@ -14,8 +14,10 @@
  * limitations under the License.
  */
 
-// Stylesheets
-import "./main.scss";
+import { Breakpoint } from "../types/types";
 
-// Javascript or Typescript
-import "./**/*.js";
+export const breakpoints: Breakpoint = {
+  sm: 0,
+  md: 768,
+  lg: 970
+};

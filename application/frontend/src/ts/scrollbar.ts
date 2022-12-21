@@ -14,8 +14,22 @@
  * limitations under the License.
  */
 
-// Stylesheets
-import "./main.scss";
+export const getScrollbarWidth: () => number = () => {
+  return window.innerWidth - document.documentElement.clientWidth;
+};
 
-// Javascript or Typescript
-import "./**/*.js";
+
+const initScrollbarCssVariable: () => void = () => {
+  document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+      document.documentElement.style.setProperty(
+        '--scrollbar-width',
+        `${getScrollbarWidth()}px`,
+      );
+    },
+    { once: true },
+  );
+};
+
+initScrollbarCssVariable();

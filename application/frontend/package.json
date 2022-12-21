@@ -34,6 +34,10 @@
     "tsconfig-paths-webpack-plugin": "^3.2.0",
     "webpack": "^5.69.1",
     "webpack-cli": "^4.9.1",
-    "websight-localsync": "^1.1.0"
+    "websight-localsync": "^1.2.0-SNAPSHOT"
+  },
+  "dependencies": {
+    "@glidejs/glide": "^3.6.0",
+    "@types/glidejs__glide": "^3.6.1"
   }
 }

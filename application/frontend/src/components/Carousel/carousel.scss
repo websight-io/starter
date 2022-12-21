@@ -14,8 +14,17 @@
  * limitations under the License.
  */
 
-// Stylesheets
-import "./main.scss";
-
-// Javascript or Typescript
-import "./**/*.js";
+.carousel {
+    overflow: hidden;
+    &-item {
+        .card {
+            box-shadow: none;
+            &-footer {
+                border-top: none;
+            }
+            &-content {
+                line-height: 1.4;
+            }
+        }
+    }
+}

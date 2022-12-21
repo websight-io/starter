@@ -14,8 +14,26 @@
  * limitations under the License.
  */
 
-// Stylesheets
-import "./main.scss";
+export const throttle: (fn: any, limit?: number) => (...args: any[]) => void = (fn, limit = 25) => {
+  let isBusy = false;
+  return (...args) => {
+    if (!isBusy) {
+      fn.apply(this, args);
+      isBusy = true;
+      setTimeout(() => {
+        isBusy = false;
+      }, limit);
+    }
+  };
+};
 
-// Javascript or Typescript
-import "./**/*.js";
+export const debounce: (fn: any, timeout?: number) => (...args: any[]) => void = (fn, timeout = 50) => {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      fn.apply(this, args);
+    }, timeout);
+  };
+};

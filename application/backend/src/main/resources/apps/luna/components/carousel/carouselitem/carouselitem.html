@@ -15,7 +15,7 @@
 */-->
 
 <sly data-sly-use.model="pl.ds.luna.lowcode.components.models.carousel.CarouselItemComponent">
-  <sly data-sly-test.classes="carousel-item column ${model.columnClass}"></sly>
+  <sly data-sly-test.classes="carousel-item ${wcmmode.isEdit ? 'column ${model.columnClass}' : ''}"></sly>
   <sly data-sly-test="${resource.hasChildren}">
     <div class="${classes}">
       <sly
