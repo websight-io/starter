@@ -19,14 +19,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pl.ds.luna</groupId>
-    <artifactId>luna-parent</artifactId>
-    <version>2.1.4-SNAPSHOT</version>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>starter-parent</artifactId>
+    <version>1.6.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>luna-content</artifactId>
+  <artifactId>starter-content</artifactId>
   <packaging>content-package</packaging>
-  <name>Luna: Content</name>
+  <name>Starter: Content</name>
 
   <properties>
     <sling.install.package.username>${websight.admin.username}</sling.install.package.username>

@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M44 25.0666L20 11.2266" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M56 42.6667V21.3333C55.999 20.3981 55.7522 19.4795 55.2841 18.6698C54.8161 17.86 54.1433 17.1876 53.3333 16.72L34.6667 6.05334C33.8559 5.58524 32.9362 5.33881 32 5.33881C31.0638 5.33881 30.1441 5.58524 29.3333 6.05334L10.6667 16.72C9.8567 17.1876 9.18395 17.86 8.7159 18.6698C8.24785 19.4795 8.00096 20.3981 8 21.3333V42.6667C8.00096 43.6019 8.24785 44.5205 8.7159 45.3302C9.18395 46.14 9.8567 46.8124 10.6667 47.28L29.3333 57.9467C30.1441 58.4148 31.0638 58.6612 32 58.6612C32.9362 58.6612 33.8559 58.4148 34.6667 57.9467L53.3333 47.28C54.1433 46.8124 54.8161 46.14 55.2841 45.3302C55.7522 44.5205 55.999 43.6019 56 42.6667Z" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M8.71997 18.5598L32 32.0265L55.28 18.5598" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M32 58.88V32" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

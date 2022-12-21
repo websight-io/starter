@@ -19,14 +19,14 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pl.ds.luna</groupId>
-    <artifactId>luna-tests</artifactId>
-    <version>2.1.4-SNAPSHOT</version>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>starter-tests</artifactId>
+    <version>1.6.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>luna-tests-e2e</artifactId>
-  <name>Luna: Tests: End to end</name>
+  <artifactId>starter-tests-e2e</artifactId>
+  <name>Starter: Tests: End to end</name>
   <packaging>pom</packaging>
 
   <properties>
@@ -43,15 +43,15 @@
 
   <dependencies>
     <dependency>
-      <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-distribution</artifactId>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-distribution</artifactId>
       <version>${project.version}</version>
-      <classifier>websight-cms-luna</classifier>
+      <classifier>websight-cms-starter</classifier>
       <type>slingosgifeature</type>
     </dependency>
     <dependency>
-      <groupId>pl.ds.luna</groupId>
-      <artifactId>luna-tests-content</artifactId>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-tests-content</artifactId>
       <version>${project.version}</version>
       <type>pom</type>
     </dependency>
@@ -85,26 +85,26 @@
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
-              <classifier>luna-project-tests</classifier>
+              <classifier>starter-project-tests</classifier>
               <filesInclude>*.json</filesInclude>
-              <title>Luna distribution with test data</title>
+              <title>Starter distribution with test data</title>
               <includeArtifact>
-                <groupId>pl.ds.luna</groupId>
-                <artifactId>luna-distribution</artifactId>
+                <groupId>pl.ds.starter</groupId>
+                <artifactId>starter-distribution</artifactId>
                 <version>${project.version}</version>
-                <classifier>websight-cms-luna</classifier>
+                <classifier>websight-cms-starter</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
             </aggregate>
           </aggregates>
           <scans>
             <scan>
-              <includeClassifier>luna-project-tests</includeClassifier>
+              <includeClassifier>starter-project-tests</includeClassifier>
             </scan>
           </scans>
           <repositories>
             <repository>
-              <includeClassifier>luna-project-tests</includeClassifier>
+              <includeClassifier>starter-project-tests</includeClassifier>
             </repository>
           </repositories>
           <outputDir>target</outputDir>
@@ -208,12 +208,12 @@
         <configuration>
           <launches>
             <launch>
-              <id>luna-project-tests</id>
+              <id>starter-project-tests</id>
               <feature>
                 <groupId>${project.groupId}</groupId>
                 <artifactId>${project.artifactId}</artifactId>
                 <version>${project.version}</version>
-                <classifier>luna-project-tests</classifier>
+                <classifier>starter-project-tests</classifier>
                 <type>slingosgifeature</type>
               </feature>
               <launcherArguments>

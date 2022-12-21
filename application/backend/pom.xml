@@ -19,13 +19,13 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pl.ds.luna</groupId>
-    <artifactId>luna-application</artifactId>
-    <version>2.1.4-SNAPSHOT</version>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>starter-application</artifactId>
+    <version>1.6.1-SNAPSHOT</version>
   </parent>
 
-  <artifactId>luna-backend</artifactId>
-  <name>Luna: Backend</name>
+  <artifactId>starter-backend</artifactId>
+  <name>Starter: Backend</name>
 
   <build>
     <plugins>

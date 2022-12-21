@@ -19,9 +19,9 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pl.ds.luna</groupId>
-    <artifactId>luna-parent</artifactId>
-    <version>2.1.4-SNAPSHOT</version>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>starter-parent</artifactId>
+    <version>1.6.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -30,8 +30,8 @@
     <module>end-to-end</module>
   </modules>
 
-  <artifactId>luna-tests</artifactId>
-  <name>Luna: Tests</name>
+  <artifactId>starter-tests</artifactId>
+  <name>Starter: Tests</name>
   <packaging>pom</packaging>
 
   <properties>

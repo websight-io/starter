@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:ws="http://ds.pl/websight"
+    jcr:primaryType="ws:Pages"
+    ws:template="/apps/bulma/templates/pagesspace">
+    <Homepage/>
+    <Products/>
+    <About/>
+    <Catalog/>
+</jcr:root>

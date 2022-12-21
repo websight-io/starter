@@ -1,0 +1,22 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<svg width="103" height="22" viewBox="0 0 103 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M0.240234 1.39992V20.9999H10.3202V18.7599H2.62023V1.39992H0.240234Z" fill="#0F154A"/>
+<path d="M24.1857 1.39992V14.5599C24.1857 15.5306 24.335 16.4266 24.6337 17.2479C24.951 18.0693 25.399 18.7786 25.9777 19.3759C26.575 19.9733 27.2844 20.4399 28.1057 20.7759C28.927 21.1119 29.8417 21.2799 30.8497 21.2799C31.8577 21.2799 32.7724 21.1119 33.5937 20.7759C34.415 20.4399 35.115 19.9733 35.6937 19.3759C36.291 18.7786 36.739 18.0693 37.0377 17.2479C37.355 16.4266 37.5137 15.5306 37.5137 14.5599V1.39992H35.1337V14.5599C35.1337 15.9039 34.7697 16.9866 34.0417 17.8079C33.3137 18.6293 32.2497 19.0399 30.8497 19.0399C29.4497 19.0399 28.3857 18.6293 27.6577 17.8079C26.9297 16.9866 26.5657 15.9039 26.5657 14.5599V1.39992H24.1857Z" fill="#0F154A"/>
+<path d="M68.173 1.39992V15.9879L53.333 0.419922V20.9999H55.713V6.41192L70.553 21.9799V1.39992H68.173Z" fill="#0F154A"/>
+<path d="M88.4 15.1199H98.76L97.92 12.8799H89.24L88.4 15.1199ZM93.524 5.82392L96.884 13.7199L97.108 14.2799L99.964 20.9999H102.624L93.524 0.419922L84.424 20.9999H87.084L89.996 14.1119L90.22 13.6079L93.524 5.82392Z" fill="#0F154A"/>
+</svg>
