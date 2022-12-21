@@ -27,11 +27,12 @@ export const galleryHorizontalPadding: Breakpoint = {
   [breakpoints.lg]: 0
 };
 
-const SLIDER_MOVING_DATA_ATTRIBUTE: string = 'data-slider-move';
+const SLIDER_MOVING_DATA_ATTRIBUTE = 'data-slider-move';
 
-export const PAGE_PADDING_HORIZONTAL: number = 24;
+export const PAGE_PADDING_HORIZONTAL = 24;
 
-export const getGalleryPeek: (element: HTMLElement, breakpoint: number, minPeek?: number) => {} = (element, breakpoint, minPeek = 80) => {
+export const getGalleryPeek: (element: HTMLElement, breakpoint: number, minPeek?: number) => object = (element, breakpoint, minPeek = 80) =>
+{
   const pagePadding: number = galleryHorizontalPadding[breakpoint];
   const scrollbarOffset: number = getScrollbarWidth() / 2;
 
@@ -78,16 +79,16 @@ export const initGlideJsSlider: (selector: string, optionsFn: any) => void = (se
          * Peek value depends on the current width of the window and the slider element,
          * so it needs to be updated upon resize.
          */
-        const updateOptions = {
+        const updateOptions: any = {
           peek: optionsFn(element).peek,
-          perView: null
+          startAt: 0
         };
 
         // Workaround for following issue: https://github.com/glidejs/glide/issues/541
         if (getBreakpoint() === breakpoints.lg) {
+
           updateOptions.perView = optionsFn(element).perView;
         }
-
         glide.update(updateOptions);
       });
 

@@ -17,6 +17,9 @@
 @use '../../sass/abstracts';
 
 .hl-icon {
+  font-family: 'ds-iconfonts';
+  font-style: normal;
+
   &.icon-arrow-left::before {
     content: "\e800";
   }

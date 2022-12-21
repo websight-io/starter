@@ -14,7 +14,11 @@
  * limitations under the License.
  */
 
+ @use 'sass:map';
+ @use '../../sass/abstracts';
+
 .carousel {
+    padding-top: 50px;
     overflow: hidden;
     &-item {
         .card {
@@ -27,4 +31,23 @@
             }
         }
     }
+    &__controls {
+        margin-top: 40px;
+        display: flex;
+        justify-content: center;
+    }
+    &__control {
+        margin: 18px 5px;
+        cursor: pointer;
+        @include abstracts.social-icon;
+
+        &.hl-icon--left {
+          transform: rotate(180deg)
+        }
+        &.glide__arrow--disabled {
+          cursor: default;
+          pointer-events: none;
+          opacity: 0.5;
+        }
+      }
 }

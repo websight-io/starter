@@ -34,22 +34,21 @@ const getCardsListPeek = (element, breakpoint) => {
 };
 
 const initCardsListGlideJs = () => {
-  initGlideJsSlider('.carousel', element => {
+  initGlideJsSlider('.carousel.glide', element => {
     const breakpoint = getBreakpoint();
-
     return {
       type: 'slider',
       gap: 32,
       bound: true,
       rewind: false,
       peek: getCardsListPeek(element, breakpoint),
-      perView: element.dataset.itemsPerRowLg,
+      perView: element.dataset.itemsPerRow,
       breakpoints: {
         [breakpoints.md]: {
-          perView: element.dataset.itemsPerRowSm
+          perView: 1
         },
         [breakpoints.lg]: {
-          perView: element.dataset.itemsPerRowMd
+          perView: 3
         }
       }
     };

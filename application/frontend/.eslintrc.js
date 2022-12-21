@@ -29,7 +29,7 @@ module.exports =  {
         "@typescript-eslint/no-explicit-any": [0],
         "ordered-imports": [0],
         "object-literal-sort-keys": [0],
-        "max-len": [1, 120],
+        "max-len": [1, 140],
         "new-parens": 1,
         "no-bitwise": 1,
         "no-cond-assign": 1,
