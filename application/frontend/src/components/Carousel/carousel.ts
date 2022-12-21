@@ -14,34 +14,18 @@
  * limitations under the License.
  */
 
-import { initGlideJsSlider, galleryHorizontalPadding, getGalleryPeek, getBreakpoint } from '../../ts/helpers/glide';
+import { initGlideJsSlider } from '../../ts/helpers/glide';
 import { breakpoints } from '../../ts/constants/breakpoints';
-import { getScrollbarWidth } from '../../ts/scrollbar';
 
-const getCardsListPeek = (element, breakpoint) => {
-  const minPeek = 40;
-  const mobileMinPeek = 52;
-
-  // Cards list should appear centered on mobile, otherwise it works same as gallery.
-  if (breakpoint === breakpoints.sm) {
-    const pagePadding = galleryHorizontalPadding[breakpoints.sm];
-    const scrollbarOffset = getScrollbarWidth() / 2;
-
-    return pagePadding + mobileMinPeek - scrollbarOffset;
-  }
-
-  return getGalleryPeek(element, breakpoint, minPeek);
-};
 
 const initCardsListGlideJs = () => {
   initGlideJsSlider('.carousel.glide', element => {
-    const breakpoint = getBreakpoint();
     return {
       type: 'slider',
       gap: 32,
       bound: true,
       rewind: false,
-      peek: getCardsListPeek(element, breakpoint),
+      peek: 0,
       perView: element.dataset.itemsPerRow,
       breakpoints: {
         [breakpoints.md]: {

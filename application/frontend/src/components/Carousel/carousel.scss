@@ -50,4 +50,8 @@
           opacity: 0.5;
         }
       }
+    .glide__track {
+        cursor: grab;
+        @include abstracts.bleed;
+    }
 }

@@ -18,7 +18,6 @@ import Glide from '@glidejs/glide';
 import { breakpoints } from '../constants/breakpoints';
 import { isRunningIos } from './platform';
 import { throttle } from './utils';
-import { getScrollbarWidth } from '../scrollbar';
 import { Breakpoint } from '../types/types';
 
 export const galleryHorizontalPadding: Breakpoint = {
@@ -29,25 +28,7 @@ export const galleryHorizontalPadding: Breakpoint = {
 
 const SLIDER_MOVING_DATA_ATTRIBUTE = 'data-slider-move';
 
-export const PAGE_PADDING_HORIZONTAL = 24;
-
-export const getGalleryPeek: (element: HTMLElement, breakpoint: number, minPeek?: number) => object = (element, breakpoint, minPeek = 80) =>
-{
-  const pagePadding: number = galleryHorizontalPadding[breakpoint];
-  const scrollbarOffset: number = getScrollbarWidth() / 2;
-
-  const actualMinPeek: number = breakpoint === breakpoints.lg ? 0 : minPeek;
-
-  const after: number = (window.innerWidth - element.offsetWidth) / 2 + pagePadding + actualMinPeek - scrollbarOffset;
-  const before: number = breakpoint === breakpoints.lg ? after : pagePadding - scrollbarOffset;
-
-  return {
-    before,
-    after
-  };
-};
-
-export const getBreakpoint: () => number = () => {
+const getBreakpoint: () => number = () => {
   let breakpoint: number = breakpoints.lg;
 
   if (window.innerWidth < breakpoints.md) {
