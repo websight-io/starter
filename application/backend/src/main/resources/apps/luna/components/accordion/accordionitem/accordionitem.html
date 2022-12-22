@@ -17,11 +17,13 @@
 */-->
 
 <sly data-sly-use.model="pl.ds.luna.lowcode.components.models.AccordionItemComponent">
-  <div data-sly-unwrap="${!wcmmode.isEdit}"
-       style="padding-top: 10px; padding-bottom: 10px; margin: 10px;">
-    <article class="accordion">
-      <div class="accordion-header" data-target="${model.id}" data-testid="header_${resource.name}">${model.header}</div>
-      <div id="${model.id}" class="accordion-body" data-testid="body_${resource.name}">
+  <div data-sly-unwrap="${!wcmmode.isEdit}">
+    <article class="accordion__item ${wcmmode.isEdit ? 'edit-mode' : ''}">
+      <button class="accordion__item-header" data-target="${model.id}" data-testid="header_${resource.name}">
+        ${model.header}
+        <i class="hl-icon icon-chevron-down accordion__item-icon"></i>
+      </button>
+      <div id="${model.id}" class="accordion__item-body" data-testid="body_${resource.name}">
         <sly data-sly-list="${resource.children}">
           <sly data-sly-resource="${item}"></sly>
         </sly>
