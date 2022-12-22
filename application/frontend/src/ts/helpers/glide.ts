@@ -18,13 +18,6 @@ import Glide from '@glidejs/glide';
 import { breakpoints } from '../constants/breakpoints';
 import { isRunningIos } from './platform';
 import { throttle } from './utils';
-import { Breakpoint } from '../types/types';
-
-export const galleryHorizontalPadding: Breakpoint = {
-  [breakpoints.sm]: 24,
-  [breakpoints.md]: 32,
-  [breakpoints.lg]: 0
-};
 
 const SLIDER_MOVING_DATA_ATTRIBUTE = 'data-slider-move';
 
