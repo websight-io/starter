@@ -28,7 +28,7 @@ export const galleryHorizontalPadding: Breakpoint = {
 
 const SLIDER_MOVING_DATA_ATTRIBUTE = 'data-slider-move';
 
-const getBreakpoint: () => number = () => {
+export const getBreakpoint: () => number = () => {
   let breakpoint: number = breakpoints.lg;
 
   if (window.innerWidth < breakpoints.md) {

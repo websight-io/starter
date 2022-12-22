@@ -14,18 +14,28 @@
  * limitations under the License.
  */
 
-import { initGlideJsSlider } from '../../ts/helpers/glide';
+import { initGlideJsSlider, getBreakpoint } from '../../ts/helpers/glide';
 import { breakpoints } from '../../ts/constants/breakpoints';
 
+const getCardsListPeek: (breakpoint: number) => number = (breakpoint) => {
+  const mobileMinPeek = 52;
+
+  if (breakpoint === breakpoints.sm) {
+    return mobileMinPeek;
+  }
+
+  return 0;
+};
 
 const initCardsListGlideJs = () => {
   initGlideJsSlider('.carousel.glide', element => {
+    const breakpoint = getBreakpoint();
     return {
       type: 'slider',
       gap: 32,
       bound: true,
       rewind: false,
-      peek: 0,
+      peek: getCardsListPeek(breakpoint),
       perView: element.dataset.itemsPerRow,
       breakpoints: {
         [breakpoints.md]: {
