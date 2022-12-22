@@ -1,0 +1,7 @@
+{
+  "isContainer": true,
+  "group": "Bulma.io Components",
+  "allowedComponents": ["/apps/luna/components/accordion/accordionitem"],
+  "sling:resourceType": "ws:Component",
+  "title": "Accordion"
+}
