@@ -15,8 +15,10 @@
  *     limitations under the License.
  * -->
  */
+@use "node_modules/@glidejs/glide/src/assets/sass/glide.core";
 
 @import './sass/global';
 @import './sass/base/index';
 @import './sass/theme/demo-content-theme.scss';
 @import './components/Quote/quote.scss';
+@import './components/Carousel/carousel.scss';

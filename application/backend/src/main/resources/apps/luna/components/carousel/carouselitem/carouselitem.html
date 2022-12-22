@@ -15,12 +15,17 @@
 */-->
 
 <sly data-sly-use.model="pl.ds.luna.lowcode.components.models.carousel.CarouselItemComponent">
-  <sly data-sly-test.classes="carousel-item column ${model.columnClass}"></sly>
+  <sly data-sly-test="${wcmmode.isEdit}">
+    <sly data-sly-test.classes="carousel-item column ${model.columnClass}"></sly>
+  </sly>
+  <sly data-sly-test="${!wcmmode.isEdit}">
+    <sly data-sly-test.classes="carousel-item glide__slide"></sly>
+  </sly>
+  
   <sly data-sly-test="${resource.hasChildren}">
-    <div class="${classes}">
-      <sly
-          data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
-    </div>
+    <li class="${classes}">
+      <sly data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+    </li>
   </sly>
   <sly data-sly-test="${!resource.hasChildren}">
     <sly data-sly-use.lib="/libs/wcm/foundation/components/commons/templates.html"

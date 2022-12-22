@@ -16,3 +16,6 @@
 
 // Stylesheets
 import "./main.scss";
+
+// Typescript
+import "./**/*.ts";

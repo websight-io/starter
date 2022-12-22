@@ -14,22 +14,10 @@
  * limitations under the License.
  */
 
-package pl.ds.luna.lowcode.components.models.carousel;
+import { Breakpoint } from "../types/types";
 
-import javax.inject.Inject;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.DefaultInjectionStrategy;
-import org.apache.sling.models.annotations.Model;
-
-@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class CarouselComponent {
-
-  @Inject
-  @Default(intValues = 3)
-  private int slidesToShow;
-
-  public int getSlidesToShow() {
-    return slidesToShow;
-  }
-}
+export const breakpoints: Breakpoint = {
+  sm: 0,
+  md: 768,
+  lg: 970
+};

@@ -14,22 +14,22 @@
  * limitations under the License.
  */
 
-package pl.ds.luna.lowcode.components.models.carousel;
+export const getScrollbarWidth: () => number = () => {
+  return window.innerWidth - document.documentElement.clientWidth;
+};
 
-import javax.inject.Inject;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.DefaultInjectionStrategy;
-import org.apache.sling.models.annotations.Model;
 
-@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class CarouselComponent {
+const initScrollbarCssVariable: () => void = () => {
+  document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+      document.documentElement.style.setProperty(
+        '--scrollbar-width',
+        `${getScrollbarWidth()}px`,
+      );
+    },
+    { once: true },
+  );
+};
 
-  @Inject
-  @Default(intValues = 3)
-  private int slidesToShow;
-
-  public int getSlidesToShow() {
-    return slidesToShow;
-  }
-}
+initScrollbarCssVariable();

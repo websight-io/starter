@@ -14,22 +14,26 @@
  * limitations under the License.
  */
 
-package pl.ds.luna.lowcode.components.models.carousel;
+export const throttle: (fn: any, limit?: number) => (...args: any[]) => void = (fn, limit = 25) => {
+  let isBusy = false;
+  return (...args) => {
+    if (!isBusy) {
+      fn.apply(this, args);
+      isBusy = true;
+      setTimeout(() => {
+        isBusy = false;
+      }, limit);
+    }
+  };
+};
 
-import javax.inject.Inject;
-import org.apache.sling.api.resource.Resource;
-import org.apache.sling.models.annotations.Default;
-import org.apache.sling.models.annotations.DefaultInjectionStrategy;
-import org.apache.sling.models.annotations.Model;
-
-@Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
-public class CarouselComponent {
-
-  @Inject
-  @Default(intValues = 3)
-  private int slidesToShow;
-
-  public int getSlidesToShow() {
-    return slidesToShow;
-  }
-}
+export const debounce: (fn: any, timeout?: number) => (...args: any[]) => void = (fn, timeout = 50) => {
+  let timer = null;
+  return (...args) => {
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      timer = null;
+      fn.apply(this, args);
+    }, timeout);
+  };
+};
