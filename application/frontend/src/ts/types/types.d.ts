@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!--
+/*
     Copyright (C) 2022 Dynamic Solutions
 
     Licensed under the Apache License, Version 2.0 (the "License");
@@ -13,10 +12,8 @@
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
--->
+*/
 
-<workspaceFilter version="1.0">
-  <filter root="/content/luna-test"/>
-  <filter root="/content/low-code-luna-test"/>
-  <filter root="/content/starter-test"/>
-</workspaceFilter>
+export type Breakpoint = {
+    [breakpoint: string]: number
+}

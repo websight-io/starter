@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!--
     Copyright (C) 2022 Dynamic Solutions
 
@@ -14,9 +13,6 @@
     See the License for the specific language governing permissions and
     limitations under the License.
 -->
-
-<workspaceFilter version="1.0">
-  <filter root="/content/luna-test"/>
-  <filter root="/content/low-code-luna-test"/>
-  <filter root="/content/starter-test"/>
-</workspaceFilter>
+<svg width="14" height="11" viewBox="0 0 14 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M12.3346 2L5.0013 9.33333L1.66797 6" stroke="#151515" stroke-width="2" stroke-linecap="square"/>
+</svg>

@@ -21,6 +21,10 @@
     {
       "id": "pl.ds.starter:starter-backend:${project.version}",
       "start-order": "25"
+    },
+    {
+      "id": "pl.ds.starter:starter-frontend:${project.version}",
+      "start-order": "25"
     }
   ],
   "content-packages:ARTIFACTS|true": [

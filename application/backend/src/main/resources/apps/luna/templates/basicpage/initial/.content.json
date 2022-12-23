@@ -1,0 +1,10 @@
+{
+  "jcr:primaryType": "ws:Page",
+  "jcr:content": {
+    "jcr:primaryType": "ws:PageContent",
+    "sling:resourceType": "luna/components/page",
+    "pagecontainer": {
+      "sling:resourceType": "bulma/components/pagecontainer"
+    }
+  }
+}

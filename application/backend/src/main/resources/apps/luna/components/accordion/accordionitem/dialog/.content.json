@@ -1,0 +1,15 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "tabs": {
+    "sling:resourceType": "wcm/dialogs/components/tabs",
+    "generalTab": {
+      "sling:resourceType": "wcm/dialogs/components/tab",
+      "label": "General",
+      "header": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "header",
+        "label": "Header"
+      }
+    }
+  }
+}
