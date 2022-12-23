@@ -32,4 +32,5 @@ public class CarouselComponent {
   public int getSlidesToShow() {
     return slidesToShow;
   }
+
 }

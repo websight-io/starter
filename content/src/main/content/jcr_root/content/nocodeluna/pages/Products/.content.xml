@@ -32,7 +32,7 @@
                                 sling:resourceType="bulma/components/navbar/navbaritem"
                                 label="LUNA"
                                 type="image"
-                                url="/content/nocodeluna/pages/Homepage.html">
+                                url="/content/nocodeluna/pages/Homepage">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
@@ -50,31 +50,31 @@
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="BLOG"
                                     type="link"
-                                    url="/content/nocodeluna/pages/Homepage.html"/>
+                                    url="/content/nocodeluna/pages/Homepage"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="PRODUCTS"
                                     type="link"
-                                    url="/content/nocodeluna/pages/Products.html"/>
+                                    url="/content/nocodeluna/pages/Products"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="CATALOG"
                                     type="link"
-                                    url="/content/nocodeluna/pages/Catalog.html"/>
+                                    url="/content/nocodeluna/pages/Catalog"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="ABOUT"
                                     type="link"
-                                    url="/content/nocodeluna/pages/About.html"/>
+                                    url="/content/nocodeluna/pages/About"/>
                                 <item_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="          CONTACT US"
                                     type="link"
-                                    url="/content/nocodeluna/pages/Homepage.html"/>
+                                    url="/content/nocodeluna/pages/Homepage"/>
                             </end>
                         </menu>
                     </navbar>
@@ -506,13 +506,13 @@
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="PRODUCTS"
                                     type="link"
-                                    url="/content/nocodeluna/pages/Products.html"/>
+                                    url="/content/nocodeluna/pages/Products"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="bulma/components/navbar/navbaritem"
                                     label="ABOUT"
                                     type="link"
-                                    url="/content/nocodeluna/pages/About.html"/>
+                                    url="/content/nocodeluna/pages/About"/>
                             </start>
                             <end
                                 jcr:primaryType="nt:unstructured"

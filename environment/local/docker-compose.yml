@@ -69,6 +69,7 @@ services:
       - "81:81"
       - "82:82"
       - "83:83"
+      - "84:84"
     volumes:
       - starter-project_site_repository:/usr/share/nginx/html:ro
 
