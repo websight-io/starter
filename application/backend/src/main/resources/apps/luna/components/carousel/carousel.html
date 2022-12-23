@@ -14,44 +14,25 @@
     limitations under the License.
 */-->
 
-<style data-sly-test="${!wcmmode.isEdit}">
-  .carousel {
-    overflow: hidden;
-    position: relative;
-  }
-
-  #prevButton, #nextButton {
-    position: absolute;
-    top: 50%;
-    margin-top: -20px;
-    cursor: pointer;
-    opacity: 0.6;
-    color: #000;
-  }
-
-  #nextButton {
-    right: 0%;
-  }
-
-  #prevButton .fa-arrow-left, #nextButton .fa-arrow-right {
-    color: white;
-  }
-</style>
-
-<sly data-sly-test="${resource.hasChildren}">
-  <div class="carousel columns ${wcmmode.isEdit ? 'is-multiline' : ''}"
-       data-testid="component_${resource.name}">
-    <sly
-        data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
-    <sly data-sly-test="${!wcmmode.isEdit}">
-      <span class="fa-stack fa-1x" id="prevButton">
-        <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fas fa-arrow-left fa-stack-1x fa-inverse"></i>
-      </span>
-      <span class="fa-stack fa-1x" id="nextButton">
-        <i class="fas fa-circle fa-stack-2x"></i>
-        <i class="fas fa-arrow-right fa-stack-1x fa-inverse"></i>
-      </span>
+<sly data-sly-use.model="pl.ds.luna.lowcode.components.models.carousel.CarouselComponent">
+    <sly data-sly-test="${resource.hasChildren}">
+        <sly data-sly-test="${!wcmmode.isEdit}">
+            <div class="carousel glide" data-items-per-row="${model.slidesToShow}" data-testid="component_${resource.name}">
+                <div class="glide__track" data-glide-el="track" tabindex="0">
+                    <ul class="glide__slides">
+                        <sly data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+                    </ul>
+                </div>
+                <div data-glide-el="controls" class="carousel__controls">
+                    <span id="prevButton" data-glide-dir="<" class="carousel__control hl-icon--left"><i class="hl-icon icon-chevron-right" tabindex="0"></i></span>
+                    <span id="nextButton" data-glide-dir=">" class="carousel__control"><i class="hl-icon icon-chevron-right" tabindex="0"></i></span>
+                </div>
+            </div>
+        </sly>
+        <sly data-sly-test="${wcmmode.isEdit}">
+            <ul class="carousel columns is-multiline" data-testid="component_${resource.name}">
+              <sly data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+            </ul>
+        </sly>
     </sly>
-  </div>
 </sly>

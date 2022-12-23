@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-@forward 'colors';
-@forward 'fonts';
-@forward 'icons';
-@forward 'spacing';
-@forward 'variables';
-@forward 'zindex';
+export const isRunningIos: () => [] | boolean = () => {
+  return (
+    ['iPad Simulator', 'iPhone Simulator', 'iPod Simulator', 'iPad', 'iPhone', 'iPod'].includes(navigator.platform) ||
+    // iPad on iOS 13 detection
+    (navigator.userAgent.includes('Mac') && 'ontouchend' in document)
+  );
+};

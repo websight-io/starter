@@ -14,9 +14,22 @@
  * limitations under the License.
  */
 
-@forward 'colors';
-@forward 'fonts';
-@forward 'icons';
-@forward 'spacing';
-@forward 'variables';
-@forward 'zindex';
+export const getScrollbarWidth: () => number = () => {
+  return window.innerWidth - document.documentElement.clientWidth;
+};
+
+
+const initScrollbarCssVariable: () => void = () => {
+  document.addEventListener(
+    'DOMContentLoaded',
+    () => {
+      document.documentElement.style.setProperty(
+        '--scrollbar-width',
+        `${getScrollbarWidth()}px`,
+      );
+    },
+    { once: true },
+  );
+};
+
+initScrollbarCssVariable();

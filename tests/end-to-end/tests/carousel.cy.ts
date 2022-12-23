@@ -29,6 +29,7 @@ describe('Carousel component', function () {
 
     cy.getByTestId('component_carousel')
     .should('not.have.class', 'is.multiline')
+    .should('have.class', 'glide')
 
     cy.getByTestId('component_carousel')
     cy.get('#prevButton')
@@ -40,7 +41,7 @@ describe('Carousel component', function () {
 
     cy.getByTestId('component_carousel')
     cy.get('.carousel-item')
-    .should('have.class', 'is-4')
+    .should('have.class', 'glide__slide')
 
     cy.percySnapshotPreview('Carousel preview');
   });

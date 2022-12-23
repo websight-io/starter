@@ -14,9 +14,10 @@
  * limitations under the License.
  */
 
-@forward 'colors';
-@forward 'fonts';
-@forward 'icons';
-@forward 'spacing';
-@forward 'variables';
-@forward 'zindex';
+import { Breakpoint } from "../types/types";
+
+export const breakpoints: Breakpoint = {
+  sm: 0,
+  md: 768,
+  lg: 970
+};

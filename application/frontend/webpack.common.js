@@ -49,7 +49,7 @@ module.exports = {
         rules: [
             {
                 test: /\.tsx?$/,
-                exclude: /node_modules/,
+                exclude: /node_modules|\.d\.ts$/,
                 use: [
                     {
                         loader: 'ts-loader'
@@ -61,6 +61,10 @@ module.exports = {
                         }
                     }
                 ]
+            },
+            {
+                test: /\.d\.ts$/,
+                loader: 'ignore-loader'
             },
             {
                 test: /\.scss$/,

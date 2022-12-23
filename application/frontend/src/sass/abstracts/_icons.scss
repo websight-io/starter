@@ -14,9 +14,34 @@
  * limitations under the License.
  */
 
-@forward 'colors';
-@forward 'fonts';
-@forward 'icons';
-@forward 'spacing';
-@forward 'variables';
-@forward 'zindex';
+@use './colors';
+
+$social-icon-size: 40px;
+
+@mixin social-icon {
+  text-decoration: none;
+  border-radius: 50%;
+  display: block;
+  appearance: none;
+  background: transparent;
+  border: 0;
+  padding: 0;
+
+  &:hover {
+    .hl-icon {
+      background-color: var(--color-default);
+      color: colors.$shades-100;
+    }
+  }
+
+  .hl-icon {
+    display: block;
+    border: 2px solid var(--color-default);
+    border-radius: 50%;
+    width: $social-icon-size;
+    height: $social-icon-size;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
