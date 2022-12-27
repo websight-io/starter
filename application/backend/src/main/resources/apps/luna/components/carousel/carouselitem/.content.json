@@ -1,7 +1,5 @@
 {
-  "isContainer": true,
   "group": "Bulma.io sub-components",
   "sling:resourceType": "ws:Component",
-  "title": "Carousel Item",
-  "allowedComponents" : ["/apps/bulma/components/card"]
+  "title": "Carousel Item"
 }
