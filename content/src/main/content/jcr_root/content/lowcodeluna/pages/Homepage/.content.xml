@@ -109,32 +109,38 @@
                                 sling:resourceType="bulma/components/content"
                                 size="is-large"
                                 text="&lt;p>&lt;/p>&lt;p>Our jewellery designers are happy to assist you in&lt;br>the creation of your perfect gold jewel.&lt;/p>&lt;p>&lt;/p>"/>
-                            <button
+                            <buttons
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
-                                addIcon="false"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="false"
-                                isRounded="true"
-                                label="NEW COLLECTION"
-                                size="is-medium"
-                                type="button"
-                                variant="is-dark"/>
-                            <button_1
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
-                                addIcon="false"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="false"
-                                isRounded="false"
-                                label="GET IN TOUCH"
-                                size="is-medium"
-                                type="button"
-                                variant="is-text"/>
+                                sling:resourceType="bulma/components/buttons"
+                                alignment="is-left"
+                                hasAddons="false">
+                                <button
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="true"
+                                    label="NEW COLLECTION"
+                                    size="is-medium"
+                                    type="button"
+                                    variant="is-dark"/>
+                                <button_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="GET IN TOUCH"
+                                    size="is-medium"
+                                    type="button"
+                                    variant="is-white"/>
+                            </buttons>
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
@@ -299,7 +305,20 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
-                                text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>&lt;p>&lt;strong>&lt;u>DISCOVER MORE&lt;/u>&lt;/strong>&lt;/p>"/>
+                                text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>"/>
+                            <button_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="DISCOVER MORE"
+                                    size="is-normal"
+                                    type="button"
+                                    variant="is-white"/>
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
@@ -325,7 +344,20 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
-                                text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>&lt;p>&lt;strong>&lt;u>DISCOVER MORE&lt;/u>&lt;/strong>&lt;/p>"/>
+                                text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>"/>
+                            <button_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="DISCOVER MORE"
+                                    size="is-normal"
+                                    type="button"
+                                    variant="is-white"/>
                         </column1_1>
                     </columns_1>
                 </container>
@@ -355,18 +387,15 @@
                         isCentered="false"
                         isCustomGapLevel="true"
                         isMultiline="false"
-                        isVerticallyCentered="true">
+                        isVerticallyCentered="false">
                         <column1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <title
+                            <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
-                                element="h1"
-                                isSpaced="false"
-                                size="is-1"
-                                text="About Luna"
-                                type="title"/>
+                                sling:resourceType="bulma/components/content"
+                                size="is-large"
+                                text="About Luna"/>
                             <mobileColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="true"
@@ -1233,11 +1262,12 @@
                             label="GET IN TOUCH"
                             size="is-medium"
                             type="button"
-                            variant="is-text"/>
+                            variant="is-white"/>
                     </buttons>
                 </container>
             </section_2_1_1>
             <section_2_1_1_1
+                id="footer"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bulma/components/section">
                 <container
@@ -1303,7 +1333,7 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="bulma/components/button"
                                         addIcon="true"
-                                        icon="fab fa-2x fa-linkedin"
+                                        icon="fab fa-2x fa-linkedin-in"
                                         isDisabled="false"
                                         isFullWidth="false"
                                         isLight="false"
@@ -1312,7 +1342,7 @@
                                         label="\0"
                                         openInNewTab="false"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         type="button"
                                         variant="is-dark"/>
                                 </navbaritem>
@@ -1325,14 +1355,14 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="bulma/components/button"
                                         addIcon="true"
-                                        icon="fab fa-2x fa-facebook"
+                                        icon="fab fa-2x fa-facebook-f"
                                         isFullWidth="false"
                                         isLight="false"
                                         isOutlined="true"
                                         isRounded="true"
                                         label="\0"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         variant="is-dark"/>
                                 </navbaritem_2>
                                 <navbaritem_2_1
@@ -1351,7 +1381,7 @@
                                         isRounded="true"
                                         label="\0"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         variant="is-dark"/>
                                 </navbaritem_2_1>
                                 <navbaritem_2_1_1
@@ -1370,7 +1400,7 @@
                                         isRounded="true"
                                         label="\0"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         variant="is-dark"/>
                                 </navbaritem_2_1_1>
                             </end>

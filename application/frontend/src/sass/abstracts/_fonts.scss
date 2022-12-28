@@ -29,6 +29,28 @@ $font-weight-xxbold: 900;
 $font-size-h1-md: 48.83px;
 $font-size-h1-lg: 95.37px;
 
+@mixin font-h1 {
+  font-size: $font-size-h1-md;
+  line-height: 1.2;
+  font-weight: $font-weight-xxbold;
+
+  // @media screen and (min-width: 970px) {
+  //   $breakpoint-lg: 970px;
+  //   $breakpoint-xl: 1200px;
+  //   $breakpoint-diff: fns.strip-unit($breakpoint-xl - $breakpoint-lg);
+  //   $font-size-diff: fns.strip-unit($font-size-h1-lg - $font-size-h1-md);
+
+  //   font-size: calc(
+  //     #{$font-size-h1-md} + (#{$font-size-diff} * (100vw - #{$breakpoint-lg})) /
+  //       #{$breakpoint-diff}
+  //   );
+  // }
+
+  @media screen and (min-width: 1200px) {
+    font-size: $font-size-h1-lg;
+  }
+}
+
 @mixin font-h2 {
   font-size: 2.441rem;
   line-height: 3rem;

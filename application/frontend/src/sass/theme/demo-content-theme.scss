@@ -29,3 +29,41 @@ body {
   --font-body: 'Avenir', 'Montserrat', sans-serif;
   --links-text-transform: uppercase;
 }
+.button {
+  border-width: 2px;
+  &.is-dark {
+    background-color: var(--color-primary);
+    font-weight: 800;
+    &:hover {
+      background-color: var(--color-default);
+    }
+  }
+  &.is-white {
+    color: var(--color-primary);
+    font-weight: 800;
+    text-decoration: none;
+    padding: 0;
+    span {
+      position: relative;
+      &::after {
+        background: var(--color-primary);
+        bottom: -4px;
+        content: "";
+        height: 2px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+      }
+    }
+    &:hover {
+      background-color: transparent;
+    }
+  }
+}
+.buttons .button:not(:last-child):not(.is-fullwidth) {
+  margin-right: 1.5rem;
+}
+.buttons.is-centered:not(.has-addons) .button:not(.is-fullwidth) {
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}

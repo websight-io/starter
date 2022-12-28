@@ -206,6 +206,7 @@ Please notice that we use a [nip.io](https://nip.io). It helps with simulating a
 
 - `application` - components related code and scripts
     - `backend` - contains application elements (components, templates, etc.) and Java code
+    - `frontend` - contains frontend elements for low code template (scss, ts, fonts etc.)
 - `content` - contains sample content created with use of application
 - `distribution` - builds a distribution of the project - instance feature model and docker images for runtime components
 - `environment` - contains scripts and files used but build environment

@@ -125,32 +125,38 @@
                                 sling:resourceType="bulma/components/content"
                                 size="is-large"
                                 text="&lt;h1>&lt;/h1>&lt;p>Luna Soleste® pear-shaped halo engagement ring with a diamond platinum band.&lt;br>&lt;/p>&lt;p>&lt;strong>From $7,900&lt;/strong>&lt;/p>&lt;p>&lt;/p>"/>
-                            <button
+                            <buttons
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
-                                addIcon="false"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="false"
-                                isRounded="true"
-                                label="SELECT A DIAMOND"
-                                size="is-medium"
-                                type="button"
-                                variant="is-dark"/>
-                            <button_1
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
-                                addIcon="false"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="false"
-                                isRounded="false"
-                                label="SPEAK TO AN EXPERT"
-                                size="is-medium"
-                                type="button"
-                                variant="is-text"/>
+                                sling:resourceType="bulma/components/buttons"
+                                alignment="is-left"
+                                hasAddons="false">
+                                <button
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="true"
+                                    label="SELECT A DIAMOND"
+                                    size="is-medium"
+                                    type="button"
+                                    variant="is-dark"/>
+                                <button_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="SPEAK TO AN EXPERT"
+                                    size="is-medium"
+                                    type="button"
+                                    variant="is-white"/>
+                            </buttons>
                         </column1>
                     </columns_1>
                 </container>
@@ -491,6 +497,7 @@
                 </container>
             </section_2_2_2>
             <section_2_1_1_1
+                id="footer"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bulma/components/section">
                 <container
@@ -556,14 +563,17 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="bulma/components/button"
                                         addIcon="true"
-                                        icon="fab fa-2x fa-linkedin"
+                                        icon="fab fa-2x fa-linkedin-in"
+                                        isDisabled="false"
                                         isFullWidth="false"
                                         isLight="false"
                                         isOutlined="true"
                                         isRounded="true"
                                         label="\0"
+                                        openInNewTab="false"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
+                                        type="button"
                                         variant="is-dark"/>
                                 </navbaritem>
                                 <navbaritem_2
@@ -575,14 +585,14 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="bulma/components/button"
                                         addIcon="true"
-                                        icon="fab fa-2x fa-facebook"
+                                        icon="fab fa-2x fa-facebook-f"
                                         isFullWidth="false"
                                         isLight="false"
                                         isOutlined="true"
                                         isRounded="true"
                                         label="\0"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         variant="is-dark"/>
                                 </navbaritem_2>
                                 <navbaritem_2_1
@@ -601,7 +611,7 @@
                                         isRounded="true"
                                         label="\0"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         variant="is-dark"/>
                                 </navbaritem_2_1>
                                 <navbaritem_2_1_1
@@ -620,7 +630,7 @@
                                         isRounded="true"
                                         label="\0"
                                         selectOrType="type"
-                                        size="is-normal"
+                                        size="is-small"
                                         variant="is-dark"/>
                                 </navbaritem_2_1_1>
                             </end>
