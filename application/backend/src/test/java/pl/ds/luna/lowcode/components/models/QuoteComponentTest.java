@@ -62,7 +62,7 @@ class QuoteComponentTest {
     assertThat(model.getAuthorName()).isEqualTo("Author name");
     assertThat(model.getAuthorDescription()).isEqualTo("Author description");
     assertThat(model.isShowImage()).isTrue();
-    assertThat(model.getAuthorImage()).isEqualTo("/content/bulma/assets/images/personal/Janet.png");
+    assertThat(model.getAuthorImage()).isEqualTo("http:///content/bulma/assets/images/personal/Janet.png");
     assertThat(model.getImageAlt()).isEqualTo("Alt text");
 
   }

@@ -63,6 +63,10 @@
       <artifactId>howlite-core</artifactId>
     </dependency>
     <dependency>
+      <groupId>pl.ds.bulma</groupId>
+      <artifactId>bulma-backend</artifactId>
+    </dependency>
+    <dependency>
       <groupId>javax.inject</groupId>
       <artifactId>javax.inject</artifactId>
     </dependency>
