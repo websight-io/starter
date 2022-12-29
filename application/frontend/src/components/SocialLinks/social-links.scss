@@ -25,6 +25,9 @@
       .button.is-outlined.is-rounded {
         height: 40px;
         width: 40px;
+        i.fab, i.fa-2x {
+          font-size: 1.2rem;
+        }
       }
     }
   }

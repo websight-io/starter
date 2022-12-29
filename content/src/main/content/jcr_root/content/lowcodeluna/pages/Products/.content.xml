@@ -12,6 +12,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="bulma/components/pagecontainer">
             <section
+                id="navbar"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bulma/components/section">
                 <container
@@ -20,7 +21,7 @@
                     <navbar
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/navbar"
-                        fixedOption="\0"
+                        fixedOption="is-fixed-top"
                         isTransparent="true"
                         variant="is-white">
                         <brand

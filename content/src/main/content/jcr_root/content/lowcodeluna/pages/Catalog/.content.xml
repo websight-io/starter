@@ -12,6 +12,7 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="bulma/components/pagecontainer">
             <section
+                id="navbar"
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bulma/components/section">
                 <container
@@ -20,7 +21,7 @@
                     <navbar
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/navbar"
-                        fixedOption="\0"
+                        fixedOption="is-fixed-top"
                         isTransparent="true"
                         variant="is-white">
                         <brand
@@ -505,10 +506,19 @@
                                 text="&lt;p>Inspired by the olive branch, a symbol of peace and abundance. In 18k gold with a round brilliant diamond.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
                         </column1_2_1>
                     </columns_1_1_1>
-                    <content_1
+                    <button_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        text="&lt;p>&lt;/p>&lt;p>&lt;/p>&lt;p>&lt;strong>&lt;u>VIEW ALL&lt;/u>&lt;/strong>&lt;/p>"/>
+                        sling:resourceType="bulma/components/button"
+                        addIcon="false"
+                        isDisabled="false"
+                        isFullWidth="false"
+                        isLight="false"
+                        isOutlined="false"
+                        isRounded="false"
+                        label="VIEW ALL"
+                        size="is-normal"
+                        type="button"
+                        variant="is-white"/>
                 </container>
             </section_2_2_3_1>
             <section_2_1_1

@@ -20,5 +20,7 @@
 <sly data-sly-test.position="${properties.navbarFixedPosition}"></sly>
 
 <body class="${properties.defaultTemplateCSS} ${navbarFixed ? position : ''}">
-<sly data-sly-include="body-content.html"></sly>
+  <div class="container">
+    <sly data-sly-include="body-content.html"></sly>
+  </div>
 </body>
