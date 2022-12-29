@@ -12,9 +12,9 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="bulma/components/pagecontainer">
             <section
-                id="navbar"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="bulma/components/section"
+                id="navbar">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/container">
@@ -91,7 +91,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Our Catalog&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Stunning, stylish and within reach&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Our Catalog&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Stunning, stylish and within reach&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;br>&lt;/p>"/>
                     <block
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/block">
@@ -244,7 +244,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>All Products&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Search our unrivaled selection of expertly crafted fine jewellery for the perfect gifts. Discover silver earrings, classic pearls, diamond necklaces and more.&lt;/p>"/>
+                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>All Products&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Search our unrivaled selection of expertly crafted fine jewellery for the perfect gifts. Discover silver earrings, classic pearls, diamond necklaces and more.&lt;br>&lt;br>&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
@@ -542,7 +542,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;p>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Luna’s Philosophy that  Beauty and&lt;/strong>&lt;br>&lt;strong>Strength Exist in Both Union and&lt;/strong>&lt;br>&lt;strong>Individuality&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;p>&lt;br>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Luna’s Philosophy that  Beauty and&lt;/strong>&lt;br>&lt;strong>Strength Exist in Both Union and&lt;/strong>&lt;br>&lt;strong>Individuality&lt;/strong>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;br>&lt;/p>"/>
                     <buttons
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/buttons"
@@ -578,9 +578,9 @@
                 </container>
             </section_2_1_1>
             <section_2_1_1_1
-                id="footer"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="bulma/components/section"
+                id="footer">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/container">

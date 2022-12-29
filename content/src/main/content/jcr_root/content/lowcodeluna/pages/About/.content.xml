@@ -12,9 +12,9 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="bulma/components/pagecontainer">
             <section
-                id="navbar"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="bulma/components/section"
+                id="navbar">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/container">
@@ -91,7 +91,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Our Story&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Stunning, stylish and within reach&lt;/p>"/>
+                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Our Story&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Stunning, stylish and within reach&lt;br>&lt;br>&lt;/p>"/>
                     <block
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/block">
@@ -215,7 +215,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Custom Made Engagement Rings&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Custom Made Engagement Rings&lt;/strong>&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
@@ -307,18 +307,18 @@
                                 size="is-medium"
                                 text="&lt;h2>&lt;/h2>&lt;p>Every Luna ring is the result of artistic passion and technical precision. Our nearly 1,500 in-house master artisans personally ensure your diamond is crafted to the absolute highest standards.&lt;/p>&lt;p>&lt;/p>"/>
                             <button_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/button"
-                                    addIcon="false"
-                                    isDisabled="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="DISCOVER MORE"
-                                    size="is-medium"
-                                    type="button"
-                                    variant="is-white"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="false"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="false"
+                                isRounded="false"
+                                label="DISCOVER MORE"
+                                size="is-medium"
+                                type="button"
+                                variant="is-white"/>
                         </column1_1>
                     </columns_1>
                 </container>
@@ -355,18 +355,18 @@
                                 size="is-medium"
                                 text="&lt;h2>&lt;/h2>&lt;p>As a longtime leader in sustainable luxury, we obtain the majority of our diamonds and precious metals from known mines and sources, because we believe that traceability is the best way to help ensure environmentally and socially responsible practices.&lt;/p>&lt;p>&lt;/p>"/>
                             <button_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/button"
-                                    addIcon="false"
-                                    isDisabled="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="DISCOVER MORE"
-                                    size="is-medium"
-                                    type="button"
-                                    variant="is-white"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="false"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="false"
+                                isRounded="false"
+                                label="DISCOVER MORE"
+                                size="is-medium"
+                                type="button"
+                                variant="is-white"/>
                         </column1_1>
                         <column1
                             jcr:primaryType="nt:unstructured"
@@ -556,7 +556,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;p>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Luna’s Philosophy that  Beauty and&lt;/strong>&lt;br>&lt;strong>Strength Exist in Both Union and&lt;/strong>&lt;br>&lt;strong>Individuality&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;p>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;br>&lt;strong>Luna’s Philosophy that  Beauty and&lt;/strong>&lt;br>&lt;strong>Strength Exist in Both Union and&lt;/strong>&lt;br>&lt;strong>Individuality&lt;/strong>&lt;br>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <buttons
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/buttons"
@@ -592,9 +592,9 @@
                 </container>
             </section_2_1_1>
             <container
-                id="footer"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/container">
+                sling:resourceType="bulma/components/container"
+                id="footer">
                 <navbar_1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/navbar"
