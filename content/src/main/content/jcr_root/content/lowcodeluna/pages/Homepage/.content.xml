@@ -12,9 +12,9 @@
             jcr:primaryType="nt:unstructured"
             sling:resourceType="bulma/components/pagecontainer">
             <section
-                id="navbar"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="bulma/components/section"
+                id="navbar">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/container">
@@ -26,7 +26,8 @@
                         variant="is-white">
                         <brand
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarbrand">
+                            sling:resourceType="bulma/components/navbar/navbarbrand"
+                            createBurger="true">
                             <item
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/navbar/navbaritem"
@@ -167,17 +168,17 @@
                         isCentered="true"
                         isCustomGapLevel="true"
                         isMultiline="true"
-                        isVerticallyCentered="true">
-                        <column2_1
+                        isVerticallyCentered="true"
+                        mobileGapLevel="is-8"
+                        tabletGapLevel="is-8">
+                        <column_2
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column"
-                            offset="empty">
+                            sling:resourceType="bulma/components/columns/column">
                             <mobileColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="false"
-                                offset="one_fifth"
                                 offsetType="evenNumber"
-                                size="six"
+                                size="empty"
                                 sizeType="evenNumber"/>
                             <tabletColumnStyle
                                 jcr:primaryType="nt:unstructured"
@@ -187,7 +188,6 @@
                             <desktopColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="false"
-                                offset="empty"
                                 offsetType="evenNumber"
                                 size="empty"
                                 sizeType="evenNumber"/>
@@ -198,7 +198,7 @@
                                 assetReference="/content/lowcodeluna/assets/images/homepage/Logo 1.svg"
                                 isRounded="false"
                                 type="fixed"/>
-                        </column2_1>
+                        </column_2>
                         <column
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
@@ -328,7 +328,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Meet our New Grand Luxor Jewelry&lt;/strong>&lt;br>&lt;strong>Collection&lt;/strong>&lt;br>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h1 style=&quot;text-align: center&quot;>Meet our New Grand Luxor Jewelry&lt;br>Collection&lt;br>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
@@ -363,18 +363,18 @@
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>"/>
                             <button_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/button"
-                                    addIcon="false"
-                                    isDisabled="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="DISCOVER MORE"
-                                    size="is-normal"
-                                    type="button"
-                                    variant="is-white"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="false"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="false"
+                                isRounded="false"
+                                label="DISCOVER MORE"
+                                size="is-normal"
+                                type="button"
+                                variant="is-white"/>
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
@@ -402,18 +402,18 @@
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>"/>
                             <button_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/button"
-                                    addIcon="false"
-                                    isDisabled="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="DISCOVER MORE"
-                                    size="is-normal"
-                                    type="button"
-                                    variant="is-white"/>
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="false"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="false"
+                                isRounded="false"
+                                label="DISCOVER MORE"
+                                size="is-normal"
+                                type="button"
+                                variant="is-white"/>
                         </column1_1>
                     </columns_1>
                 </container>
@@ -451,7 +451,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 size="is-large"
-                                text="&lt;h2>&lt;strong>About Luna&lt;/strong>&lt;/h2>&lt;p>&lt;/p>"/>
+                                text="&lt;h2>About Luna&lt;/h2>&lt;p>&lt;/p>"/>
                             <mobileColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="true"
@@ -490,7 +490,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Discover our Bestsellers&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;br>&lt;br>&lt;/p>"/>
+                        text="&lt;h2 style=&quot;text-align: center&quot;>Discover our Bestsellers&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own&lt;br>&lt;br>&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <block
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/block">
@@ -714,19 +714,19 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Shape of Gemstone&lt;/strong>&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h2 style=&quot;text-align: center&quot;>Shape of Gemstone&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                 </container>
                 <columns
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/columns"
                     columnsActivationLevel="is-mobile"
-                    desktopGapLevel="is-1"
+                    desktopGapLevel="is-8"
                     isCentered="true"
-                    isCustomGapLevel="false"
+                    isCustomGapLevel="true"
                     isMultiline="true"
                     isVerticallyCentered="true"
-                    mobileGapLevel="is-5"
-                    tabletGapLevel="is-7">
+                    mobileGapLevel="is-8"
+                    tabletGapLevel="is-8">
                     <column
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns/column">
@@ -945,7 +945,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Custom Made Engagement Rings&lt;/strong>&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h2 style=&quot;text-align: center&quot;>Custom Made Engagement Rings&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
@@ -1020,7 +1020,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Frequently Asked Questions&lt;/strong>&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h2 style=&quot;text-align: center&quot;>Frequently Asked Questions&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <accordion
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="luna/components/accordion">
@@ -1130,7 +1130,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;p>&lt;/p>&lt;br>&lt;br>&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Luna’s Philosophy that  Beauty and&lt;/strong>&lt;br>&lt;strong>Strength Exist in Both Union and&lt;/strong>&lt;br>&lt;strong>Individuality&lt;/strong>&lt;br>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;p>&lt;br>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and&lt;br>Strength Exist in Both Union and&lt;br>Individuality&lt;br>&lt;br>&lt;/h1>"/>
                     <buttons
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/buttons"
@@ -1166,150 +1166,152 @@
                 </container>
             </section_2_1_1>
             <section_2_1_1_1
-                id="footer"
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
-                <container
+                sling:resourceType="bulma/components/section"
+                id="footer">
+                <footer
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <navbar_1
+                    sling:resourceType="bulma/components/footer">
+                    <mediaobject
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/navbar"
-                        isTransparent="true"
-                        variant="is-light">
-                        <brand
+                        sling:resourceType="bulma/components/mediaobject">
+                        <mediaLeft
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarbrand">
-                            <item
+                            sling:resourceType="bulma/components/mediaobject/medialeft">
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbaritem"
-                                label="LUNA"
-                                type="image">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    alt="\0"
-                                    src="/content/lowcodeluna/assets/images/LUNA.svg"/>
-                            </item>
-                        </brand>
-                        <menu
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
+                                isRounded="false"
+                                src="/content/lowcodeluna/pages/Homepage"
+                                type="fixed"/>
+                        </mediaLeft>
+                        <mediaContent
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarmenu">
-                            <start
+                            sling:resourceType="bulma/components/mediaobject/mediacontent">
+                            <buttons
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarstart">
-                                <item_1
+                                sling:resourceType="bulma/components/buttons">
+                                <button1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
                                     label="PRICING"
-                                    type="link"/>
-                                <item_2
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Homepage"
+                                    variant="is-white"/>
+                                <button1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="FEATURES"
-                                    type="link"/>
-                                <item
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="CATALOG"
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Catalog/"
+                                    variant="is-white"/>
+                                <button1_1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
                                     label="PRODUCTS"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/Products"/>
-                                <item_2_1
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Products/"
+                                    variant="is-white"/>
+                                <button1_1_1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
                                     label="ABOUT"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/About"/>
-                            </start>
-                            <end
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/About/"
+                                    variant="is-white"/>
+                            </buttons>
+                        </mediaContent>
+                        <mediaRight
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/mediaobject/mediaright">
+                            <button
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarend">
-                                <navbaritem
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-linkedin-in"
-                                        isDisabled="false"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        openInNewTab="false"
-                                        selectOrType="type"
-                                        size="is-small"
-                                        type="button"
-                                        variant="is-dark"/>
-                                </navbaritem>
-                                <navbaritem_2
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-facebook-f"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-small"
-                                        variant="is-dark"/>
-                                </navbaritem_2>
-                                <navbaritem_2_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-twitter"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-small"
-                                        variant="is-dark"/>
-                                </navbaritem_2_1>
-                                <navbaritem_2_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-instagram"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-small"
-                                        variant="is-dark"/>
-                                </navbaritem_2_1_1>
-                            </end>
-                        </menu>
-                    </navbar_1>
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-linkedin-in"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                openInNewTab="false"
+                                selectOrType="type"
+                                size="is-small"
+                                type="button"
+                                variant="is-dark"/>
+                            <button_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-facebook-f"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                            <button_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-twitter"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                            <button_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-instagram"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                        </mediaRight>
+                    </mediaobject>
                     <content
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
-                </container>
+                </footer>
             </section_2_1_1_1>
         </pagecontainer>
     </jcr:content>

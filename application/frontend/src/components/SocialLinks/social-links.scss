@@ -17,16 +17,25 @@
  @use 'sass:map';
  @use '../../sass/abstracts';
 
- #footer {
-  .navbar-end {
+ .footer {
+  .media-right {
     display: flex;
     gap: 1rem;
-    .navbar-item {
-      .button.is-outlined.is-rounded {
+    .button {
+      &.is-outlined.is-rounded {
         height: 40px;
         width: 40px;
         i.fab, i.fa-2x {
           font-size: 1.2rem;
+        }
+      }
+      @media screen and (max-width: 640px) {
+        &.is-outlined.is-rounded {
+          height: 34px;
+          width: 34px;
+          i.fab, i.fa-2x {
+            font-size: 0.9rem;
+          }
         }
       }
     }
