@@ -192,13 +192,13 @@ docker compose up
 
 CMS is available under: [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
 
-Pages published from `Luna` space are available under [luna.127.0.0.1.nip.io](http://luna.127.0.0.1.nip.io/)
+Pages published from `Luna - custom code` space are available under [luna-custom-code.127.0.0.1.nip.io](http://luna-custom-code.127.0.0.1.nip.io/)
 
-Pages published from `Low Code Luna` space are available under [low-code.luna.127.0.0.1.nip.io](http://low-code.luna.127.0.0.1.nip.io/)
+Pages published from `Luna - low code` space are available under [luna-low-code.127.0.0.1.nip.io](http://luna-low-code.127.0.0.1.nip.io/)
 
-Pages published from `No Code Luna` space are available under [no-code.luna.127.0.0.1.nip.io](http://no-code.luna.127.0.0.1.nip.io/)
+Pages published from `Luna - no code` space are available under [luna-no-code.127.0.0.1.nip.io](http://luna-no-code.127.0.0.1.nip.io/)
 
-Pages published from `Bulma - Personal Template` space are available under [bulma.127.0.0.1.nip.io](http://bulma.127.0.0.1.nip.io/)
+Pages published from `Bulma - personal template` space are available under [bulma-personal-template.127.0.0.1.nip.io](http://bulma-personal-template.127.0.0.1.nip.io/)
 
 Please notice that we use a [nip.io](https://nip.io). It helps with simulating a real production environment that uses subdomains without the necessity to edit the `hosts` file on local machines.
 
