@@ -389,208 +389,182 @@
             <section_2_2_1
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bulma/components/section">
-                <container
+                <content
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/content"
+                    size="is-large"
+                    text="&lt;h2 style=&quot;text-align: center&quot;>Why People Choose Us&lt;br>&lt;br>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                <container_1_1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/container">
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
-                        desktopGapLevel="is-7"
-                        isCentered="false"
+                        columnsActivationLevel="is-mobile"
+                        desktopGapLevel="is-8"
+                        isCentered="true"
                         isCustomGapLevel="true"
-                        isMultiline="false"
-                        isVerticallyCentered="false">
+                        isMultiline="true"
+                        isVerticallyCentered="true"
+                        mobileGapLevel="is-8">
                         <column1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/aboutus/customer-service.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/aboutus/customer-service.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Customer Service&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1>
                         <column1_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/aboutus/easy-returns.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/aboutus/easy-returns.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Easy Returns&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1_2>
                         <column1_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/aboutus/security-payment.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/aboutus/security-payment.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Security Payment&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1_2_1>
                     </columns_1>
-                </container>
-            </section_2_2_1>
-            <section_2_1_1
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
-                <container
+                </container_1_1>
+                <section_2_1_1
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <block
+                    sling:resourceType="bulma/components/section">
+                    <section
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/block">
-                        <image
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/image"
-                            alt="\0"
-                            isRounded="false"
-                            src="/content/lowcodeluna/assets/images/aboutus/pearl bracelet.png"
-                            type="fixed"/>
-                    </block>
-                    <content
+                        sling:resourceType="bulma/components/section"/>
+                    <container
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        size="is-large"
-                        text="&lt;p>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;br>Luna’s Philosophy that  Beauty and&lt;br>Strength Exist in Both Union and&lt;br>Individuality&lt;br>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
-                    <buttons
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/buttons"
-                        alignment="is-centered"
-                        hasAddons="false">
-                        <button
+                        sling:resourceType="bulma/components/container">
+                        <block
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/button"
-                            addIcon="false"
-                            isDisabled="false"
-                            isFullWidth="false"
-                            isLight="false"
-                            isOutlined="false"
-                            isRounded="true"
-                            label="NEW COLLECTION"
-                            size="is-medium"
-                            type="button"
-                            variant="is-dark"/>
-                        <button_1
+                            sling:resourceType="bulma/components/block">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                isRounded="false"
+                                src="/content/lowcodeluna/assets/images/aboutus/pearl bracelet.png"
+                                type="fixed"/>
+                        </block>
+                        <content
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/button"
-                            addIcon="false"
-                            isDisabled="false"
-                            isFullWidth="false"
-                            isLight="false"
-                            isOutlined="false"
-                            isRounded="false"
-                            label="GET IN TOUCH"
-                            size="is-medium"
-                            type="button"
-                            variant="is-white"/>
-                    </buttons>
-                </container>
-            </section_2_1_1>
+                            sling:resourceType="bulma/components/content"
+                            size="is-large"
+                            text="&lt;p>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;br>Luna’s Philosophy that  Beauty and&lt;br>Strength Exist in Both Union and&lt;br>Individuality&lt;br>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        <buttons
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/buttons"
+                            alignment="is-centered"
+                            hasAddons="false">
+                            <button
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="false"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="false"
+                                isRounded="true"
+                                label="NEW COLLECTION"
+                                size="is-medium"
+                                type="button"
+                                variant="is-dark"/>
+                            <button_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="false"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="false"
+                                isRounded="false"
+                                label="GET IN TOUCH"
+                                size="is-medium"
+                                type="button"
+                                variant="is-white"/>
+                        </buttons>
+                    </container>
+                </section_2_1_1>
+            </section_2_2_1>
             <section_2_1_1_1
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="bulma/components/section"

@@ -220,146 +220,114 @@
                 sling:resourceType="bulma/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="bulma/components/container"
+                    containerStyle="is-fluid">
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
-                        desktopGapLevel="is-7"
-                        isCentered="false"
+                        columnsActivationLevel="is-mobile"
+                        desktopGapLevel="is-8"
+                        isCentered="true"
                         isCustomGapLevel="true"
-                        isMultiline="false"
-                        isVerticallyCentered="false">
+                        isMultiline="true"
+                        isVerticallyCentered="true"
+                        mobileGapLevel="is-8"
+                        tabletGapLevel="is-8">
                         <column1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/product/payment-plans.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/product/payment-plans.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Payment Plans&lt;/h2>&lt;p style=&quot;text-align: center&quot;>We want you to have the ring of your dreams.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1>
                         <column1_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/product/drop-a-hint.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/product/drop-a-hint.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Drop a Hint&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Let us tell someone special what you’re wishing for.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1_2>
                         <column1_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/product/ring-resizing.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/product/ring-resizing.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Ring Resizing&lt;/h2>&lt;p style=&quot;text-align: center&quot;>We offer complimentary resizing for all Tiffany engagement rings.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1_2_1>
                     </columns_1>
                 </container>
