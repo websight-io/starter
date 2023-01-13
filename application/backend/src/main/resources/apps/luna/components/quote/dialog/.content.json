@@ -10,7 +10,7 @@
         "name": "text",
         "required": true,
         "label": "Text",
-        "ws:disallowedContext": ["sidepanel"]
+        "ws:disallowedContext": ["edit:panel"]
       },
       "authorName": {
         "sling:resourceType": "wcm/dialogs/components/textfield",
