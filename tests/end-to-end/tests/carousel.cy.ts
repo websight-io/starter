@@ -65,7 +65,7 @@ describe('Carousel component', function () {
 
     cy.get('button[data-resize-button]').click();
 
-    cy.getByTestId('ToolbarOption_Edit').click();
+    cy.getByTestId('ToolbarOption_Properties').click();
     cy.getByTestId('Input_Slidestoshow').clear().type('5');
 
     cy.percySnapshotDialog('Carousel dialog');

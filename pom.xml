@@ -20,7 +20,7 @@
 
   <groupId>pl.ds.starter</groupId>
   <artifactId>starter-parent</artifactId>
-  <version>1.6.1-SNAPSHOT</version>
+  <version>1.7.0-SNAPSHOT</version>
   <name>Starter Project Parent</name>
   <packaging>pom</packaging>
 
@@ -79,12 +79,12 @@
     <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
 
     <!-- WebSight CMS Version -->
-    <websight.cms.version>1.6.0</websight.cms.version>
+    <websight.cms.version>1.7.0</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-    <howlite.version>1.0.3</howlite.version>
-    <bulma.version>1.0.6</bulma.version>
+    <howlite.version>1.0.4</howlite.version>
+    <bulma.version>1.0.8</bulma.version>
   </properties>
 
   <dependencyManagement>
