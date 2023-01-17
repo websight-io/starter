@@ -12,7 +12,7 @@
   "scripts": {
     "prod": "webpack --config ./webpack.prod.js",
     "watch": "webpack --config ./webpack.prod.js --watch",
-    "sync": "websight-localsync target-folder=dist provider-root-suffix=luna/web_root"
+    "sync": "websight-localsync target-folder=src/main/resources/apps/luna/web_root provider-root-suffix=luna/web_root"
   },
   "devDependencies": {
     "@types/glidejs__glide": "^3.6.1",

@@ -39,7 +39,7 @@
     &__control {
         margin: 18px 5px;
         cursor: pointer;
-        @include abstracts.social-icon;
+        @include abstracts.carousel-icon;
 
         &.hl-icon--left {
           transform: rotate(180deg)

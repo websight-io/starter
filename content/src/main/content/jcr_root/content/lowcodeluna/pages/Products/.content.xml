@@ -13,14 +13,15 @@
             sling:resourceType="bulma/components/pagecontainer">
             <section
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="bulma/components/section"
+                id="navbar">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="bulma/components/container">
                     <navbar
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/navbar"
-                        fixedOption="\0"
+                        fixedOption="is-fixed-top"
                         isTransparent="true"
                         variant="is-white">
                         <brand
@@ -125,32 +126,38 @@
                                 sling:resourceType="bulma/components/content"
                                 size="is-large"
                                 text="&lt;h1>&lt;/h1>&lt;p>Luna Soleste® pear-shaped halo engagement ring with a diamond platinum band.&lt;br>&lt;/p>&lt;p>&lt;strong>From $7,900&lt;/strong>&lt;/p>&lt;p>&lt;/p>"/>
-                            <button
+                            <buttons
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
-                                addIcon="false"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="false"
-                                isRounded="true"
-                                label="SELECT A DIAMOND"
-                                size="is-medium"
-                                type="button"
-                                variant="is-dark"/>
-                            <button_1
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
-                                addIcon="false"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="false"
-                                isRounded="false"
-                                label="SPEAK TO AN EXPERT"
-                                size="is-medium"
-                                type="button"
-                                variant="is-text"/>
+                                sling:resourceType="bulma/components/buttons"
+                                alignment="is-left"
+                                hasAddons="false">
+                                <button
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="true"
+                                    label="SELECT A DIAMOND"
+                                    size="is-medium"
+                                    type="button"
+                                    variant="is-dark"/>
+                                <button_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isDisabled="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="SPEAK TO AN EXPERT"
+                                    size="is-medium"
+                                    type="button"
+                                    variant="is-white"/>
+                            </buttons>
                         </column1>
                     </columns_1>
                 </container>
@@ -175,7 +182,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
                                 size="is-medium"
-                                text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Description&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Just as the sun’s rays radiate outward, casting light in every direction, so too does this engagement ring. With a scintillating halo of brilliant round-shaped centre stone, light is gathered and mirrored throughout the design, resulting in an unrivaled display of brilliance. Flawlessly engineered, the setting virtually disappears and allows the brilliant diamond to float above the band and into the light, resulting in a ring so beautiful it has been a symbol of the world’s greatest love stories for over 120 years.&lt;/p>&lt;p style=&quot;text-align: center&quot;>At Luna, we ethically source our diamonds. Integrity and social responsibility are at the core of our sourcing practices.&lt;/p>"/>
+                                text="&lt;h1 style=&quot;text-align: center&quot;>Description&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Just as the sun’s rays radiate outward, casting light in every direction, so too does this engagement ring. With a scintillating halo of brilliant round-shaped centre stone, light is gathered and mirrored throughout the design, resulting in an unrivaled display of brilliance. Flawlessly engineered, the setting virtually disappears and allows the brilliant diamond to float above the band and into the light, resulting in a ring so beautiful it has been a symbol of the world’s greatest love stories for over 120 years.&lt;/p>&lt;p style=&quot;text-align: center&quot;>At Luna, we ethically source our diamonds. Integrity and social responsibility are at the core of our sourcing practices.&lt;br>&lt;br>&lt;/p>"/>
                             <mobileColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="true"
@@ -213,146 +220,114 @@
                 sling:resourceType="bulma/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="bulma/components/container"
+                    containerStyle="is-fluid">
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/columns"
-                        desktopGapLevel="is-7"
-                        isCentered="false"
+                        columnsActivationLevel="is-mobile"
+                        desktopGapLevel="is-8"
+                        isCentered="true"
                         isCustomGapLevel="true"
-                        isMultiline="false"
-                        isVerticallyCentered="false">
+                        isMultiline="true"
+                        isVerticallyCentered="true"
+                        mobileGapLevel="is-8"
+                        tabletGapLevel="is-8">
                         <column1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/product/payment-plans.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/product/payment-plans.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
-                                text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Payment Plans&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>We want you to have the ring of your dreams.&lt;/p>"/>
+                                text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Payment Plans&lt;/h2>&lt;p style=&quot;text-align: center&quot;>We want you to have the ring of your dreams.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1>
                         <column1_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/product/drop-a-hint.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/product/drop-a-hint.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
-                                text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Drop a Hint&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Let us tell someone special what you’re wishing for.&lt;/p>"/>
+                                text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Drop a Hint&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Let us tell someone special what you’re wishing for.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1_2>
                         <column1_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="bulma/components/columns/column">
-                            <columns
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
-                                isCentered="true"
-                                isCustomGapLevel="false"
-                                isMultiline="false"
-                                isVerticallyCentered="false">
-                                <column1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
-                                        alt="\0"
-                                        isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/product/ring-resizing.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
-                                    <mobileColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <tabletColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        sizeType="evenNumber"/>
-                                    <desktopColumnStyle
-                                        jcr:primaryType="nt:unstructured"
-                                        isNormalColumn="true"
-                                        offsetType="evenNumber"
-                                        size="three"
-                                        sizeType="evenNumber"/>
-                                </column1>
-                            </columns>
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/product/ring-resizing.svg"
+                                isRounded="false"
+                                style="is-3by1"
+                                type="ratio"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="bulma/components/content"
-                                text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Ring Resizing&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>We offer complimentary resizing for all Tiffany engagement rings.&lt;/p>"/>
+                                text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;h2 style=&quot;text-align: center&quot;>Ring Resizing&lt;/h2>&lt;p style=&quot;text-align: center&quot;>We offer complimentary resizing for all Tiffany engagement rings.&lt;/p>"/>
+                            <mobileColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="two_thirds"
+                                sizeType="fraction"/>
+                            <tabletColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                sizeType="evenNumber"/>
                         </column1_2_1>
                     </columns_1>
                 </container>
@@ -367,7 +342,7 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Related Products&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;h2 style=&quot;text-align: center&quot;>Related Products&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <carousel
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="luna/components/carousel">
@@ -492,145 +467,151 @@
             </section_2_2_2>
             <section_2_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
-                <container
+                sling:resourceType="bulma/components/section"
+                id="footer">
+                <footer
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <navbar_1
+                    sling:resourceType="bulma/components/footer">
+                    <mediaobject
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/navbar"
-                        isTransparent="true"
-                        variant="is-light">
-                        <brand
+                        sling:resourceType="bulma/components/mediaobject">
+                        <mediaLeft
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarbrand">
-                            <item
+                            sling:resourceType="bulma/components/mediaobject/medialeft">
+                            <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbaritem"
-                                label="LUNA"
-                                type="image">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    alt="\0"
-                                    src="/content/lowcodeluna/assets/images/LUNA.svg"/>
-                            </item>
-                        </brand>
-                        <menu
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
+                                isRounded="false"
+                                src="/content/lowcodeluna/pages/Homepage"
+                                type="fixed"/>
+                        </mediaLeft>
+                        <mediaContent
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarmenu">
-                            <start
+                            sling:resourceType="bulma/components/mediaobject/mediacontent">
+                            <buttons
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarstart">
-                                <item_1
+                                sling:resourceType="bulma/components/buttons">
+                                <button1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
                                     label="PRICING"
-                                    type="link"/>
-                                <item_2
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Homepage"
+                                    variant="is-white"/>
+                                <button1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="FEATURES"
-                                    type="link"/>
-                                <item
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="CATALOG"
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Catalog/"
+                                    variant="is-white"/>
+                                <button1_1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
                                     label="PRODUCTS"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/Products"/>
-                                <item_2_1
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Products/"
+                                    variant="is-white"/>
+                                <button1_1_1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
                                     label="ABOUT"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/About"/>
-                            </start>
-                            <end
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/About/"
+                                    variant="is-white"/>
+                            </buttons>
+                        </mediaContent>
+                        <mediaRight
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/mediaobject/mediaright">
+                            <button
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarend">
-                                <navbaritem
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-linkedin"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-normal"
-                                        variant="is-dark"/>
-                                </navbaritem>
-                                <navbaritem_2
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-facebook"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-normal"
-                                        variant="is-dark"/>
-                                </navbaritem_2>
-                                <navbaritem_2_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-twitter"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-normal"
-                                        variant="is-dark"/>
-                                </navbaritem_2_1>
-                                <navbaritem_2_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-instagram"
-                                        isFullWidth="false"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
-                                        label="\0"
-                                        selectOrType="type"
-                                        size="is-normal"
-                                        variant="is-dark"/>
-                                </navbaritem_2_1_1>
-                            </end>
-                        </menu>
-                    </navbar_1>
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-linkedin-in"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                openInNewTab="false"
+                                selectOrType="type"
+                                size="is-small"
+                                type="button"
+                                variant="is-dark"/>
+                            <button_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-facebook-f"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                            <button_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-twitter"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                            <button_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-instagram"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                        </mediaRight>
+                    </mediaobject>
                     <content
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="bulma/components/content"
                         text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
-                </container>
+                </footer>
             </section_2_1_1_1>
         </pagecontainer>
     </jcr:content>

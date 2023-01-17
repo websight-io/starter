@@ -33,6 +33,7 @@ services:
     volumes:
       - starter-project_cms_logs:/websight/logs
       - starter-project_site_repository:/websight/docroot
+      #- localsync:${PWD}/../../:ro
     secrets:
       - source: mongo_password
         target: mongo.password
@@ -77,6 +78,12 @@ volumes:
   starter-project_cms_logs:
   starter-project_mongo_repository:
   starter-project_site_repository:
+  # localsync:
+  #   driver: local
+  #   driver_opts:
+  #     o: bind
+  #     device: ${PWD}/../../
+  #     type: none
 
 secrets:
   mongo_password:

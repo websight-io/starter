@@ -35,3 +35,49 @@ body {
     font-family: var(--font-body)
   }
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-weight: abstracts.$font-weight-xxbold;
+  letter-spacing: 0.02rem;
+  font-family: var(--font-headings);
+  color: var(--color-primary);
+}
+.title {
+  color: var(--color-default);
+}
+
+h1,
+.title.is-1 {
+  @include abstracts.font-h1;
+}
+
+h2,
+.hl-title__heading--size-2 {
+  @include abstracts.font-h2;
+}
+
+h3,
+.hl-title__heading--size-3 {
+  @include abstracts.font-h3;
+}
+
+h4,
+.hl-title__heading--size-4 {
+  @include abstracts.font-h4;
+}
+
+h5,
+.hl-title__heading--size-5 {
+  @include abstracts.font-h5;
+}
+
+h6,
+.hl-title__heading--size-6 {
+  @include abstracts.font-h6;
+}

@@ -21,7 +21,6 @@
 
 * {
   box-sizing: border-box;
-  color: var(--color-default);
 }
 
 a {
@@ -37,7 +36,7 @@ svg {
 body {
   background-color: var(--color-body-background);
   
-  // @include abstracts.font-body;
+  @include abstracts.font-body;
 
   &.primary-color {
     @each $name, $color in abstracts.$primary-colors {

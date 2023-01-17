@@ -29,6 +29,16 @@ $font-weight-xxbold: 900;
 $font-size-h1-md: 48.83px;
 $font-size-h1-lg: 95.37px;
 
+@mixin font-h1 {
+  font-size: $font-size-h1-md;
+  line-height: 1.2;
+  font-weight: $font-weight-xxbold;
+
+  @media screen and (min-width: 1200px) {
+    font-size: $font-size-h1-lg;
+  }
+}
+
 @mixin font-h2 {
   font-size: 2.441rem;
   line-height: 3rem;
