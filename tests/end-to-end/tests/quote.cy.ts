@@ -46,7 +46,7 @@ describe('Quote component', function () {
     cy.getByTestId('component_quote_1')
     .get('img')
     .should('have.attr', 'alt', 'Alt text')
-    .should('have.attr', 'src', '/content/low-code-luna-test/assets/images/quote/Janet.png')
+    .should('have.attr', 'src', '/content/low-code-luna-test/assets/images/quote/Janet.png/jcr:content/renditions/original.png')
 
     cy.percySnapshotPreview('Quote preview');
   });
