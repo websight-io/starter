@@ -18,9 +18,12 @@ package pl.ds.luna.lowcode.components.models;
 
 import javax.inject.Inject;
 import org.apache.sling.api.resource.Resource;
+import org.apache.sling.api.resource.ResourceResolver;
 import org.apache.sling.models.annotations.Default;
 import org.apache.sling.models.annotations.DefaultInjectionStrategy;
 import org.apache.sling.models.annotations.Model;
+import org.apache.sling.models.annotations.injectorspecific.SlingObject;
+import pl.ds.howlite.components.utils.LinkUtil;
 
 @Model(adaptables = Resource.class, defaultInjectionStrategy = DefaultInjectionStrategy.OPTIONAL)
 public class QuoteComponent {
@@ -44,6 +47,10 @@ public class QuoteComponent {
   @Inject
   private String imageAlt;
 
+  @SlingObject
+  private ResourceResolver resourceResolver;
+
+
   public String getText() {
     return text;
   }
@@ -61,7 +68,7 @@ public class QuoteComponent {
   }
 
   public String getAuthorImage() {
-    return authorImage;
+    return LinkUtil.handleLink(authorImage, resourceResolver);
   }
 
   public String getImageAlt() {
