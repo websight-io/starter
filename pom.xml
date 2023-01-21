@@ -72,6 +72,7 @@
     <docker.cms-project.tag>latest</docker.cms-project.tag>
     <docker.nginx.name>ds/websight-nginx-starter</docker.nginx.name>
     <docker.nginx.tag>latest</docker.nginx.tag>
+    <docker.host.url>tcp://localhost:2375</docker.host.url>
 
     <!-- admin user default credentials for tests -->
     <websight.admin.username>wsadmin</websight.admin.username>
@@ -132,6 +133,10 @@
           <artifactId>docker-maven-plugin</artifactId>
           <!-- Please do not upgrade to 0.40.2 as there is an issue with multi-platforms support -->
           <version>0.40.1</version>
+          <configuration>
+            <dockerHost>${docker.host.url}</dockerHost>
+            <verbose>true</verbose>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
