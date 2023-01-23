@@ -97,6 +97,20 @@
     </dependencies>
   </dependencyManagement>
 
+  <profiles>
+    <profile>
+      <activation>
+        <os>
+          <family>windows</family>
+        </os>
+      </activation>
+      <id>windows</id>
+      <properties>
+        <docker.host>tcp://localhost:2375</docker.host>
+      </properties>
+    </profile>
+  </profiles>
+
   <build>
     <plugins>
       <plugin>
