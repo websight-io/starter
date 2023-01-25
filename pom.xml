@@ -85,6 +85,7 @@
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.4</howlite.version>
     <bulma.version>1.0.8</bulma.version>
+    <sling.feature.launcher.version>1.2.4</sling.feature.launcher.version>
   </properties>
 
   <dependencyManagement>

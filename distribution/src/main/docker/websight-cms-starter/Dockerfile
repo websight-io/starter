@@ -26,7 +26,7 @@ VOLUME /websight/docroot
 
 COPY src/main/docker/websight-cms-starter/bin /websight/bin
 RUN ["chmod", "+x", "/websight/bin/launch.sh"]
-COPY target/dependency/org.apache.sling.feature.launcher.jar /websight
+COPY target/dependency/org.apache.sling.feature.launcher /websight/org.apache.sling.feature.launcher
 COPY target/artifacts/ /websight/cache/
 
 RUN apt-get update && apt-get install curl --assume-yes

@@ -125,18 +125,30 @@
       </plugin>
       <plugin>
         <artifactId>maven-dependency-plugin</artifactId>
+        <version>3.5.0</version>
         <executions>
           <execution>
             <id>prepare-feature-launcher</id>
             <goals>
-              <goal>get</goal>
-              <goal>copy</goal>
+              <goal>unpack</goal>
             </goals>
             <phase>package</phase>
             <configuration>
-              <!-- 1.1.28 and newer versions don't work out-of-the-box due to SLING-10956 -->
-              <artifact>org.apache.sling:org.apache.sling.feature.launcher:1.1.26</artifact>
-              <stripVersion>true</stripVersion>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.apache.sling</groupId>
+                  <artifactId>org.apache.sling.feature.launcher</artifactId>
+                  <version>${sling.feature.launcher.version}</version>
+                  <type>tar.gz</type>
+                  <!-- remove the version number from the unpacked folder -->
+                  <fileMappers>
+                    <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                      <pattern>\Qorg.apache.sling.feature.launcher-${sling.feature.launcher.version}\E</pattern>
+                      <replacement>org.apache.sling.feature.launcher</replacement>
+                    </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                  </fileMappers>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
         </executions>

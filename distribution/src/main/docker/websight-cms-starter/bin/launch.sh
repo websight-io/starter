@@ -65,10 +65,8 @@ setupDefaults
 setupDebugOptions
 
 # remove add-opens after SLING-10831 is fixed
-exec java \
-    --add-opens java.base/java.lang=ALL-UNNAMED \
-    ${JAVA_OPTS} \
-    -jar org.apache.sling.feature.launcher.jar \
+export JAVA_OPTS="${JAVA_OPTS} --add-opens java.base/java.lang=ALL-UNNAMED"
+exec org.apache.sling.feature.launcher/bin/launcher \
     -c ${CACHE_DIR} \
     -CC "org.apache.sling.commons.log.LogManager=MERGE_LATEST" \
     -p . \
