@@ -68,7 +68,7 @@ describe('Quote component', function () {
 
     cy.percySnapshotPageEditor('Quote editor');
 
-    cy.getByTestId('ToolbarOption_Properties').click();
+    cy.getByTestId('ToolbarItem_Properties').click();
 
     cy.getByTestId('Input_Text').clear().type('Lorem ipsum');
     cy.getByTestId('Input_Author’sname').clear().type('Author name');

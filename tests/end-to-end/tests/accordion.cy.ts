@@ -51,7 +51,7 @@ describe('Accordion component', function () {
 
     cy.percySnapshotPageEditor('Accordion editor');
 
-    cy.getByTestId('ToolbarOption_Properties').click();
+    cy.getByTestId('ToolbarItem_Properties').click();
 
     cy.getByTestId('Input_Header').clear().type('Lorem ipsum');
 
