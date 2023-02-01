@@ -76,7 +76,7 @@ describe('Luna Title component', function () {
 
     cy.percySnapshotPageEditor('Title editor');
 
-    cy.getByTestId('ToolbarOption_Properties').click();
+    cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
     cy.getByTestId('RadioElement_h1').click();
     cy.getByTestId('RadioElement_hl-title__heading--size-2').click();
