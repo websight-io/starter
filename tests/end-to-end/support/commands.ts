@@ -15,25 +15,31 @@
  */
 
 import '@4tw/cypress-drag-drop';
+import { SelectionMode } from './types';
+
 
 /**
  * Adds support for '/' in testId
  */
 const prepareTestId = (testId: string) => testId.replaceAll('/', '\\/');
 
-Cypress.Commands.add('getByTestId', (testId) => {
-  return cy.get(`[data-testid=${prepareTestId(testId)}]`);
+Cypress.Commands.addQuery('getByTestId',
+    (testId: string, selectionMode = SelectionMode.FULL_MATCH) => {
+  const fixedTextId = prepareTestId(testId);
+  const getFn = cy.now('get', `[data-testid${selectionMode}="${fixedTextId}"]`);
+  return () => {
+    return getFn(cy);
+  };
 });
 
-Cypress.Commands.add(
-    'findByTestId',
-    {
-      prevSubject: true
-    },
-    (subject, testId) => {
-      return subject.find(`[data-testid=${prepareTestId(testId)}]`);
-    }
-);
+Cypress.Commands.addQuery('findByTestId',
+    (testId: string, selectionMode = SelectionMode.FULL_MATCH) => {
+  const fixedTextId = prepareTestId(testId);
+  const getFn = cy.now('find', `[data-testid${selectionMode}="${fixedTextId}"]`);
+  return (subject) => {
+    return getFn(subject);
+  };
+});
 
 Cypress.Commands.add('login', () => {
   const authUrl = `${
