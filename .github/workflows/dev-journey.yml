@@ -136,10 +136,7 @@ jobs:
           ./mvnw -f ./application/backend/pom.xml clean install -P autoInstallBundle
       - name: Validate if functional tests detect changes
         run: |
-          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
-          ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e -Dcms.port=8080
-          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
-          if ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e -Dcms.port=8080 | grep "1 of [0-9]* failed"; then
+          if ./mvnw -f ./tests/pom.xml clean install -P e2e | grep "1 of [0-9]* failed"; then
             echo "Project changes detected"
           else
             echo "Project changes not detected"
@@ -154,7 +151,7 @@ jobs:
           ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
       - name: Validate functional tests
         run: |
-          ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e -Dcms.port=8080
+          ./mvnw -f ./tests/pom.xml clean install -P e2e
       - name: Stop environment
         if: always()
         run: docker compose -f ./environment/local/docker-compose.yml down
