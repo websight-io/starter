@@ -137,6 +137,8 @@ jobs:
       - name: Validate if functional tests detect changes
         run: |
           ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
+          ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e -Dcms.port=8080
+          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
           if ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e -Dcms.port=8080 | grep "1 of [0-9]* failed"; then
             echo "Project changes detected"
           else
