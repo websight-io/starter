@@ -83,8 +83,8 @@
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-    <howlite.version>1.0.5</howlite.version>
-    <bulma.version>1.0.8</bulma.version>
+    <howlite.version>1.0.6</howlite.version>
+    <bulma.version>1.0.9</bulma.version>
   </properties>
 
   <dependencyManagement>
