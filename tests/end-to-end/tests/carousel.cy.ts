@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_pagecontainer/container/carousel'
+  title: 'ComponentOverlay_/content/low-code-luna-test/pages/Carousel/jcr:content/pagecontainer/container/carousel'
 };
 
 describe('Carousel component', function () {

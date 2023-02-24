@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_rootcontainer/maincontainer/pagesection/title'
+  title: 'ComponentOverlay_/content/starter-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title'
 };
 
 describe('Luna Title component', function () {
