@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_pagecontainer/accordion/accordionitem'
+  title: 'ComponentOverlay_/content/low-code-luna-test/pages/Accordion/jcr:content/pagecontainer/accordion/accordionitem'
 };
 
 describe('Accordion component', function () {

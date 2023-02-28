@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_pagecontainer/quote'
+  title: 'ComponentOverlay_/content/low-code-luna-test/pages/Quote/jcr:content/pagecontainer/quote'
 };
 
 describe('Quote component', function () {
