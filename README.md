@@ -20,7 +20,7 @@ For more details see our [Authoring Quick Start Guide](https://www.websight.io/d
 
 ## Websight Technologies
 
-Find out what technologies Dynamic Solutions team have used to design, build and launch WebSight.
+Find out what technologies the Dynamic Solutions team has used to design, build and launch WebSight.
 
 ### CMS
 
