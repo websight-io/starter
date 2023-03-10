@@ -55,7 +55,7 @@
       <id>websight-repo</id>
       <url>https://repo.websight.io/maven/</url>
       <snapshots>
-        <enabled>true</enabled>
+        <enabled>false</enabled>
       </snapshots>
     </repository>
   </repositories>
@@ -79,7 +79,7 @@
     <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
 
     <!-- WebSight CMS Version -->
-    <websight.cms.version>1.10.1-SNAPSHOT</websight.cms.version>
+    <websight.cms.version>1.10.0</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
