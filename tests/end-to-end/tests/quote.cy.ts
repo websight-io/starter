@@ -18,7 +18,9 @@ const paths = {
   title: 'ComponentOverlay_/content/low-code-luna-test/pages/Quote/jcr:content/pagecontainer/quote'
 };
 
+
 describe('Quote component', function () {
+
 
   beforeEach(() => {
     cy.login();
@@ -70,14 +72,20 @@ describe('Quote component', function () {
 
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
-    cy.getByTestId('Input_Text').clear().type('Lorem ipsum');
-    cy.getByTestId('Input_Author’sname').clear().type('Author name');
-    cy.getByTestId('Input_Author’sdescription').clear().type('Author description');
-    cy.getByTestId('Input_Showauthor’simage').click();
+    cy.getByTestId('ModalDialog_Quote')
+      .findByTestId('Input_Text').clear().type('Lorem ipsum');
+    cy.getByTestId('ModalDialog_Quote')
+      .findByTestId('Input_Author’sname').clear().type('Author name');
+    cy.getByTestId('ModalDialog_Quote')
+      .findByTestId('Input_Author’sdescription').clear().type('Author description');
+    cy.getByTestId('ModalDialog_Quote')
+      .findByTestId('Input_Showauthor’simage').click();
     cy.getByTestId('SidebarElement_Assets').click();
     cy.getByTestId('AssetItem_Janet_png').trigger('dragstart');
-    cy.getByTestId('Input_Author’simage').trigger('drop');
-    cy.getByTestId('Input_Alttext').clear().type('Alt text');
+    cy.getByTestId('ModalDialog_Quote').
+      findByTestId('Input_Author’simage').trigger('drop');
+    cy.getByTestId('ModalDialog_Quote')
+      .findByTestId('Input_Alttext').clear().type('Alt text');
 
     cy.percySnapshotDialog('Quote dialog');
 

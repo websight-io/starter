@@ -53,8 +53,8 @@ describe('Accordion component', function () {
 
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
-    cy.getByTestId('Input_Header').clear().type('Lorem ipsum');
-
+    cy.getByTestId('ModalDialog_Accordionitem')
+      .findByTestId('Input_Header').clear().type('Lorem ipsum');
 
     cy.percySnapshotDialog('Accordion dialog');
 

@@ -78,11 +78,16 @@ describe('Luna Title component', function () {
 
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
-    cy.getByTestId('RadioElement_h1').click();
-    cy.getByTestId('RadioElement_hl-title__heading--size-2').click();
-    cy.getByTestId('Input_Headingtext').clear().type('New heading');
-    cy.getByTestId('Input_Addanoverline').click();
-    cy.getByTestId('Input_Overlinetext').clear().type('New overline text');
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('RadioElement_h1').click();
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('RadioElement_hl-title__heading--size-2').click();
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('Input_Headingtext').clear().type('New heading');
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('Input_Addanoverline').click();
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('Input_Overlinetext').clear().type('New overline text');
 
     cy.percySnapshotDialog('Title dialog');
 
