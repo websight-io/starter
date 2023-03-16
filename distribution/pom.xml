@@ -59,7 +59,7 @@
     <!-- Tests -->
     <dependency>
       <groupId>pl.ds.websight</groupId>
-      <artifactId>websight-cms-ce-feature</artifactId>
+      <artifactId>websight-cms-ce-tests-integration</artifactId>
       <version>${websight.cms.version}</version>
       <classifier>tests</classifier>
       <scope>test</scope>
@@ -199,23 +199,6 @@
           <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
-            <configuration>
-              <images>
-                <image>
-                  <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
-                  <build>
-                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-                <image>
-                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
-                  <build>
-                    <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-              </images>
             <executions>
               <execution>
                 <id>start mongo</id>
@@ -270,7 +253,7 @@
                     <image>
                       <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
                       <build>
-                        <dockerFile>src/main/docker/websight-cms-luna/Dockerfile</dockerFile>
+                        <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
                         <contextDir>${project.basedir}</contextDir>
                       </build>
                     </image>
@@ -294,12 +277,12 @@
             <configuration>
               <launches>
                 <launch>
-                  <id>websight-cms-luna</id>
+                  <id>websight-cms-starter</id>
                   <feature>
                     <groupId>${project.groupId}</groupId>
                     <artifactId>${project.artifactId}</artifactId>
                     <version>${project.version}</version>
-                    <classifier>websight-cms-luna</classifier>
+                    <classifier>websight-cms-starter</classifier>
                     <type>slingosgifeature</type>
                   </feature>
                   <launcherArguments>
@@ -331,14 +314,14 @@
             <version>3.0.0-M7</version>
             <configuration>
               <dependenciesToScan>
-                <dependency>pl.ds.websight:websight-cms-ce-feature</dependency>
+                <dependency>pl.ds.websight:websight-cms-ce-tests-integration</dependency>
               </dependenciesToScan>
               <systemPropertyVariables>
                 <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
                 <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
                 <WS_APPLICATION_VERSION>${websight.cms.version}</WS_APPLICATION_VERSION>
-                <INSTALLED_PACKAGES_COUNT_LUNA>1</INSTALLED_PACKAGES_COUNT_LUNA>
-                <INSTALLED_PACKAGES_GROUP_LUNA>pl.ds.luna</INSTALLED_PACKAGES_GROUP_LUNA>
+                <INSTALLED_PACKAGES_COUNT_STARTER>1</INSTALLED_PACKAGES_COUNT_STARTER>
+                <INSTALLED_PACKAGES_GROUP_STARTER>pl.ds.starter</INSTALLED_PACKAGES_GROUP_STARTER>
                 <INSTALLED_PACKAGES_COUNT_BULMA>1</INSTALLED_PACKAGES_COUNT_BULMA>
                 <INSTALLED_PACKAGES_GROUP_BULMA>pl.ds.bulma</INSTALLED_PACKAGES_GROUP_BULMA>
               </systemPropertyVariables>

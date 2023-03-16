@@ -5,10 +5,6 @@
       "start-order": "25"
     },
     {
-      "id": "pl.ds.bulma:bulma-frontend:${bulma.version}",
-      "start-order": "25"
-    },
-    {
       "id": "pl.ds.bulma:bulma-table-service:${bulma.version}",
       "start-order": "25"
     },

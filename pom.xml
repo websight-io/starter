@@ -85,6 +85,8 @@
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.7</howlite.version>
     <bulma.version>1.0.10</bulma.version>
+
+    <mongo.container.image>mongo:4.4.6</mongo.container.image>
   </properties>
 
   <dependencyManagement>
