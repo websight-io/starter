@@ -3,8 +3,8 @@ It builds a WebSight distribution containing all dependencies, configurations, r
 
 The builds two Docker images:
 
-- CMS with Luna - `ds/websight-cms-luna:latest`
-- HTTP server exposing published assets - `ds/nginx-luna:latest`
+- CMS with Luna - `ds/websight-cms-starter:latest`
+- HTTP server exposing published assets - `ds/websight-nginx-starter:latest`
 
 ## Prerequisites
 
@@ -26,7 +26,7 @@ to assemble the distribution, build a Docker image and run integration tests.
 
 ```bash
 docker run -p 27017:27017 -e MONGO_INITDB_ROOT_USERNAME=mongoadmin -e MONGO_INITDB_ROOT_PASSWORD=mongoadmin mongo:4.4.6
-java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-websight-cms-luna.json
+java -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-websight-cms-starter.json
 ```
 
 and open [localhost:8080](http://localhost:8080/) to see the CMS admin panel (use default `wsadmin/wsadmin` password).

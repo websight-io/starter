@@ -12,7 +12,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-name: CI development versions
+name: Starter CI development version
 
 on:
   workflow_dispatch:
@@ -27,7 +27,7 @@ permissions:
   contents: read
 
 jobs:
-  build-luna-with-latest-snapshots:
+  build-starter-with-latest-snapshots:
     runs-on: ubuntu-latest
 
     steps:
@@ -48,7 +48,7 @@ jobs:
         uses: aws-actions/configure-aws-credentials@v1
         with:
           role-to-assume: ${{ secrets.AWS_CI_ROLE_TO_ASSUME }}
-          role-session-name: LunaPullRequestCheck
+          role-session-name: StarterPullRequestCheck
           aws-region: ${{ env.AWS_REGION }}
       - name: Prepare Maven settings for Code Artifact
         run: |

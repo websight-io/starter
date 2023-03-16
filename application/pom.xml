@@ -19,19 +19,20 @@
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
-    <groupId>pl.ds.luna</groupId>
-    <artifactId>luna-parent</artifactId>
-    <version>2.1.3-SNAPSHOT</version>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>starter-parent</artifactId>
+    <version>1.11.1-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
-  <artifactId>luna-application</artifactId>
-  <name>Luna: Application</name>
+  <artifactId>starter-application</artifactId>
+  <name>Starter: Application</name>
   <description>Parent for application modules.</description>
   <packaging>pom</packaging>
 
   <modules>
     <module>backend</module>
+    <module>frontend</module>
   </modules>
 
   <properties>
@@ -64,7 +65,7 @@
               </goals>
               <configuration>
                 <bnd><![CDATA[
-                  Bundle-Category: pl.ds.luna
+                  Bundle-Category: pl.ds.starter
                   Bundle-Description : ${project.name}
                   -exportcontents: ${removeall;${packages;VERSIONED};${packages;CONDITIONAL}}
                   -noextraheaders: true
@@ -165,7 +166,6 @@
         <version>${howlite.version}</version>
         <scope>provided</scope>
       </dependency>
-
       <dependency>
         <groupId>org.osgi</groupId>
         <artifactId>org.osgi.annotation.versioning</artifactId>

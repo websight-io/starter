@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_rootcontainer/maincontainer/pagesection/title'
+  title: 'ComponentOverlay_/content/starter-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title'
 };
 
 describe('Luna Title component', function () {
@@ -25,7 +25,7 @@ describe('Luna Title component', function () {
   });
 
   it('renders correctly in preview mode', function () {
-    cy.visit('/content/luna-test/pages/LunaTitle.html');
+    cy.visit('/content/starter-test/pages/LunaTitle.html');
 
     cy.getByTestId('component_title')
       .findByTestId('title')
@@ -66,7 +66,7 @@ describe('Luna Title component', function () {
     ).as('saveProperties');
 
     cy.visit(
-      '/apps/websight/index.html/content/luna-test/pages/LunaTitle::editor'
+      '/apps/websight/index.html/content/starter-test/pages/LunaTitle::editor'
     );
 
     cy.getByTestId(paths.title)
@@ -76,13 +76,18 @@ describe('Luna Title component', function () {
 
     cy.percySnapshotPageEditor('Title editor');
 
-    cy.getByTestId('ToolbarOption_Edit').click();
+    cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
-    cy.getByTestId('RadioElement_h1').click();
-    cy.getByTestId('RadioElement_hl-title__heading--size-2').click();
-    cy.getByTestId('Input_Headingtext').clear().type('New heading');
-    cy.getByTestId('Input_Addanoverline').click();
-    cy.getByTestId('Input_Overlinetext').clear().type('New overline text');
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('RadioElement_h1').click();
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('RadioElement_hl-title__heading--size-2').click();
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('Input_Headingtext').clear().type('New heading');
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('Input_Addanoverline').click();
+    cy.getByTestId('ModalDialog_LunaTitle')
+      .findByTestId('Input_Overlinetext').clear().type('New overline text');
 
     cy.percySnapshotDialog('Title dialog');
 
@@ -90,7 +95,7 @@ describe('Luna Title component', function () {
     cy.wait('@saveProperties');
 
     cy.request(
-      '/content/luna-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title.json'
+      '/content/starter-test/pages/LunaTitle/jcr:content/rootcontainer/maincontainer/pagesection/title.json'
     )
       .its('body')
       .should('deep.eq', {

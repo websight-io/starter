@@ -1,0 +1,30 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "item1": {
+    "jcr:primaryType": "nt:unstructured",
+    "header":"Accordion header 1",
+    "sling:resourceType": "luna/components/accordion/accordionitem",
+    "accordioncontent": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "luna/components/accordion/accordioncontent"
+    }
+  },
+  "item2": {
+    "jcr:primaryType": "nt:unstructured",
+    "header":"Accordion header 2",
+    "sling:resourceType": "luna/components/accordion/accordionitem",
+    "accordioncontent": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "luna/components/accordion/accordioncontent"
+    }
+  },
+  "item3": {
+    "jcr:primaryType": "nt:unstructured",
+    "header":"Accordion header 3",
+    "sling:resourceType": "luna/components/accordion/accordionitem",
+    "accordioncontent": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "luna/components/accordion/accordioncontent"
+    }
+  }
+}

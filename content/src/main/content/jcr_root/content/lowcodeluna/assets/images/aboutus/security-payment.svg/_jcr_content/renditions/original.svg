@@ -1,0 +1,20 @@
+<?xml version="1.0" standalone="no"?>
+<!--
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+-->
+<svg width="64" height="64" viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.0001 58.6665C32.0001 58.6665 53.3334 47.9999 53.3334 31.9999V13.3332L32.0001 5.33319L10.6667 13.3332V31.9999C10.6667 47.9999 32.0001 58.6665 32.0001 58.6665Z" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M24 32.0001L29.3333 37.3335L40 26.6668" stroke="#1D1F31" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

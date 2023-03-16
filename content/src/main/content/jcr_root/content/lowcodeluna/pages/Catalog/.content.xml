@@ -1,0 +1,730 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="ws:Page">
+    <jcr:content
+        jcr:primaryType="ws:PageContent"
+        jcr:title="Catalog"
+        sling:resourceType="luna/components/page"
+        ws:template="/apps/luna/templates/basicpage"
+        navbarFixed="true"
+        navbarFixedPosition="has-navbar-fixed-top">
+        <pagecontainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="bulma/components/pagecontainer">
+            <section
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bulma/components/section"
+                id="navbar">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/container">
+                    <navbar
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/navbar"
+                        fixedOption="is-fixed-top"
+                        isTransparent="true"
+                        variant="is-white">
+                        <brand
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/navbar/navbarbrand"
+                            createBurger="true">
+                            <item
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/navbar/navbaritem"
+                                label="LUNA"
+                                type="image"
+                                url="/content/lowcodeluna/pages/Homepage">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    alt="\0"
+                                    src="/content/lowcodeluna/assets/images/LUNA.svg"/>
+                            </item>
+                        </brand>
+                        <menu
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/navbar/navbarmenu">
+                            <end
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/navbar/navbarend">
+                                <item_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    label="BLOG"
+                                    type="link"
+                                    url="/content/lowcodeluna/pages/Homepage"/>
+                                <item
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    label="PRODUCTS"
+                                    type="link"
+                                    url="/content/lowcodeluna/pages/Products"/>
+                                <item_2
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    label="CATALOG"
+                                    type="link"
+                                    url="/content/lowcodeluna/pages/Catalog"/>
+                                <item_2_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    label="ABOUT"
+                                    type="link"
+                                    url="/content/lowcodeluna/pages/About"/>
+                                <item_2_1_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    label="          CONTACT US"
+                                    type="link"
+                                    url="/content/lowcodeluna/pages/Homepage"/>
+                            </end>
+                        </menu>
+                    </navbar>
+                </container>
+            </section>
+            <section_2_2
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bulma/components/section">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/container">
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/content"
+                        size="is-large"
+                        text="&lt;h1 style=&quot;text-align: center&quot;>Our Catalog&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Stunning, stylish and within reach&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;br>&lt;/p>"/>
+                    <block
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/block">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/image"
+                            alt="\0"
+                            isRounded="false"
+                            src="/content/lowcodeluna/assets/images/catalog/Our Catalog.png"
+                            type="fixed"/>
+                    </block>
+                </container>
+            </section_2_2>
+            <section_2_2_3
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bulma/components/section">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/container">
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/content"
+                        size="is-large"
+                        text="&lt;h1 style=&quot;text-align: center&quot;>Bestsellers&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own.&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                    <carousel
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="luna/components/carousel">
+                        <carouselitem
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="luna/components/carousel/carouselitem">
+                            <card
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/card"
+                                header="\0">
+                                <cardcontent
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/card/cardcontent">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/title"
+                                        element="h2"
+                                        isSpaced="false"
+                                        text="Diamonds By The Yard Bracelet"
+                                        type="title"/>
+                                    <content
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/content"
+                                        text="&lt;p>Tiffany round diamonds catch the light and make it dance. Bracelet in 18k rose gold with a round brilliant diamond. 7″ long.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                                </cardcontent>
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"/>
+                            </card>
+                        </carouselitem>
+                        <carouselitem_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="luna/components/carousel/carouselitem">
+                            <card
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/card"
+                                header="\0">
+                                <cardcontent
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/card/cardcontent">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/title"
+                                        element="h2"
+                                        isSpaced="false"
+                                        text="Nesting Narrow Band Ring"
+                                        type="title"/>
+                                    <content
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/content"
+                                        text="&lt;p>Featuring v-shaped details, the nesting band ring is the perfect complement to all Tiffany engagement ring styles.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"/>
+                                </cardcontent>
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"/>
+                            </card>
+                        </carouselitem_1>
+                        <carouselitem_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="luna/components/carousel/carouselitem">
+                            <card
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/card"
+                                header="\0">
+                                <cardcontent
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/card/cardcontent">
+                                    <title_1
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/title"
+                                        element="h2"
+                                        isSpaced="false"
+                                        text="Layer Cake Necklace Set"
+                                        type="title"/>
+                                    <content
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/content"
+                                        text="&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                                </cardcontent>
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/catalog/Layer Cake Necklace Set.png"/>
+                            </card>
+                        </carouselitem_2>
+                        <carouselitem_3
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="luna/components/carousel/carouselitem">
+                            <card
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/card"
+                                header="\0">
+                                <cardcontent
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/card/cardcontent">
+                                    <title
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/title"
+                                        element="h2"
+                                        isSpaced="false"
+                                        text="The Texture Ring Set"
+                                        type="title"/>
+                                    <content
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="bulma/components/content"
+                                        text="&lt;p>You play with patterns, now it’s time to texturize. Our Mini Infinity Ring meets a Modern Cigar Band to create the fashion-forward jewelry pair you never knew you needed.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,600&lt;/strong>&lt;/p>"/>
+                                </cardcontent>
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/catalog/The Texture Ring Set.png"/>
+                            </card>
+                        </carouselitem_3>
+                    </carousel>
+                </container>
+            </section_2_2_3>
+            <section_2_2_3_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bulma/components/section">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/container">
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/content"
+                        size="is-large"
+                        text="&lt;h1 style=&quot;text-align: center&quot;>All Products&lt;/h1>&lt;p style=&quot;text-align: center&quot;>Search our unrivaled selection of expertly crafted fine jewellery for the perfect gifts. Discover silver earrings, classic pearls, diamond necklaces and more.&lt;br>&lt;br>&lt;/p>"/>
+                    <columns_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/columns"
+                        desktopGapLevel="is-7"
+                        isCentered="false"
+                        isCustomGapLevel="true"
+                        isMultiline="false"
+                        isVerticallyCentered="false">
+                        <column1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Diamonds By The Yard Bracelet"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>Tiffany round diamonds catch the light and make it dance. Bracelet in 18k rose gold with a round brilliant diamond. 7″ long.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                        </column1>
+                        <column1_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Nesting Narrow Band Ring"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>Featuring v-shaped details, the nesting band ring is the perfect complement to all Tiffany engagement ring styles.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"/>
+                        </column1_2>
+                        <column1_2_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Layer Cake Necklace Set"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                        </column1_2_1>
+                    </columns_1>
+                    <columns_1_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/columns"
+                        desktopGapLevel="is-7"
+                        isCentered="false"
+                        isCustomGapLevel="true"
+                        isMultiline="false"
+                        isVerticallyCentered="false">
+                        <column1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/product/Viviana Diamond Engagement Ring.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Viviana Diamond Engagement Ring"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>This delightful engagement ring features a glittering diamond gallery that wraps around the center gem.  &lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                        </column1>
+                        <column1_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/product/Diamond Cut Ankle.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Veronece 18K Clad 10″ Diamond Cut Ankle"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                        </column1_2>
+                        <column1_2_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/product/The Texture Ring Set.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="The Texture Ring Set"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>You play with patterns, now it’s time to texturize. Our Mini Infinity Ring meets a Modern Cigar Band to create the fashion-forward jewelry pair you never knew you needed.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,600&lt;/strong>&lt;/p>"/>
+                        </column1_2_1>
+                    </columns_1_1>
+                    <columns_1_1_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/columns"
+                        desktopGapLevel="is-7"
+                        isCentered="false"
+                        isCustomGapLevel="true"
+                        isMultiline="false"
+                        isVerticallyCentered="false">
+                        <column1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/catalog/The Texture Ring Set.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="The Texture Ring Set"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>You play with patterns, now it’s time to texturize. Our Mini Infinity Ring meets a Modern Cigar Band to create the fashion-forward jewelry pair you never knew you needed.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,800&lt;/strong>&lt;/p>"/>
+                        </column1>
+                        <column1_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/catalog/Olive Leaf Earrings.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Olive Leaf Earrings"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>Diamonds dazzle against the leaves in a design inspired by the olive branch, a symbol of peace and abundance.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,400&lt;/strong>&lt;/p>"/>
+                        </column1_2>
+                        <column1_2_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/columns/column">
+                            <block
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/block">
+                                <image
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/image"
+                                    alt="\0"
+                                    isRounded="false"
+                                    src="/content/lowcodeluna/assets/images/catalog/Olive Leaf Pendant.png"
+                                    type="fixed"/>
+                            </block>
+                            <title
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/title"
+                                element="h2"
+                                isSpaced="false"
+                                text="Olive Leaf Pendant"
+                                type="title"/>
+                            <content
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/content"
+                                text="&lt;p>Inspired by the olive branch, a symbol of peace and abundance. In 18k gold with a round brilliant diamond.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
+                        </column1_2_1>
+                    </columns_1_1_1>
+                    <button_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/button"
+                        addIcon="false"
+                        isDisabled="false"
+                        isFullWidth="false"
+                        isLight="false"
+                        isOutlined="false"
+                        isRounded="false"
+                        label="VIEW ALL"
+                        size="is-normal"
+                        type="button"
+                        variant="is-white"/>
+                </container>
+            </section_2_2_3_1>
+            <section_2_1_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bulma/components/section">
+                <container
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/container">
+                    <block
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/block">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/image"
+                            alt="\0"
+                            isRounded="false"
+                            src="/content/lowcodeluna/assets/images/catalog/diamond earing.png"
+                            type="fixed"/>
+                    </block>
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/content"
+                        size="is-large"
+                        text="&lt;p>&lt;br>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and&lt;br>Strength Exist in Both Union and&lt;br>Individuality&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;br>&lt;/p>"/>
+                    <buttons
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/buttons"
+                        alignment="is-centered"
+                        hasAddons="false">
+                        <button
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/button"
+                            addIcon="false"
+                            isDisabled="false"
+                            isFullWidth="false"
+                            isLight="false"
+                            isOutlined="false"
+                            isRounded="true"
+                            label="NEW COLLECTION"
+                            size="is-medium"
+                            type="button"
+                            variant="is-dark"/>
+                        <button_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/button"
+                            addIcon="false"
+                            isDisabled="false"
+                            isFullWidth="false"
+                            isLight="false"
+                            isOutlined="false"
+                            isRounded="false"
+                            label="GET IN TOUCH"
+                            size="is-medium"
+                            type="button"
+                            variant="is-white"/>
+                    </buttons>
+                </container>
+            </section_2_1_1>
+            <section_2_1_1_1
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="bulma/components/section"
+                id="footer">
+                <footer
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="bulma/components/footer">
+                    <mediaobject
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/mediaobject">
+                        <mediaLeft
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/mediaobject/medialeft">
+                            <image
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/image"
+                                alt="\0"
+                                assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
+                                isRounded="false"
+                                src="/content/lowcodeluna/pages/Homepage"
+                                type="fixed"/>
+                        </mediaLeft>
+                        <mediaContent
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/mediaobject/mediacontent">
+                            <buttons
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/buttons">
+                                <button1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="PRICING"
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Homepage"
+                                    variant="is-white"/>
+                                <button1_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="CATALOG"
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Catalog/"
+                                    variant="is-white"/>
+                                <button1_1_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="PRODUCTS"
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/Products/"
+                                    variant="is-white"/>
+                                <button1_1_1_1
+                                    jcr:primaryType="nt:unstructured"
+                                    sling:resourceType="bulma/components/button"
+                                    addIcon="false"
+                                    isFullWidth="false"
+                                    isLight="false"
+                                    isOutlined="false"
+                                    isRounded="false"
+                                    label="ABOUT"
+                                    openInNewTab="false"
+                                    type="a"
+                                    url="/content/lowcodeluna/pages/About/"
+                                    variant="is-white"/>
+                            </buttons>
+                        </mediaContent>
+                        <mediaRight
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="bulma/components/mediaobject/mediaright">
+                            <button
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-linkedin-in"
+                                isDisabled="false"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                openInNewTab="false"
+                                selectOrType="type"
+                                size="is-small"
+                                type="button"
+                                variant="is-dark"/>
+                            <button_1
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-facebook-f"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                            <button_2
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-twitter"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                            <button_3
+                                jcr:primaryType="nt:unstructured"
+                                sling:resourceType="bulma/components/button"
+                                addIcon="true"
+                                icon="fab fa-2x fa-instagram"
+                                isFullWidth="false"
+                                isLight="false"
+                                isOutlined="true"
+                                isRounded="true"
+                                label="\0"
+                                selectOrType="type"
+                                size="is-small"
+                                variant="is-dark"/>
+                        </mediaRight>
+                    </mediaobject>
+                    <content
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="bulma/components/content"
+                        text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
+                </footer>
+            </section_2_1_1_1>
+        </pagecontainer>
+    </jcr:content>
+</jcr:root>
