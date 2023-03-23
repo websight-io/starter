@@ -35,7 +35,6 @@
     <e2e.skip>true</e2e.skip>
     <e2e.skip.cypress>true</e2e.skip.cypress>
     <e2e.skip.visual>true</e2e.skip.visual>
-    <mongo.container.image>mongo:4.4.6</mongo.container.image>
 
     <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
     <node.version>v16.15.0</node.version>
