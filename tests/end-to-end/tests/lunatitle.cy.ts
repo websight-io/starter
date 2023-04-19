@@ -101,6 +101,7 @@ describe('Luna Title component', function () {
       .should('deep.eq', {
         'sling:resourceType': 'luna/components/lunatitle',
         title: 'New heading',
+        anchorId: '',
         showSubtitle: 'true',
         subtitle: 'New overline text',
         'jcr:primaryType': 'nt:unstructured',
