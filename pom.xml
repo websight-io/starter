@@ -83,7 +83,7 @@
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-    <howlite.version>1.0.10</howlite.version>
+    <howlite.version>1.0.11</howlite.version>
     <bulma.version>1.0.10</bulma.version>
 
     <mongo.container.image>mongo:4.4.6</mongo.container.image>
