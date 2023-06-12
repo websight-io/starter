@@ -9,7 +9,7 @@ WebSight Starter is a sample project built on top of the [Websight CMS Community
 Set up a local on-demand environment with the released WebSight CMS CE Docker images by running:
 
 ```bash
-curl https://www.websight.io/scripts/get.sh | sh
+curl https://docs.websight.io/scripts/get.sh | sh
 ```
 
 and then see the results on [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
