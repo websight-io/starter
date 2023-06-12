@@ -38,5 +38,5 @@ jobs:
           signed-commit-message: '$contributorName has signed the individual CLA in #$pullRequestNo'
           custom-notsigned-prcomment: 'You must sign a [Contributor License Agreement](https://github.com/websight-io/starter/blob/main/CONTRIBUTING.md#contributor-license-agreement-cla) (CLA) to accept your pull request. You only need to do this once. If you submit a pull request for the first time, our CLA bot will automatically ask you to sign before merging the pull request.'
           custom-pr-sign-comment: 'I have read the Dynamic Solutions Individual Contributor License Agreement (CLA) Document and I hereby sign the CLA'
-          custom-allsigned-prcomment: '**CLA bot** All Contributors have signed the [Dynamic Solutions Individual Contributor License Agreement](https://www.websight.io/product/cla/individual/v1/)'
+          custom-allsigned-prcomment: '**CLA bot** All Contributors have signed the [Dynamic Solutions Individual Contributor License Agreement](https://docs.websight.io/product/cla/individual/v1/)'
           lock-pullrequest-aftermerge: true

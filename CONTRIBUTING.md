@@ -16,11 +16,11 @@ This project, and everyone participating in it, are governed by the [WebSight Co
 
 ### Individual contribution
 
-You need to sign a [Dynamic Solutions Individual Contributor License Agreement](https://www.websight.io/product/cla/individual/v1/) (CLA) to accept your pull request. You only need to do this once. If you submit a pull request for the first time, we will ask you to sign our CLA before merging the pull request.
+You need to sign a [Dynamic Solutions Individual Contributor License Agreement](https://docs.websight.io/product/cla/individual/v1/) (CLA) to accept your pull request. You only need to do this once. If you submit a pull request for the first time, we will ask you to sign our CLA before merging the pull request.
 
 ### Company contribution
 
-If you make contributions to our repositories on behalf of your company, we will need a [Dynamic Solutions Corporate Contributor License Agreement](https://www.websight.io/product/cla/corporate/v1/) signed. To do that, please get in touch with us at [websight@ds.pl](mailto:websight@ds.pl).
+If you make contributions to our repositories on behalf of your company, we will need a [Dynamic Solutions Corporate Contributor License Agreement](https://docs.websight.io/product/cla/corporate/v1/) signed. To do that, please get in touch with us at [websight@ds.pl](mailto:websight@ds.pl).
 
 ## Documentation
 
