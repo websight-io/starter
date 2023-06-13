@@ -9,14 +9,14 @@ WebSight Starter is a sample project built on top of the [Websight CMS Community
 Set up a local on-demand environment with the released WebSight CMS CE Docker images by running:
 
 ```bash
-curl https://www.websight.io/scripts/get.sh | sh
+curl https://docs.websight.io/scripts/get.sh | sh
 ```
 
 and then see the results on [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
 
 ![Luna screenshot](/assets/luna-screenshot.png "Luna screenshot")
 
-For more details see our [Authoring Quick Start Guide](https://www.websight.io/docs/quick-start/).
+For more details see our [Authoring Quick Start Guide](https://docs.websight.io/cms/quick-start/).
 
 ## Websight Technologies
 
@@ -229,11 +229,11 @@ To support us, you may follow the project at:
 ## Documentation
 See our dedicated repository for the [WebSight CMS documentation](https://github.com/websight-io/docs), or view our documentation live:
 
-- [User guide](https://www.websight.io/docs/quick-start/)
-- [Developer guide](https://www.websight.io/docs/developers/quick-start/)
+- [User guide](https://docs.websight.io/cms/quick-start/)
+- [Developer guide](https://docs.websight.io/cms/developers/quick-start/)
 
 ## License
 
 WebSight Starter and [Howlite components](https://github.com/websight-io/howlite) are `open-source` with `Apache License 2.0` license.
 
-WebSight CMS Community Edition is free to use for everyone ([terms of use](https://www.websight.io/terms-of-use/)).
+WebSight CMS Community Edition is free to use for everyone ([terms of use](https://docs.websight.io/terms-of-use/)).
