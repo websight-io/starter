@@ -99,19 +99,12 @@ describe('Luna Title component', function () {
     )
       .its('body')
       .should('deep.eq', {
-        mdOffset: '',
-        smColSize: '12',
-        classes: '',
-        smOffset: '',
         'sling:resourceType': 'luna/components/lunatitle',
         title: 'New heading',
         anchorId: '',
         showSubtitle: 'true',
-        lgOffset: '',
         subtitle: 'New overline text',
-        mdColSize: '12',
         'jcr:primaryType': 'nt:unstructured',
-        lgColSize: '12',
         headingLevel: 'h1',
         headingSize: 'hl-title__heading--size-2'
       });
