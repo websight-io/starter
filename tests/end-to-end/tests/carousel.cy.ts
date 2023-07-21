@@ -15,7 +15,7 @@
  */
 
 const paths = {
-  title: 'ComponentOverlay_pagecontainer/container/carousel'
+  title: 'ComponentOverlay_/content/low-code-luna-test/pages/Carousel/jcr:content/pagecontainer/container/carousel'
 };
 
 describe('Carousel component', function () {
@@ -57,7 +57,7 @@ describe('Carousel component', function () {
     );
 
     cy.getByTestId(paths.title)
-    .click()
+    .click({force: true})
     .find('span.name')
     .should('contain.text', 'Carousel');
 
@@ -66,7 +66,8 @@ describe('Carousel component', function () {
     cy.get('button[data-resize-button]').click();
 
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
-    cy.getByTestId('Input_Slidestoshow').clear().type('5');
+    cy.getByTestId('ModalDialog_Carousel')
+      .findByTestId('Input_Slidestoshow').clear().type('5');
 
     cy.percySnapshotDialog('Carousel dialog');
 

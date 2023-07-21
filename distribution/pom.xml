@@ -21,12 +21,19 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-parent</artifactId>
-    <version>1.8.1-SNAPSHOT</version>
+    <version>1.17.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>starter-distribution</artifactId>
   <name>Starter: Distribution</name>
   <description>Starter distribution that builds the Docker Image for the projects running on WebSight.</description>
+
+  <properties>
+    <it.installed.packages.starter.group>pl.ds.starter</it.installed.packages.starter.group>
+    <it.installed.packages.starter.count>1</it.installed.packages.starter.count>
+    <it.installed.packages.bulma.group>pl.ds.bulma</it.installed.packages.bulma.group>
+    <it.installed.packages.bulma.count>1</it.installed.packages.bulma.count>
+  </properties>
 
   <dependencies>
     <dependency>
@@ -55,6 +62,16 @@
       <classifier>oak-document-store</classifier>
       <type>slingosgifeature</type>
     </dependency>
+
+    <!-- Tests -->
+    <dependency>
+      <groupId>pl.ds.websight</groupId>
+      <artifactId>websight-cms-ce-tests-integration</artifactId>
+      <version>${websight.cms.version}</version>
+      <classifier>tests</classifier>
+      <scope>test</scope>
+    </dependency>
+
   </dependencies>
 
   <build>
@@ -167,33 +184,169 @@
       <build>
         <plugins>
           <plugin>
+            <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+            <version>3.3.0</version>
+            <executions>
+              <execution>
+                <id>reserve-network-port</id>
+                <goals>
+                  <goal>reserve-network-port</goal>
+                </goals>
+                <phase>pre-integration-test</phase>
+                <configuration>
+                  <portNames>
+                    <portName>cms.port</portName>
+                    <portName>mongo.port</portName>
+                  </portNames>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
-            <configuration>
-              <images>
-                <image>
-                  <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
-                  <build>
-                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-                <image>
-                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
-                  <build>
-                    <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-              </images>
-            </configuration>
             <executions>
+              <execution>
+                <id>start mongo</id>
+                <goals>
+                  <goal>start</goal>
+                </goals>
+                <configuration>
+                  <images>
+                    <image>
+                      <alias>mongo</alias>
+                      <name>${mongo.container.image}</name>
+                      <run>
+                        <ports>
+                          <port>${mongo.port}:27017</port>
+                        </ports>
+                        <wait>
+                          <log>CONTROL</log>
+                          <time>60000</time>
+                        </wait>
+                        <env>
+                          <MONGO_INITDB_ROOT_USERNAME>mongoadmin</MONGO_INITDB_ROOT_USERNAME>
+                          <MONGO_INITDB_ROOT_PASSWORD>mongoadmin</MONGO_INITDB_ROOT_PASSWORD>
+                        </env>
+                      </run>
+                    </image>
+                  </images>
+                </configuration>
+              </execution>
+              <execution>
+                <id>stop mongo</id>
+                <phase>verify</phase>
+                <goals>
+                  <goal>stop</goal>
+                </goals>
+                <configuration>
+                  <images>
+                    <image>
+                      <alias>mongo</alias>
+                      <name>${mongo.container.image}</name>
+                    </image>
+                  </images>
+                </configuration>
+              </execution>
               <execution>
                 <id>build-docker-image</id>
                 <phase>package</phase>
                 <goals>
                   <goal>build</goal>
                 </goals>
+                <configuration>
+                  <images>
+                    <image>
+                      <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
+                      <build>
+                        <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
+                        <contextDir>${project.basedir}</contextDir>
+                      </build>
+                    </image>
+                    <image>
+                      <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                      <build>
+                        <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
+                        <contextDir>${project.basedir}</contextDir>
+                      </build>
+                    </image>
+                  </images>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <!-- run the ITs -->
+          <plugin>
+            <groupId>org.apache.sling</groupId>
+            <artifactId>feature-launcher-maven-plugin</artifactId>
+            <version>0.1.2</version>
+            <configuration>
+              <launches>
+                <launch>
+                  <id>websight-cms-starter</id>
+                  <feature>
+                    <groupId>${project.groupId}</groupId>
+                    <artifactId>${project.artifactId}</artifactId>
+                    <version>${project.version}</version>
+                    <classifier>websight-cms-starter</classifier>
+                    <type>slingosgifeature</type>
+                  </feature>
+                  <launcherArguments>
+                    <frameworkProperties>
+                      <org.osgi.service.http.port>${cms.port}</org.osgi.service.http.port>
+                    </frameworkProperties>
+                  </launcherArguments>
+                  <environmentVariables>
+                    <MONGODB_PORT>${mongo.port}</MONGODB_PORT>
+                    <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
+                    <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
+                  </environmentVariables>
+                  <startTimeoutSeconds>${it.startTimeoutSeconds}</startTimeoutSeconds>
+                </launch>
+              </launches>
+            </configuration>
+            <executions>
+              <execution>
+                <goals>
+                  <goal>start</goal>
+                  <goal>stop</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-failsafe-plugin</artifactId>
+            <version>3.0.0-M7</version>
+            <configuration>
+              <dependenciesToScan>
+                <dependency>pl.ds.websight:websight-cms-ce-tests-integration</dependency>
+              </dependenciesToScan>
+              <systemPropertyVariables>
+                <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
+                <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
+                <WS_APPLICATION_VERSION>${websight.cms.version}</WS_APPLICATION_VERSION>
+                <INSTALLED_PACKAGES_COUNT_STARTER>${it.installed.packages.starter.count}</INSTALLED_PACKAGES_COUNT_STARTER>
+                <INSTALLED_PACKAGES_GROUP_STARTER>${it.installed.packages.starter.group}</INSTALLED_PACKAGES_GROUP_STARTER>
+                <INSTALLED_PACKAGES_COUNT_BULMA>${it.installed.packages.bulma.count}</INSTALLED_PACKAGES_COUNT_BULMA>
+                <INSTALLED_PACKAGES_GROUP_BULMA>${it.installed.packages.bulma.group}</INSTALLED_PACKAGES_GROUP_BULMA>
+              </systemPropertyVariables>
+              <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
+              <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
+            </configuration>
+            <executions>
+              <execution>
+                <id>cms-integration-tests</id>
+                <goals>
+                  <goal>integration-test</goal>
+                  <goal>verify</goal>
+                </goals>
+                <configuration>
+                  <systemPropertyVariables>
+                    <WS_HTTP_PORT>${cms.port}</WS_HTTP_PORT>
+                  </systemPropertyVariables>
+                </configuration>
               </execution>
             </executions>
           </plugin>

@@ -145,9 +145,6 @@ jobs:
       - name: Update functional tests
         run: |
           sed -i "/have.css/s/20px/25.008px/g" ./tests/end-to-end/tests/lunatitle.cy.ts
-          sed -i "/showSubtitle:/a\
-                  overlineSize: 'hl-title__heading--size-5',\
-          " ./tests/end-to-end/tests/lunatitle.cy.ts
           ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
       - name: Validate functional tests
         run: |
