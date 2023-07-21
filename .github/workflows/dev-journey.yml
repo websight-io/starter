@@ -43,7 +43,7 @@ jobs:
       - name: Build and test with Maven
         run: |
           ./mvnw --batch-mode clean verify -P e2e
-          cp ./distribution/target/artifacts/pl ~/.m2/repository/pl
+          cp -r ./distribution/target/artifacts/pl ~/.m2/repository/pl
       - name: Run environment
         run: |
           docker compose -f ./environment/local/docker-compose.yml up -d
