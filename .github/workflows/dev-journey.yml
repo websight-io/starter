@@ -145,7 +145,6 @@ jobs:
             echo "Project changes not detected"
             exit 1  
           fi
-        uses: ./distribution/target/starter/my-action
       - name: Update functional tests
         run: |
           sed -i "/have.css/s/20px/25.008px/g" ./tests/end-to-end/tests/lunatitle.cy.ts
