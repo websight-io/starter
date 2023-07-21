@@ -136,6 +136,7 @@ jobs:
           ./mvnw -f ./application/backend/pom.xml clean install -P autoInstallBundle
       - name: Validate if functional tests detect changes
         run: |
+          ./mvnw -f ./distribution/pom.xml clean install
           ./mvnw -f ./tests/pom.xml clean install -P e2e
           if ./mvnw -f ./tests/pom.xml clean install -P e2e | grep "1 of [0-9]* failed"; then
             echo "Project changes detected"
@@ -146,8 +147,10 @@ jobs:
       - name: Update functional tests
         run: |
           sed -i "/have.css/s/20px/25.008px/g" ./tests/end-to-end/tests/lunatitle.cy.ts
+          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
       - name: Validate functional tests
         run: |
+          ./mvnw -f ./distribution/pom.xml clean install
           ./mvnw -f ./tests/pom.xml clean install -P e2e
       - name: Stop environment
         if: always()
