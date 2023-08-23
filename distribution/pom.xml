@@ -31,8 +31,8 @@
   <properties>
     <it.installed.packages.starter.group>pl.ds.starter</it.installed.packages.starter.group>
     <it.installed.packages.starter.count>1</it.installed.packages.starter.count>
-    <it.installed.packages.bulma.group>pl.ds.bulma</it.installed.packages.bulma.group>
-    <it.installed.packages.bulma.count>1</it.installed.packages.bulma.count>
+    <it.installed.packages.kyanite.group>pl.ds.kyanite</it.installed.packages.kyanite.group>
+    <it.installed.packages.kyanite.count>1</it.installed.packages.kyanite.count>
   </properties>
 
   <dependencies>
@@ -98,7 +98,7 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            howlite.version,project.version,bulma.version
+            howlite.version,project.version,kyanite.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
@@ -329,8 +329,8 @@
                 <WS_APPLICATION_VERSION>${websight.cms.version}</WS_APPLICATION_VERSION>
                 <INSTALLED_PACKAGES_COUNT_STARTER>${it.installed.packages.starter.count}</INSTALLED_PACKAGES_COUNT_STARTER>
                 <INSTALLED_PACKAGES_GROUP_STARTER>${it.installed.packages.starter.group}</INSTALLED_PACKAGES_GROUP_STARTER>
-                <INSTALLED_PACKAGES_COUNT_BULMA>${it.installed.packages.bulma.count}</INSTALLED_PACKAGES_COUNT_BULMA>
-                <INSTALLED_PACKAGES_GROUP_BULMA>${it.installed.packages.bulma.group}</INSTALLED_PACKAGES_GROUP_BULMA>
+                <INSTALLED_PACKAGES_COUNT_KYANITE>${it.installed.packages.kyanite.count}</INSTALLED_PACKAGES_COUNT_KYANITE>
+                <INSTALLED_PACKAGES_GROUP_KYANITE>${it.installed.packages.kyanite.group}</INSTALLED_PACKAGES_GROUP_KYANITE>
               </systemPropertyVariables>
               <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
               <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>

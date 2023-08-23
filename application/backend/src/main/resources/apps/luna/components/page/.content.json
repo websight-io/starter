@@ -1,5 +1,5 @@
 {
-  "sling:resourceSuperType": "bulma/components/page",
+  "sling:resourceSuperType": "kyanite/common/components/page",
   "group": ".hidden",
   "sling:resourceType": "ws:Component",
   "title": "Low code Luna page"

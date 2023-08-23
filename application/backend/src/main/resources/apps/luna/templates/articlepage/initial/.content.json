@@ -3,8 +3,10 @@
   "jcr:content": {
     "jcr:primaryType": "ws:PageContent",
     "sling:resourceType": "luna/components/page",
+    "navbarFixedPosition": "has-navbar-fixed-top",
+    "navbarFixed": "true",
     "pagecontainer": {
-      "sling:resourceType": "bulma/components/pagecontainer"
+      "sling:resourceType": "kyanite/common/components/pagecontainer"
     }
   }
 }

@@ -5,14 +5,14 @@
   <jcr:content
     jcr:primaryType="ws:PageContent"
     jcr:title="Carousel"
-    sling:resourceType="bulma/components/page"
-    ws:template="/apps/bulma/templates/basicpage">
+    sling:resourceType="kyanite/common/components/page"
+    ws:template="/libs/kyanite/blogs/templates/articlepage">
     <pagecontainer
       jcr:primaryType="nt:unstructured"
-      sling:resourceType="bulma/components/pagecontainer">
+      sling:resourceType="kyanite/common/components/pagecontainer">
       <container
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="bulma/components/container">
+        sling:resourceType="kyanite/common/components/container">
         <carousel
           jcr:primaryType="nt:unstructured"
           sling:resourceType="luna/components/carousel"
@@ -22,7 +22,7 @@
             sling:resourceType="luna/components/carousel/carouselitem">
             <card
               jcr:primaryType="nt:unstructured"
-              sling:resourceType="bulma/components/card">
+              sling:resourceType="kyanite/common/components/card">
             </card>
           </carouselitem>
         </carousel>

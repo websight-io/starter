@@ -1,5 +1,5 @@
 {
-  "group": "Bulma.io Components",
+  "group": "Kyanite Components",
   "sling:resourceType": "ws:Component",
   "title": "Quote"
 }

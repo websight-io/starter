@@ -14,62 +14,57 @@
  * limitations under the License.
  */
 
- #footer {
-    border-top: 1px solid var(--color-neutral-200);
-    .footer {
-        background-color: transparent;
-        padding: 0;
-        .media {
-            align-items: center;
-            margin-bottom: 2rem;
+.footer {
+    background-color: transparent!important;
+    padding: 0;
+    .media {
+        align-items: center;
+        margin-bottom: 2rem;
+        @media screen and (max-width: 970px) {
+            flex-direction: column;
+            gap: 2rem;
+        }
+        .media-left {
+            margin-right: 3.5rem;
             @media screen and (max-width: 970px) {
-                flex-direction: column;
-                gap: 2rem;
+                margin-right: 0;
+                margin-left: 0;
             }
-            .media-left {
-                margin-right: 3.5rem;
-                @media screen and (max-width: 970px) {
-                    margin-right: 0;
-                    margin-left: 0;
-                }
+        }
+        .media-right {
+            @media screen and (max-width: 970px) {
+                margin-right: 0;
+                margin-left: 0;
             }
-            .media-right {
-                @media screen and (max-width: 970px) {
-                    margin-right: 0;
-                    margin-left: 0;
-                }
-            }
-            .media-content {
-                overflow-x: initial;
-                .buttons {
-                    .button {
-                        font-size: 1rem;
-                        line-height: 1.5rem;
-                        color: var(--color-neutral-800);
-                        font-weight: 400;
-                        margin-bottom: 0;
-                        span {
-                            position: relative;
-                            &:after {
-                                background: var(--color-default);
-                                bottom: -4px;
-                                content: "";
-                                display: none;
-                                height: 2px;
-                                left: 0;
-                                position: absolute;
-                                width: 100%;
-                            }
+        }
+        .media-content {
+            overflow-x: initial;
+            .buttons {
+                .button {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                    font-weight: 400;
+                    margin-bottom: 0;
+                    span {
+                        position: relative;
+                        &:after {
+                            background: var(--color-default);
+                            bottom: -4px;
+                            content: "";
+                            display: none;
+                            height: 2px;
+                            left: 0;
+                            position: absolute;
+                            width: 100%;
                         }
-                        &:hover {
-                            color: var(--color-neutral-800);
-                            span:after {
-                                display: block;
-                              }
-                        }
+                    }
+                    &:hover {
+                        span:after {
+                            display: block;
+                          }
                     }
                 }
             }
         }
     }
- }
+}

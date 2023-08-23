@@ -5,11 +5,11 @@
   <jcr:content
     jcr:primaryType="ws:PageContent"
     jcr:title="Quote"
-    sling:resourceType="bulma/components/page"
-    ws:template="/apps/bulma/templates/basicpage">
+    sling:resourceType="kyanite/common/components/page"
+    ws:template="/libs/kyanite/blogs/templates/articlepage">
     <pagecontainer
       jcr:primaryType="nt:unstructured"
-      sling:resourceType="bulma/components/pagecontainer">
+      sling:resourceType="kyanite/common/components/pagecontainer">
       <quote
         jcr:primaryType="nt:unstructured"
         sling:resourceType="luna/components/quote"/>

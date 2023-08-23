@@ -1,0 +1,35 @@
+{
+  "bundles": [
+    {
+      "id": "pl.ds.kyanite:kyanite-common-backend:${kyanite.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "pl.ds.kyanite:kyanite-common-frontend:${kyanite.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "pl.ds.kyanite:kyanite-blogs-backend:${kyanite.version}",
+      "start-order": "25"
+    },
+    {
+      "id":"pl.ds.kyanite:kyanite-table-service:${kyanite.version}",
+      "start-order":"25"
+    },
+    {
+      "id":"pl.ds.kyanite:kyanite-table-view:${kyanite.version}",
+      "start-order":"25"
+    }
+  ],
+  "configurations": {
+    "pl.ds.kyanite.common.components.services.impl.LibraryIconConfigImpl~mdi": {
+      "id": "mdi",
+      "label": "Material Design",
+      "libraryUrl": "/libs/kyanite/webroot/material-design-icons/css/materialdesignicons@7.2.96.min.css"
+    }
+  },
+  "content-packages:ARTIFACTS|true": [
+    "pl.ds.kyanite:kyanite-content:zip:${kyanite.version}"
+  ]
+}
+  
