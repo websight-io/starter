@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <security-payment.svg/>
+    <Errings.png/>
+    <AboutUs8.png/>
+    <pearl_x0020_bracelet.png/>
+    <Jewellery_x0020_set.png/>
+    <Ring-creation-process.png/>
+    <hero-image-our-story.png/>
+    <AboutUs6.png/>
+    <easy-returns.svg/>
+    <promo-necles-1.png/>
+    <customer-service.svg/>
+</jcr:root>

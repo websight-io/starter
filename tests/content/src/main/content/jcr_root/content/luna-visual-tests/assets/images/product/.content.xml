@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <drop-a-hint.svg/>
+    <ring-resizing.svg/>
+    <Silver_x0020_Ring.png/>
+    <Ring_x0020_in_x0020_a_x0020_hand.png/>
+    <The_x0020_Texture_x0020_Ring_x0020_Set.png/>
+    <Diamond_x0020_Cut_x0020_Ankle.png/>
+    <Viviana_x0020_Diamond_x0020_Engagement_x0020_Ring.png/>
+    <Diamond_x0020_Vine_x0020_Ring_x0020_In_x0020_Platinum.png/>
+    <payment-plans.svg/>
+</jcr:root>

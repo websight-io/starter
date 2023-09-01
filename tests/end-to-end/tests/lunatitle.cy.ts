@@ -55,8 +55,6 @@ describe('Luna Title component', function () {
       .findByTestId('overline')
       .should('have.css', "font-size", "20px")
       .should('have.text', 'Resized to 6 cols on L breakpoint')
-
-    cy.percySnapshotPreview('Title preview');
   });
 
   it('renders correctly in edit mode', function () {
@@ -74,8 +72,6 @@ describe('Luna Title component', function () {
       .find('span.name')
       .should('contain.text', 'Luna Title');
 
-    cy.percySnapshotPageEditor('Title editor');
-
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
     cy.getByTestId('ModalDialog_LunaTitle')
@@ -88,8 +84,6 @@ describe('Luna Title component', function () {
       .findByTestId('Input_Addanoverline').click();
     cy.getByTestId('ModalDialog_LunaTitle')
       .findByTestId('Input_Overlinetext').clear().type('New overline text');
-
-    cy.percySnapshotDialog('Title dialog');
 
     cy.getByTestId('Action_Submit').click();
     cy.wait('@saveProperties');
