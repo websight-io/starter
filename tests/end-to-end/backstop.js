@@ -22,12 +22,6 @@ const { baseUrlsPublish } = require('./src/baseUrl');
 
 const selectors = {
   cookie_banner: '#cc--main',
-  header: '.navbar',
-  footer: '.footer',
-  body: 'body',
-  content: 'body > section', // todo refactor name to section and plural all
-  container: 'body > .container',
-  all: 'body > *',
 };
 
 const viewports = [
