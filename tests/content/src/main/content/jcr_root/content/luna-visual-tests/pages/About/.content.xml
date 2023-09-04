@@ -35,11 +35,11 @@
                                 sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                 label="LUNA"
                                 type="image"
-                                url="/content/lowcodeluna/pages/Homepage">
+                                url="/content/luna-visual-tests/pages/Homepage">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    src="/content/lowcodeluna/assets/images/LUNA.svg"/>
+                                    src="/content/luna-visual-tests/assets/images/LUNA.svg"/>
                             </item>
                         </brand>
                         <menu
@@ -53,31 +53,31 @@
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="BLOG"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Homepage"/>
+                                    url="/content/luna-visual-tests/pages/Homepage"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="PRODUCTS"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Products"/>
+                                    url="/content/luna-visual-tests/pages/Products"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="CATALOG"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Catalog"/>
+                                    url="/content/luna-visual-tests/pages/Catalog"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="ABOUT"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/About"/>
+                                    url="/content/luna-visual-tests/pages/About"/>
                                 <item_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="  CONTACT US"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Homepage"/>
+                                    url="/content/luna-visual-tests/pages/Homepage"/>
                             </end>
                         </menu>
                     </navbar>
@@ -117,7 +117,7 @@
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
-                            src="/content/lowcodeluna/assets/images/aboutus/hero-image-our-story.png"
+                            src="/content/luna-visual-tests/assets/images/aboutus/hero-image-our-story.png"
                             type="fixed"/>
                     </block>
                 </container>
@@ -199,7 +199,7 @@
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/aboutus/AboutUs6.png"
+                                        src="/content/luna-visual-tests/assets/images/aboutus/AboutUs6.png"
                                         type="fixed"/>
                                 </block>
                             </column1>
@@ -214,7 +214,7 @@
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/aboutus/promo-necles-1.png"
+                                        src="/content/luna-visual-tests/assets/images/aboutus/promo-necles-1.png"
                                         type="fixed"/>
                                 </block>
                             </column1_2>
@@ -229,7 +229,7 @@
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
-                                        src="/content/lowcodeluna/assets/images/aboutus/AboutUs8.png"
+                                        src="/content/luna-visual-tests/assets/images/aboutus/AboutUs8.png"
                                         type="fixed"/>
                                 </block>
                             </column1_2_1>
@@ -295,7 +295,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/aboutus/Jewellery set.png"
+                                    src="/content/luna-visual-tests/assets/images/aboutus/Jewellery set.png"
                                     type="fixed"/>
                             </block>
                         </column1>
@@ -328,7 +328,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/aboutus/Ring-creation-process.png"
+                                    src="/content/luna-visual-tests/assets/images/aboutus/Ring-creation-process.png"
                                     type="fixed"/>
                             </block>
                         </column1>
@@ -422,7 +422,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/aboutus/Errings.png"
+                                    src="/content/luna-visual-tests/assets/images/aboutus/Errings.png"
                                     type="fixed"/>
                             </block>
                         </column1>
@@ -466,7 +466,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
-                                assetReference="/content/lowcodeluna/assets/images/aboutus/customer-service.svg"
+                                assetReference="/content/luna-visual-tests/assets/images/aboutus/customer-service.svg"
                                 isRounded="false"
                                 style="is-3by1"
                                 type="ratio"/>
@@ -498,7 +498,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
-                                assetReference="/content/lowcodeluna/assets/images/aboutus/easy-returns.svg"
+                                assetReference="/content/luna-visual-tests/assets/images/aboutus/easy-returns.svg"
                                 isRounded="false"
                                 style="is-3by1"
                                 type="ratio"/>
@@ -530,7 +530,7 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
-                                assetReference="/content/lowcodeluna/assets/images/aboutus/security-payment.svg"
+                                assetReference="/content/luna-visual-tests/assets/images/aboutus/security-payment.svg"
                                 isRounded="false"
                                 style="is-3by1"
                                 type="ratio"/>
@@ -571,15 +571,15 @@
                     <item
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                        imageUrl="/content/lowcodeluna/pages/Homepage"
+                        imageUrl="/content/luna-visual-tests/pages/Homepage"
                         isLink="true"
                         label="LUNA"
                         type="image"
-                        url="/content/lowcodeluna/pages/Homepage">
+                        url="/content/luna-visual-tests/pages/Homepage">
                         <image
                             jcr:primaryType="nt:unstructured"
                             alt="\0"
-                            src="/content/lowcodeluna/assets/images/LUNA.svg"/>
+                            src="/content/luna-visual-tests/assets/images/LUNA.svg"/>
                     </item>
                 </brand_1>
                 <menu_1
@@ -593,31 +593,31 @@
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="BLOG"
                             type="link"
-                            url="/content/lowcodeluna/pages/Homepage"/>
+                            url="/content/luna-visual-tests/pages/Homepage"/>
                         <item
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="PRODUCTS"
                             type="link"
-                            url="/content/lowcodeluna/pages/Products"/>
+                            url="/content/luna-visual-tests/pages/Products"/>
                         <item_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="CATALOG"
                             type="link"
-                            url="/content/lowcodeluna/pages/Catalog"/>
+                            url="/content/luna-visual-tests/pages/Catalog"/>
                         <item_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="ABOUT"
                             type="link"
-                            url="/content/lowcodeluna/pages/About"/>
+                            url="/content/luna-visual-tests/pages/About"/>
                         <item_2_1_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="          CONTACT US"
                             type="link"
-                            url="/content/lowcodeluna/pages/Homepage"/>
+                            url="/content/luna-visual-tests/pages/Homepage"/>
                     </end>
                 </menu_1>
             </navbar>
@@ -635,7 +635,7 @@
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
-                            src="/content/lowcodeluna/assets/images/aboutus/pearl bracelet.png"
+                            src="/content/luna-visual-tests/assets/images/aboutus/pearl bracelet.png"
                             type="fixed"/>
                     </block>
                     <title
@@ -703,9 +703,9 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
-                                assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
+                                assetReference="/content/luna-visual-tests/assets/images/LUNA.svg"
                                 isRounded="false"
-                                src="/content/lowcodeluna/pages/Homepage"
+                                src="/content/luna-visual-tests/pages/Homepage"
                                 type="fixed"/>
                         </mediaLeft>
                         <mediaContent
@@ -725,7 +725,7 @@
                                     label="PRICING"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/Homepage"
+                                    url="/content/luna-visual-tests/pages/Homepage"
                                     variant="is-white"/>
                                 <button1_1
                                     jcr:primaryType="nt:unstructured"
@@ -738,7 +738,7 @@
                                     label="CATALOG"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/Catalog/"
+                                    url="/content/luna-visual-tests/pages/Catalog/"
                                     variant="is-white"/>
                                 <button1_1_1
                                     jcr:primaryType="nt:unstructured"
@@ -751,7 +751,7 @@
                                     label="PRODUCTS"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/Products/"
+                                    url="/content/luna-visual-tests/pages/Products/"
                                     variant="is-white"/>
                                 <button1_1_1_1
                                     jcr:primaryType="nt:unstructured"
@@ -764,7 +764,7 @@
                                     label="ABOUT"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/About/"
+                                    url="/content/luna-visual-tests/pages/About/"
                                     variant="is-white"/>
                             </buttons>
                         </mediaContent>

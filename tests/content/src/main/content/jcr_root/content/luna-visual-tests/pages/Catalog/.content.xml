@@ -35,11 +35,11 @@
                                 sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                 label="LUNA"
                                 type="image"
-                                url="/content/lowcodeluna/pages/Homepage">
+                                url="/content/luna-visual-tests/pages/Homepage">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    src="/content/lowcodeluna/assets/images/LUNA.svg"/>
+                                    src="/content/luna-visual-tests/assets/images/LUNA.svg"/>
                             </item>
                         </brand>
                         <menu
@@ -53,31 +53,31 @@
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="BLOG"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Homepage"/>
+                                    url="/content/luna-visual-tests/pages/Homepage"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="PRODUCTS"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Products"/>
+                                    url="/content/luna-visual-tests/pages/Products"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="CATALOG"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Catalog"/>
+                                    url="/content/luna-visual-tests/pages/Catalog"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="ABOUT"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/About"/>
+                                    url="/content/luna-visual-tests/pages/About"/>
                                 <item_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="          CONTACT US"
                                     type="link"
-                                    url="/content/lowcodeluna/pages/Homepage"/>
+                                    url="/content/luna-visual-tests/pages/Homepage"/>
                             </end>
                         </menu>
                     </navbar>
@@ -116,7 +116,7 @@
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
-                            src="/content/lowcodeluna/assets/images/catalog/Our Catalog.png"
+                            src="/content/luna-visual-tests/assets/images/catalog/Our Catalog.png"
                             type="fixed"/>
                     </block>
                 </container>
@@ -177,7 +177,7 @@
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    assetReference="/content/lowcodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"/>
+                                    assetReference="/content/luna-visual-tests/assets/images/homepage/Diamonds By The Yard Bracelet.png"/>
                             </card>
                         </carouselitem>
                         <carouselitem_1
@@ -207,7 +207,7 @@
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    assetReference="/content/lowcodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"/>
+                                    assetReference="/content/luna-visual-tests/assets/images/homepage/Nesting Narrow Band Ring.png"/>
                             </card>
                         </carouselitem_1>
                         <carouselitem_2
@@ -237,7 +237,7 @@
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    assetReference="/content/lowcodeluna/assets/images/catalog/Layer Cake Necklace Set.png"/>
+                                    assetReference="/content/luna-visual-tests/assets/images/catalog/Layer Cake Necklace Set.png"/>
                             </card>
                         </carouselitem_2>
                         <carouselitem_3
@@ -267,7 +267,7 @@
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    assetReference="/content/lowcodeluna/assets/images/catalog/The Texture Ring Set.png"/>
+                                    assetReference="/content/luna-visual-tests/assets/images/catalog/The Texture Ring Set.png"/>
                             </card>
                         </carouselitem_3>
                     </carousel>
@@ -318,7 +318,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
+                                    src="/content/luna-visual-tests/assets/images/homepage/Diamonds By The Yard Bracelet.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -345,7 +345,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
+                                    src="/content/luna-visual-tests/assets/images/homepage/Nesting Narrow Band Ring.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -372,7 +372,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
+                                    src="/content/luna-visual-tests/assets/images/homepage/Layer Cake Necklace Set.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -408,7 +408,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/product/Viviana Diamond Engagement Ring.png"
+                                    src="/content/luna-visual-tests/assets/images/product/Viviana Diamond Engagement Ring.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -435,7 +435,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/product/Diamond Cut Ankle.png"
+                                    src="/content/luna-visual-tests/assets/images/product/Diamond Cut Ankle.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -462,7 +462,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/product/The Texture Ring Set.png"
+                                    src="/content/luna-visual-tests/assets/images/product/The Texture Ring Set.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -498,7 +498,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/catalog/The Texture Ring Set.png"
+                                    src="/content/luna-visual-tests/assets/images/catalog/The Texture Ring Set.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -525,7 +525,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/catalog/Olive Leaf Earrings.png"
+                                    src="/content/luna-visual-tests/assets/images/catalog/Olive Leaf Earrings.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -552,7 +552,7 @@
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
-                                    src="/content/lowcodeluna/assets/images/catalog/Olive Leaf Pendant.png"
+                                    src="/content/luna-visual-tests/assets/images/catalog/Olive Leaf Pendant.png"
                                     type="fixed"/>
                             </block>
                             <title
@@ -603,7 +603,7 @@
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
-                            src="/content/lowcodeluna/assets/images/catalog/diamond earing.png"
+                            src="/content/luna-visual-tests/assets/images/catalog/diamond earing.png"
                             type="fixed"/>
                     </block>
                     <title
@@ -668,15 +668,15 @@
                     <item
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                        imageUrl="/content/lowcodeluna/pages/Homepage"
+                        imageUrl="/content/luna-visual-tests/pages/Homepage"
                         isLink="true"
                         label="LUNA"
                         type="image"
-                        url="/content/lowcodeluna/pages/Homepage">
+                        url="/content/luna-visual-tests/pages/Homepage">
                         <image
                             jcr:primaryType="nt:unstructured"
                             alt="\0"
-                            src="/content/lowcodeluna/assets/images/LUNA.svg"/>
+                            src="/content/luna-visual-tests/assets/images/LUNA.svg"/>
                     </item>
                 </brand_1>
                 <menu_1
@@ -690,31 +690,31 @@
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="BLOG"
                             type="link"
-                            url="/content/lowcodeluna/pages/Homepage"/>
+                            url="/content/luna-visual-tests/pages/Homepage"/>
                         <item
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="PRODUCTS"
                             type="link"
-                            url="/content/lowcodeluna/pages/Products"/>
+                            url="/content/luna-visual-tests/pages/Products"/>
                         <item_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="CATALOG"
                             type="link"
-                            url="/content/lowcodeluna/pages/Catalog"/>
+                            url="/content/luna-visual-tests/pages/Catalog"/>
                         <item_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="ABOUT"
                             type="link"
-                            url="/content/lowcodeluna/pages/About"/>
+                            url="/content/luna-visual-tests/pages/About"/>
                         <item_2_1_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
                             label="          CONTACT US"
                             type="link"
-                            url="/content/lowcodeluna/pages/Homepage"/>
+                            url="/content/luna-visual-tests/pages/Homepage"/>
                     </end>
                 </menu_1>
             </navbar>
@@ -734,9 +734,9 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
-                                assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
+                                assetReference="/content/luna-visual-tests/assets/images/LUNA.svg"
                                 isRounded="false"
-                                src="/content/lowcodeluna/pages/Homepage"
+                                src="/content/luna-visual-tests/pages/Homepage"
                                 type="fixed"/>
                         </mediaLeft>
                         <mediaContent
@@ -756,7 +756,7 @@
                                     label="PRICING"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/Homepage"
+                                    url="/content/luna-visual-tests/pages/Homepage"
                                     variant="is-white"/>
                                 <button1_1
                                     jcr:primaryType="nt:unstructured"
@@ -769,7 +769,7 @@
                                     label="CATALOG"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/Catalog/"
+                                    url="/content/luna-visual-tests/pages/Catalog/"
                                     variant="is-white"/>
                                 <button1_1_1
                                     jcr:primaryType="nt:unstructured"
@@ -782,7 +782,7 @@
                                     label="PRODUCTS"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/Products/"
+                                    url="/content/luna-visual-tests/pages/Products/"
                                     variant="is-white"/>
                                 <button1_1_1_1
                                     jcr:primaryType="nt:unstructured"
@@ -795,7 +795,7 @@
                                     label="ABOUT"
                                     openInNewTab="false"
                                     type="a"
-                                    url="/content/lowcodeluna/pages/About/"
+                                    url="/content/luna-visual-tests/pages/About/"
                                     variant="is-white"/>
                             </buttons>
                         </mediaContent>

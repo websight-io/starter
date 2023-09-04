@@ -1,4 +1,5 @@
 const fs = require('fs');
+const setSessionCookie = require('../setSessionCookie');
 
 module.exports = async (page, scenario) => {
   let cookies = [];
@@ -7,6 +8,7 @@ module.exports = async (page, scenario) => {
   // READ COOKIES FROM FILE IF EXISTS
   if (fs.existsSync(cookiePath)) {
     cookies = JSON.parse(fs.readFileSync(cookiePath));
+    cookies = await setSessionCookie(cookies);
   }
 
   // MUNGE COOKIE DOMAIN

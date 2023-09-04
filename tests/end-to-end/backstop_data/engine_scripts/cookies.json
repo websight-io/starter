@@ -1,8 +1,8 @@
 [
   {
-    "domain": ".www.yourdomain.com",
+    "domain": "localhost",
     "path": "/",
-    "name": "yourCookieName",
+    "name": "websight.auth",
     "value": "yourCookieValue",
     "expirationDate": 1798790400,
     "hostOnly": false,
