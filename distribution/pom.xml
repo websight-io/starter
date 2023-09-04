@@ -331,6 +331,7 @@
                 <INSTALLED_PACKAGES_GROUP_STARTER>${it.installed.packages.starter.group}</INSTALLED_PACKAGES_GROUP_STARTER>
                 <INSTALLED_PACKAGES_COUNT_KYANITE>${it.installed.packages.kyanite.count}</INSTALLED_PACKAGES_COUNT_KYANITE>
                 <INSTALLED_PACKAGES_GROUP_KYANITE>${it.installed.packages.kyanite.group}</INSTALLED_PACKAGES_GROUP_KYANITE>
+                <WS_READY_TIMEOUT>60</WS_READY_TIMEOUT>
               </systemPropertyVariables>
               <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
               <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
