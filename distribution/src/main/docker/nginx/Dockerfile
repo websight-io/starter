@@ -17,9 +17,9 @@ FROM nginx
 COPY src/main/docker/nginx/luna.conf /etc/nginx/conf.d/luna.conf
 COPY src/main/docker/nginx/nocodeluna.conf /etc/nginx/conf.d/nocodeluna.conf
 COPY src/main/docker/nginx/lowcodeluna.conf /etc/nginx/conf.d/lowcodeluna.conf
-COPY src/main/docker/nginx/bulma.conf /etc/nginx/conf.d/bulma.conf
+COPY src/main/docker/nginx/kyanite.conf /etc/nginx/conf.d/kyanite.conf
 COPY src/main/docker/nginx/nginx.conf /etc/nginx/conf.d/nginx.conf
 COPY src/main/docker/nginx/html/Homepage.html /usr/share/nginx/html/content/nocodeluna/pages/Homepage.html
 COPY src/main/docker/nginx/html/Homepage.html /usr/share/nginx/html/content/lowcodeluna/pages/Homepage.html
 COPY src/main/docker/nginx/html/Homepage.html /usr/share/nginx/html/content/luna/pages/Homepage.html
-COPY src/main/docker/nginx/html/Personal.html /usr/share/nginx/html/content/bulma/pages/Personal.html
+COPY src/main/docker/nginx/html/Personal.html /usr/share/nginx/html/content/kyanite/pages/Personal.html
