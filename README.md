@@ -2,7 +2,8 @@
 
 # WebSight Starter
 
-WebSight Starter is a sample project built on top of the [Websight CMS Community Edition](https://www.websight.io/). It contains a demo page called _Luna_ built with [Howlite](https://github.com/websight-io/howlite) components.
+WebSight Starter is a sample project built on top of the [Websight CMS Community Edition](https://www.websight.io/).
+It contains a demo pages called _Luna_ built with [Howlite](https://github.com/websight-io/howlite) and [Kyanite](https://github.com/websight-io/kyanite) components and demo pages for the Kyanite.
 
 ## Playground
 
@@ -198,7 +199,7 @@ Pages published from `Luna - low code` space are available under [luna-low-code.
 
 Pages published from `Luna - no code` space are available under [luna-no-code.127.0.0.1.nip.io](http://luna-no-code.127.0.0.1.nip.io/)
 
-Pages published from `Bulma - personal template` space are available under [bulma-personal-template.127.0.0.1.nip.io](http://bulma-personal-template.127.0.0.1.nip.io/)
+Pages published from `Kyanite - personal template` space are available under [kyanite-personal-template.127.0.0.1.nip.io](http://kyanite-personal-template.127.0.0.1.nip.io/)
 
 Please notice that we use a [nip.io](https://nip.io). It helps with simulating a real production environment that uses subdomains without the necessity to edit the `hosts` file on local machines.
 
@@ -234,6 +235,6 @@ See our dedicated repository for the [WebSight CMS documentation](https://github
 
 ## License
 
-WebSight Starter and [Howlite components](https://github.com/websight-io/howlite) are `open-source` with `Apache License 2.0` license.
+WebSight Starter, [Kyanite components](https://github.com/websight-io/kyanite) and [Howlite components](https://github.com/websight-io/howlite) are `open-source` with `Apache License 2.0` license.
 
 WebSight CMS Community Edition is free to use for everyone ([terms of use](https://docs.websight.io/terms-of-use/)).
