@@ -41,7 +41,7 @@ jobs:
             ${{ runner.os }}-maven-
 
       - name: Build and test with Maven
-        run: ./mvnw --batch-mode clean verify -P e2e
+        run: ./mvnw --batch-mode clean verify -P e2e-functional
       - name: Run environment
         run: |
           docker compose -f ./environment/local/docker-compose.yml up -d
