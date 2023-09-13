@@ -106,6 +106,9 @@
               <classifier>websight-cms-starter</classifier>
               <title>Starter WebSight CMS project</title>
               <filesInclude>*.json</filesInclude>
+              <configurationOverrides>
+                <configurationOverride>*=MERGE_LATEST</configurationOverride>
+              </configurationOverrides>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>

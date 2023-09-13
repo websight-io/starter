@@ -26,6 +26,12 @@
       "id": "mdi",
       "label": "Material Design",
       "libraryUrl": "/libs/kyanite/webroot/material-design-icons/css/materialdesignicons@7.2.96.min.css"
+    },
+    "org.apache.sling.engine.impl.auth.SlingAuthenticator": {
+      "auth.annonymous": false,
+      "sling.auth.requirements": [
+        "-/libs/kyanite/webroot"
+      ]
     }
   },
   "content-packages:ARTIFACTS|true": [
