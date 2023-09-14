@@ -16,6 +16,16 @@
 
 package pl.ds.luna.services;
 
-public interface AuthRequirementsService {
+import org.osgi.service.component.annotations.Component;
+
+/**
+ * OSGi service to extend the configuration of sling.auth.requirements property.
+ */
+@Component(
+    service = AuthRequirementsService.class,
+    immediate = true,
+    property = {"sling.auth.requirements=-/libs/howlite/web_root",
+                "sling.auth.requirements=-/libs/kyanite/webroot" })
+public class AuthRequirementsService {
 
 }
