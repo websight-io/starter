@@ -15,6 +15,13 @@
     },
     "pl.ds.websight.publishing.staticprocessor.PagePublishProcessor": {
       "shorten.paths": true
+    },
+    "pl.ds.luna.services.impl.AuthRequirementsServiceImpl": {
+      "auth.annonymous": false,
+      "sling.auth.requirements": [
+        "-/libs/howlite/web_root",
+        "-/libs/kyanite/webroot"
+      ]
     }
   },
   "bundles": [
