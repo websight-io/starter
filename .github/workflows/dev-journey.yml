@@ -134,6 +134,10 @@ jobs:
       - name: Install changes
         run: |
           ./mvnw -f ./application/backend/pom.xml clean install -P autoInstallBundle
+      - name: Run tests
+        run: |
+          ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
+          npm run-script test --prefix tests/end-to-end
       - name: Validate if functional tests detect changes
         run: |
           ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
