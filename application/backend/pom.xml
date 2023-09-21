@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-application</artifactId>
-    <version>1.19.2-SNAPSHOT</version>
+    <version>1.20.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>starter-backend</artifactId>
@@ -81,6 +81,10 @@
     <dependency>
       <groupId>org.osgi</groupId>
       <artifactId>org.osgi.annotation.versioning</artifactId>
+    </dependency>
+    <dependency>
+      <groupId>org.osgi</groupId>
+      <artifactId>org.osgi.service.component.annotations</artifactId>
     </dependency>
 
     <!-- TEST -->

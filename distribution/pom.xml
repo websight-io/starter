@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-parent</artifactId>
-    <version>1.19.2-SNAPSHOT</version>
+    <version>1.20.1-SNAPSHOT</version>
   </parent>
 
   <artifactId>starter-distribution</artifactId>
@@ -33,6 +33,7 @@
     <it.installed.packages.starter.count>1</it.installed.packages.starter.count>
     <it.installed.packages.kyanite.group>pl.ds.kyanite</it.installed.packages.kyanite.group>
     <it.installed.packages.kyanite.count>1</it.installed.packages.kyanite.count>
+    <it.ws.ready.timeout>60</it.ws.ready.timeout>
   </properties>
 
   <dependencies>
@@ -331,7 +332,7 @@
                 <INSTALLED_PACKAGES_GROUP_STARTER>${it.installed.packages.starter.group}</INSTALLED_PACKAGES_GROUP_STARTER>
                 <INSTALLED_PACKAGES_COUNT_KYANITE>${it.installed.packages.kyanite.count}</INSTALLED_PACKAGES_COUNT_KYANITE>
                 <INSTALLED_PACKAGES_GROUP_KYANITE>${it.installed.packages.kyanite.group}</INSTALLED_PACKAGES_GROUP_KYANITE>
-                <WS_READY_TIMEOUT>60</WS_READY_TIMEOUT>
+                <WS_READY_TIMEOUT>${it.ws.ready.timeout}</WS_READY_TIMEOUT>
               </systemPropertyVariables>
               <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
               <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
