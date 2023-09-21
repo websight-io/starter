@@ -25,7 +25,9 @@ const main = async () => {
     try {
         await Promise
             .all([
-                publishAllContent(CONTENT_SPACE.VISUAL_TESTS)
+                publishAllContent(CONTENT_SPACE.LUNA),
+                publishAllContent(CONTENT_SPACE.LUNA_LOW_CODE),
+                publishAllContent(CONTENT_SPACE.LUNA_NO_CODE)
             ]);
 
         console.log('OK');

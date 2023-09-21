@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:ws="http://ds.pl/websight"
-    jcr:primaryType="ws:PagesSpace"
-    jcr:title="Luna - low code">
-    <pages/>
-    <assets/>
-</jcr:root>

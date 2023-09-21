@@ -17,6 +17,5 @@
 
 <workspaceFilter version="1.0">
   <filter root="/content/low-code-luna-test"/>
-  <filter root="/content/luna-visual-tests"/>
   <filter root="/content/starter-test"/>
 </workspaceFilter>

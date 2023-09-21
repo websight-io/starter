@@ -16,24 +16,17 @@
 
 require('dotenv').config();
 
-const getBaseUrlCms = (space = 'luna-visual-tests') => {
-    const devDefault = 'http://localhost:8080';
+const getBaseUrlCms = () => {
+  const devDefault = 'http://localhost:8080';
 
-    return process.env.BACKSTOPJS_baseUrlCms
-        || process.env.CYPRESS_baseUrlCms
-        || process.env.baseUrlCms
-        || devDefault;
-};
-
-const getBaseUrlPublish = (space = 'luna-visual-tests') => {
-    // naive usage of publishers as `${baseUrlsPublish[space]}/published/${space}/pages/${page}.html`;
-    // function left out as facade for future upgrade using real publishers (not /published/ CMS url)
-    return getBaseUrlCms(space);
+  return (
+    process.env.BACKSTOPJS_baseUrlCms ||
+    process.env.CYPRESS_baseUrlCms ||
+    process.env.baseUrlCms ||
+    devDefault
+  );
 };
 
 module.exports = {
-    baseUrlCms: getBaseUrlCms(),
-    baseUrlsPublish: {
-        'luna-visual-tests': getBaseUrlPublish('luna-visual-tests'),
-    },
+  baseUrlCms: getBaseUrlCms(),
 }

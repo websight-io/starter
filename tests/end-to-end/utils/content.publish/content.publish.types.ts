@@ -24,7 +24,9 @@ export const API_ACTION = {
 }
 
 export enum CONTENT_SPACE {
-    VISUAL_TESTS = 'luna-visual-tests',
+    LUNA = 'luna',
+    LUNA_NO_CODE = 'nocodeluna',
+    LUNA_LOW_CODE = 'lowcodeluna',
 }
 
 export interface ResponseGetAssets {

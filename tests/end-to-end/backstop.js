@@ -18,7 +18,7 @@ require('dotenv').config();
 
 const silent = process.env.SILENT === '1';
 
-const { baseUrlsPublish } = require('./src/baseUrl');
+const { baseUrlCms } = require('./src/baseUrl');
 
 const selectors = {
   cookie_banner: '#cc--main',
@@ -33,14 +33,22 @@ const viewports = [
 ];
 
 const getPublishedPageUrl = ({ space, page }) => {
-  return `${baseUrlsPublish[space]}/published/${space}/pages/${page}.html`;
+  return `${baseUrlCms}/published/${space}/pages/${page}.html`;
 };
 
 const scenarios = [
-  { space: 'luna-visual-tests', page: 'Homepage' },
-  { space: 'luna-visual-tests', page: 'Products' },
-  { space: 'luna-visual-tests', page: 'About' },
-  { space: 'luna-visual-tests', page: 'Catalog' },
+  { space: 'luna', page: 'Homepage' },
+  { space: 'luna', page: 'Products' },
+  { space: 'luna', page: 'About-Us' },
+  { space: 'luna', page: 'Catalog' },
+  { space: 'nocodeluna', page: 'Homepage' },
+  { space: 'nocodeluna', page: 'Products' },
+  { space: 'nocodeluna', page: 'About' },
+  { space: 'nocodeluna', page: 'Catalog' },
+  { space: 'lowcodeluna', page: 'Homepage' },
+  { space: 'lowcodeluna', page: 'Products' },
+  { space: 'lowcodeluna', page: 'About' },
+  { space: 'lowcodeluna', page: 'Catalog' },
 ]
   .map((scenario) => {
     const removeSelectors = [
