@@ -17,8 +17,8 @@
 declare namespace BaseUrl {
     export const baseUrlCms: string;
     export const baseUrlsPublish: {
-        'kyanite-e2e-tests': string,
-        'kyanite-visual-tests': string,
+        'low-code-luna-test': string,
+        'luna-visual-tests': string,
     };
 }
 
