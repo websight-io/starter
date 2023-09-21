@@ -164,6 +164,7 @@
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <configuration>
+          <removeVolumes>true</removeVolumes>
           <images>
             <image>
               <alias>mongo</alias>
