@@ -21,15 +21,15 @@ const silent = process.env.SILENT === '1';
 const { baseUrlCms } = require('./src/baseUrl');
 
 const selectors = {
-  cookie_banner: '#cc--main',
+  cookie_banner: '#cc--main'
 };
 
 const viewports = [
-  { label: 'md-mini', width: 360,  height: 480  },
-  { label: 'md',      width: 768,  height: 1024 },
-  { label: 'lg',      width: 1025, height: 768  },
-  { label: 'xl',      width: 1216, height: 1024 },
-  { label: 'mx',      width: 1408, height: 900  }
+  { label: 'md-mini', width: 360, height: 480 },
+  { label: 'md', width: 768, height: 1024 },
+  { label: 'lg', width: 1025, height: 768 },
+  { label: 'xl', width: 1216, height: 1024 },
+  { label: 'mx', width: 1408, height: 900 }
 ];
 
 const getPublishedPageUrl = ({ space, page }) => {
@@ -48,47 +48,41 @@ const scenarios = [
   { space: 'lowcodeluna', page: 'Homepage' },
   { space: 'lowcodeluna', page: 'Products' },
   { space: 'lowcodeluna', page: 'About' },
-  { space: 'lowcodeluna', page: 'Catalog' },
-]
-  .map((scenario) => {
-    const removeSelectors = [
-      'script',
-      'noscript',
-      selectors.cookie_banner,
-    ];
+  { space: 'lowcodeluna', page: 'Catalog' }
+].map((scenario) => {
+  const removeSelectors = ['script', 'noscript', selectors.cookie_banner];
 
-    const scenarioConfig = {
-      removeSelectors,
-      label: scenario.page,
-      cookiePath: 'backstop_data/engine_scripts/cookies.json',
-      url: getPublishedPageUrl(scenario),
-      delay: 500,
-      postInteractionWait: 0,
-      selectorExpansion: true,
-      expect: 0,
-      /*
-       * sometimes page height is ~100px higher than normal,
-       * the website looks correct, but footer looks like with `padding-bottom: 100px`
-       * maybe that's what's left after removing `selectors.cookie_banner`?
-       */
-      requireSameDimensions: false,
-    };
+  const scenarioConfig = {
+    removeSelectors,
+    label: scenario.page,
+    cookiePath: 'backstop_data/engine_scripts/cookies.json',
+    url: getPublishedPageUrl(scenario),
+    delay: 500,
+    postInteractionWait: 0,
+    selectorExpansion: true,
+    expect: 0,
+    /*
+     * sometimes page height is ~100px higher than normal,
+     * the website looks correct, but footer looks like with `padding-bottom: 100px`
+     * maybe that's what's left after removing `selectors.cookie_banner`?
+     */
+    requireSameDimensions: false
+  };
 
+  if (scenario.selectors) {
+    scenarioConfig.selectors = scenario.selectors;
+  }
 
-    if (scenario.selectors) {
-      scenarioConfig.selectors = scenario.selectors;
-    }
+  if (scenario.hoverSelector) {
+    scenarioConfig.hoverSelector = scenario.hoverSelector;
+  }
 
-    if (scenario.hoverSelector) {
-      scenarioConfig.hoverSelector = scenario.hoverSelector;
-    }
+  if (scenario.viewports) {
+    scenarioConfig.viewports = scenario.viewports;
+  }
 
-    if (scenario.viewports) {
-      scenarioConfig.viewports = scenario.viewports;
-    }
-
-    return scenarioConfig;
-  });
+  return scenarioConfig;
+});
 
 const config = {
   id: 'starter',
@@ -124,7 +118,7 @@ const config = {
 };
 
 if (!silent) {
-  console.log(JSON.stringify({backstopJS_config: config}, null, 4));
+  console.log(JSON.stringify({ backstopJS_config: config }, null, 4));
 }
 
 module.exports = config;
