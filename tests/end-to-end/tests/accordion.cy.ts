@@ -29,8 +29,6 @@ describe('Accordion component', function () {
 
     cy.getByTestId('header_accordionitem')
     .should('have.text', 'Some awesome header')
-
-    cy.percySnapshotPreview('Accordion preview');
   });
 
 
@@ -49,14 +47,10 @@ describe('Accordion component', function () {
     .find('span.name')
     .should('contain.text', 'Accordion item');
 
-    cy.percySnapshotPageEditor('Accordion editor');
-
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
     cy.getByTestId('ModalDialog_Accordionitem')
       .findByTestId('Input_Header').clear().type('Lorem ipsum');
-
-    cy.percySnapshotDialog('Accordion dialog');
 
     cy.getByTestId('Action_Submit').click();
     cy.wait('@saveProperties');

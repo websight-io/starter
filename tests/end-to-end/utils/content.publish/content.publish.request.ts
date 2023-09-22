@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Dynamic Solutions
+ * Copyright (C) 2023 Dynamic Solutions
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,23 @@
  * limitations under the License.
  */
 
-import { defineConfig } from 'cypress';
+import axios from 'axios';
+import { CONTENT_SPACE } from './content.publish.types';
+import { baseUrlCms } from '../../src/baseUrl';
 
-export default defineConfig({
-  chromeWebSecurity: false,
-  screenshotsFolder: 'build/screenshots',
-  videosFolder: 'build/video',
-  fixturesFolder: false,
-  video: false,
-  viewportWidth: 1280,
-  viewportHeight: 1024,
-  e2e: {
-    setupNodeEvents(on, config) {},
-    baseUrl: 'http://localhost:8080',
-    specPattern: 'tests/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: 'support/index.ts',
-    defaultCommandTimeout: 10000
+export const http = axios.create({
+  baseURL: baseUrlCms,
+  auth: {
+    username: 'wsadmin',
+    password: 'wsadmin'
+  },
+  headers: {
+    Accept: 'application/json'
   }
 });
+
+export const pathContent = (space: CONTENT_SPACE): string =>
+  `/content/${space}/`;
+
+export const buildUrl = (space: CONTENT_SPACE, action: string): string =>
+  `${pathContent(space)}${action}`;

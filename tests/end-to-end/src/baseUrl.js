@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Dynamic Solutions
+ * Copyright (C) 2023 Dynamic Solutions
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,21 +14,19 @@
  * limitations under the License.
  */
 
-import { defineConfig } from 'cypress';
+require('dotenv').config();
 
-export default defineConfig({
-  chromeWebSecurity: false,
-  screenshotsFolder: 'build/screenshots',
-  videosFolder: 'build/video',
-  fixturesFolder: false,
-  video: false,
-  viewportWidth: 1280,
-  viewportHeight: 1024,
-  e2e: {
-    setupNodeEvents(on, config) {},
-    baseUrl: 'http://localhost:8080',
-    specPattern: 'tests/**/*.cy.{js,jsx,ts,tsx}',
-    supportFile: 'support/index.ts',
-    defaultCommandTimeout: 10000
-  }
-});
+const getBaseUrlCms = () => {
+  const devDefault = 'http://localhost:8080';
+
+  return (
+    process.env.BACKSTOPJS_baseUrlCms ||
+    process.env.CYPRESS_baseUrlCms ||
+    process.env.baseUrlCms ||
+    devDefault
+  );
+};
+
+module.exports = {
+  baseUrlCms: getBaseUrlCms(),
+}
