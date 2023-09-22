@@ -149,7 +149,7 @@ jobs:
           ./mvnw -f ./tests/content/pom.xml clean install -P autoInstallPackage
       - name: Validate functional tests
         run: |
-          ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e-functional
+          ./mvnw -f ./tests/end-to-end/pom.xml integration-test -Pe2e-functional -Dcms.port=8080
       - name: Stop environment
         if: always()
         run: docker compose -f ./environment/local/docker-compose.yml down
