@@ -49,8 +49,6 @@ describe('Quote component', function () {
     .get('img')
     .should('have.attr', 'alt', 'Alt text')
     .should('have.attr', 'src', '/content/low-code-luna-test/assets/images/quote/Janet.png/jcr:content/renditions/original.png')
-
-    cy.percySnapshotPreview('Quote preview');
   });
 
   it('renders correctly in edit mode', function () {
@@ -68,8 +66,6 @@ describe('Quote component', function () {
     .find('span.name')
     .should('contain.text', 'Quote');
 
-    cy.percySnapshotPageEditor('Quote editor');
-
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
 
     cy.getByTestId('ModalDialog_Quote')
@@ -86,8 +82,6 @@ describe('Quote component', function () {
       findByTestId('Input_Author’simage').trigger('drop');
     cy.getByTestId('ModalDialog_Quote')
       .findByTestId('Input_Alttext').clear().type('Alt text');
-
-    cy.percySnapshotDialog('Quote dialog');
 
     cy.getByTestId('Action_Submit').click();
     cy.wait('@saveProperties');

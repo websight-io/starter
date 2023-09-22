@@ -1,6 +1,6 @@
 {
   "isContainer": true,
-  "group": "Bulma.io Components",
+  "group": "Kyanite Components",
   "sling:resourceType": "ws:Component",
   "allowedComponents": "/apps/luna/components/carousel/carouselitem",
   "title": "Carousel"

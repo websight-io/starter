@@ -15,8 +15,6 @@
  */
 
 import './commands';
-import '@percy/cypress';
-import { SnapshotOptions } from '@percy/core';
 
 declare global {
   // eslint-disable-next-line @typescript-eslint/no-namespace

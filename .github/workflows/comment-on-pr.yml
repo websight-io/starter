@@ -1,0 +1,106 @@
+# Copyright (C) 2023 Dynamic Solutions
+#
+# Licensed under the Apache License, Version 2.0 (the "License");
+# you may not use this file except in compliance with the License.
+# You may obtain a copy of the License at
+#
+#     http://www.apache.org/licenses/LICENSE-2.0
+#
+# Unless required by applicable law or agreed to in writing, software
+# distributed under the License is distributed on an "AS IS" BASIS,
+# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+# See the License for the specific language governing permissions and
+# limitations under the License.
+
+name: Comment on PR
+
+on:
+  workflow_run:
+    types:
+      - completed
+    workflows:
+      - CI
+
+jobs:
+  comment-on-pr:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get Artifact and Pull request info
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WORKFLOW_RUN_EVENT_OBJ: ${{ toJSON(github.event.workflow_run) }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: |
+          PREVIOUS_JOB_ID=$(jq -r '.id' <<< "$WORKFLOW_RUN_EVENT_OBJ")
+          echo "Previous Job ID: $PREVIOUS_JOB_ID"
+          echo "PREVIOUS_JOB_ID=$PREVIOUS_JOB_ID" >> "$GITHUB_ENV"
+          
+          SUITE_ID=$(jq -r '.check_suite_id' <<< "$WORKFLOW_RUN_EVENT_OBJ")
+          echo "Previous Suite ID: $SUITE_ID"
+          echo "SUITE_ID=$SUITE_ID" >> "$GITHUB_ENV"
+          
+          ARTIFACT_ID=$(gh api "/repos/$OWNER/$REPO/actions/artifacts" \
+            --jq ".artifacts.[] |
+            select(.workflow_run.id==${PREVIOUS_JOB_ID}) |
+            select(.expired==false) |
+            .id")
+          
+          echo "Artifact ID: $ARTIFACT_ID"
+          echo "ARTIFACT_ID=$ARTIFACT_ID" >> "$GITHUB_ENV"
+          
+          PR_NUMBER=$(jq -r '.pull_requests[0].number' \
+            <<< "$WORKFLOW_RUN_EVENT_OBJ")
+          
+          echo "Pull request Number: $PR_NUMBER"
+          echo "PR_NUMBER=$PR_NUMBER" >> "$GITHUB_ENV"
+          
+          HEAD_SHA=$(jq -r '.pull_requests[0].head.sha' \
+            <<< "$WORKFLOW_RUN_EVENT_OBJ")
+          
+          echo "Head SHA: $HEAD_SHA"
+          echo "HEAD_SHA=$HEAD_SHA" >> "$GITHUB_ENV"
+      - name: Get current date
+        id: currentDateStep
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%dT%H%M%S')" >> "$GITHUB_OUTPUT"
+      - name: Add a comment
+        if: "${{ env.ARTIFACT_ID != '' }}"
+        env:
+          JOB_PATH: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.PREVIOUS_JOB_ID }}"
+          ARTIFACT_URL: "${{ github.server_url }}/${{ github.repository }}/suites/${{ env.SUITE_ID }}/artifacts/${{ env.ARTIFACT_ID }}"
+          HEAD_SHA: "${{ env.HEAD_SHA }}"
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ env.PR_NUMBER }}
+          body: |
+            ## ⚠️ Visual tests status
+
+            Some visual changes require review.
+
+            Please download BackstopJS report and check if there is no visual regression.
+
+            Please note that the report only stay for 1 day!
+
+            | Name     | Link                    |
+            | -------- | ----------------------- |
+            | Commit   | ${{ env.HEAD_SHA }}     |
+            | Logs     | ${{ env.JOB_PATH }}     |
+            | Report   | [visual-tests-report_${{ steps.currentDateStep.outputs.CURRENT_DATE }}.zip](${{ env.ARTIFACT_URL }}) |
+      - name: Add a comment
+        if: "${{ env.ARTIFACT_ID == '' }}"
+        env:
+          JOB_PATH: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.PREVIOUS_JOB_ID }}"
+          HEAD_SHA: "${{ env.HEAD_SHA }}"
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ env.PR_NUMBER }}
+          body: |
+            ## ✅ Visual tests status
+
+            No visual changes detected.
+            
+            | Name     | Link                    |
+            | -------- | ----------------------- |
+            | Commit   | ${{ env.HEAD_SHA }}     |
+            | Logs     | ${{ env.JOB_PATH }}     |

@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-parent</artifactId>
-    <version>1.17.1-SNAPSHOT</version>
+    <version>1.20.2-SNAPSHOT</version>
   </parent>
 
   <artifactId>starter-distribution</artifactId>
@@ -31,8 +31,9 @@
   <properties>
     <it.installed.packages.starter.group>pl.ds.starter</it.installed.packages.starter.group>
     <it.installed.packages.starter.count>1</it.installed.packages.starter.count>
-    <it.installed.packages.bulma.group>pl.ds.bulma</it.installed.packages.bulma.group>
-    <it.installed.packages.bulma.count>1</it.installed.packages.bulma.count>
+    <it.installed.packages.kyanite.group>pl.ds.kyanite</it.installed.packages.kyanite.group>
+    <it.installed.packages.kyanite.count>1</it.installed.packages.kyanite.count>
+    <it.ws.ready.timeout>60</it.ws.ready.timeout>
   </properties>
 
   <dependencies>
@@ -98,7 +99,7 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            howlite.version,project.version,bulma.version
+            howlite.version,project.version,kyanite.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
@@ -206,6 +207,9 @@
           <plugin>
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
+            <configuration>
+              <removeVolumes>true</removeVolumes>
+            </configuration>
             <executions>
               <execution>
                 <id>start mongo</id>
@@ -329,8 +333,9 @@
                 <WS_APPLICATION_VERSION>${websight.cms.version}</WS_APPLICATION_VERSION>
                 <INSTALLED_PACKAGES_COUNT_STARTER>${it.installed.packages.starter.count}</INSTALLED_PACKAGES_COUNT_STARTER>
                 <INSTALLED_PACKAGES_GROUP_STARTER>${it.installed.packages.starter.group}</INSTALLED_PACKAGES_GROUP_STARTER>
-                <INSTALLED_PACKAGES_COUNT_BULMA>${it.installed.packages.bulma.count}</INSTALLED_PACKAGES_COUNT_BULMA>
-                <INSTALLED_PACKAGES_GROUP_BULMA>${it.installed.packages.bulma.group}</INSTALLED_PACKAGES_GROUP_BULMA>
+                <INSTALLED_PACKAGES_COUNT_KYANITE>${it.installed.packages.kyanite.count}</INSTALLED_PACKAGES_COUNT_KYANITE>
+                <INSTALLED_PACKAGES_GROUP_KYANITE>${it.installed.packages.kyanite.group}</INSTALLED_PACKAGES_GROUP_KYANITE>
+                <WS_READY_TIMEOUT>${it.ws.ready.timeout}</WS_READY_TIMEOUT>
               </systemPropertyVariables>
               <argLine>--add-opens java.base/java.lang=org.apache.sling.commons.threads</argLine>
               <argLine>--add-opens java.base/java.lang=ALL-UNNAMED</argLine>
@@ -364,6 +369,7 @@
             <groupId>io.fabric8</groupId>
             <artifactId>docker-maven-plugin</artifactId>
             <configuration>
+              <removeVolumes>true</removeVolumes>
               <images>
                 <image>
                   <name>public.ecr.aws/ds/websight-cms-starter:${project.version}</name>

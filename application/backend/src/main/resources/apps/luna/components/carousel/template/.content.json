@@ -5,7 +5,7 @@
     "sling:resourceType": "/apps/luna/components/carousel/carouselitem",
     "card": {
       "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "/apps/bulma/components/card",
+      "sling:resourceType": "kyanite/common/components/card",
       "header": "Card 1"
     }
   },
@@ -14,7 +14,7 @@
     "sling:resourceType": "/apps/luna/components/carousel/carouselitem",
     "card": {
       "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "/apps/bulma/components/card",
+      "sling:resourceType": "kyanite/common/components/card",
       "header": "Card 2"
     }
   },
@@ -23,7 +23,7 @@
     "sling:resourceType": "/apps/luna/components/carousel/carouselitem",
     "card": {
       "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "/apps/bulma/components/card",
+      "sling:resourceType": "kyanite/common/components/card",
       "header": "Card 3"
     }
   },
@@ -32,7 +32,7 @@
     "sling:resourceType": "/apps/luna/components/carousel/carouselitem",
     "card": {
       "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "/apps/bulma/components/card",
+      "sling:resourceType": "kyanite/common/components/card",
       "header": "Card 4"
     }
   },
@@ -41,7 +41,7 @@
     "sling:resourceType": "/apps/luna/components/carousel/carouselitem",
     "card": {
       "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "/apps/bulma/components/card",
+      "sling:resourceType": "kyanite/common/components/card",
       "header": "Card 5"
     }
   },
@@ -50,7 +50,7 @@
     "sling:resourceType": "/apps/luna/components/carousel/carouselitem",
     "card": {
       "jcr:primaryType": "nt:unstructured",
-      "sling:resourceType": "/apps/bulma/components/card",
+      "sling:resourceType": "kyanite/common/components/card",
       "header": "Card 6"
     }
   }

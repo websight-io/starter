@@ -1,0 +1,14 @@
+[
+  {
+    "domain": "localhost",
+    "path": "/",
+    "name": "websight.auth",
+    "value": "yourCookieValue",
+    "expirationDate": 1798790400,
+    "hostOnly": false,
+    "httpOnly": false,
+    "secure": false,
+    "session": false,
+    "sameSite": "Lax"
+  }
+]

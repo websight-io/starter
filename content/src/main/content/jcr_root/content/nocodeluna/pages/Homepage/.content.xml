@@ -4,90 +4,24 @@
     <jcr:content
         jcr:primaryType="ws:PageContent"
         jcr:title="Homepage"
-        sling:resourceType="bulma/components/page"
-        ws:template="/apps/bulma/templates/basicpage"
+        sling:resourceType="kyanite/common/components/page"
+        ws:lastModified="{Date}2023-08-23T13:24:51.125Z"
+        ws:lastModifiedBy="wsadmin"
+        ws:template="/libs/kyanite/common/templates/homepage"
         navbarFixed="true"
         navbarFixedPosition="has-navbar-fixed-top">
         <pagecontainer
             jcr:primaryType="nt:unstructured"
-            sling:resourceType="bulma/components/pagecontainer">
-            <section
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
-                <container
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <navbar
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/navbar"
-                        fixedOption="\0"
-                        isTransparent="true"
-                        variant="is-white">
-                        <brand
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarbrand">
-                            <item
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbaritem"
-                                label="LUNA"
-                                type="image"
-                                url="/content/nocodeluna/pages/Homepage">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    alt="\0"
-                                    src="/content/nocodeluna/assets/images/LUNA.svg"/>
-                            </item>
-                        </brand>
-                        <menu
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarmenu">
-                            <end
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarend">
-                                <item_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="BLOG"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/Homepage"/>
-                                <item
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="PRODUCTS"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/Products"/>
-                                <item_2
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="CATALOG"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/Catalog"/>
-                                <item_2_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="ABOUT"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/About"/>
-                                <item_2_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
-                                    label="          CONTACT US"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/Homepage"/>
-                            </end>
-                        </menu>
-                    </navbar>
-                </container>
-            </section>
+            sling:resourceType="kyanite/common/components/pagecontainer">
             <section_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
                     <columns_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -95,23 +29,23 @@
                         isVerticallyCentered="true">
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h1"
                                 isSpaced="false"
-                                size="is-1"
+                                size="is-2"
                                 text="Jewelry Decorates Your Beauty"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 size="is-large"
                                 text="&lt;p>&lt;/p>&lt;p>Our jewellery designers are happy to assist you in&lt;br>the creation of your perfect gold jewel.&lt;/p>&lt;p>&lt;/p>"/>
                             <button
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
+                                sling:resourceType="kyanite/common/components/button"
                                 addIcon="false"
                                 isDisabled="false"
                                 isFullWidth="false"
@@ -124,7 +58,7 @@
                                 variant="is-dark"/>
                             <button_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/button"
+                                sling:resourceType="kyanite/common/components/button"
                                 addIcon="false"
                                 isDisabled="false"
                                 isFullWidth="false"
@@ -138,13 +72,13 @@
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Necles-hero-image.png"
@@ -154,18 +88,18 @@
                     </columns_1>
                     <columns
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         isCentered="true"
                         isCustomGapLevel="false"
                         isMultiline="false"
                         isVerticallyCentered="true">
                         <column2
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column"
+                            sling:resourceType="kyanite/common/components/columns/column"
                             offset="empty">
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/image"
+                                sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 1.svg"
@@ -190,10 +124,10 @@
                         </column2>
                         <column2_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/image"
+                                sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 2.svg"
@@ -202,10 +136,10 @@
                         </column2_1>
                         <column
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/image"
+                                sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 3.svg"
@@ -214,10 +148,10 @@
                         </column>
                         <column_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/image"
+                                sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 4.svg"
@@ -226,10 +160,10 @@
                         </column_1>
                         <column_1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <image
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/image"
+                                sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 5.svg"
@@ -258,18 +192,28 @@
             </section_1>
             <section_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <content
+                    sling:resourceType="kyanite/common/components/container">
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        size="is-large"
-                        text="&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Meet our New Grand Luxor Jewelry&lt;/strong>&lt;br>&lt;strong>Collection&lt;/strong>&lt;br>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        sling:resourceType="kyanite/common/components/title"
+                        anchorId="\0"
+                        color="rest_has-text-grey"
+                        element="h2"
+                        isSpaced="{Boolean}false"
+                        size="is-4"
+                        subtitle="Subtitle"
+                        subtitleColor="bw_has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Meet our New Grand Luxor Jewelry &lt;br>Collection&lt;/p>">
+                        <rest
+                            jcr:primaryType="nt:unstructured"
+                            shade="900"/>
+                    </title>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -277,13 +221,13 @@
                         isVerticallyCentered="false">
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Amadeus-collection.png"
@@ -291,25 +235,25 @@
                             </block>
                             <title_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h3"
                                 isSpaced="false"
                                 text="Amadeus Collection"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>&lt;p>&lt;strong>&lt;u>DISCOVER MORE&lt;/u>&lt;/strong>&lt;/p>"/>
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Margot-collection.png"
@@ -317,14 +261,14 @@
                             </block>
                             <title_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h3"
                                 isSpaced="false"
                                 text="Margot Collection"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>&lt;p>&lt;strong>&lt;u>DISCOVER MORE&lt;/u>&lt;/strong>&lt;/p>"/>
                         </column1_1>
                     </columns_1>
@@ -332,16 +276,16 @@
             </section_2>
             <section_2_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
                     <block
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/block">
+                        sling:resourceType="kyanite/common/components/block">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/image"
+                            sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/homepage/Bracelets.png"
@@ -349,22 +293,22 @@
                     </block>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         columnsActivationLevel="is-desktop"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
                         isMultiline="false"
-                        isVerticallyCentered="true">
+                        isVerticallyCentered="false">
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
-                                element="h1"
+                                sling:resourceType="kyanite/common/components/title"
+                                element="h2"
                                 isSpaced="false"
-                                size="is-1"
+                                size="is-4"
                                 text="About Luna"
                                 type="title"/>
                             <mobileColumnStyle
@@ -386,10 +330,10 @@
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Founded In 1986, Luna Owned &amp;amp; Operated Business Has Become A House-Hold Name In States All Over The USA As Well As Countries All Over The World.&lt;/p>&lt;p>For those that rather the full immersion of the in store experience we welcome your company and look forward to meeting you face to face. Being located in the 47 street diamond district, known to be the largest diamond.&lt;/p>&lt;p>Based in the heart of New York’s Diamond District, also known as the NYC diamond district, Luna has some of the most competitively priced in the market. It is our goal to supply our clients.&lt;/p>"/>
                         </column1_1>
                     </columns_1>
@@ -397,21 +341,35 @@
             </section_2_1>
             <section_2_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
+                    <title
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kyanite/common/components/title"
+                        color="rest_has-text-grey"
+                        element="h2"
+                        isSpaced="{Boolean}false"
+                        size="is-4"
+                        subtitle="Subtitle"
+                        subtitleColor="bw_has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Discover our Bestsellers&lt;/p>">
+                        <rest
+                            jcr:primaryType="nt:unstructured"
+                            shade="900"/>
+                    </title>
                     <content
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
+                        sling:resourceType="kyanite/common/components/content"
                         size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Discover our Bestsellers&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        text="&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <block
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/block">
+                        sling:resourceType="kyanite/common/components/block">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/image"
+                            sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/product/Ring in a hand.png"
@@ -419,7 +377,7 @@
                     </block>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -427,13 +385,13 @@
                         isVerticallyCentered="false">
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
@@ -441,26 +399,26 @@
                             </block>
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h3"
                                 isSpaced="false"
-                                size="is-3"
+                                size="is-6"
                                 text="Diamonds By The Yard Bracelet"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Tiffany round diamonds catch the light and make it dance. Bracelet in 18k rose gold with a round brilliant diamond. 7″ long.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
                         </column1>
                         <column1_2
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
@@ -468,26 +426,26 @@
                             </block>
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h3"
                                 isSpaced="false"
-                                size="is-3"
+                                size="is-6"
                                 text="Nesting Narrow Band Ring"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Featuring v-shaped details, the nesting band ring is the perfect complement to all Tiffany engagement ring styles.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"/>
                         </column1_2>
                         <column1_2_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
@@ -495,15 +453,15 @@
                             </block>
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h3"
                                 isSpaced="false"
-                                size="is-3"
+                                size="is-6"
                                 text="Layer Cake Necklace Set"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p>&lt;/p>&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
                         </column1_2_1>
                     </columns_1>
@@ -511,13 +469,13 @@
             </section_2_2>
             <section_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
                     <columns_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         columnsActivationLevel="is-desktop"
                         desktopGapLevel="is-7"
                         isCentered="false"
@@ -526,13 +484,13 @@
                         isVerticallyCentered="true">
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Diamond ring.png"
@@ -541,38 +499,55 @@
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
-                                element="h1"
+                                sling:resourceType="kyanite/common/components/title"
+                                element="h2"
                                 isSpaced="false"
-                                size="is-2"
+                                size="is-4"
                                 text="Beauty Enchanted  in Diamonds"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 size="is-medium"
                                 text="&lt;p>&lt;/p>&lt;p>Whether in deep or deck, diamonds level up any look, studs work in any situations. Graphic links and gold rings hold their own an look even better together.&lt;/p>&lt;p>Too muchis never enough. It’s called a good statement for a reason.&lt;/p>"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offset="one"
+                                offsetType="evenNumber"
+                                size="five"
+                                sizeType="evenNumber"/>
                         </column1_1>
                     </columns_1>
                 </container>
             </section_1_1>
             <section_1_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <content
+                    sling:resourceType="kyanite/common/components/container">
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Shape of Gemstone&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        sling:resourceType="kyanite/common/components/title"
+                        anchorId="\0"
+                        color="rest_has-text-grey"
+                        element="h2"
+                        isSpaced="{Boolean}false"
+                        size="is-3"
+                        subtitle="Subtitle"
+                        subtitleColor="bw_has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Shape of Gemstone&lt;/p>">
+                        <rest
+                            jcr:primaryType="nt:unstructured"
+                            shade="900"/>
+                    </title>
                     <columns
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         columnsActivationLevel="is-desktop"
                         isCentered="false"
                         isCustomGapLevel="false"
@@ -580,7 +555,7 @@
                         isVerticallyCentered="false">
                         <column_1_1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <mobileColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="true"
@@ -600,17 +575,17 @@
                                 sizeType="evenNumber"/>
                             <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
+                                sling:resourceType="kyanite/common/components/columns"
                                 isCentered="true"
                                 isCustomGapLevel="false"
                                 isMultiline="false"
                                 isVerticallyCentered="false">
                                 <column1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
+                                    sling:resourceType="kyanite/common/components/columns/column">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Round.svg"
@@ -636,25 +611,25 @@
                             </columns>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;strong>Round&lt;/strong>&lt;/p>"/>
                         </column_1_1_1>
                         <column_1_1_1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
+                                sling:resourceType="kyanite/common/components/columns"
                                 isCentered="true"
                                 isCustomGapLevel="false"
                                 isMultiline="false"
                                 isVerticallyCentered="false">
                                 <column1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
+                                    sling:resourceType="kyanite/common/components/columns/column">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Emerald.svg"
@@ -697,25 +672,25 @@
                                 sizeType="evenNumber"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;strong>Emerald&lt;/strong>&lt;/p>"/>
                         </column_1_1_1_1>
                         <column_1_1_1_2
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
+                                sling:resourceType="kyanite/common/components/columns"
                                 isCentered="true"
                                 isCustomGapLevel="false"
                                 isMultiline="false"
                                 isVerticallyCentered="false">
                                 <column1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
+                                    sling:resourceType="kyanite/common/components/columns/column">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Oval.svg"
@@ -758,25 +733,25 @@
                                 sizeType="evenNumber"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;strong>Oval&lt;/strong>&lt;/p>"/>
                         </column_1_1_1_2>
                         <column_1_1_1_2_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
+                                sling:resourceType="kyanite/common/components/columns"
                                 isCentered="true"
                                 isCustomGapLevel="false"
                                 isMultiline="false"
                                 isVerticallyCentered="false">
                                 <column1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
+                                    sling:resourceType="kyanite/common/components/columns/column">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Pear.svg"
@@ -819,25 +794,25 @@
                                 sizeType="evenNumber"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;strong>Pear&lt;/strong>&lt;/p>"/>
                         </column_1_1_1_2_1>
                         <column_1_1_1_2_1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
+                                sling:resourceType="kyanite/common/components/columns"
                                 isCentered="true"
                                 isCustomGapLevel="false"
                                 isMultiline="false"
                                 isVerticallyCentered="false">
                                 <column1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
+                                    sling:resourceType="kyanite/common/components/columns/column">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Marquise.svg"
@@ -880,25 +855,25 @@
                                 sizeType="evenNumber"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;strong>Marquise&lt;/strong>&lt;/p>"/>
                         </column_1_1_1_2_1_1>
                         <column_1_1_1_3
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <columns
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/columns"
+                                sling:resourceType="kyanite/common/components/columns"
                                 isCentered="true"
                                 isCustomGapLevel="false"
                                 isMultiline="false"
                                 isVerticallyCentered="false">
                                 <column1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/columns/column">
+                                    sling:resourceType="kyanite/common/components/columns/column">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Cushion.svg"
@@ -941,7 +916,7 @@
                                 sizeType="evenNumber"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;p style=&quot;text-align: center&quot;>&lt;strong>Cushion&lt;/strong>&lt;/p>"/>
                         </column_1_1_1_3>
                     </columns>
@@ -949,18 +924,28 @@
             </section_1_2>
             <section_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <content
+                    sling:resourceType="kyanite/common/components/container">
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Custom Made Engagement Rings&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        sling:resourceType="kyanite/common/components/title"
+                        anchorId="\0"
+                        color="rest_has-text-grey"
+                        element="h2"
+                        isSpaced="{Boolean}false"
+                        size="is-4"
+                        subtitle="Subtitle"
+                        subtitleColor="bw_has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Custom Made Engagement Rings&lt;/p>">
+                        <rest
+                            jcr:primaryType="nt:unstructured"
+                            shade="900"/>
+                    </title>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/columns"
+                        sling:resourceType="kyanite/common/components/columns"
                         columnsActivationLevel="is-desktop"
                         desktopGapLevel="is-7"
                         isCentered="false"
@@ -969,50 +954,50 @@
                         isVerticallyCentered="true">
                         <column1_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <title
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h2"
                                 isSpaced="false"
                                 text="Consultation"
                                 type="title"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;h2>&lt;/h2>&lt;p>Book a meeting to share your engagement ring ideas, timeline and budget. Financing available.&lt;/p>&lt;p>&lt;/p>"/>
                             <title_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h2"
                                 isSpaced="false"
                                 text="Design"
                                 type="title"/>
                             <content_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;h2>&lt;/h2>&lt;p>See sketched designs and estimates and give us feedback. We’ll revise until we’ve nailed the design and source additional stones if needed.&lt;/p>&lt;p>&lt;/p>&lt;h2>&lt;/h2>"/>
                             <title_2
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/title"
+                                sling:resourceType="kyanite/common/components/title"
                                 element="h2"
                                 isSpaced="false"
                                 text="Production"
                                 type="title"/>
                             <content_1_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 text="&lt;h2>&lt;/h2>&lt;p>Your ring is architected and precisely engineered with CAD, cast in metal, and the stones are set by hand.&lt;/p>"/>
                         </column1_1>
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column">
                             <block
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/block">
+                                sling:resourceType="kyanite/common/components/block">
                                 <image
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/image"
+                                    sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Design-process.png"
@@ -1024,56 +1009,72 @@
             </section_1_1_1>
             <section_1_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
-                    <content
+                    sling:resourceType="kyanite/common/components/container">
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        size="is-large"
-                        text="&lt;h2 style=&quot;text-align: center&quot;>&lt;strong>Frequently Asked Questions&lt;/strong>&lt;/h2>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        sling:resourceType="kyanite/common/components/title"
+                        anchorId="\0"
+                        color="rest_has-text-grey"
+                        element="h2"
+                        isSpaced="{Boolean}false"
+                        size="is-4"
+                        subtitle="Subtitle"
+                        subtitleColor="bw_has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Frequently Asked Questions&lt;/p>">
+                        <rest
+                            jcr:primaryType="nt:unstructured"
+                            shade="900"/>
+                    </title>
                     <content_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
+                        sling:resourceType="kyanite/common/components/content"
                         text="&lt;h2>&lt;strong>Does LUNA also have a catalogue?&lt;/strong>&lt;/h2>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris cursus, elit eu pretium gravida, arcu odio sollicitudin erat, at ornare risus nulla a velit. Donec auctor dui eu malesuada rutrum. Donec et dapibus lectus. Aliquam tempor mauris libero. Duis lorem mauris, semper vel volutpat sed, consectetur quis leo. Nam purus est, blandit eget vulputate vitae, euismod in lorem. Morbi porta non est sed accumsan. Quisque sed consectetur augue.&lt;/p>&lt;h2>&lt;strong>What is the standard quality of LUNA jewellery?&lt;/strong>&lt;/h2>&lt;h2>&lt;strong>Can I change the ring size after the start of the production process?&lt;/strong>&lt;/h2>&lt;h2>&lt;strong>Accordion item title&lt;/strong>&lt;/h2>&lt;h2>&lt;strong>Can you engrave my ring?&lt;/strong>&lt;/h2>&lt;h2>&lt;strong>What diamonds does LUNA use?&lt;/strong>&lt;/h2>&lt;p>&lt;/p>"/>
                 </container>
             </section_1_1_1_1>
             <section_1_1_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
                     <mediaobject_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/mediaobject">
+                        sling:resourceType="kyanite/common/components/mediaobject">
                         <mediaLeft
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/mediaobject/medialeft">
-                            <content
+                            sling:resourceType="kyanite/common/components/mediaobject/medialeft">
+                            <icon
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
-                                size="is-large"
-                                text="&lt;h1>&lt;strong>&quot;&lt;/strong>&lt;/h1>"/>
+                                sling:resourceType="kyanite/common/components/icon"
+                                addText="false"
+                                elementType="span"
+                                hidden="{Boolean}true"
+                                icon="mdi-format-quote-open"
+                                iconLibType="mdi"
+                                iconSize="mdi-48px"
+                                selectOrType="type"
+                                textVariant="\0"/>
                         </mediaLeft>
                         <mediaContent
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/mediaobject/mediacontent">
+                            sling:resourceType="kyanite/common/components/mediaobject/mediacontent">
                             <content_1
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/content"
+                                sling:resourceType="kyanite/common/components/content"
                                 size="is-medium"
                                 text="&lt;p>&lt;/p>&lt;h2>&lt;strong>Luna’s Jewellery never ceases to amaze me - I love her originality and thoughtfulness. Her website is often my first port of call if I want something special for myself or a friend.&lt;/strong>&lt;/h2>"/>
                             <mediaobject
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/mediaobject">
+                                sling:resourceType="kyanite/common/components/mediaobject">
                                 <mediaLeft
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/mediaobject/medialeft">
+                                    sling:resourceType="kyanite/common/components/mediaobject/medialeft">
                                     <image
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/image"
+                                        sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Janet.png"
@@ -1082,54 +1083,64 @@
                                 </mediaLeft>
                                 <mediaContent
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/mediaobject/mediacontent">
+                                    sling:resourceType="kyanite/common/components/mediaobject/mediacontent">
                                     <content
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/content"
+                                        sling:resourceType="kyanite/common/components/content"
                                         size="is-normal"
                                         text="&lt;p>&lt;strong>Janet&lt;/strong>&lt;br>&lt;strong>Adelaide, Australia&lt;/strong>&lt;/p>"/>
                                 </mediaContent>
                                 <mediaRight
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/mediaobject/mediaright"/>
+                                    sling:resourceType="kyanite/common/components/mediaobject/mediaright"/>
                             </mediaobject>
                         </mediaContent>
                         <mediaRight
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/mediaobject/mediaright"/>
+                            sling:resourceType="kyanite/common/components/mediaobject/mediaright"/>
                     </mediaobject_1>
                 </container>
             </section_1_1_1_1_1>
             <section_2_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
                     <block
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/block">
+                        sling:resourceType="kyanite/common/components/block">
                         <image
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/image"
+                            sling:resourceType="kyanite/common/components/image"
                             alt="\0"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/homepage/Hands with jewelry.png"
                             type="fixed"/>
                     </block>
-                    <content
+                    <title
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
-                        size="is-large"
-                        text="&lt;p>&lt;/p>&lt;h1 style=&quot;text-align: center&quot;>&lt;strong>Luna’s Philosophy that  Beauty and&lt;/strong>&lt;br>&lt;strong>Strength Exist in Both Union and&lt;/strong>&lt;br>&lt;strong>Individuality&lt;/strong>&lt;/h1>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
+                        sling:resourceType="kyanite/common/components/title"
+                        anchorId="\0"
+                        color="rest_has-text-grey"
+                        element="h2"
+                        isSpaced="{Boolean}false"
+                        size="is-4"
+                        subtitle="Subtitle"
+                        subtitleColor="bw_has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>">
+                        <rest
+                            jcr:primaryType="nt:unstructured"
+                            shade="900"/>
+                    </title>
                     <buttons
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/buttons"
+                        sling:resourceType="kyanite/common/components/buttons"
                         alignment="is-centered"
                         hasAddons="false">
                         <button
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/button"
+                            sling:resourceType="kyanite/common/components/button"
                             addIcon="false"
                             isDisabled="false"
                             isFullWidth="false"
@@ -1142,7 +1153,7 @@
                             variant="is-dark"/>
                         <button_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/button"
+                            sling:resourceType="kyanite/common/components/button"
                             addIcon="false"
                             isDisabled="false"
                             isFullWidth="false"
@@ -1158,21 +1169,21 @@
             </section_2_1_1>
             <section_2_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="bulma/components/section">
+                sling:resourceType="kyanite/common/components/section">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="bulma/components/container">
+                    sling:resourceType="kyanite/common/components/container">
                     <navbar_1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/navbar"
+                        sling:resourceType="kyanite/common/components/navbar"
                         isTransparent="true"
                         variant="is-light">
                         <brand
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarbrand">
+                            sling:resourceType="kyanite/common/components/navbar/navbarbrand">
                             <item
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbaritem"
+                                sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                 label="LUNA"
                                 type="image">
                                 <image
@@ -1183,124 +1194,216 @@
                         </brand>
                         <menu
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="bulma/components/navbar/navbarmenu">
+                            sling:resourceType="kyanite/common/components/navbar/navbarmenu">
                             <start
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarstart">
+                                sling:resourceType="kyanite/common/components/navbar/navbarstart">
                                 <item_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="PRICING"
                                     type="link"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="FEATURES"
                                     type="link"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="PRODUCTS"
                                     type="link"
                                     url="/content/nocodeluna/pages/Products"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="ABOUT"
                                     type="link"
                                     url="/content/nocodeluna/pages/About"/>
                             </start>
                             <end
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="bulma/components/navbar/navbarend">
+                                sling:resourceType="kyanite/common/components/navbar/navbarend">
                                 <navbaritem
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="Item"
                                     type="container">
                                     <button
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
+                                        sling:resourceType="kyanite/common/components/button"
                                         addIcon="true"
                                         icon="fab fa-2x fa-linkedin"
                                         isDisabled="false"
                                         isFullWidth="false"
+                                        isInverted="true"
                                         isLight="false"
                                         isOutlined="true"
-                                        isRounded="true"
+                                        isRounded="false"
                                         label="\0"
                                         openInNewTab="false"
                                         selectOrType="type"
+                                        showIconLeft="true"
                                         size="is-normal"
                                         type="button"
-                                        variant="is-dark"/>
+                                        variant="is-ghost">
+                                        <leftIcon
+                                            jcr:primaryType="nt:unstructured"
+                                            icon="mdi-linkedin"
+                                            iconLibType="mdi"
+                                            selectOrType="type"/>
+                                    </button>
                                 </navbaritem>
                                 <navbaritem_2
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="Item"
                                     type="container">
                                     <button
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
+                                        sling:resourceType="kyanite/common/components/button"
                                         addIcon="true"
                                         icon="fab fa-2x fa-facebook"
                                         isFullWidth="false"
+                                        isInverted="true"
                                         isLight="false"
                                         isOutlined="true"
-                                        isRounded="true"
+                                        isRounded="false"
                                         label="\0"
                                         selectOrType="type"
+                                        showIconLeft="true"
                                         size="is-normal"
-                                        variant="is-dark"/>
+                                        variant="is-ghost">
+                                        <leftIcon
+                                            jcr:primaryType="nt:unstructured"
+                                            icon="mdi-facebook"
+                                            iconLibType="mdi"
+                                            selectOrType="type"/>
+                                    </button>
                                 </navbaritem_2>
                                 <navbaritem_2_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="Item"
                                     type="container">
                                     <button
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
+                                        sling:resourceType="kyanite/common/components/button"
                                         addIcon="true"
                                         icon="fab fa-2x fa-twitter"
                                         isFullWidth="false"
+                                        isInverted="true"
                                         isLight="false"
                                         isOutlined="true"
-                                        isRounded="true"
+                                        isRounded="false"
                                         label="\0"
                                         selectOrType="type"
+                                        showIconLeft="true"
                                         size="is-normal"
-                                        variant="is-dark"/>
+                                        variant="is-ghost">
+                                        <leftIcon
+                                            jcr:primaryType="nt:unstructured"
+                                            icon="mdi-twitter"
+                                            iconLibType="mdi"
+                                            selectOrType="type"/>
+                                    </button>
                                 </navbaritem_2_1>
                                 <navbaritem_2_1_1
                                     jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="bulma/components/navbar/navbaritem"
+                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
                                     label="Item"
                                     type="container">
                                     <button
                                         jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="bulma/components/button"
+                                        sling:resourceType="kyanite/common/components/button"
                                         addIcon="true"
                                         icon="fab fa-2x fa-instagram"
                                         isFullWidth="false"
+                                        isInverted="true"
                                         isLight="false"
-                                        isOutlined="true"
-                                        isRounded="true"
+                                        isOutlined="false"
+                                        isRounded="false"
                                         label="\0"
                                         selectOrType="type"
+                                        showIconLeft="true"
                                         size="is-normal"
-                                        variant="is-dark"/>
+                                        variant="is-ghost">
+                                        <leftIcon
+                                            jcr:primaryType="nt:unstructured"
+                                            icon="mdi-instagram"
+                                            iconLibType="mdi"
+                                            selectOrType="type"/>
+                                    </button>
                                 </navbaritem_2_1_1>
                             </end>
                         </menu>
                     </navbar_1>
                     <content
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="bulma/components/content"
+                        sling:resourceType="kyanite/common/components/content"
                         text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
                 </container>
             </section_2_1_1_1>
+            <navbar
+                jcr:primaryType="nt:unstructured"
+                sling:resourceType="kyanite/common/components/navbar"
+                containerStyle="\0"
+                fixedOption="is-fixed-top"
+                variant="\0">
+                <brand_1
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kyanite/common/components/navbar/navbarbrand">
+                    <item
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                        label="LUNA"
+                        type="image"
+                        url="/content/nocodeluna/pages/Homepage">
+                        <image
+                            jcr:primaryType="nt:unstructured"
+                            alt="\0"
+                            src="/content/nocodeluna/assets/images/LUNA.svg"/>
+                    </item>
+                </brand_1>
+                <menu
+                    jcr:primaryType="nt:unstructured"
+                    sling:resourceType="kyanite/common/components/navbar/navbarmenu">
+                    <end_1
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="kyanite/common/components/navbar/navbarend">
+                        <item_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            label="BLOG"
+                            type="link"
+                            url="/content/nocodeluna/pages/Homepage"/>
+                        <item
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            label="PRODUCTS"
+                            type="link"
+                            url="/content/nocodeluna/pages/Products"/>
+                        <item_2
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            label="CATALOG"
+                            type="link"
+                            url="/content/nocodeluna/pages/Catalog"/>
+                        <item_2_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            label="ABOUT"
+                            type="link"
+                            url="/content/nocodeluna/pages/About"/>
+                        <item_2_1_1
+                            jcr:primaryType="nt:unstructured"
+                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            label="          CONTACT US"
+                            type="link"
+                            url="/content/nocodeluna/pages/Homepage"/>
+                    </end_1>
+                </menu>
+            </navbar>
         </pagecontainer>
     </jcr:content>
 </jcr:root>

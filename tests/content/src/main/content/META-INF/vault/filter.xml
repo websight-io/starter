@@ -16,7 +16,6 @@
 -->
 
 <workspaceFilter version="1.0">
-  <filter root="/content/luna-test"/>
   <filter root="/content/low-code-luna-test"/>
   <filter root="/content/starter-test"/>
 </workspaceFilter>

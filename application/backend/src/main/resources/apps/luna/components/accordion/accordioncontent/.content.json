@@ -2,10 +2,10 @@
   "isContainer": true,
   "group": ".hidden",
   "allowedComponents": [
-    "Bulma.io Columns",
-    "Bulma.io Components",
-    "Bulma.io Elements",
-    "Bulma.io Layouts"
+    "Kyanite Columns",
+    "Kyanite Components",
+    "Kyanite Elements",
+    "Kyanite Layouts"
   ],
   "sling:resourceType": "ws:Component",
   "title": "Accordion Item Content"

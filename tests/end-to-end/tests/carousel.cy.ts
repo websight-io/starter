@@ -42,8 +42,6 @@ describe('Carousel component', function () {
     cy.getByTestId('component_carousel')
     cy.get('.carousel-item')
     .should('have.class', 'glide__slide')
-
-    cy.percySnapshotPreview('Carousel preview');
   });
 
   it('renders correctly in edit mode', function () {
@@ -61,15 +59,11 @@ describe('Carousel component', function () {
     .find('span.name')
     .should('contain.text', 'Carousel');
 
-    cy.percySnapshotPageEditor('Carousel editor');
-
     cy.get('button[data-resize-button]').click();
 
     cy.getByTestId('ToolbarItem_Properties').click({force: true});
     cy.getByTestId('ModalDialog_Carousel')
       .findByTestId('Input_Slidestoshow').clear().type('5');
-
-    cy.percySnapshotDialog('Carousel dialog');
 
     cy.getByTestId('Action_Submit').click();
     cy.wait('@saveProperties');

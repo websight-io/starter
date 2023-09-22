@@ -2,6 +2,6 @@
   "jcr:primaryType": "nt:unstructured",
   "card": {
     "jcr:primaryType": "nt:unstructured",
-    "sling:resourceType": "/apps/bulma/components/card"
+    "sling:resourceType": "kyanite/common/components/card"
   }
 }

@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-tests</artifactId>
-    <version>1.17.1-SNAPSHOT</version>
+    <version>1.20.2-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
@@ -35,6 +35,7 @@
     <e2e.skip>true</e2e.skip>
     <e2e.skip.cypress>true</e2e.skip.cypress>
     <e2e.skip.visual>true</e2e.skip.visual>
+    <e2e.skip.visual.seed>true</e2e.skip.visual.seed>
 
     <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
     <node.version>v16.15.0</node.version>
@@ -164,6 +165,7 @@
         <groupId>io.fabric8</groupId>
         <artifactId>docker-maven-plugin</artifactId>
         <configuration>
+          <removeVolumes>true</removeVolumes>
           <images>
             <image>
               <alias>mongo</alias>
@@ -301,6 +303,20 @@
             </configuration>
           </execution>
           <execution>
+            <id>publish test content</id>
+            <goals>
+              <goal>npx</goal>
+            </goals>
+            <phase>integration-test</phase>
+            <configuration>
+              <skip>${e2e.skip}</skip>
+              <arguments>ts-node ./utils/content.publish/content.publish.cli.ts</arguments>
+              <environmentVariables>
+                <baseUrlCms>http://localhost:${cms.port}</baseUrlCms>
+              </environmentVariables>
+            </configuration>
+          </execution>
+          <execution>
             <id>npx test</id>
             <goals>
               <goal>npx</goal>
@@ -319,19 +335,32 @@
             </configuration>
           </execution>
           <execution>
-            <id>npx visual test</id>
+            <id>visual tests seed</id>
+            <goals>
+              <goal>npx</goal>
+            </goals>
+            <phase>integration-test</phase>
+            <configuration>
+             <skip>${e2e.skip.visual.seed}</skip>
+              <arguments>npm run test:visual:seed</arguments>
+              <environmentVariables>
+                <BACKSTOPJS_baseUrlCms>http://localhost:${cms.port}</BACKSTOPJS_baseUrlCms>
+                <TERM>xterm</TERM>
+                <CI>1</CI>
+              </environmentVariables>
+            </configuration>
+          </execution>
+          <execution>
+            <id>visual tests check</id>
             <goals>
               <goal>npx</goal>
             </goals>
             <phase>integration-test</phase>
             <configuration>
              <skip>${e2e.skip.visual}</skip>
-              <arguments>percy exec -- cypress run</arguments>
+              <arguments>npm run test:visual:check</arguments>
               <environmentVariables>
-                <CYPRESS_baseUrl>http://localhost:${cms.port}</CYPRESS_baseUrl>
-                <CYPRESS_loginUsername>${websight.admin.username}</CYPRESS_loginUsername>
-                <CYPRESS_loginPassword>${websight.admin.password}</CYPRESS_loginPassword>
-                <PERCY_TOKEN>${env.PERCY_TOKEN}</PERCY_TOKEN>
+                <BACKSTOPJS_baseUrlCms>http://localhost:${cms.port}</BACKSTOPJS_baseUrlCms>
                 <TERM>xterm</TERM>
                 <CI>1</CI>
               </environmentVariables>
@@ -347,7 +376,7 @@
 
   <profiles>
     <profile>
-      <id>e2e</id>
+      <id>e2e-functional</id>
       <properties>
         <e2e.skip>false</e2e.skip>
         <e2e.skip.cypress>false</e2e.skip.cypress>
@@ -355,11 +384,22 @@
       </properties>
     </profile>
     <profile>
-      <id>e2e-visual</id>
+      <id>e2e-visual-seed</id>
+      <properties>
+        <e2e.skip>false</e2e.skip>
+        <e2e.skip.cypress>true</e2e.skip.cypress>
+        <e2e.skip.visual>true</e2e.skip.visual>
+        <e2e.skip.visual.seed>false</e2e.skip.visual.seed>
+        <var.skip.pre-integration-test-phase>pre-integration-test</var.skip.pre-integration-test-phase>
+      </properties>
+    </profile>
+    <profile>
+      <id>e2e-visual-check</id>
       <properties>
         <e2e.skip>false</e2e.skip>
         <e2e.skip.cypress>true</e2e.skip.cypress>
         <e2e.skip.visual>false</e2e.skip.visual>
+        <var.skip.pre-integration-test-phase>pre-integration-test</var.skip.pre-integration-test-phase>
       </properties>
     </profile>
   </profiles>
