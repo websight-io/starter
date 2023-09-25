@@ -63,4 +63,4 @@ jobs:
       - name: Build and test with Maven
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: ./mvnw --batch-mode --update-snapshots clean install -P e2e
+        run: ./mvnw --batch-mode --update-snapshots clean install -P e2e-functional
