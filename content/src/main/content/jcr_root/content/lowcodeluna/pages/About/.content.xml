@@ -31,12 +31,14 @@
                             <item
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                imageSrcType="asset"
                                 label="LUNA"
                                 type="image"
                                 url="/content/lowcodeluna/pages/Homepage">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
                                     src="/content/lowcodeluna/assets/images/LUNA.svg"/>
                             </item>
                         </brand>
@@ -49,30 +51,35 @@
                                 <item_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="BLOG"
                                     type="link"
                                     url="/content/lowcodeluna/pages/Homepage"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="PRODUCTS"
                                     type="link"
                                     url="/content/lowcodeluna/pages/Products"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="CATALOG"
                                     type="link"
                                     url="/content/lowcodeluna/pages/Catalog"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="ABOUT"
                                     type="link"
                                     url="/content/lowcodeluna/pages/About"/>
                                 <item_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="  CONTACT US"
                                     type="link"
                                     url="/content/lowcodeluna/pages/Homepage"/>
@@ -114,6 +121,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/lowcodeluna/assets/images/aboutus/hero-image-our-story.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/lowcodeluna/assets/images/aboutus/hero-image-our-story.png"
                             type="fixed"/>
@@ -196,6 +205,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/lowcodeluna/assets/images/aboutus/AboutUs6.png"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/lowcodeluna/assets/images/aboutus/AboutUs6.png"
                                         type="fixed"/>
@@ -211,6 +222,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/lowcodeluna/assets/images/aboutus/promo-necles-1.png"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/lowcodeluna/assets/images/aboutus/promo-necles-1.png"
                                         type="fixed"/>
@@ -226,6 +239,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/lowcodeluna/assets/images/aboutus/AboutUs8.png"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/lowcodeluna/assets/images/aboutus/AboutUs8.png"
                                         type="fixed"/>
@@ -292,6 +307,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/aboutus/Jewellery set.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/lowcodeluna/assets/images/aboutus/Jewellery set.png"
                                     type="fixed"/>
@@ -325,6 +342,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/aboutus/Ring-creation-process.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/lowcodeluna/assets/images/aboutus/Ring-creation-process.png"
                                     type="fixed"/>
@@ -419,6 +438,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/lowcodeluna/assets/images/aboutus/Errings.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/lowcodeluna/assets/images/aboutus/Errings.png"
                                     type="fixed"/>
@@ -465,6 +486,7 @@
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 assetReference="/content/lowcodeluna/assets/images/aboutus/customer-service.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 style="is-3by1"
                                 type="ratio"/>
@@ -497,6 +519,7 @@
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 assetReference="/content/lowcodeluna/assets/images/aboutus/easy-returns.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 style="is-3by1"
                                 type="ratio"/>
@@ -529,6 +552,7 @@
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 assetReference="/content/lowcodeluna/assets/images/aboutus/security-payment.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 style="is-3by1"
                                 type="ratio"/>
@@ -569,6 +593,7 @@
                     <item
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                        imageSrcType="asset"
                         imageUrl="/content/lowcodeluna/pages/Homepage"
                         isLink="true"
                         label="LUNA"
@@ -577,6 +602,7 @@
                         <image
                             jcr:primaryType="nt:unstructured"
                             alt="\0"
+                            assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
                             src="/content/lowcodeluna/assets/images/LUNA.svg"/>
                     </item>
                 </brand_1>
@@ -589,30 +615,35 @@
                         <item_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="BLOG"
                             type="link"
                             url="/content/lowcodeluna/pages/Homepage"/>
                         <item
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="PRODUCTS"
                             type="link"
                             url="/content/lowcodeluna/pages/Products"/>
                         <item_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="CATALOG"
                             type="link"
                             url="/content/lowcodeluna/pages/Catalog"/>
                         <item_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="ABOUT"
                             type="link"
                             url="/content/lowcodeluna/pages/About"/>
                         <item_2_1_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="          CONTACT US"
                             type="link"
                             url="/content/lowcodeluna/pages/Homepage"/>
@@ -632,6 +663,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/lowcodeluna/assets/images/aboutus/pearl bracelet.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/lowcodeluna/assets/images/aboutus/pearl bracelet.png"
                             type="fixed"/>
@@ -702,6 +735,7 @@
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
                                 assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 src="/content/lowcodeluna/pages/Homepage"
                                 type="fixed"/>
