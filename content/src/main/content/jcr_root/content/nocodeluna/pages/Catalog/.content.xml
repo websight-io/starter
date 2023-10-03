@@ -45,6 +45,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/nocodeluna/assets/images/catalog/Our Catalog.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/catalog/Our Catalog.png"
                             type="fixed"/>
@@ -94,6 +96,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
                                     type="fixed"/>
@@ -121,6 +125,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
                                     type="fixed"/>
@@ -148,6 +154,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
                                     type="fixed"/>
@@ -211,6 +219,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
                                     type="fixed"/>
@@ -237,6 +247,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
                                     type="fixed"/>
@@ -263,6 +275,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
                                     type="fixed"/>
@@ -298,6 +312,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/product/Viviana Diamond Engagement Ring.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/Viviana Diamond Engagement Ring.png"
                                     type="fixed"/>
@@ -324,6 +340,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/product/Diamond Cut Ankle.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/Diamond Cut Ankle.png"
                                     type="fixed"/>
@@ -350,6 +368,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/product/The Texture Ring Set.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/The Texture Ring Set.png"
                                     type="fixed"/>
@@ -385,6 +405,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/catalog/The Texture Ring Set.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/catalog/The Texture Ring Set.png"
                                     type="fixed"/>
@@ -411,6 +433,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/catalog/Olive Leaf Earrings.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/catalog/Olive Leaf Earrings.png"
                                     type="fixed"/>
@@ -437,6 +461,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/catalog/Olive Leaf Pendant.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/catalog/Olive Leaf Pendant.png"
                                     type="fixed"/>
@@ -473,6 +499,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/nocodeluna/assets/images/catalog/diamond earing.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/catalog/diamond earing.png"
                             type="fixed"/>
@@ -546,11 +574,13 @@
                             <item
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                imageSrcType="asset"
                                 label="LUNA"
                                 type="image">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/LUNA.svg"
                                     src="/content/nocodeluna/assets/images/LUNA.svg"/>
                             </item>
                         </brand>
@@ -563,22 +593,26 @@
                                 <item_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="PRICING"
                                     type="link"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="FEATURES"
                                     type="link"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="PRODUCTS"
                                     type="link"
                                     url="/content/nocodeluna/pages/Products"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="ABOUT"
                                     type="link"
                                     url="/content/nocodeluna/pages/About"/>
@@ -589,6 +623,7 @@
                                 <navbaritem
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -619,6 +654,7 @@
                                 <navbaritem_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -646,6 +682,7 @@
                                 <navbaritem_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -673,6 +710,7 @@
                                 <navbaritem_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
