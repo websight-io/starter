@@ -37,8 +37,6 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
-                                    assetReference="/content/nocodeluna/assets/images/product/Silver Ring.png"
-                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/Silver Ring.png"
                                     type="fixed"/>
@@ -152,8 +150,6 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
-                            assetReference="/content/nocodeluna/assets/images/product/Ring in a hand.png"
-                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/product/Ring in a hand.png"
                             type="fixed"/>
@@ -191,8 +187,6 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
-                                        assetReference="/content/nocodeluna/assets/images/product/payment-plans.svg"
-                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/product/payment-plans.svg"
                                         style="is-96x96"
@@ -237,8 +231,6 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
-                                        assetReference="/content/nocodeluna/assets/images/product/drop-a-hint.svg"
-                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/product/drop-a-hint.svg"
                                         style="is-96x96"
@@ -283,8 +275,6 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
-                                        assetReference="/content/nocodeluna/assets/images/product/ring-resizing.svg"
-                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/product/ring-resizing.svg"
                                         style="is-96x96"
@@ -353,8 +343,6 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
-                                    assetReference="/content/nocodeluna/assets/images/product/Viviana Diamond Engagement Ring.png"
-                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/Viviana Diamond Engagement Ring.png"
                                     type="fixed"/>
@@ -382,8 +370,6 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
-                                    assetReference="/content/nocodeluna/assets/images/product/Diamond Cut Ankle.png"
-                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/Diamond Cut Ankle.png"
                                     type="fixed"/>
@@ -411,8 +397,6 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
-                                    assetReference="/content/nocodeluna/assets/images/product/The Texture Ring Set.png"
-                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/product/The Texture Ring Set.png"
                                     type="fixed"/>
@@ -453,13 +437,11 @@
                             <item
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                imageSrcType="asset"
                                 label="LUNA"
                                 type="image">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
-                                    assetReference="/content/nocodeluna/assets/images/LUNA.svg"
                                     src="/content/nocodeluna/assets/images/LUNA.svg"/>
                             </item>
                         </brand>
@@ -472,26 +454,22 @@
                                 <item_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="PRICING"
                                     type="link"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="FEATURES"
                                     type="link"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="PRODUCTS"
                                     type="link"
                                     url="/content/nocodeluna/pages/Products"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="ABOUT"
                                     type="link"
                                     url="/content/nocodeluna/pages/About"/>
@@ -502,7 +480,6 @@
                                 <navbaritem
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -533,7 +510,6 @@
                                 <navbaritem_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -561,7 +537,6 @@
                                 <navbaritem_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -589,7 +564,6 @@
                                 <navbaritem_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
