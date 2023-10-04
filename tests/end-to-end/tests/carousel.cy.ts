@@ -40,7 +40,7 @@ describe('Carousel component', function () {
     .should('exist')
 
     cy.getByTestId('component_carousel')
-    cy.get('.carousel-item')
+    cy.get('.luna-carousel-item')
     .should('have.class', 'glide__slide')
   });
 
