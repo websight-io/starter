@@ -1,6 +1,6 @@
 {
   "isContainer": true,
-  "group": "Kyanite Components",
+  "group": "Luna Components",
   "allowedComponents": ["/apps/luna/components/accordion/accordionitem"],
   "sling:resourceType": "ws:Component",
   "title": "Accordion"

@@ -1,5 +1,5 @@
 {
-  "group": "Kyanite sub-components",
+  "group": "Luna sub-components",
   "sling:resourceType": "ws:Component",
   "title": "Carousel Item"
 }

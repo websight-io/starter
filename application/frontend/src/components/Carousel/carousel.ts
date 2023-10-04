@@ -28,7 +28,7 @@ const getCardsListPeek: (breakpoint: number) => number = (breakpoint) => {
 };
 
 const initCardsListGlideJs = () => {
-  initGlideJsSlider('.carousel.glide', element => {
+  initGlideJsSlider('.luna-carousel.glide', element => {
     const breakpoint = getBreakpoint();
     return {
       type: 'slider',

@@ -16,10 +16,10 @@
 
 <sly data-sly-use.model="pl.ds.luna.lowcode.components.models.carousel.CarouselItemComponent">
   <sly data-sly-test="${wcmmode.isEdit}">
-    <sly data-sly-test.classes="carousel-item column ${model.columnClass}"></sly>
+    <sly data-sly-test.classes="luna-carousel-item column ${model.columnClass}"></sly>
   </sly>
   <sly data-sly-test="${!wcmmode.isEdit}">
-    <sly data-sly-test.classes="carousel-item glide__slide"></sly>
+    <sly data-sly-test.classes="luna-carousel-item glide__slide"></sly>
   </sly>
   
   <sly data-sly-test="${resource.hasChildren}">
