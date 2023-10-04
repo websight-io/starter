@@ -80,6 +80,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Necles-hero-image.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Necles-hero-image.png"
                                     type="fixed"/>
@@ -101,6 +103,8 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
+                                assetReference="/content/nocodeluna/assets/images/homepage/Logo 1.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 1.svg"
                                 style="is-96x96"
@@ -129,6 +133,8 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
+                                assetReference="/content/nocodeluna/assets/images/homepage/Logo 2.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 2.svg"
                                 style="is-96x96"
@@ -141,6 +147,8 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
+                                assetReference="/content/nocodeluna/assets/images/homepage/Logo 3.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 3.svg"
                                 style="is-96x96"
@@ -153,6 +161,8 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
+                                assetReference="/content/nocodeluna/assets/images/homepage/Logo 4.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 4.svg"
                                 style="is-96x96"
@@ -165,6 +175,8 @@
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/image"
                                 alt="\0"
+                                assetReference="/content/nocodeluna/assets/images/homepage/Logo 5.svg"
+                                imageSrcType="asset"
                                 isRounded="false"
                                 src="/content/nocodeluna/assets/images/homepage/Logo 5.svg"
                                 style="is-96x96"
@@ -229,6 +241,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Amadeus-collection.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Amadeus-collection.png"
                                     type="fixed"/>
@@ -255,6 +269,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Margot-collection.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Margot-collection.png"
                                     type="fixed"/>
@@ -287,6 +303,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/nocodeluna/assets/images/homepage/Bracelets.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/homepage/Bracelets.png"
                             type="fixed"/>
@@ -371,6 +389,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/nocodeluna/assets/images/product/Ring in a hand.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/product/Ring in a hand.png"
                             type="fixed"/>
@@ -393,6 +413,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Diamonds By The Yard Bracelet.png"
                                     type="fixed"/>
@@ -420,6 +442,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Nesting Narrow Band Ring.png"
                                     type="fixed"/>
@@ -447,6 +471,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Layer Cake Necklace Set.png"
                                     type="fixed"/>
@@ -492,6 +518,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Diamond ring.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Diamond ring.png"
                                     type="fixed"/>
@@ -587,6 +615,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Round.svg"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Round.svg"
                                         style="is-1by2"
@@ -631,6 +661,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Emerald.svg"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Emerald.svg"
                                         style="is-1by2"
@@ -692,6 +724,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Oval.svg"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Oval.svg"
                                         style="is-1by2"
@@ -753,6 +787,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Pear.svg"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Pear.svg"
                                         style="is-1by2"
@@ -814,6 +850,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Marquise.svg"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Marquise.svg"
                                         style="is-1by2"
@@ -875,6 +913,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Cushion.svg"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Cushion.svg"
                                         style="is-1by2"
@@ -999,6 +1039,8 @@
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/image"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/homepage/Design-process.png"
+                                    imageSrcType="asset"
                                     isRounded="false"
                                     src="/content/nocodeluna/assets/images/homepage/Design-process.png"
                                     type="fixed"/>
@@ -1076,6 +1118,8 @@
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/image"
                                         alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/homepage/Janet.png"
+                                        imageSrcType="asset"
                                         isRounded="false"
                                         src="/content/nocodeluna/assets/images/homepage/Janet.png"
                                         style="is-64x64"
@@ -1114,6 +1158,8 @@
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/image"
                             alt="\0"
+                            assetReference="/content/nocodeluna/assets/images/homepage/Hands with jewelry.png"
+                            imageSrcType="asset"
                             isRounded="false"
                             src="/content/nocodeluna/assets/images/homepage/Hands with jewelry.png"
                             type="fixed"/>
@@ -1184,11 +1230,13 @@
                             <item
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                imageSrcType="asset"
                                 label="LUNA"
                                 type="image">
                                 <image
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
+                                    assetReference="/content/nocodeluna/assets/images/LUNA.svg"
                                     src="/content/nocodeluna/assets/images/LUNA.svg"/>
                             </item>
                         </brand>
@@ -1201,22 +1249,26 @@
                                 <item_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="PRICING"
                                     type="link"/>
                                 <item_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="FEATURES"
                                     type="link"/>
                                 <item
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="PRODUCTS"
                                     type="link"
                                     url="/content/nocodeluna/pages/Products"/>
                                 <item_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="ABOUT"
                                     type="link"
                                     url="/content/nocodeluna/pages/About"/>
@@ -1227,6 +1279,7 @@
                                 <navbaritem
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -1257,6 +1310,7 @@
                                 <navbaritem_2
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -1284,6 +1338,7 @@
                                 <navbaritem_2_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -1311,6 +1366,7 @@
                                 <navbaritem_2_1_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                                    imageSrcType="asset"
                                     label="Item"
                                     type="container">
                                     <button
@@ -1356,12 +1412,14 @@
                     <item
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                        imageSrcType="asset"
                         label="LUNA"
                         type="image"
                         url="/content/nocodeluna/pages/Homepage">
                         <image
                             jcr:primaryType="nt:unstructured"
                             alt="\0"
+                            assetReference="/content/nocodeluna/assets/images/LUNA.svg"
                             src="/content/nocodeluna/assets/images/LUNA.svg"/>
                     </item>
                 </brand_1>
@@ -1374,30 +1432,35 @@
                         <item_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="BLOG"
                             type="link"
                             url="/content/nocodeluna/pages/Homepage"/>
                         <item
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="PRODUCTS"
                             type="link"
                             url="/content/nocodeluna/pages/Products"/>
                         <item_2
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="CATALOG"
                             type="link"
                             url="/content/nocodeluna/pages/Catalog"/>
                         <item_2_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="ABOUT"
                             type="link"
                             url="/content/nocodeluna/pages/About"/>
                         <item_2_1_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"
+                            imageSrcType="asset"
                             label="          CONTACT US"
                             type="link"
                             url="/content/nocodeluna/pages/Homepage"/>
