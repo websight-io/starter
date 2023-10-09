@@ -103,7 +103,7 @@
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
-              <classifier>websight-cms-starter</classifier>
+              <classifier>websight-cms-starter-mongo</classifier>
               <title>Starter WebSight CMS project</title>
               <filesInclude>*.json</filesInclude>
               <includeArtifact>
@@ -121,15 +121,35 @@
                 <type>slingosgifeature</type>
               </includeArtifact>
             </aggregate>
+            <aggregate>
+              <classifier>websight-cms-starter-tar</classifier>
+              <filesInclude>*.json</filesInclude>
+              <includeArtifact>
+                <groupId>pl.ds.websight</groupId>
+                <artifactId>websight-cms-ce-feature</artifactId>
+                <version>${websight.cms.version}</version>
+                <classifier>cms</classifier>
+                <type>slingosgifeature</type>
+              </includeArtifact>
+              <includeArtifact>
+                <groupId>pl.ds.websight</groupId>
+                <artifactId>websight-cms-ce-feature</artifactId>
+                <version>${websight.cms.version}</version>
+                <classifier>oak-node-store</classifier>
+                <type>slingosgifeature</type>
+              </includeArtifact>
+            </aggregate>
           </aggregates>
           <scans>
             <scan>
-              <includeClassifier>websight-cms-starter</includeClassifier>
+              <includeClassifier>websight-cms-starter-mongo</includeClassifier>
+              <includeClassifier>websight-cms-starter-tar</includeClassifier>
             </scan>
           </scans>
           <repositories>
             <repository>
-              <includeClassifier>websight-cms-starter</includeClassifier>
+              <includeClassifier>websight-cms-starter-mongo</includeClassifier>
+              <includeClassifier>websight-cms-starter-tar</includeClassifier>
               <includeClassifier>docker</includeClassifier>
             </repository>
           </repositories>
