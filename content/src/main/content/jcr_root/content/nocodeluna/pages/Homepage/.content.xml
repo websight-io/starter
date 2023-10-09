@@ -1429,13 +1429,6 @@
                     <end_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/navbar/navbarend">
-                        <item_1
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                            imageSrcType="asset"
-                            label="BLOG"
-                            type="link"
-                            url="/content/nocodeluna/pages/Homepage"/>
                         <item
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/navbar/navbaritem"

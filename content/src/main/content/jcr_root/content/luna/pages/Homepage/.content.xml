@@ -20,10 +20,6 @@
                     url="/content/luna/pages/Homepage"/>
                 <navigation jcr:primaryType="nt:unstructured">
                     <menuItems jcr:primaryType="nt:unstructured">
-                        <_x0031_
-                            jcr:primaryType="nt:unstructured"
-                            label="Blog"
-                            openInNewTab="false"/>
                         <_x0032_
                             jcr:primaryType="nt:unstructured"
                             label="Products"
