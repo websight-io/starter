@@ -1,6 +1,6 @@
 # Local Environment
 
-Local instance that base on the [Oak Document Storage](https://jackrabbit.apache.org/oak/docs/nodestore/documentmk.html).
+Local instance based on the [Oak Document Storage](https://jackrabbit.apache.org/oak/docs/nodestore/documentmk.html).
 All data is stored in the MongoDB that runs as a separate container (see the `docker-compose.yml` for details).
 
 ## Usage

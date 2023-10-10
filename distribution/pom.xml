@@ -439,6 +439,66 @@
         </plugins>
       </build>
     </profile>
+    <profile>
+      <id>dockerhub</id>
+      <properties>
+        <docker.skip.push>false</docker.skip.push>
+      </properties>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <configuration>
+              <removeVolumes>true</removeVolumes>
+              <images>
+                <image>
+                  <name>${docker.hub.username}/websight-cms-starter:${project.version}</name>
+                  <build>
+                    <buildx>
+                      <platforms>
+                        <platform>linux/amd64</platform>
+                        <platform>linux/arm64</platform>
+                      </platforms>
+                    </buildx>
+                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+                <image>
+                  <name>${docker.hub.username}/websight-nginx-starter:${project.version}</name>
+                  <build>
+                    <buildx>
+                      <platforms>
+                        <platform>${docker.platforms}</platform>
+                      </platforms>
+                    </buildx>
+                    <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+              </images>
+            </configuration>
+            <executions>
+              <execution>
+                <id>build-docker-image</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+              </execution>
+              <execution>
+                <id>push-docker-image</id>
+                <phase>package</phase>
+                <goals>
+                  <goal>push</goal>
+                </goals>
+              </execution>
+            </executions>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
   </profiles>
 
 </project>

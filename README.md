@@ -185,7 +185,7 @@ to build the sample websight, aggregate all required CMS dependencies, run end-t
 
 ### How to run
 
-Once Docker images are ready, all you need is to run Docker Compose from the `environment/local` folder:
+Once Docker images are ready, all you need is to run Docker Compose of the `environment/local-mongo` folder:
 
 ```bash
 docker compose up
@@ -211,10 +211,21 @@ Please notice that we use a [nip.io](https://nip.io). It helps with simulating a
 - `content` - contains sample content created with use of application
 - `distribution` - builds a distribution of the project - instance feature model and docker images for runtime components
 - `environment` - contains scripts and files used but build environment
-    - `local` - starts local environment
+    - `local-mongo` - (default) starts a multi-container local environment based on the [Oak Document Storage](https://jackrabbit.apache.org/oak/docs/nodestore/documentmk.html)
+    - `local-tar` - starts a single-container local environment based on the [Oak Segment Tar](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html)
 - `tests` - responsible for the automatic distribution validation
-    - `content` - contains content used for end to end tests
+    - `content` - contains content used for end-to-end tests
     - `end-to-end` - end-to-end tests validating distribution
+
+## Publishing Docker image
+
+### DockerHub
+
+Push images to your custom Docker Hub repository running:
+
+```bash
+./mvnw clean install -P dockerhub -Ddocker.hub.username=<DOCKER_HUB_USERNAME>
+```
 
 ## Contributing
 Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.

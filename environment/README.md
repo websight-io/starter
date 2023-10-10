@@ -1,6 +1,6 @@
 # Environments
 
-For local usage and development.
+For local usage and development only.
 
 See:
 - [`local-mongo`](./local-mongo)

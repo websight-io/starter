@@ -34,4 +34,4 @@ HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD curl --fail http:/
 
 WORKDIR /websight
 ENTRYPOINT [ "/websight/bin/launch.sh" ]
-CMD ["websight-cms-starter-tar"]
+CMD ["websight-cms-starter-mongo"]
