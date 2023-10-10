@@ -178,7 +178,7 @@ The following technologies are used in designing and prototyping:
 Run the command
 
 ```bash
-./mvnw clean verify -P e2e
+./mvnw clean verify -P e2e-functional
 ```
 
 to build the sample websight, aggregate all required CMS dependencies, run end-to-end tests with Cypress, build Docker images (`ds/websight-nginx-starter:latest`, `ds/websight-cms-starter:latest`).
