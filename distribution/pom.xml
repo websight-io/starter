@@ -313,7 +313,7 @@
                     <groupId>${project.groupId}</groupId>
                     <artifactId>${project.artifactId}</artifactId>
                     <version>${project.version}</version>
-                    <classifier>websight-cms-starter</classifier>
+                    <classifier>websight-cms-starter-mongo</classifier>
                     <type>slingosgifeature</type>
                   </feature>
                   <launcherArguments>
