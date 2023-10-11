@@ -30,6 +30,7 @@ services:
       LEASE_CHECK_MODE: "LENIENT"
       # WS_DEBUG: "true" is for local usage only. It enables java debugger.
       WS_DEBUG: "true"
+    command: ["websight-cms-starter-mongo"]
     volumes:
       - starter-project_cms_logs:/websight/logs
       - starter-project_site_repository:/websight/docroot

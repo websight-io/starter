@@ -44,7 +44,7 @@ jobs:
         run: ./mvnw --batch-mode clean verify -P e2e-functional
       - name: Run environment
         run: |
-          docker compose -f ./environment/local/docker-compose.yml up -d
+          docker compose -f ./environment/local-mongo/docker-compose.yml up -d
           sleep 10
       - name: Verify environment
         run: | 
@@ -152,4 +152,4 @@ jobs:
           npm run-script test --prefix ./tests/end-to-end
       - name: Stop environment
         if: always()
-        run: docker compose -f ./environment/local/docker-compose.yml down
+        run: docker compose -f ./environment/local-mongo/docker-compose.yml down
