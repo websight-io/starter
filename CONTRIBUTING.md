@@ -45,4 +45,12 @@ checkstyle issue, our `mvn clean install` should fail with the message:
 [WARN] /Projects/websight/projects/howlite/core/src/main/java/pl/ds/howlite/components/models/AccordionItemComponent.java:14:3: Annotation 'Default' have incorrect indentation level 2, expected level should be 7. [AnnotationLocationVariables]
 Audit done.
 ```
+### Tests
 
+We use [JUnit 5](https://junit.org/junit5/docs/current/user-guide/) for unit tests, [Cypress](https://www.cypress.io/) for end-to-end tests, and [BackstopJS](https://garris.github.io/BackstopJS/) to visual regression tests.
+
+Before contributing a change, make sure to run all tests and ensure they pass. If you are adding a new feature, make sure to add tests for it.
+See the [`CI GH Action`](.github/workflows/ci.yml) on how to run the tests suites.
+
+Additionally, we use this repository as a [Developer's start guide](https://docs.websight.io/cms/developers/quick-start/) reference.
+Make sure the [`Dev Journey Action`](.github/workflows/dev-journey.yml) is passing. You may run it locally using the `./scripts/dev-journey-*.sh` scripts. See the full workflow in the [`CI GH Action`](.github/workflows/dev-journey.yml).
