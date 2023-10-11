@@ -17,6 +17,9 @@
 # fail fast
 set -e
 
+# wait until CMS is ready but no longer than 300 seconds (5 minutes)
+timeout 300 bash -c 'until curl -s -o /dev/null -w "%{http_code}" http://localhost:8080/system/health -ipv4 | grep "200"; do sleep 5; done'
+
 curl 'http://localhost:8080/apps/websight-authentication/j_security_check' --data-raw '_charset_=UTF-8&resource=%2F&j_username=wsadmin&j_password=wsadmin' -ipv4 --cookie-jar websight.auth --retry-delay 1 --retry 10
 
 checkPage() {

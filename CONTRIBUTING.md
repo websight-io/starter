@@ -54,3 +54,5 @@ See the [`CI GH Action`](.github/workflows/ci.yml) on how to run the tests suite
 
 Additionally, we use this repository as a [Developer's start guide](https://docs.websight.io/cms/developers/quick-start/) reference.
 Make sure the [`Dev Journey Action`](.github/workflows/dev-journey.yml) is passing. You may run it locally using the `./scripts/dev-journey-*.sh` scripts. See the full workflow in the [`CI GH Action`](.github/workflows/dev-journey.yml).
+
+> Note: on MacOs you will need to `brew install coreutils` to run the `dev-journey-*.sh` scripts.
