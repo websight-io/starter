@@ -104,7 +104,7 @@
           <aggregates>
             <aggregate>
               <classifier>websight-cms-starter-mongo</classifier>
-              <title>Starter WebSight CMS project</title>
+              <title>Starter WebSight CMS project with MongoDB</title>
               <filesInclude>*.json</filesInclude>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
@@ -123,6 +123,7 @@
             </aggregate>
             <aggregate>
               <classifier>websight-cms-starter-tar</classifier>
+              <title>Starter WebSight CMS project</title>
               <filesInclude>*.json</filesInclude>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
@@ -218,84 +219,7 @@
                 <configuration>
                   <portNames>
                     <portName>cms.port</portName>
-                    <portName>mongo.port</portName>
                   </portNames>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
-            <groupId>io.fabric8</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <configuration>
-              <removeVolumes>true</removeVolumes>
-            </configuration>
-            <executions>
-              <execution>
-                <id>start mongo</id>
-                <goals>
-                  <goal>start</goal>
-                </goals>
-                <configuration>
-                  <images>
-                    <image>
-                      <alias>mongo</alias>
-                      <name>${mongo.container.image}</name>
-                      <run>
-                        <ports>
-                          <port>${mongo.port}:27017</port>
-                        </ports>
-                        <wait>
-                          <log>CONTROL</log>
-                          <time>60000</time>
-                        </wait>
-                        <env>
-                          <MONGO_INITDB_ROOT_USERNAME>mongoadmin</MONGO_INITDB_ROOT_USERNAME>
-                          <MONGO_INITDB_ROOT_PASSWORD>mongoadmin</MONGO_INITDB_ROOT_PASSWORD>
-                        </env>
-                      </run>
-                    </image>
-                  </images>
-                </configuration>
-              </execution>
-              <execution>
-                <id>stop mongo</id>
-                <phase>verify</phase>
-                <goals>
-                  <goal>stop</goal>
-                </goals>
-                <configuration>
-                  <images>
-                    <image>
-                      <alias>mongo</alias>
-                      <name>${mongo.container.image}</name>
-                    </image>
-                  </images>
-                </configuration>
-              </execution>
-              <execution>
-                <id>build-docker-image</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>build</goal>
-                </goals>
-                <configuration>
-                  <images>
-                    <image>
-                      <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
-                      <build>
-                        <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
-                        <contextDir>${project.basedir}</contextDir>
-                      </build>
-                    </image>
-                    <image>
-                      <name>${docker.nginx.name}:${docker.nginx.tag}</name>
-                      <build>
-                        <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
-                        <contextDir>${project.basedir}</contextDir>
-                      </build>
-                    </image>
-                  </images>
                 </configuration>
               </execution>
             </executions>
@@ -313,7 +237,7 @@
                     <groupId>${project.groupId}</groupId>
                     <artifactId>${project.artifactId}</artifactId>
                     <version>${project.version}</version>
-                    <classifier>websight-cms-starter-mongo</classifier>
+                    <classifier>websight-cms-starter-tar</classifier>
                     <type>slingosgifeature</type>
                   </feature>
                   <launcherArguments>
@@ -322,7 +246,6 @@
                     </frameworkProperties>
                   </launcherArguments>
                   <environmentVariables>
-                    <MONGODB_PORT>${mongo.port}</MONGODB_PORT>
                     <WS_ADMIN_USERNAME>${websight.admin.username}</WS_ADMIN_USERNAME>
                     <WS_ADMIN_PASSWORD>${websight.admin.password}</WS_ADMIN_PASSWORD>
                   </environmentVariables>
@@ -371,6 +294,44 @@
                   <systemPropertyVariables>
                     <WS_HTTP_PORT>${cms.port}</WS_HTTP_PORT>
                   </systemPropertyVariables>
+                  <excludes>
+                    <!-- this test is valid only for MongoDB distribution !-->
+                    <exclude>**/CmsDatabaseIT*</exclude>
+                  </excludes>
+                </configuration>
+              </execution>
+            </executions>
+          </plugin>
+          <plugin>
+            <groupId>io.fabric8</groupId>
+            <artifactId>docker-maven-plugin</artifactId>
+            <configuration>
+              <removeVolumes>true</removeVolumes>
+            </configuration>
+            <executions>
+              <execution>
+                <id>build-docker-image</id>
+                <phase>install</phase>
+                <goals>
+                  <goal>build</goal>
+                </goals>
+                <configuration>
+                  <images>
+                    <image>
+                      <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
+                      <build>
+                        <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
+                        <contextDir>${project.basedir}</contextDir>
+                      </build>
+                    </image>
+                    <image>
+                      <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                      <build>
+                        <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
+                        <contextDir>${project.basedir}</contextDir>
+                      </build>
+                    </image>
+                  </images>
                 </configuration>
               </execution>
             </executions>
