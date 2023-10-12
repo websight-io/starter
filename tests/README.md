@@ -44,8 +44,6 @@ We use [BackstopJS](https://github.com/garris/BackstopJS) for visual regression 
 compare screenshots stored in `./end-to-end/backstop_data/bitmaps_reference` created by 
 `backstop reference` task.
 
-> Please note that reference screenshots are not stored in GIT repository.
-
 ### Running locally
 From project `<ROOT>` folder build the latest CMS distribution and test content package:
 ```bash
@@ -59,16 +57,16 @@ java --add-opens java.base/java.lang=ALL-UNNAMED -jar target/dependency/org.apac
 
 From `./end-to-end` folder publish all pages
 ```bash
-npm install -g ts-node
-baseUrlCms=http://localhost:8080 ts-node ./utils/content.publish/content.publish.cli.ts
+npm run content:publish
 ```
 
 From `./end-to-end` folder gather reference screenshots (`backstop_data/bitmaps_reference`)
 ```bash
 npm run test:visual:seed
+# do some changes in code
 ```
 
-From `./end-to-end` folder test the changes comparing the current CMS results with gahtered ones
+From `./end-to-end` folder test the changes comparing the current CMS results with gathered ones
 ```bash
 npm run test:visual:check
 ```
@@ -77,5 +75,6 @@ npm run test:visual:check
 From project `<ROOT>` folder run:
 ```bash
 ./mvnw clean verify -P e2e-visual-seed
+# do some changes in the code
 ./mvnw clean verify -P e2e-visual-check
 ```
