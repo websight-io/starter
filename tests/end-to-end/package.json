@@ -13,7 +13,8 @@
     "test:visual:approve": "backstop approve --config backstop.js",
     "format": "prettier --write .",
     "format:watch": "onchange \"**/*\" -- prettier --write --ignore-unknown {{changed}}",
-    "rebuild-content": "cd ../content && mvn clean install -P autoInstallPackage"
+    "rebuild-content": "cd ../content && mvn clean install -P autoInstallPackage",
+    "content:publish": "baseUrlCms=http://localhost:8080 ts-node ./utils/content.publish/content.publish.cli.ts"
   },
   "dependencies": {
     "axios": "^1.5.0",
