@@ -40,8 +40,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-maven-
 
-      - name: Build and test with Maven
-        run: ./mvnw --batch-mode clean verify -P e2e-functional
+      - name: Build and install Cypress
+        run: ./mvnw --batch-mode clean install -De2e.skip=false
       - name: Run environment
         run: |
           docker compose -f ./environment/local-mongo/docker-compose.yml up -d
