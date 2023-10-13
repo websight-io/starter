@@ -37,11 +37,10 @@ gcloud run services add-iam-policy-binding websight-cms-$DOCKERHUB_USERNAME \
 
 and login with credentials `wsadmin`/`wsadmin`.
 
+## Clean up
 
-JIT topic:
-> Running WebSight CMS on GCP Cloud Run for free (live demo)
+To delete the environment, run the following command:
+```bash
+gcloud run services delete websight-cms-$DOCKERHUB_USERNAME --region=europe-west1
+```
 
-Speakers: 
-@Tomasz Michalak, @Maciej Laskowski
-
-Time: Today, 14:00
