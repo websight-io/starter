@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-parent</artifactId>
-    <version>1.21.3</version>
+    <version>1.21.4-SNAPSHOT</version>
   </parent>
 
   <artifactId>starter-content</artifactId>
