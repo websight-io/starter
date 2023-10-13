@@ -1,0 +1,50 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  annotations:
+    run.googleapis.com/ingress: all
+    run.googleapis.com/ingress-status: all
+  name: websight-cms-${DOCKERHUB_USERNAME}
+spec:
+  template:
+    metadata:
+      annotations:
+        autoscaling.knative.dev/maxScale: '1'
+        autoscaling.knative.dev/minScale: '1'
+        run.googleapis.com/client-name: cloud-console
+        run.googleapis.com/cpu-throttling: 'false'
+        run.googleapis.com/startup-cpu-boost: 'true'
+      labels:
+        run.googleapis.com/startupProbeType: Custom
+    spec:
+      containers:
+      - args:
+          - websight-cms-starter-tar
+        image: ${DOCKERHUB_USERNAME}/websight-cms-starter
+        livenessProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /system/health
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 1
+        ports:
+        - containerPort: 8080
+          name: http1
+        resources:
+          limits:
+            cpu: 2000m
+            memory: 2Gi
+        startupProbe:
+          failureThreshold: 3
+          httpGet:
+            path: /system/health
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 10
+          timeoutSeconds: 1
+      timeoutSeconds: 300
+  traffic:
+  - latestRevision: true
+    percent: 100

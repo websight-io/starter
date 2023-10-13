@@ -414,7 +414,7 @@
               <removeVolumes>true</removeVolumes>
               <images>
                 <image>
-                  <name>${docker.hub.username}/websight-cms-starter:${project.version}</name>
+                  <name>${docker.hub.username}/websight-cms-starter:${docker.cms-project.tag}</name>
                   <build>
                     <buildx>
                       <platforms>
@@ -427,7 +427,7 @@
                   </build>
                 </image>
                 <image>
-                  <name>${docker.hub.username}/websight-nginx-starter:${project.version}</name>
+                  <name>${docker.hub.username}/websight-nginx-starter:${docker.nginx.tag}</name>
                   <build>
                     <buildx>
                       <platforms>

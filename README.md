@@ -217,16 +217,6 @@ Please notice that we use a [nip.io](https://nip.io). It helps with simulating a
     - `content` - contains content used for end-to-end tests
     - `end-to-end` - end-to-end tests validating distribution
 
-## Publishing Docker image
-
-### DockerHub
-
-Push images to your custom Docker Hub repository running:
-
-```bash
-./mvnw clean install -P dockerhub -Ddocker.hub.username=<DOCKER_HUB_USERNAME>
-```
-
 ## Contributing
 Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.
 
