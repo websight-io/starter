@@ -2,6 +2,7 @@ apiVersion: serving.knative.dev/v1
 kind: Service
 metadata:
   annotations:
+    run.googleapis.com/launch-stage: BETA
     run.googleapis.com/ingress: all
     run.googleapis.com/ingress-status: all
   name: websight-cms-${DOCKERHUB_USERNAME}
@@ -29,13 +30,16 @@ spec:
           initialDelaySeconds: 60
           periodSeconds: 10
           timeoutSeconds: 1
+        env:
+          - name: TEST
+            value: /run/secrets/admin.password
         ports:
         - containerPort: 8080
           name: http1
         resources:
           limits:
             cpu: 2000m
-            memory: 2Gi
+            memory: 4Gi
         startupProbe:
           failureThreshold: 3
           httpGet:
@@ -48,6 +52,8 @@ spec:
         - mountPath: /run/secrets
           name: websight-admin-password-volume
           readOnly: true
+        - mountPath: /websight/repository
+          name: repository-volume
       timeoutSeconds: 300
       volumes:
       - name: websight-admin-password-volume
@@ -56,6 +62,10 @@ spec:
           - key: latest
             path: admin.password
           secretName: websight-admin-password
+      - name: repository-volume
+        emptyDir:
+          sizeLimit: 2Gi
+          medium: Memory
   traffic:
   - latestRevision: true
     percent: 100
