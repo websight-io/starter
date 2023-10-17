@@ -20,6 +20,10 @@ on:
     branches:
       - main
 
+env:
+  APP_FRONTEND_MODULE: application/frontend
+  E2E_TESTS_MODULE: tests/end-to-end
+
 jobs:
   verify-cms-docker-image:
     runs-on: ubuntu-latest
@@ -32,6 +36,14 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - uses: docker/setup-qemu-action@v2
       - uses: docker/setup-buildx-action@v2
       - name: Build Docker image
@@ -51,6 +63,14 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Verify Starter CMS Feature model with integration and E2E tests
         run: ./mvnw --batch-mode clean verify -P e2e-functional
       - name: Clear snapshots before caching
@@ -69,6 +89,14 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Visual tests - create reference snapshots
         run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-seed
       - uses: actions/upload-artifact@v3
@@ -92,6 +120,14 @@ jobs:
           java-version: '17'
           distribution: 'adopt'
           cache: 'maven'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/download-artifact@v3
         with:
           name: backstopjs-references
