@@ -383,7 +383,7 @@
                     <contextDir>${project.basedir}</contextDir>
                   </build>
                 </image>
-                <image>
+                <!-- <image>
                   <name>${docker.nginx.name}:${docker.nginx.tag}</name>
                   <build>
                     <buildx>
@@ -395,7 +395,7 @@
                     <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
                     <contextDir>${project.basedir}</contextDir>
                   </build>
-                </image>
+                </image> -->
               </images>
             </configuration>
             <executions>
