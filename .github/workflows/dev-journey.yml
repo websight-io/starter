@@ -21,6 +21,10 @@ permissions:
   id-token: write
   contents: read
 
+env:
+  APP_FRONTEND_MODULE: application/frontend
+  E2E_TESTS_MODULE: tests/end-to-end
+
 jobs:
   dev-journey:
     runs-on: ubuntu-latest
@@ -32,13 +36,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - name: Cache local Maven repository
-        uses: actions/cache@v3
+          cache: 'maven'
+      - uses: actions/cache@v3
         with:
-          path: ~/.m2/repository
-          key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: |
-            ${{ runner.os }}-maven-
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Build and install Cypress
         run: ./mvnw --batch-mode clean install -De2e.skip=false
@@ -61,3 +67,6 @@ jobs:
       - name: Stop environment
         if: always()
         run: docker compose -f ./environment/local-mongo/docker-compose.yml down
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;

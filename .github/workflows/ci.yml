@@ -21,8 +21,8 @@ on:
       - main
 
 env:
-  MAVEN_CACHE_VERSION: v7.0.0 # bump cache version number to invalidate cache i.e. v3 > v4
-  MAVEN_CACHE_PATH: ~/.m2/repository
+  APP_FRONTEND_MODULE: application/frontend
+  E2E_TESTS_MODULE: tests/end-to-end
 
 jobs:
   verify-cms-docker-image:
@@ -35,15 +35,22 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - uses: actions/cache/restore@v3
+          cache: 'maven'
+      - uses: actions/cache@v3
         with:
-          path: ${{ env.MAVEN_CACHE_PATH }}
-          key: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - uses: docker/setup-qemu-action@v2
       - uses: docker/setup-buildx-action@v2
       - name: Build Docker image
         run: ./mvnw --batch-mode install -DskipITs       # we build Docker image within install phase so updating maven cache is not allowed here
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
 
   verify-cms-feature-model-e2e:
     runs-on: ubuntu-latest
@@ -55,18 +62,20 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - uses: actions/cache/restore@v3
+          cache: 'maven'
+      - uses: actions/cache@v3
         with:
-          path: ${{ env.MAVEN_CACHE_PATH }}
-          key: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Verify Starter CMS Feature model with integration and E2E tests
         run: ./mvnw --batch-mode clean verify -P e2e-functional
-      - uses: actions/cache/save@v3
+      - name: Clear snapshots before caching
         if: always()
-        with:
-          path: ${{ env.MAVEN_CACHE_PATH }}
-          key: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
 
   prepare-data-for-visual-tests:
     runs-on: ubuntu-latest
@@ -79,11 +88,15 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
-      - uses: actions/cache/restore@v3
+          cache: 'maven'
+      - uses: actions/cache@v3
         with:
-          path: ${{ env.MAVEN_CACHE_PATH }}
-          key: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Visual tests - create reference snapshots
         run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-seed
       - uses: actions/upload-artifact@v3
@@ -91,6 +104,9 @@ jobs:
           name: backstopjs-references
           path: ./tests/end-to-end/backstop_data/bitmaps_reference
           if-no-files-found: error
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
 
   verify-cms-feature-model-visual:
     runs-on: ubuntu-latest
@@ -103,15 +119,19 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+          cache: 'maven'
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - uses: actions/download-artifact@v3
         with:
           name: backstopjs-references
           path: ./tests/end-to-end/backstop_data/bitmaps_reference
-      - uses: actions/cache/restore@v3
-        with:
-          path: ${{ env.MAVEN_CACHE_PATH }}
-          key: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
-          restore-keys: ${{ env.MAVEN_CACHE_VERSION }}-${{ runner.os }}-maven
       - name: Visual tests - compare with reference screenshots
         id: visualTestsCompare
         run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-check
@@ -130,3 +150,6 @@ jobs:
           path: artifacts/visual/
           if-no-files-found: error
           retention-days: 1
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
