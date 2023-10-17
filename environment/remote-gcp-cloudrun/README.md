@@ -29,7 +29,7 @@ export IMAGE_TAG=latest
 
 Build and push CSM Docker image with a single command:
 ```bash
-../../mvnw clean install -f ../../pom.xml -P dockerhub,release-image -Ddocker.hub.username=$DOCKERHUB_USERNAME
+../../mvnw clean install -f ../../pom.xml -P dockerhub,release-cms-image -Ddocker.hub.username=$DOCKERHUB_USERNAME
 ```
 
 ## Customize CMS admin password
