@@ -9,11 +9,13 @@ See:
 
 ## Ephemeral environments
 
-Ephemeral environments are environments that are not meant to be used for a long time. They are meant to be used for development purposes only (e.g. for bugfix/feature testing or demo).
+Ephemeral environments are for development (bugfix/feature testing) and demo purposes only (they are not meant to be used for a long time).
 
-To run ephemeral environment, run the [Ephemeral environment - create](https://github.com/websight-io/starter/actions/workflows/ephemeral-env-create.yml) workflow (you may choose the branch you want to run the environment from). It will create a new ephemeral environment and print the URL to the environment in the console.
+To create an ephemeral environment, run the [Ephemeral environment - create](https://github.com/websight-io/starter/actions/workflows/ephemeral-env-create.yml) workflow (you may choose the branch you want to create the environment from). It will spawn a new environment and print the CMS panel URL in the console.
 
-To delete ephemeral environment, run the [Ephemeral environment - destroy](https://github.com/websight-io/starter/actions/workflows/ephemeral-env-destroy.yml) workflow. It will delete the ephemeral environment.
+To update the environment, run the [Ephemeral environment - create](https://github.com/websight-io/starter/actions/workflows/ephemeral-env-create.yml) action agian from the same branch. It will update the environment with the latest changes on the branch. The URL will not change. Note, that all manual chagnes (like publications and content changes) will be lost.
+
+To delete ephemeral environment, run the [Ephemeral environment - destroy](https://github.com/websight-io/starter/actions/workflows/ephemeral-env-destroy.yml) workflow.
 
 > Important!
 >
