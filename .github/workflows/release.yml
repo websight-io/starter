@@ -65,4 +65,4 @@ jobs:
             CURRENT_VERSION=$(git tag | sort -V | tail -1)
             git checkout tags/${CURRENT_VERSION}
       - name: Validate & publish Luna artifacts
-        run: ./mvnw --batch-mode deploy -P ecr,release-image,-default
+        run: ./mvnw --batch-mode deploy -P ecr,release-cms-image,release-nginx-image,-default
