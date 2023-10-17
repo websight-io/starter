@@ -17,12 +17,19 @@ Make sure you have:
 Authenticate to DockerHub:
 ```bash
 docker login
+```
+
+Set environment variables:
+```bash
 export DOCKERHUB_USERNAME=<your dockerhub username>
+export IMAGE_REGISTRY=${DOCKERHUB_USERNAME}
+export ENV_NAME_POSTFIX=${DOCKERHUB_USERNAME}
+export IMAGE_TAG=latest
 ```
 
 Build and push CSM Docker image with a single command:
 ```bash
-../../mvnw clean install -f ../../pom.xml -P dockerhub -Ddocker.hub.username=$DOCKERHUB_USERNAME
+../../mvnw clean install -f ../../pom.xml -P dockerhub,release-image -Ddocker.hub.username=$DOCKERHUB_USERNAME
 ```
 
 ## Customize CMS admin password

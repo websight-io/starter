@@ -5,7 +5,7 @@ metadata:
     run.googleapis.com/launch-stage: BETA
     run.googleapis.com/ingress: all
     run.googleapis.com/ingress-status: all
-  name: websight-cms-${DOCKERHUB_USERNAME}
+  name: websight-cms-${ENV_NAME_POSTFIX}
 spec:
   template:
     metadata:
@@ -21,7 +21,8 @@ spec:
       containers:
       - args:
           - websight-cms-starter-tar
-        image: ${DOCKERHUB_USERNAME}/websight-cms-starter
+        image: ${IMAGE_REGISTRY}/websight-cms-starter:${IMAGE_TAG}
+        # image: europe-west1-docker.pkg.dev/websight-dxp-development/cms-starter/websight-cms-starter
         livenessProbe:
           failureThreshold: 3
           httpGet:
