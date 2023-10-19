@@ -10,27 +10,6 @@ Cloud Run is a serverless platform that allows you to run `stateless` HTTP conta
 
 Make sure you have:
 - your [GCP environment set](https://cloud.google.com/run/docs/setup)
-- [DockerHub](https://hub.docker.com/) account to store CMS Docker image publicly
-
-## Build and Push image to DockerHub
-
-Authenticate to DockerHub:
-```bash
-docker login
-```
-
-Set environment variables:
-```bash
-export DOCKERHUB_USERNAME=<your dockerhub username>
-export IMAGE_REGISTRY=${DOCKERHUB_USERNAME}
-export ENV_NAME_POSTFIX=${DOCKERHUB_USERNAME}
-export IMAGE_TAG=latest
-```
-
-Build and push CSM Docker image with a single command:
-```bash
-../../mvnw clean install -f ../../pom.xml -P dockerhub,release-cms-image -Ddocker.hub.username=$DOCKERHUB_USERNAME
-```
 
 ## Customize CMS admin password
 
@@ -48,6 +27,14 @@ gcloud iam service-accounts list --format json | jq -r '.[] | select(.displayNam
 ```
 
 ## Run environment
+
+Set environment variables:
+```bash
+export IMAGE_REGISTRY=europe-docker.pkg.dev/websight-io/public
+export ENV_NAME_POSTFIX=<your-name>
+export IMAGE_TAG=<released-version>
+```
+
 Run the service with command
 ```bash
 envsubst < service.tmpl.yaml | gcloud run services replace --region=europe-west1 -
@@ -56,7 +43,7 @@ and then open the URL printed in the console (it will be not available publicly 
 
 To make your environment publicly available, run the following command:
 ```bash
-gcloud run services add-iam-policy-binding websight-cms-$DOCKERHUB_USERNAME \
+gcloud run services add-iam-policy-binding websight-cms-$ENV_NAME_POSTFIX \
     --member="allUsers" \
     --role="roles/run.invoker" \
     --region=europe-west1
@@ -68,7 +55,7 @@ and login with username `wsadmin` and password from `.secrets/admin-password` fi
 
 To delete the environment and the secret, run the following commands:
 ```bash
-gcloud run services delete websight-cms-$DOCKERHUB_USERNAME --region=europe-west1
+gcloud run services delete websight-cms-$ENV_NAME_POSTFIX --region=europe-west1
 gcloud secrets delete websight-admin-password
 ```
 
