@@ -52,21 +52,21 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           token_format: access_token
-          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ vars.GCP_SERVICE_ACCOUNT_EMAIL }}
+          workload_identity_provider: ${{ vars.GCP_DEV_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_DEV_SERVICE_ACCOUNT_EMAIL }}
       - name: Login to GAR
         uses: docker/login-action@v3
         with:
-          registry: europe-west1-docker.pkg.dev
+          registry: ${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}
           username: oauth2accesstoken
           password: ${{ steps.auth.outputs.access_token }}
 
       - name: Build image and push to registry
-        run: ./mvnw --batch-mode install -DskipITs -Ddocker.cms-project.name=europe-west1-docker.pkg.dev/websight-dxp-development/cms-starter/websight-cms-starter -Ddocker.cms-project.tag=${{ github.sha }} -P release-cms-image
+        run: ./mvnw --batch-mode install -DskipITs -Ddocker.cms-project.name=${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}/${{ vars.GCP_DEV_PROJECT_ID }}/cms-starter/websight-cms-starter -Ddocker.cms-project.tag=${{ github.sha }} -P release-cms-image
 
       - name: Deploy new Cloud Run service
         run: |
-          export IMAGE_REGISTRY="europe-west1-docker.pkg.dev/websight-dxp-development/cms-starter"
+          export IMAGE_REGISTRY="${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}/${{ vars.GCP_DEV_PROJECT_ID }}/cms-starter"
           export ENV_NAME_POSTFIX=$(echo ${{ github.ref_name }} | sed 's/[^a-zA-Z0-9]/-/g' | cut -c 1-40)
           export IMAGE_TAG=${{ github.sha }}
           envsubst < environment/remote-gcp-cloudrun/service.tmpl.yaml | gcloud run services replace --region=${{ vars.GCP_DEFAULT_REGION }} -

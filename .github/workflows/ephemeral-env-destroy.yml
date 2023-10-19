@@ -32,8 +32,8 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           token_format: access_token
-          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
-          service_account: ${{ vars.GCP_SERVICE_ACCOUNT_EMAIL }}
+          workload_identity_provider: ${{ vars.GCP_DEV_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_DEV_SERVICE_ACCOUNT_EMAIL }}
       - name: Destroy Cloud Run service
         run: |
           export ENV_NAME_POSTFIX=$(echo ${{ github.ref_name }} | sed 's/[^a-zA-Z0-9]/-/g' | cut -c 1-40)
