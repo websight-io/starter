@@ -14,6 +14,9 @@
 
 name: Ephemeral environment - cleanup
 
+permissions:
+  id-token: write
+
 on:
   workflow_dispatch:
   schedule:
@@ -31,13 +34,13 @@ jobs:
         uses: google-github-actions/auth@v1
         with:
           token_format: access_token
-          credentials_json: ${{ secrets.GCP_SERVICE_CREDENTIALS_JSON }}
-          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }}
+          workload_identity_provider: ${{ vars.GCP_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_SERVICE_ACCOUNT_EMAIL }}
       - name: Destroy Cloud Run service
         run: |
           environments=$(gcloud run services list --format json | jq '.[] | .metadata.name' -r)
           for env in $environments; do
             if [[ $env == websight-cms-* ]]; then
-              gcloud run services delete -q $env --region=europe-west1
+              gcloud run services delete -q $env --region=${{ vars.GCP_DEFAULT_REGION }}
             fi
           done
