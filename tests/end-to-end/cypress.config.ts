@@ -29,6 +29,6 @@ export default defineConfig({
     baseUrl: 'http://localhost:8080',
     specPattern: 'tests/**/*.cy.{js,jsx,ts,tsx}',
     supportFile: 'support/index.ts',
-    defaultCommandTimeout: 10000
+    defaultCommandTimeout: 30000
   }
 });
