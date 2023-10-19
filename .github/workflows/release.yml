@@ -34,6 +34,7 @@ jobs:
         with:
           java-version: '17'
           distribution: 'adopt'
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
         with:
@@ -45,6 +46,21 @@ jobs:
         uses: aws-actions/amazon-ecr-login@v1
         with:
           registry-type: public
+      
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          token_format: access_token
+          workload_identity_provider: ${{ vars.GCP_RELEASE_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_RELEASE_SERVICE_ACCOUNT_EMAIL }}
+      - name: Login to GAR
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ vars.GCP_RELEASE_IMAGE_REGISTRY_URI }}
+          username: oauth2accesstoken
+          password: ${{ steps.auth.outputs.access_token }}
+
       - name: Configure Git and Maven settings
         run: |
           git config --global user.email "github.actions@ds.pl"
@@ -64,5 +80,6 @@ jobs:
             git fetch --tags
             CURRENT_VERSION=$(git tag | sort -V | tail -1)
             git checkout tags/${CURRENT_VERSION}
-      - name: Validate & publish Luna artifacts
-        run: ./mvnw --batch-mode deploy -P ecr,release-cms-image,release-nginx-image,-default
+
+      - name: Validate & publish starter artifacts
+        run: ./mvnw --batch-mode deploy -P release-cms-image,release-nginx-image,-default

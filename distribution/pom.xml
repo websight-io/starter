@@ -318,14 +318,14 @@
                 <configuration>
                   <images>
                     <image>
-                      <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
+                      <name>${docker.cms-project.name}</name>
                       <build>
                         <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
                         <contextDir>${project.basedir}</contextDir>
                       </build>
                     </image>
                     <image>
-                      <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                      <name>${docker.nginx.name}</name>
                       <build>
                         <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
                         <contextDir>${project.basedir}</contextDir>
@@ -340,27 +340,9 @@
       </build>
     </profile>
     <profile>
-      <id>ecr</id>
-      <properties>
-        <docker.cms-project.name>public.ecr.aws/ds/websight-cms-starter</docker.cms-project.name>
-        <docker.cms-project.tag>${project.version}</docker.cms-project.tag>
-        <docker.nginx.name>public.ecr.aws/ds/websight-nginx-starter</docker.nginx.name>
-        <docker.nginx.tag>${project.version}</docker.nginx.tag>
-      </properties>
-    </profile>
-    <profile>
-      <id>dockerhub</id>
-      <properties>
-        <docker.cms-project.name>${docker.hub.username}/websight-cms-starter</docker.cms-project.name>
-        <docker.cms-project.tag>${project.version}</docker.cms-project.tag>
-        <docker.nginx.name>${docker.hub.username}/websight-nginx-starter</docker.nginx.name>
-        <docker.nginx.tag>${project.version}</docker.nginx.tag>
-      </properties>
-    </profile>
-    <profile>
       <id>release-cms-image</id>
       <properties>
-        <docker.skip.push>false</docker.skip.push>
+        <!-- <docker.skip.push>false</docker.skip.push> -->
       </properties>
       <build>
         <plugins>
@@ -371,7 +353,20 @@
               <removeVolumes>true</removeVolumes>
               <images>
                 <image>
-                  <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
+                  <name>public.ecr.aws/ds/websight-cms-starter:${docker.cms-project.tag}</name>
+                  <build>
+                    <buildx>
+                      <platforms>
+                        <platform>linux/amd64</platform>
+                        <platform>linux/arm64</platform>
+                      </platforms>
+                    </buildx>
+                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
+                    <contextDir>${project.basedir}</contextDir>
+                  </build>
+                </image>
+                <image>
+                  <name>europe-docker.pkg.dev/websight-io/public/websight-cms-starter:${docker.cms-project.tag}</name>
                   <build>
                     <buildx>
                       <platforms>
