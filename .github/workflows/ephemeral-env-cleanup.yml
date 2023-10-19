@@ -16,7 +16,8 @@ name: Ephemeral environment - cleanup
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron:  '0 0 * * *'
 
 jobs:
   cleanup-ephemeral-envs:
@@ -25,3 +26,18 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          token_format: access_token
+          credentials_json: ${{ secrets.GCP_SERVICE_CREDENTIALS_JSON }}
+          service_account: ${{ secrets.GCP_SERVICE_ACCOUNT_EMAIL }}
+      - name: Destroy Cloud Run service
+        run: |
+          environments=$(gcloud run services list --format json | jq '.[] | .metadata.name' -r)
+          for env in $environments; do
+            if [[ $env == websight-cms-* ]]; then
+              gcloud run services delete -q $env --region=europe-west1
+            fi
+          done
