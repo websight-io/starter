@@ -342,7 +342,8 @@
     <profile>
       <id>release-cms-image</id>
       <properties>
-        <!-- <docker.skip.push>false</docker.skip.push> -->
+        <docker.skip.push>false</docker.skip.push>
+        <docker.cms-project.tag>${project.version}</docker.cms-project.tag>
       </properties>
       <build>
         <plugins>
@@ -404,6 +405,7 @@
       <id>release-nginx-image</id>
       <properties>
         <docker.skip.push>false</docker.skip.push>
+        <docker.nginx.tag>${project.version}</docker.nginx.tag>
       </properties>
       <build>
         <plugins>
