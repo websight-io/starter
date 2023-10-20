@@ -62,7 +62,7 @@ jobs:
           password: ${{ steps.auth.outputs.access_token }}
 
       - name: Build image and push to registry
-        run: ./mvnw --batch-mode install -DskipITs -Ddocker.cms-project.name=${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}/${{ vars.GCP_DEV_PROJECT_ID }}/cms-starter/websight-cms-starter -Ddocker.cms-project.tag=${{ github.sha }} -P release-cms-image
+        run: ./mvnw --batch-mode install -DskipITs -Ddocker.cms-project.name=${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}/${{ vars.GCP_DEV_PROJECT_ID }}/cms-starter/websight-cms-starter -Ddocker.cms-project.tag=${{ github.sha }} -P release-gar-image
 
       - name: Deploy new Cloud Run service
         run: |
