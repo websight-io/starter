@@ -72,7 +72,7 @@ jobs:
         uses: docker/setup-qemu-action@v2
       - name: Set up Docker Buildx
         uses: docker/setup-buildx-action@v2
-      - name: Create tag, push images, bump version
+      - name: Prepare release
         run: ./mvnw --batch-mode release:prepare -P release
       - name: Checkout latest tag
         run: |
@@ -81,5 +81,7 @@ jobs:
             CURRENT_VERSION=$(git tag | sort -V | tail -1)
             git checkout tags/${CURRENT_VERSION}
 
-      - name: Validate & publish starter artifacts
-        run: ./mvnw --batch-mode deploy -P release-cms-image,release-nginx-image,-default
+      - name: Build and push CMS image
+        run: ./mvnw --batch-mode deploy -P release-cms-image,-default
+      - name: Build and push Nignx image
+        run: ./mvnw --batch-mode deploy -P release-nginx-image,-default
