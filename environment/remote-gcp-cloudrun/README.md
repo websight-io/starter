@@ -10,6 +10,7 @@ Cloud Run is a serverless platform that allows you to run `stateless` HTTP conta
 
 Make sure you have:
 - your [GCP environment set](https://cloud.google.com/run/docs/setup)
+- Cloud Run API needs to be [enabled](https://cloud.google.com/apis/docs/getting-started#enabling_apis).
 
 ## Customize CMS admin password
 
@@ -32,7 +33,12 @@ Set environment variables:
 ```bash
 export IMAGE_REGISTRY=europe-docker.pkg.dev/websight-io/public
 export ENV_NAME_POSTFIX=<your-name>
-export IMAGE_TAG=<released-version>
+export IMAGE_TAG=<cms-released-version>
+```
+
+To list available `websight-cms-starter` image versions run:
+```bash
+gcloud container images list-tags europe-docker.pkg.dev/websight-io/public/websight-cms-starter --format json | jq -r '.[] | .tags[]'
 ```
 
 Run the service with command
@@ -58,5 +64,3 @@ To delete the environment and the secret, run the following commands:
 gcloud run services delete websight-cms-$ENV_NAME_POSTFIX --region=europe-west1
 gcloud secrets delete websight-admin-password
 ```
-
-
