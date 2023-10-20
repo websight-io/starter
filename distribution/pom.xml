@@ -416,7 +416,7 @@
               <removeVolumes>true</removeVolumes>
               <images>
                 <image>
-                  <name>${docker.nginx.name}:${docker.nginx.tag}</name>
+                  <name>public.ecr.aws/ds/websight-nginx-starter:${docker.nginx.tag}</name>
                   <build>
                     <buildx>
                       <platforms>
