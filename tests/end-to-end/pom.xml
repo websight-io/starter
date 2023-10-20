@@ -46,7 +46,7 @@
       <groupId>pl.ds.starter</groupId>
       <artifactId>starter-distribution</artifactId>
       <version>${project.version}</version>
-      <classifier>websight-cms-starter-mongo</classifier>
+      <classifier>websight-cms-starter-tar</classifier>
       <type>slingosgifeature</type>
     </dependency>
     <dependency>
