@@ -212,10 +212,42 @@ Please notice that we use a [nip.io](https://nip.io). It helps with simulating a
 - `distribution` - builds a distribution of the project - instance feature model and docker images for runtime components
 - `environment` - contains scripts and files used but build environment
     - `local-mongo` - (default) starts a multi-container local environment based on the [Oak Document Storage](https://jackrabbit.apache.org/oak/docs/nodestore/documentmk.html)
-    - `local-tar` - starts a single-container local environment based on the [Oak Segment Tar](https://jackrabbit.apache.org/oak/docs/nodestore/segment/overview.html)
 - `tests` - responsible for the automatic distribution validation
     - `content` - contains content used for end-to-end tests
     - `end-to-end` - end-to-end tests validating distribution
+
+## Build
+
+```bash
+mvn clean package
+```
+
+⚠️ There is a `windowsDockerHost` profile activated by default for Windows family systems. It sets the default value for the [docker.host](https://dmp.fabric8.io/#global-configuration) property.
+
+## Executing end-to-end tests
+
+Check the tests [README](./tests/README.md) for more details.
+
+
+## Running application
+
+### JVM application 
+
+```bash
+mvn clean package
+java --add-opens java.base/java.lang=ALL-UNNAMED -jar distribution/target/dependency/org.apache.sling.feature.launcher.jar -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
+```
+
+and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (use default `wsadmin/wsadmin` password).
+
+Press `CTRL + C` to stop the application.
+
+### Docker container
+
+```bash
+mvn clean install
+docker run -p 8080:8080 --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter:latest websight-cms-starter-tar
+```
 
 ## Contributing
 Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.

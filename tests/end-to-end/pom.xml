@@ -15,7 +15,8 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -27,6 +28,7 @@
 
   <artifactId>starter-tests-e2e</artifactId>
   <name>Starter: Tests: End to end</name>
+  <description>Contains functional and visual tests for the project distribution.</description>
   <packaging>pom</packaging>
 
   <properties>
@@ -39,6 +41,9 @@
 
     <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
     <node.version>v16.15.0</node.version>
+
+    <!-- properties that are replaced in the feature files -->
+    <starter-parent.version>${project.version}</starter-parent.version>
   </properties>
 
   <dependencies>
@@ -53,7 +58,7 @@
       <groupId>pl.ds.starter</groupId>
       <artifactId>starter-tests-content</artifactId>
       <version>${project.version}</version>
-      <type>pom</type>
+      <type>zip</type>
     </dependency>
   </dependencies>
 
@@ -81,13 +86,13 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            project.version
+            starter-parent.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
               <classifier>starter-project-tests</classifier>
-              <filesInclude>*.json</filesInclude>
-              <title>Starter distribution with test data</title>
+              
+              <title>Starter Project distribution with test data</title>
               <includeArtifact>
                 <groupId>pl.ds.starter</groupId>
                 <artifactId>starter-distribution</artifactId>
@@ -95,6 +100,7 @@
                 <classifier>websight-cms-starter-tar</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
+              <filesInclude>*.json</filesInclude>
             </aggregate>
           </aggregates>
           <scans>
@@ -108,8 +114,8 @@
             </repository>
           </repositories>
           <outputDir>target</outputDir>
-          <selection />
-          <extension />
+          <selection/>
+          <extension/>
         </configuration>
         <executions>
           <execution>
@@ -257,7 +263,7 @@
             </configuration>
           </execution>
           <execution>
-            <id>npx wait</id>
+            <id>npx healthcheck</id>
             <goals>
               <goal>npx</goal>
             </goals>
@@ -336,6 +342,15 @@
           <nodeVersion>${node.version}</nodeVersion>
         </configuration>
       </plugin>
+
+      <plugin>
+        <groupId>org.codehaus.mojo</groupId>
+        <artifactId>versions-maven-plugin</artifactId>
+        <version>2.11.0</version>
+        <configuration>
+          <allowSnapshots>true</allowSnapshots>
+        </configuration>
+      </plugin>
     </plugins>
   </build>
 
@@ -368,5 +383,4 @@
       </properties>
     </profile>
   </profiles>
-
 </project>

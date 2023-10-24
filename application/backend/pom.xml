@@ -15,23 +15,52 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>starter-application</artifactId>
     <version>1.21.4-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
   </parent>
 
   <artifactId>starter-backend</artifactId>
   <name>Starter: Backend</name>
+  <description>Contains application backend.</description>
 
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.sling</groupId>
         <artifactId>sling-maven-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>json-validate</id>
+            <goals>
+              <goal>validate</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.sling</groupId>
+        <artifactId>htl-maven-plugin</artifactId>
+        <executions>
+          <!-- https://teamds.atlassian.net/browse/WS-2977 -->
+          <!-- <execution>
+            <id>htl-validate</id>
+            <goals>
+              <goal>validate</goal>
+            </goals>
+          </execution> -->
+        </executions>
+        <configuration>
+          <sourceDirectory>src/main/resources/</sourceDirectory>
+          <failOnWarnings>true</failOnWarnings>
+        </configuration>
       </plugin>
       <plugin>
         <groupId>biz.aQute.bnd</groupId>

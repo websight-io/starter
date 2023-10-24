@@ -15,7 +15,9 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+  xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -26,9 +28,11 @@
 
   <artifactId>starter-distribution</artifactId>
   <name>Starter: Distribution</name>
-  <description>Starter distribution that builds the Docker Image for the projects running on WebSight.</description>
+  <description>Distribution module builds OSGi feature model and Docker Image for the projects running on WebSight.</description>
 
   <properties>
+    <!-- properties that are replaced in the feature files -->
+    <starter-parent.version>${project.version}</starter-parent.version>
     <it.installed.packages.starter.group>pl.ds.starter</it.installed.packages.starter.group>
     <it.installed.packages.starter.count>1</it.installed.packages.starter.count>
     <it.installed.packages.kyanite.group>pl.ds.kyanite</it.installed.packages.kyanite.group>
@@ -37,18 +41,6 @@
   </properties>
 
   <dependencies>
-    <dependency>
-      <groupId>pl.ds.starter</groupId>
-      <artifactId>starter-content</artifactId>
-      <version>${project.parent.version}</version>
-      <type>pom</type>
-    </dependency>
-    <dependency>
-      <groupId>pl.ds.starter</groupId>
-      <artifactId>starter-backend</artifactId>
-      <version>${project.parent.version}</version>
-      <type>pom</type>
-    </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-cms-ce-feature</artifactId>
@@ -63,8 +55,22 @@
       <classifier>oak-document-store</classifier>
       <type>slingosgifeature</type>
     </dependency>
-
-    <!-- Tests -->
+    <dependency>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-content</artifactId>
+      <version>${project.version}</version>
+      <type>zip</type>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-backend</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>starter-frontend</artifactId>
+      <version>${project.version}</version>
+    </dependency>
     <dependency>
       <groupId>pl.ds.websight</groupId>
       <artifactId>websight-cms-ce-tests-integration</artifactId>
@@ -72,7 +78,6 @@
       <classifier>tests</classifier>
       <scope>test</scope>
     </dependency>
-
   </dependencies>
 
   <build>
@@ -99,13 +104,12 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            howlite.version,project.version,kyanite.version
+            starter-parent.version,howlite.version,kyanite.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
               <classifier>websight-cms-starter-mongo</classifier>
-              <title>Starter WebSight CMS project with MongoDB</title>
-              <filesInclude>*.json</filesInclude>
+              <title>WebSight CMS with Starter Project project with MongoDB</title>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>
@@ -120,11 +124,11 @@
                 <classifier>oak-document-store</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
+              <filesInclude>*.json</filesInclude>
             </aggregate>
             <aggregate>
               <classifier>websight-cms-starter-tar</classifier>
-              <title>Starter WebSight CMS project</title>
-              <filesInclude>*.json</filesInclude>
+              <title>WebSight CMS with Starter Project project</title>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>
@@ -139,6 +143,7 @@
                 <classifier>oak-node-store</classifier>
                 <type>slingosgifeature</type>
               </includeArtifact>
+              <filesInclude>*.json</filesInclude>
             </aggregate>
           </aggregates>
           <scans>
