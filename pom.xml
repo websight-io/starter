@@ -15,7 +15,8 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>pl.ds.starter</groupId>
@@ -50,16 +51,6 @@
     <url>https://websight.io</url>
   </organization>
 
-  <repositories>
-    <repository>
-      <id>websight-repo</id>
-      <url>https://repo.websight.io/maven/</url>
-      <snapshots>
-        <enabled>false</enabled>
-      </snapshots>
-    </repository>
-  </repositories>
-
   <properties>
     <!-- generic -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -72,7 +63,6 @@
     <docker.cms-project.tag>latest</docker.cms-project.tag>
     <docker.nginx.name>ds/websight-nginx-starter</docker.nginx.name>
     <docker.nginx.tag>latest</docker.nginx.tag>
-    <docker.hub.username>NOT_CONFIGURED</docker.hub.username>
 
     <!-- admin user default credentials for tests -->
     <websight.admin.username>wsadmin</websight.admin.username>
@@ -86,19 +76,7 @@
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.19</howlite.version>
     <kyanite.version>0.2.0</kyanite.version>
-
-    <mongo.container.image>mongo:4.4.6</mongo.container.image>
   </properties>
-
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>pl.ds.websight</groupId>
-        <artifactId>websight-cms-ce-feature</artifactId>
-        <version>${websight.cms.version}</version>
-      </dependency>
-    </dependencies>
-  </dependencyManagement>
 
   <profiles>
     <profile>
@@ -107,7 +85,7 @@
           <family>windows</family>
         </os>
       </activation>
-      <id>windows</id>
+      <id>windowsDockerHost</id>
       <properties>
         <docker.host>tcp://localhost:2375</docker.host>
       </properties>
@@ -157,5 +135,15 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <repositories>
+    <repository>
+      <id>websight-repo</id>
+      <url>https://repo.websight.io/maven/</url>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
 
 </project>

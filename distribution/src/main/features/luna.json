@@ -19,16 +19,16 @@
   },
   "bundles": [
     {
-      "id": "pl.ds.starter:starter-backend:${project.version}",
+      "id": "pl.ds.starter:starter-backend:${starter-parent.version}",
       "start-order": "25"
     },
     {
-      "id": "pl.ds.starter:starter-frontend:${project.version}",
+      "id": "pl.ds.starter:starter-frontend:${starter-parent.version}",
       "start-order": "25"
     }
   ],
   "content-packages:ARTIFACTS|true": [
-    "pl.ds.starter:starter-content:zip:${project.version}"
+    "pl.ds.starter:starter-content:zip:${starter-parent.version}"
   ]
 }
   
