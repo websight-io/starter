@@ -70,6 +70,7 @@
     <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
 
     <!-- WebSight CMS Version -->
+    <!-- remember to update the verion in Dockerfile too! -->
     <websight.cms.version>1.21.2</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>

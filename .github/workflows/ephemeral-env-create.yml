@@ -31,22 +31,8 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-      - uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-          cache: 'maven'
-      - uses: actions/cache@v3
-        with:
-          path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - uses: docker/setup-qemu-action@v2
       - uses: docker/setup-buildx-action@v2
-
       - name: Authenticate to Google Cloud
         id: auth
         uses: google-github-actions/auth@v1
@@ -54,27 +40,12 @@ jobs:
           token_format: access_token
           workload_identity_provider: ${{ vars.GCP_DEV_WORKLOAD_IDENTITY_PROVIDER }}
           service_account: ${{ vars.GCP_DEV_SERVICE_ACCOUNT_EMAIL }}
-      - name: Login to GAR
-        uses: docker/login-action@v3
-        with:
-          registry: ${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}
-          username: oauth2accesstoken
-          password: ${{ steps.auth.outputs.access_token }}
-
-      - name: Build image and push to registry
-        run: ./mvnw --batch-mode install -DskipITs -Ddocker.cms-project.name=${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}/${{ vars.GCP_DEV_PROJECT_ID }}/cms-starter/websight-cms-starter -Ddocker.cms-project.tag=${{ github.sha }} -P release-gar-image
-
-      - name: Deploy new Cloud Run service
+      - name: Deploy new Cloud Run environment
         run: |
-          export IMAGE_REGISTRY="${{ vars.GCP_DEV_IMAGE_REGISTRY_URI }}/${{ vars.GCP_DEV_PROJECT_ID }}/cms-starter"
           export ENV_NAME_POSTFIX=$(echo ${{ github.ref_name }} | sed 's/[^a-zA-Z0-9]/-/g' | cut -c 1-40)
-          export IMAGE_TAG=${{ github.sha }}
-          envsubst < environment/remote-gcp-cloudrun/service.tmpl.yaml | gcloud run services replace --region=${{ vars.GCP_DEFAULT_REGION }} -
-          gcloud run services add-iam-policy-binding websight-cms-$ENV_NAME_POSTFIX \
-            --member="allUsers" \
-            --role="roles/run.invoker" \
-            --region=${{ vars.GCP_DEFAULT_REGION }}
-
-      - name: Clear snapshots before caching
-        if: always()
-        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
+          gcloud run deploy websight-cms-$ENV_NAME_POSTFIX --source=. \
+          --update-secrets=/run/secrets/admin.password=websight-admin-password:1 \
+          --cpu=2 --memory=2Gi --no-cpu-throttling \
+          --min-instances=1 --max-instances=1 \
+          --allow-unauthenticated --region=${{ vars.GCP_DEFAULT_REGION }} \
+          --quiet
