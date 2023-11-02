@@ -1,0 +1,15 @@
+.idea
+.vscode
+.DS_Store
+*.iml
+**/target
+
+**/node
+**/node_modules
+**/dist
+**/launcher
+.projects
+
+# Not needed in build
+assets
+environment
