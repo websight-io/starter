@@ -21,7 +21,7 @@
 
   <groupId>pl.ds.starter</groupId>
   <artifactId>starter-parent</artifactId>
-  <version>1.21.4-SNAPSHOT</version>
+  <version>1.22.0-SNAPSHOT</version>
   <name>Starter Project Parent</name>
   <packaging>pom</packaging>
 
@@ -70,12 +70,12 @@
     <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
 
     <!-- WebSight CMS Version -->
-    <websight.cms.version>1.21.2</websight.cms.version>
+    <websight.cms.version>1.22.0</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.19</howlite.version>
-    <kyanite.version>0.2.0</kyanite.version>
+    <kyanite.version>0.3.2</kyanite.version>
   </properties>
 
   <profiles>
