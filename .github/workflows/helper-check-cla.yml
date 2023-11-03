@@ -15,11 +15,28 @@
 name: 'Helper: CLA Assistant'
 
 on:
-  workflow_dispatch:
-  
+  issue_comment:
+    types: [created]
+  pull_request_target:
+    types: [opened,closed,synchronize]
+
 jobs:
-  placeholder:
+  check-cla-signature:
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder step
-        run: echo "I'm here just to have the workflow file on the main branch, while the real workflow is on the feature branch."
+      - name: 'Check Contributor License Agreement signature'
+        if: (github.event.comment.body == 'recheck' || github.event.comment.body == 'I have read the CLA Document and I hereby sign the CLA') || github.event_name == 'pull_request_target'
+        uses: contributor-assistant/github-action@v2.2.0
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PERSONAL_ACCESS_TOKEN : ${{ secrets.PERSONAL_ACCESS_TOKEN }}
+        with:
+          path-to-signatures: '.github/signatures/v1/cla.json'
+          branch: 'main'
+          allowlist: user1,bot*
+          create-file-commit-message: 'Creating file for storing individual CLA Signatures'
+          signed-commit-message: '$contributorName has signed the individual CLA in #$pullRequestNo'
+          custom-notsigned-prcomment: 'You must sign a [Contributor License Agreement](https://github.com/websight-io/starter/blob/main/CONTRIBUTING.md#contributor-license-agreement-cla) (CLA) to accept your pull request. You only need to do this once. If you submit a pull request for the first time, our CLA bot will automatically ask you to sign before merging the pull request.'
+          custom-pr-sign-comment: 'I have read the Dynamic Solutions Individual Contributor License Agreement (CLA) Document and I hereby sign the CLA'
+          custom-allsigned-prcomment: '**CLA bot** All Contributors have signed the [Dynamic Solutions Individual Contributor License Agreement](https://docs.websight.io/product/cla/individual/v1/)'
+          lock-pullrequest-aftermerge: true

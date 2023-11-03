@@ -14,12 +14,35 @@
 
 name: 'ENV Ephemeral: cleanup'
 
+permissions:
+  id-token: write
+
 on:
   workflow_dispatch:
-  
+  schedule:
+    - cron:  '0 0 * * *'
+
 jobs:
-  placeholder:
+  cleanup-ephemeral-envs:
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder step
-        run: echo "I'm here just to have the workflow file on the main branch, while the real workflow is on the feature branch."
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          token_format: access_token
+          workload_identity_provider: ${{ vars.GCP_DEV_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_DEV_SERVICE_ACCOUNT_EMAIL }}
+          
+      - name: Destroy Cloud Run service
+        run: |
+          environments=$(gcloud run services list --format json | jq '.[] | .metadata.name' -r)
+          for env in $environments; do
+            if [[ $env == websight-cms-* ]]; then
+              gcloud run services delete -q $env --region=${{ vars.GCP_DEFAULT_REGION }}
+            fi
+          done

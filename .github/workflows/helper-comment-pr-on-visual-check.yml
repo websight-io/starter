@@ -15,11 +15,67 @@
 name: 'Helper: comment PR with visual tests report'
 
 on:
-  workflow_dispatch:
-  
+  workflow_run:
+    types:
+      - completed
+    workflows:
+      - 'CI: verify build'
+
 jobs:
-  placeholder:
+  comment-on-pr:
+    if: github.event.workflow_run.conclusion == 'success' && github.event.workflow_run.event == 'pull_request'
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder step
-        run: echo "I'm here just to have the workflow file on the main branch, while the real workflow is on the feature branch."
+      - name: Get Artifact and Pull request info
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          WORKFLOW_RUN_EVENT_OBJ: ${{ toJSON(github.event.workflow_run) }}
+          OWNER: ${{ github.repository_owner }}
+          REPO: ${{ github.event.repository.name }}
+        run: ./.github/scripts/get-visual-test-artifact-and-pr-info.sh
+          
+      - name: Get current date
+        id: currentDateStep
+        run: echo "CURRENT_DATE=$(date +'%Y-%m-%dT%H%M%S')" >> "$GITHUB_OUTPUT"
+
+      - name: Add a comment
+        if: "${{ env.ARTIFACT_ID != '' }}"
+        env:
+          JOB_PATH: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.PREVIOUS_JOB_ID }}"
+          ARTIFACT_URL: "${{ github.server_url }}/${{ github.repository }}/suites/${{ env.SUITE_ID }}/artifacts/${{ env.ARTIFACT_ID }}"
+          HEAD_SHA: "${{ env.HEAD_SHA }}"
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ env.PR_NUMBER }}
+          body: |
+            ## ⚠️ Visual tests status
+
+            Some visual changes require review.
+
+            Please download BackstopJS report and check if there is no visual regression.
+
+            Please note that the report only stay for 1 day!
+
+            | Name     | Link                    |
+            | -------- | ----------------------- |
+            | Commit   | ${{ env.HEAD_SHA }}     |
+            | Logs     | ${{ env.JOB_PATH }}     |
+            | Report   | [visual-tests-report_${{ steps.currentDateStep.outputs.CURRENT_DATE }}.zip](${{ env.ARTIFACT_URL }}) |
+            
+      - name: Add a comment
+        if: "${{ env.ARTIFACT_ID == '' }}"
+        env:
+          JOB_PATH: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.PREVIOUS_JOB_ID }}"
+          HEAD_SHA: "${{ env.HEAD_SHA }}"
+        uses: peter-evans/create-or-update-comment@v3
+        with:
+          issue-number: ${{ env.PR_NUMBER }}
+          body: |
+            ## ✅ Visual tests status
+
+            No visual changes detected.
+            
+            | Name     | Link                    |
+            | -------- | ----------------------- |
+            | Commit   | ${{ env.HEAD_SHA }}     |
+            | Logs     | ${{ env.JOB_PATH }}     |
