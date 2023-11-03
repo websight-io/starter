@@ -25,7 +25,7 @@ COPY distribution ./distribution
 COPY tests ./tests
 
 # Build a release artifact.
-RUN mvn package -DskipTests
+RUN mvn package -DskipTests -Drat.skip=true
 
 # Use the Official OpenJDK image for a lean production stage of our multi-stage build.
 FROM docker.io/openjdk:17-slim
