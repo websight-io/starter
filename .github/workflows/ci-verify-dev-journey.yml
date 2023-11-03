@@ -15,11 +15,72 @@
 name: 'CI: verify dev journey'
 
 on:
-  workflow_dispatch:
-  
+  pull_request:
+
+permissions:
+  id-token: write
+  contents: read
+
+env:
+  APP_FRONTEND_MODULE: application/frontend
+  E2E_TESTS_MODULE: tests/end-to-end
+
 jobs:
-  placeholder:
+  verify-dev-journey:
+    name: Verify dev journey
     runs-on: ubuntu-latest
+
     steps:
-      - name: Placeholder step
-        run: echo "I'm here just to have the workflow file on the main branch, while the real workflow is on the feature branch."
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: 'maven'
+
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Build and install Cypress
+        run: ./mvnw --batch-mode clean install -De2e.skip=false
+
+      - name: Run environment
+        run: |
+          docker compose -f ./environment/local-mongo/docker-compose.yml up -d
+          sleep 10
+
+      - name: Verify environment
+        run: ./.github/scripts/dev-journey-1-verify-env.sh\
+
+      - name: Prepare project changes
+        run: ./.github/scripts/dev-journey-2-prepare-project-changes.sh
+
+      - name: Install changes
+        run: ./mvnw -f ./application/backend/pom.xml clean install -P autoInstallBundle
+
+      - name: Validate if functional tests detect changes
+        run: ./.github/scripts/dev-journey-3-validate-functional-tests.sh
+
+      - name: Update functional tests
+        run: ./.github/scripts/dev-journey-4-update-functionals.sh
+
+      - name: Validate functional tests
+        run: npm run-script test --prefix ./tests/end-to-end
+
+      - name: Stop environment
+        if: always()
+        run: docker compose -f ./environment/local-mongo/docker-compose.yml down
+        
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;

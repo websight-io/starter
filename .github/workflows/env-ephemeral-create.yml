@@ -14,12 +14,42 @@
 
 name: 'ENV Ephemeral: create'
 
+permissions:
+  id-token: write
+
 on:
   workflow_dispatch:
-  
+
+env:
+  APP_FRONTEND_MODULE: application/frontend
+  E2E_TESTS_MODULE: tests/end-to-end
+
 jobs:
-  placeholder:
+  create-ephemeral-env:
     runs-on: ubuntu-latest
     steps:
-      - name: Placeholder step
-        run: echo "I'm here just to have the workflow file on the main branch, while the real workflow is on the feature branch."
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: docker/setup-qemu-action@v2
+
+      - uses: docker/setup-buildx-action@v2
+
+      - name: Authenticate to Google Cloud
+        id: auth
+        uses: google-github-actions/auth@v1
+        with:
+          token_format: access_token
+          workload_identity_provider: ${{ vars.GCP_DEV_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ vars.GCP_DEV_SERVICE_ACCOUNT_EMAIL }}
+          
+      - name: Deploy new Cloud Run environment
+        run: |
+          export ENV_NAME_POSTFIX=$(echo ${{ github.ref_name }} | sed 's/[^a-zA-Z0-9]/-/g' | cut -c 1-40)
+          gcloud run deploy websight-cms-$ENV_NAME_POSTFIX --source=. \
+          --update-secrets=/run/secrets/admin.password=websight-admin-password:1 \
+          --cpu=2 --memory=2Gi --no-cpu-throttling \
+          --min-instances=1 --max-instances=1 \
+          --allow-unauthenticated --region=${{ vars.GCP_DEFAULT_REGION }} \
+          --quiet
