@@ -13,8 +13,7 @@
 # limitations under the License.
 
 # Use the CMS builder image with cached .m2 repo to create a build artifact.
-# FixMe: use the latest version of the builder image after the CMS release.
-FROM europe-docker.pkg.dev/websight-io/public/websight-cms-builder:1.21.2-test as builder
+FROM europe-docker.pkg.dev/websight-io/public/websight-cms-builder:1.22.0 as builder
 
 # Copy local code to the container image.
 WORKDIR /app
