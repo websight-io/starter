@@ -15,13 +15,12 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>pl.ds.starter</groupId>
   <artifactId>starter-parent</artifactId>
-  <version>1.22.0-SNAPSHOT</version>
+  <version>1.22.0</version>
   <name>Starter Project Parent</name>
   <packaging>pom</packaging>
 
@@ -43,7 +42,7 @@
     <connection>scm:git:git://github.com/websight-io/starter.git</connection>
     <developerConnection>scm:git:git@github.com:websight-io/starter.git</developerConnection>
     <url>https://github.com/websight-io/starter</url>
-    <tag>HEAD</tag>
+    <tag>v1.22.0</tag>
   </scm>
 
   <organization>
