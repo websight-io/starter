@@ -6,9 +6,6 @@ All data is stored in the MongoDB that runs as a separate container (see the `do
 ## Usage
 
 * Build
-    ```bash
-    ../../mvnw -f ../pom.xml clean install
-    ```
 
 * Deploy
     ```bash
@@ -17,7 +14,7 @@ All data is stored in the MongoDB that runs as a separate container (see the `do
 
     Services are available with URLs:
     - [localhost:8080](http://localhost:8080/) - CMS admin panel (`wsadmin`/`wsadmin`)
-    - [localhost](http://localhost/) - after publishing pages will be available on the standard `:80` port, e.g. http://localhost/Homepage.html
+    - [localhost:8080/published](http://localhost:8080/published) - after publishing pages will be available on `/published` path, e.g. http://localhost:8080/published/luna/pages/Homepage.html
 
 * Cleanup
     ```bash

@@ -81,8 +81,8 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>3.2.0</version>
         <configuration>
           <filesets>
             <fileset>
@@ -98,7 +98,6 @@
       <plugin>
         <groupId>org.apache.sling</groupId>
         <artifactId>slingfeature-maven-plugin</artifactId>
-        <version>1.6.6</version>
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
@@ -180,19 +179,32 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
             <id>prepare-feature-launcher</id>
             <goals>
-              <goal>get</goal>
-              <goal>copy</goal>
+              <goal>unpack</goal>
             </goals>
             <phase>package</phase>
             <configuration>
-              <!-- 1.1.28 and newer versions don't work out-of-the-box due to SLING-10956 -->
-              <artifact>org.apache.sling:org.apache.sling.feature.launcher:1.1.26</artifact>
-              <stripVersion>true</stripVersion>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.apache.sling</groupId>
+                  <artifactId>org.apache.sling.feature.launcher</artifactId>
+                  <version>${sling.feature.launcher.version}</version>
+                  <type>tar.gz</type>
+                  <!-- remove the version number from the unpacked folder -->
+                  <fileMappers>
+                    <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                      <pattern>
+                        \Qorg.apache.sling.feature.launcher-${sling.feature.launcher.version}\E</pattern>
+                      <replacement>org.apache.sling.feature.launcher</replacement>
+                    </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                  </fileMappers>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
         </executions>
@@ -211,7 +223,6 @@
           <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>build-helper-maven-plugin</artifactId>
-            <version>3.3.0</version>
             <executions>
               <execution>
                 <id>reserve-network-port</id>
@@ -231,7 +242,6 @@
           <plugin>
             <groupId>org.apache.sling</groupId>
             <artifactId>feature-launcher-maven-plugin</artifactId>
-            <version>0.1.2</version>
             <configuration>
               <launches>
                 <launch>
@@ -268,7 +278,7 @@
           <plugin>
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-failsafe-plugin</artifactId>
-            <version>3.0.0-M7</version>
+            <version>3.2.1</version>
             <configuration>
               <dependenciesToScan>
                 <dependency>pl.ds.websight:websight-cms-ce-tests-integration</dependency>
@@ -302,153 +312,6 @@
                     <exclude>**/CmsDatabaseIT*</exclude>
                   </excludes>
                 </configuration>
-              </execution>
-            </executions>
-          </plugin>
-          <plugin>
-            <groupId>io.fabric8</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <configuration>
-              <removeVolumes>true</removeVolumes>
-            </configuration>
-            <executions>
-              <execution>
-                <id>build-docker-image</id>
-                <phase>install</phase>
-                <goals>
-                  <goal>build</goal>
-                </goals>
-                <configuration>
-                  <images>
-                    <image>
-                      <name>${docker.cms-project.name}</name>
-                      <build>
-                        <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
-                        <contextDir>${project.basedir}</contextDir>
-                      </build>
-                    </image>
-                    <image>
-                      <name>${docker.nginx.name}</name>
-                      <build>
-                        <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
-                        <contextDir>${project.basedir}</contextDir>
-                      </build>
-                    </image>
-                  </images>
-                </configuration>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>release-gar-image</id>
-      <properties>
-        <docker.skip.push>false</docker.skip.push>
-        <docker.cms-project.name>europe-docker.pkg.dev/websight-io/public/websight-cms-starter</docker.cms-project.name>
-        <docker.cms-project.tag>${project.version}</docker.cms-project.tag>
-      </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>io.fabric8</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <configuration>
-              <removeVolumes>true</removeVolumes>
-              <images>
-                <image>
-                  <name>${docker.cms-project.name}:${docker.cms-project.tag}</name>
-                  <build>
-                    <buildx>
-                      <platforms>
-                        <platform>linux/amd64</platform>
-                        <platform>linux/arm64</platform>
-                      </platforms>
-                    </buildx>
-                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-              </images>
-            </configuration>
-            <executions>
-              <execution>
-                <id>build-docker-image</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>build</goal>
-                </goals>
-              </execution>
-              <execution>
-                <id>push-docker-image</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>push</goal>
-                </goals>
-              </execution>
-            </executions>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-    <profile>
-      <id>release-ecr-images</id>
-      <properties>
-        <docker.skip.push>false</docker.skip.push>
-        <docker.cms-project.tag>${project.version}</docker.cms-project.tag>
-        <docker.nginx.tag>${project.version}</docker.nginx.tag>
-      </properties>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>io.fabric8</groupId>
-            <artifactId>docker-maven-plugin</artifactId>
-            <configuration>
-              <removeVolumes>true</removeVolumes>
-              <images>
-                <image>
-                  <name>public.ecr.aws/ds/websight-cms-starter:${docker.cms-project.tag}</name>
-                  <build>
-                    <buildx>
-                      <platforms>
-                        <platform>linux/amd64</platform>
-                        <platform>linux/arm64</platform>
-                      </platforms>
-                    </buildx>
-                    <dockerFile>src/main/docker/websight-cms-starter/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-                <image>
-                  <name>public.ecr.aws/ds/websight-nginx-starter:${docker.nginx.tag}</name>
-                  <build>
-                    <buildx>
-                      <platforms>
-                        <platform>linux/amd64</platform>
-                        <platform>linux/arm64</platform>
-                      </platforms>
-                    </buildx>
-                    <dockerFile>src/main/docker/nginx/Dockerfile</dockerFile>
-                    <contextDir>${project.basedir}</contextDir>
-                  </build>
-                </image>
-              </images>
-            </configuration>
-            <executions>
-              <execution>
-                <id>build-docker-image</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>build</goal>
-                </goals>
-              </execution>
-              <execution>
-                <id>push-docker-image</id>
-                <phase>package</phase>
-                <goals>
-                  <goal>push</goal>
-                </goals>
               </execution>
             </executions>
           </plugin>
