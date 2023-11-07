@@ -294,7 +294,7 @@
             <phase>integration-test</phase>
             <configuration>
               <skip>${e2e.skip.cypress}</skip>
-              <arguments>cypress run test:ci</arguments>
+              <arguments>cypress run test:ci --browser chrome</arguments>
               <environmentVariables>
                 <CYPRESS_baseUrl>http://localhost:${cms.port}</CYPRESS_baseUrl>
                 <CYPRESS_loginUsername>${websight.admin.username}</CYPRESS_loginUsername>
