@@ -56,11 +56,12 @@ jobs:
 
       - name: Run environment
         run: |
+          docker build -t ds/websight-cms-starter . 
           docker compose -f ./environment/local-mongo/docker-compose.yml up -d
           sleep 10
 
       - name: Verify environment
-        run: ./.github/scripts/dev-journey-1-verify-env.sh\
+        run: ./.github/scripts/dev-journey-1-verify-env.sh
 
       - name: Prepare project changes
         run: ./.github/scripts/dev-journey-2-prepare-project-changes.sh

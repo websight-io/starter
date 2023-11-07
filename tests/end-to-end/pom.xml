@@ -15,7 +15,9 @@
     limitations under the License.
 -->
 
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
   <parent>
@@ -38,7 +40,6 @@
     <e2e.skip.visual>true</e2e.skip.visual>
     <e2e.skip.visual.seed>true</e2e.skip.visual.seed>
 
-    <frontend-maven-plugin.version>1.12.1</frontend-maven-plugin.version>
     <node.version>v16.15.0</node.version>
 
     <!-- properties that are replaced in the feature files -->
@@ -64,8 +65,8 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-clean-plugin</artifactId>
-        <version>3.2.0</version>
         <configuration>
           <filesets>
             <fileset>
@@ -81,7 +82,6 @@
       <plugin>
         <groupId>org.apache.sling</groupId>
         <artifactId>slingfeature-maven-plugin</artifactId>
-        <version>1.6.6</version>
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
@@ -90,7 +90,7 @@
           <aggregates>
             <aggregate>
               <classifier>starter-project-tests</classifier>
-              
+
               <title>Starter Project distribution with test data</title>
               <includeArtifact>
                 <groupId>pl.ds.starter</groupId>
@@ -137,19 +137,32 @@
         </executions>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-dependency-plugin</artifactId>
         <executions>
           <execution>
             <id>prepare-feature-launcher</id>
             <goals>
-              <goal>get</goal>
-              <goal>copy</goal>
+              <goal>unpack</goal>
             </goals>
             <phase>package</phase>
             <configuration>
-              <!-- 1.1.28 and newer versions don't work out-of-the-box due to SLING-10956 -->
-              <artifact>org.apache.sling:org.apache.sling.feature.launcher:1.1.26</artifact>
-              <stripVersion>true</stripVersion>
+              <artifactItems>
+                <artifactItem>
+                  <groupId>org.apache.sling</groupId>
+                  <artifactId>org.apache.sling.feature.launcher</artifactId>
+                  <version>${sling.feature.launcher.version}</version>
+                  <type>tar.gz</type>
+                  <!-- remove the version number from the unpacked folder -->
+                  <fileMappers>
+                    <org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                      <pattern>
+                        \Qorg.apache.sling.feature.launcher-${sling.feature.launcher.version}\E</pattern>
+                      <replacement>org.apache.sling.feature.launcher</replacement>
+                    </org.codehaus.plexus.components.io.filemappers.RegExpFileMapper>
+                  </fileMappers>
+                </artifactItem>
+              </artifactItems>
             </configuration>
           </execution>
         </executions>
@@ -157,7 +170,6 @@
       <plugin>
         <groupId>org.codehaus.mojo</groupId>
         <artifactId>build-helper-maven-plugin</artifactId>
-        <version>3.3.0</version>
         <executions>
           <execution>
             <id>reserve-network-port</id>
@@ -176,7 +188,6 @@
       <plugin>
         <groupId>org.apache.sling</groupId>
         <artifactId>feature-launcher-maven-plugin</artifactId>
-        <version>0.1.2</version>
         <configuration>
           <launches>
             <launch>
@@ -213,7 +224,6 @@
       <plugin>
         <groupId>com.github.eirslett</groupId>
         <artifactId>frontend-maven-plugin</artifactId>
-        <version>${frontend-maven-plugin.version}</version>
         <executions>
           <execution>
             <id>install node and npm</id>
@@ -311,7 +321,7 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
-             <skip>${e2e.skip.visual.seed}</skip>
+              <skip>${e2e.skip.visual.seed}</skip>
               <arguments>npm run test:visual:seed</arguments>
               <environmentVariables>
                 <BACKSTOPJS_baseUrlCms>http://localhost:${cms.port}</BACKSTOPJS_baseUrlCms>
@@ -327,7 +337,7 @@
             </goals>
             <phase>integration-test</phase>
             <configuration>
-             <skip>${e2e.skip.visual}</skip>
+              <skip>${e2e.skip.visual}</skip>
               <arguments>npm run test:visual:check</arguments>
               <environmentVariables>
                 <BACKSTOPJS_baseUrlCms>http://localhost:${cms.port}</BACKSTOPJS_baseUrlCms>

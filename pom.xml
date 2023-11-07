@@ -57,11 +57,8 @@
     <maven.compiler.source>17</maven.compiler.source>
     <maven.compiler.target>17</maven.compiler.target>
 
-    <!-- base docker distributions -->
-    <docker.cms-project.name>ds/websight-cms-starter</docker.cms-project.name>
-    <docker.cms-project.tag>latest</docker.cms-project.tag>
-    <docker.nginx.name>ds/websight-nginx-starter</docker.nginx.name>
-    <docker.nginx.tag>latest</docker.nginx.tag>
+    <!-- plugins -->
+    <sling.feature.launcher.version>1.3.0</sling.feature.launcher.version>
 
     <!-- admin user default credentials for tests -->
     <websight.admin.username>wsadmin</websight.admin.username>
@@ -78,26 +75,12 @@
     <kyanite.version>0.3.2</kyanite.version>
   </properties>
 
-  <profiles>
-    <profile>
-      <activation>
-        <os>
-          <family>windows</family>
-        </os>
-      </activation>
-      <id>windowsDockerHost</id>
-      <properties>
-        <docker.host>tcp://localhost:2375</docker.host>
-      </properties>
-    </profile>
-  </profiles>
-
   <build>
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>
-        <version>3.0.0</version>
+        <version>3.1.1</version>
         <configuration>
           <skip>true</skip>
         </configuration>
@@ -123,14 +106,39 @@
     <pluginManagement>
       <plugins>
         <plugin>
-          <groupId>io.fabric8</groupId>
-          <artifactId>docker-maven-plugin</artifactId>
-          <version>0.43.4</version>
-        </plugin>
-        <plugin>
           <groupId>org.apache.rat</groupId>
           <artifactId>apache-rat-plugin</artifactId>
           <version>0.15</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-dependency-plugin</artifactId>
+          <version>3.6.1</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.sling</groupId>
+          <artifactId>slingfeature-maven-plugin</artifactId>
+          <version>1.7.2</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.sling</groupId>
+          <artifactId>feature-launcher-maven-plugin</artifactId>
+          <version>0.1.6</version>
+        </plugin>
+        <plugin>
+          <groupId>org.codehaus.mojo</groupId>
+            <artifactId>build-helper-maven-plugin</artifactId>
+          <version>3.4.0</version>
+        </plugin>
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-clean-plugin</artifactId>
+          <version>3.3.1</version>
+        </plugin>
+        <plugin>
+          <groupId>com.github.eirslett</groupId>
+          <artifactId>frontend-maven-plugin</artifactId>
+          <version>1.14.1</version>
         </plugin>
       </plugins>
     </pluginManagement>

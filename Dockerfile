@@ -32,17 +32,19 @@ FROM docker.io/openjdk:17-slim
 EXPOSE 8080
 
 RUN mkdir /websight && \
-    mkdir /websight/cache && \
-    mkdir /websight/docroot && \
+    mkdir /websight/org.apache.sling.feature.launcher && \
+    mkdir /websight/launcher && \
+    mkdir /websight/artifacts && \
     mkdir /var/websight
 
 VOLUME /websight/repository
 VOLUME /websight/docroot
 
-COPY --from=builder /app/distribution/src/main/docker/websight-cms-starter/bin /websight/bin
+COPY --from=builder /app/distribution/src/main/container/bin /websight/bin
+COPY --from=builder /app/distribution/target/dependency/org.apache.sling.feature.launcher /websight/org.apache.sling.feature.launcher
+COPY --from=builder /app/distribution/target/artifacts/ /websight/artifacts/
+
 RUN ["chmod", "+x", "/websight/bin/launch.sh"]
-COPY --from=builder /app/distribution/target/dependency/org.apache.sling.feature.launcher.jar /websight
-COPY --from=builder /app/distribution/target/artifacts/ /websight/cache/
 
 RUN apt-get update && apt-get install curl --assume-yes
 HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD curl --fail http://localhost:8080/system/health || exit 1

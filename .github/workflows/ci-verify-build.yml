@@ -15,6 +15,7 @@
 name: 'CI: verify build'
 
 on:
+  workflow_dispatch:
   pull_request:
   push:
     branches:
@@ -33,31 +34,12 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-          cache: 'maven'
-
-      - uses: actions/cache@v3
-        with:
-          path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
       - uses: docker/setup-qemu-action@v2
 
       - uses: docker/setup-buildx-action@v2
 
       - name: Build Docker image
-        run: ./mvnw --batch-mode install -DskipITs
-
-      - name: Clear snapshots before caching
-        if: always()
-        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
+        run: docker build -t ds/websight-cms-starter . 
 
   verify-e2e-tests:
     name: Verify E2E tests

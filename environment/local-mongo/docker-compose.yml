@@ -33,7 +33,6 @@ services:
     command: ["websight-cms-starter-mongo"]
     volumes:
       - starter-project_cms_logs:/websight/logs
-      - starter-project_site_repository:/websight/docroot
       #- localsync:${PWD}/../../:ro
     secrets:
       - source: mongo_password
@@ -62,23 +61,9 @@ services:
       - source: mongo_password
         target: mongo.password
 
-
-  # HTTP Server
-  nginx:
-    image: ds/websight-nginx-starter:latest
-    ports:
-      - "80:80"
-      - "81:81"
-      - "82:82"
-      - "83:83"
-      - "84:84"
-    volumes:
-      - starter-project_site_repository:/usr/share/nginx/html:ro
-
 volumes:
   starter-project_cms_logs:
   starter-project_mongo_repository:
-  starter-project_site_repository:
   # localsync:
   #   driver: local
   #   driver_opts:

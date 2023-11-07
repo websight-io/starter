@@ -171,7 +171,7 @@ The following technologies are used in designing and prototyping:
 ### Prerequisites
 
 - [AdoptOpenJDK 17](https://adoptium.net/) with `x64`/`aarch64` architecture (on mac use `brew install openjdk@17`).
-- [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+- Optionally, [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ### How to build
 
@@ -235,7 +235,7 @@ Check the tests [README](./tests/README.md) for more details.
 
 ```bash
 mvn clean package
-java --add-opens java.base/java.lang=ALL-UNNAMED -jar distribution/target/dependency/org.apache.sling.feature.launcher.jar -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
+distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
 ```
 
 and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (use default `wsadmin/wsadmin` password).
@@ -245,8 +245,8 @@ Press `CTRL + C` to stop the application.
 ### Docker container
 
 ```bash
-mvn clean install
-docker run -p 8080:8080 --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter:latest websight-cms-starter-tar
+docker build -t ds/websight-cms-starter . 
+docker run -p 8080:8080 --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter
 ```
 
 ## Contributing
