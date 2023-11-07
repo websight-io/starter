@@ -1,4 +1,4 @@
-[![CI](https://github.com/websight-io/starter/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/websight-io/starter/actions/workflows/ci.yml)
+[![CI](https://github.com/websight-io/starter/actions/workflows/ci-verify-build.yml/badge.svg?branch=main)](https://github.com/websight-io/starter/actions/workflows/ci-verify-build.yml)
 
 # WebSight Starter
 
