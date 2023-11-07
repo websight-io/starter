@@ -301,6 +301,7 @@
                 <CYPRESS_loginPassword>${websight.admin.password}</CYPRESS_loginPassword>
                 <TERM>xterm</TERM>
                 <CI>1</CI>
+                <DEBUG>cypress:server:util:process_profiler</DEBUG>
               </environmentVariables>
             </configuration>
           </execution>
