@@ -51,14 +51,18 @@ jobs:
             ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Build and install Cypress
-        run: ./mvnw --batch-mode clean install -De2e.skip=false
+      - name: Build and install Nodejs, NPM, and Cypress
+        run: ./mvnw --batch-mode clean package -De2e.skip=false
 
       - name: Run environment
         run: |
-          docker build -t ds/websight-cms-starter . 
-          docker compose -f ./environment/local-mongo/docker-compose.yml up -d
-          sleep 10
+          docker build -t ds/websight-cms-starter .
+          docker run -p 8080:8080 --name websight-cms-ce --rm --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter &
+      
+      - name: Wait for environment to start
+        run: |
+          echo "Waiting for the environment to be ready..."
+          timeout 300 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/system/health; do echo " - waiting for the server..."; sleep 1; done'
 
       - name: Verify environment
         run: ./.github/scripts/dev-journey-1-verify-env.sh
