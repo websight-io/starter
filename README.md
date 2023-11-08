@@ -219,7 +219,7 @@ Please notice that we use a [nip.io](https://nip.io). It helps with simulating a
 ## Build
 
 ```bash
-mvn clean package
+./mvnw clean package
 ```
 
 ⚠️ There is a `windowsDockerHost` profile activated by default for Windows family systems. It sets the default value for the [docker.host](https://dmp.fabric8.io/#global-configuration) property.
@@ -234,7 +234,7 @@ Check the tests [README](./tests/README.md) for more details.
 ### JVM application 
 
 ```bash
-mvn clean package
+./mvnw clean package
 distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
 ```
 

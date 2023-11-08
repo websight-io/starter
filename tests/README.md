@@ -20,7 +20,7 @@ From project `<ROOT>` folder build the latest CMS distribution and test content 
 
 From `./end-to-end` folder run CMS instance with testing content package:
 ```bash
-java --add-opens java.base/java.lang=ALL-UNNAMED -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-starter-project-tests.json
+target/dependency/org.apache.sling.feature.launcher/bin/launcher -f target/slingfeature-tmp/feature-starter-project-tests.json
 ```
 
 From `./end-to-end` folder run Cypress
@@ -52,7 +52,7 @@ From project `<ROOT>` folder build the latest CMS distribution and test content 
 
 From `./end-to-end` folder run CMS instance with testing content package:
 ```bash
-java --add-opens java.base/java.lang=ALL-UNNAMED -jar target/dependency/org.apache.sling.feature.launcher.jar -f target/slingfeature-tmp/feature-starter-project-tests.json
+target/dependency/org.apache.sling.feature.launcher/bin/launcher -f target/slingfeature-tmp/feature-starter-project-tests.json
 ```
 
 From `./end-to-end` folder publish all pages
