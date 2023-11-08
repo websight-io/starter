@@ -81,10 +81,6 @@ jobs:
 
       - name: Validate functional tests
         run: npm run-script test --prefix ./tests/end-to-end
-
-      - name: Stop environment
-        if: always()
-        run: docker compose -f ./environment/local-mongo/docker-compose.yml down
         
       - name: Clear snapshots before caching
         if: always()
