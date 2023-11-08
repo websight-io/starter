@@ -168,40 +168,24 @@ The following technologies are used in designing and prototyping:
 
 ## Development
 
-### Prerequisites
+You need to have Java 17 installed to build the project.
 
-- [AdoptOpenJDK 17](https://adoptium.net/) with `x64`/`aarch64` architecture (on mac use `brew install openjdk@17`).
-- Optionally, [Docker Desktop](https://www.docker.com/products/docker-desktop/)
-
-### How to build
-
-Run the command
+To build the project, run:
 
 ```bash
-./mvnw clean verify -P e2e-functional
+./mvnw clean package
 ```
 
-to build the sample websight, aggregate all required CMS dependencies, run end-to-end tests with Cypress, build Docker images (`ds/websight-nginx-starter:latest`, `ds/websight-cms-starter:latest`).
-
-### How to run
-
-Once Docker images are ready, all you need is to run Docker Compose of the `environment/local-mongo` folder:
+To start a local instance, run:
 
 ```bash
-docker compose up
+distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
+  -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
 ```
 
-CMS is available under: [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
+Your local environment should be ready after a few seconds. To view it, open http://localhost:8080/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
 
-Pages published from `Luna - custom code` space are available under [luna-custom-code.127.0.0.1.nip.io](http://luna-custom-code.127.0.0.1.nip.io/)
-
-Pages published from `Luna - low code` space are available under [luna-low-code.127.0.0.1.nip.io](http://luna-low-code.127.0.0.1.nip.io/)
-
-Pages published from `Luna - no code` space are available under [luna-no-code.127.0.0.1.nip.io](http://luna-no-code.127.0.0.1.nip.io/)
-
-Pages published from `Kyanite - personal template` space are available under [kyanite-personal-template.127.0.0.1.nip.io](http://kyanite-personal-template.127.0.0.1.nip.io/)
-
-Please notice that we use a [nip.io](https://nip.io). It helps with simulating a real production environment that uses subdomains without the necessity to edit the `hosts` file on local machines.
+For more details please refer to our [Developers quick start guide](https://docs.websight.io/cms/developers/quick-start/).
 
 ## Project structure
 
@@ -210,46 +194,16 @@ Please notice that we use a [nip.io](https://nip.io). It helps with simulating a
     - `frontend` - contains frontend elements for low code template (scss, ts, fonts etc.)
 - `content` - contains sample content created with use of application
 - `distribution` - builds a distribution of the project - instance feature model and docker images for runtime components
-- `environment` - contains scripts and files used but build environment
-    - `local-mongo` - (default) starts a multi-container local environment based on the [Oak Document Storage](https://jackrabbit.apache.org/oak/docs/nodestore/documentmk.html)
 - `tests` - responsible for the automatic distribution validation
     - `content` - contains content used for end-to-end tests
     - `end-to-end` - end-to-end tests validating distribution
-
-## Build
-
-```bash
-./mvnw clean package
-```
-
-⚠️ There is a `windowsDockerHost` profile activated by default for Windows family systems. It sets the default value for the [docker.host](https://dmp.fabric8.io/#global-configuration) property.
 
 ## Executing end-to-end tests
 
 Check the tests [README](./tests/README.md) for more details.
 
-
-## Running application
-
-### JVM application 
-
-```bash
-./mvnw clean package
-distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
-```
-
-and open [localhost:8080](http://localhost:8080/) to see the ICE admin panel (use default `wsadmin/wsadmin` password).
-
-Press `CTRL + C` to stop the application.
-
-### Docker container
-
-```bash
-docker build -t ds/websight-cms-starter . 
-docker run -p 8080:8080 --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter
-```
-
 ## Contributing
+
 Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull Request to the project.
 
 ## Community support
@@ -261,6 +215,7 @@ To support us, you may follow the project at:
 * [twitter.com/websight_io](https://twitter.com/websight_io)
 
 ## Documentation
+
 See our dedicated repository for the [WebSight CMS documentation](https://github.com/websight-io/docs), or view our documentation live:
 
 - [User guide](https://docs.websight.io/cms/quick-start/)
