@@ -22,30 +22,30 @@ permissions:
   contents: read
 
 jobs:
-  prepare-release:
-    runs-on: ubuntu-latest
+  # prepare-release:
+  #   runs-on: ubuntu-latest
 
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         repo-token: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Set up JDK 17
-        uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
+  #     - name: Set up JDK 17
+  #       uses: actions/setup-java@v3
+  #       with:
+  #         java-version: '17'
+  #         distribution: 'adopt'
 
-      - name: Configure Git and Maven settings
-        run: |
-          git config --global user.email "github.actions@ds.pl"
-          git config --global user.name "GitHub Actions"
-          mkdir -p ~/.ssh
-          printf '%s\n' "${{ secrets.SSH_SECRET_KEY }}" > ~/.ssh/id_rsa
-          chmod 0600 ~/.ssh/id_rsa
+  #     - name: Configure Git and Maven settings
+  #       run: |
+  #         git config --global user.email "github.actions@ds.pl"
+  #         git config --global user.name "GitHub Actions"
+  #         mkdir -p ~/.ssh
+  #         printf '%s\n' "${{ secrets.SSH_SECRET_KEY }}" > ~/.ssh/id_rsa
+  #         chmod 0600 ~/.ssh/id_rsa
 
-      - name: Prepare release and push tag
-        run: ./mvnw --batch-mode release:prepare -P release
+  #     - name: Prepare release and push tag
+  #       run: ./mvnw --batch-mode release:prepare -P release
 
   build-and-push-images:
     runs-on: ubuntu-latest
@@ -53,7 +53,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-tags: 0
+          fetch-depth: 0
+          fetch-tags: true
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
@@ -92,11 +93,10 @@ jobs:
       - name: Checkout latest tag
         run: |
             CURRENT_VERSION=$(git describe --tags `git rev-list --tags --max-count=1`)
-            git checkout tags/${CURRENT_VERSION}
             echo "STARTER_IMAGE_TAG=${CURRENT_VERSION:1}" >> $GITHUB_ENV
             
       - name: Build and push CMS image to GAR
-        run: docker buildx build --platform linux/amd64,linux/arm64 --push -t europe-docker.pkg.dev/websight-io/public/websight-cms-starter:${{ env.STARTER_IMAGE_TAG }} .
+        run: docker buildx build --platform linux/amd64,linux/arm64 --push -t europe-docker.pkg.dev/websight-io/public/websight-cms-starter:test.${{ env.STARTER_IMAGE_TAG }} .
 
       - name: Build and push CMS image to ECR
-        run: docker buildx build --platform linux/amd64,linux/arm64 --push -t public.ecr.aws/ds/websight-cms-starter:${{ env.STARTER_IMAGE_TAG }} .
+        run: docker buildx build --platform linux/amd64,linux/arm64 --push -t public.ecr.aws/ds/websight-cms-starter:test.${{ env.STARTER_IMAGE_TAG }} .
