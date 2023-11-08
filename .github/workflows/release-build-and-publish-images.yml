@@ -53,7 +53,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          fetch-tags: 0
+          fetch-depth: 0
+          fetch-tags: true
 
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v1
