@@ -46,8 +46,8 @@ jobs:
           
       - name: Deploy new Cloud Run environment
         run: |
-          export ENV_NAME_POSTFIX=$(echo ${{ github.ref_name }} | sed 's/[^a-zA-Z0-9]/-/g' | cut -c 1-40)
-          gcloud run deploy websight-cms-$ENV_NAME_POSTFIX --source=. \
+          CLOUD_RUN_ENV_NAME=$(./.github/scripts/get-cloud-run-env-name.sh ${{ github.ref_name }})
+          gcloud run deploy $CLOUD_RUN_ENV_NAME --source=. \
           --update-secrets=/run/secrets/admin.password=websight-admin-password:1 \
           --cpu=2 --memory=2Gi --no-cpu-throttling \
           --min-instances=1 --max-instances=1 \
