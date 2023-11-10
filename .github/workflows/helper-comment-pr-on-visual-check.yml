@@ -34,24 +34,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: Create check run
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.checks.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: 'Visual regression check',
-              head_sha: context.sha,
-              status: 'in_progress',
-              started_at: new Date().toISOString(),
-              output: {
-                title: 'Visual regression tests',
-                summary: 'Visual regression tests are running...',
-              }
-            })
-
       - uses: actions/checkout@v4
       
       - name: Get Artifact and Pull request info
@@ -108,37 +90,9 @@ jobs:
             | Commit   | ${{ env.HEAD_SHA }}     |
             | Logs     | ${{ env.JOB_PATH }}     |
 
-      - name: Update check run
-        uses: actions/github-script@v6
-        env:
-          ARTIFACT_URL: "${{ github.server_url }}/${{ github.repository }}/suites/${{ env.SUITE_ID }}/artifacts/${{ env.ARTIFACT_ID }}"
+      - name: Add a comment on job failure
+        if: ${{ failure() }}
+        uses: peter-evans/create-or-update-comment@v3
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.checks.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              check_run_id: context.payload.check_run.id,
-              status: 'completed',
-              conclusion: '${{ env.ARTIFACT_ID != '' ? 'action_required' : 'neutral' }}',
-              completed_at: new Date().toISOString(),
-              output: {
-                title: 'Visual regression tests',
-                summary: '${{ env.ARTIFACT_ID != '' ? 'Some visual changes require review.' : 'No visual changes detected.' }}',
-                text: '${{ env.ARTIFACT_ID != '' ? 'Please download BackstopJS report and check if there is no visual regression.' : '' }}',
-                images: [
-                  {
-                    alt: 'Visual regression tests',
-                    image_url: '${{ env.ARTIFACT_ID != '' ? 'https://raw.githubusercontent.com/DynamicSolutions/visual-regression-tests/main/.github/assets/visual-tests-failed.png' : 'https://raw.githubusercontent.com/DynamicSolutions/visual-regression-tests/main/.github/assets/visual-tests-passed.png' }}'
-                  }
-                ],
-                actions: [
-                  {
-                    label: 'Download report',
-                    description: 'Download BackstopJS report',
-                    identifier: 'download-report',
-                    url: '${{ env.ARTIFACT_ID != '' ? env.ARTIFACT_URL : '' }}'
-                  }
-                ]
-              }
-            })
+          issue-number: ${{ env.PR_NUMBER }}
+          body: ❌ Failed to add visual tests status!
