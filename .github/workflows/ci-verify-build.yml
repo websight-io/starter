@@ -71,233 +71,93 @@ jobs:
   #       if: always()
   #       run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
 
-  # prepare-data-for-visual-tests-from-main-branch:
-  #   name: Prepare data for visual tests from main branch
-  #   runs-on: ubuntu-latest
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #       with:
-  #         fetch-depth: 0
-  #         ref: ${{ github.event.pull_request.base.ref }} # main branch
-
-  #     - uses: actions/setup-java@v3
-  #       with:
-  #         java-version: '17'
-  #         distribution: 'adopt'
-  #         cache: 'maven'
-
-  #     - uses: actions/cache@v3
-  #       with:
-  #         path: |
-  #           ${{ env.APP_FRONTEND_MODULE }}/node
-  #           ${{ env.APP_FRONTEND_MODULE }}/node_modules
-  #           ${{ env.E2E_TESTS_MODULE }}/node
-  #           ${{ env.E2E_TESTS_MODULE }}/node_modules
-  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-  #     - name: Visual tests - create reference snapshots
-  #       run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-seed
-
-  #     - name: Upload reference snapshots
-  #       uses: actions/upload-artifact@v3
-  #       with:
-  #         name: backstopjs-references
-  #         path: ./tests/end-to-end/backstop_data/bitmaps_reference
-  #         if-no-files-found: error
-
-  #     - name: Clear snapshots before caching
-  #       if: always()
-  #       run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
-
-  # verify-visual-regression:
-  #   name: Verify with visual regression tests
-  #   runs-on: ubuntu-latest
-  #   needs: [ prepare-data-for-visual-tests-from-main-branch ]
-  #   steps:
-  #     - uses: actions/checkout@v4
-  #       with:
-  #         fetch-depth: 0
-
-  #     - uses: actions/setup-java@v3
-  #       with:
-  #         java-version: '17'
-  #         distribution: 'adopt'
-  #         cache: 'maven'
-
-  #     - uses: actions/cache@v3
-  #       with:
-  #         path: |
-  #           ${{ env.APP_FRONTEND_MODULE }}/node
-  #           ${{ env.APP_FRONTEND_MODULE }}/node_modules
-  #           ${{ env.E2E_TESTS_MODULE }}/node
-  #           ${{ env.E2E_TESTS_MODULE }}/node_modules
-  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-
-  #     - name: Download reference screenshots
-  #       uses: actions/download-artifact@v3
-  #       with:
-  #         name: backstopjs-references
-  #         path: ./tests/end-to-end/backstop_data/bitmaps_reference
-
-  #     - name: Visual tests - compare with reference screenshots
-  #       id: visualTestsCompare
-  #       run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-check
-  #       continue-on-error: true
-
-  #     - name: Create visual tests report
-  #       if: steps.visualTestsCompare.outcome == 'failure'
-  #       shell: bash
-  #       run: |
-  #         ./tests/end-to-end/backstop_data/ci/read-report-failures.sh
-  #         sudo apt-get install -y pngquant && ./tests/end-to-end/backstop_data/ci/provide-report.sh
-
-  #     - name: Upload visual test report
-  #       if: steps.visualTestsCompare.outcome == 'failure'
-  #       uses: actions/upload-artifact@v3
-  #       with:
-  #         name: visual-tests-report
-  #         path: artifacts/visual/
-  #         if-no-files-found: error
-  #         retention-days: 1
-
-  #     - name: Clear snapshots before caching
-  #       if: always()
-  #       run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
-    
-  # comment-on-pr-with-visual-tests-report:
-  #   if: ${{ github.event_name == 'pull_request' }}
-  #   needs: [ verify-visual-regression ]
-  #   runs-on: ubuntu-latest
-  #   steps:         
-
-  #     - uses: actions/checkout@v4
-  #       with:
-  #         fetch-depth: 0
-
-  #     - name: Get Artifact and Pull request info
-  #       env:
-  #         GITHUB_TOKEN: ${{ github.token }}
-  #         WORKFLOW_RUN_EVENT_OBJ: ${{ toJSON(github.event.workflow_run) }}
-  #         OWNER: ${{ github.repository_owner }}
-  #         REPO: ${{ github.event.repository.name }}
-  #       run: ./.github/scripts/get-visual-test-artifact-and-pr-info.sh
-          
-  #     - name: Get current date
-  #       id: currentDateStep
-  #       run: echo "CURRENT_DATE=$(date +'%Y-%m-%dT%H%M%S')" >> "$GITHUB_OUTPUT"
-
-  #     - name: Add a comment
-  #       if: "${{ env.ARTIFACT_ID != '' }}"
-  #       env:
-  #         JOB_PATH: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.PREVIOUS_JOB_ID }}"
-  #         ARTIFACT_URL: "${{ github.server_url }}/${{ github.repository }}/suites/${{ env.SUITE_ID }}/artifacts/${{ env.ARTIFACT_ID }}"
-  #         HEAD_SHA: "${{ env.HEAD_SHA }}"
-  #       uses: peter-evans/create-or-update-comment@v3
-  #       with:
-  #         issue-number: ${{ env.PR_NUMBER }}
-  #         body: |
-  #           ## ⚠️ Visual tests status
-
-  #           Some visual changes require review.
-
-  #           Please download BackstopJS report and check if there is no visual regression.
-
-  #           Please note that the report only stay for 1 day!
-
-  #           | Name     | Link                    |
-  #           | -------- | ----------------------- |
-  #           | Commit   | ${{ env.HEAD_SHA }}     |
-  #           | Logs     | ${{ env.JOB_PATH }}     |
-  #           | Report   | [visual-tests-report_${{ steps.currentDateStep.outputs.CURRENT_DATE }}.zip](${{ env.ARTIFACT_URL }}) |
-            
-  #     - name: Add a comment
-  #       if: "${{ env.ARTIFACT_ID == '' }}"
-  #       env:
-  #         JOB_PATH: "${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ env.PREVIOUS_JOB_ID }}"
-  #         HEAD_SHA: "${{ env.HEAD_SHA }}"
-  #       uses: peter-evans/create-or-update-comment@v3
-  #       with:
-  #         issue-number: ${{ env.PR_NUMBER }}
-  #         body: |
-  #           ## ✅ Visual tests status
-
-  #           No visual changes detected.
-            
-  #           | Name     | Link                    |
-  #           | -------- | ----------------------- |
-  #           | Commit   | ${{ env.HEAD_SHA }}     |
-  #           | Logs     | ${{ env.JOB_PATH }}     |
-
-  zip:
+  prepare-data-for-visual-tests-from-main-branch:
+    name: Prepare data for visual tests from main branch
     runs-on: ubuntu-latest
     steps:
-      - name: Create check run
-        id: create-check-run
-        uses: actions/github-script@v6
+      - uses: actions/checkout@v4
         with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            const checkRun = await github.rest.checks.create({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: 'Visual regression check',
-              head_sha: context.sha,
-              status: 'in_progress',
-              started_at: new Date().toISOString(),
-              output: {
-                title: 'Visual regression tests',
-                summary: 'Visual regression tests are running...',
-              }
-            })
-            console.log(checkRun.data)
-            return checkRun.data.id
+          fetch-depth: 0
+          ref: ${{ github.event.pull_request.base.ref }} # main branch
 
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: 'maven'
 
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Visual tests - create reference snapshots
+        run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-seed
+
+      - name: Upload reference snapshots
+        uses: actions/upload-artifact@v3
+        with:
+          name: backstopjs-references
+          path: ./tests/end-to-end/backstop_data/bitmaps_reference
+          if-no-files-found: error
+
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
+
+  verify-visual-regression:
+    name: Verify with visual regression tests
+    runs-on: ubuntu-latest
+    needs: [ prepare-data-for-visual-tests-from-main-branch ]
+    steps:
       - uses: actions/checkout@v4
 
-      - shell: bash
-        run: |
-          echo "Test $(date)" > report.txt
+      - uses: actions/setup-java@v3
+        with:
+          java-version: '17'
+          distribution: 'adopt'
+          cache: 'maven'
 
-      - name: Upload artifact
+      - uses: actions/cache@v3
+        with:
+          path: |
+            ${{ env.APP_FRONTEND_MODULE }}/node
+            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.E2E_TESTS_MODULE }}/node
+            ${{ env.E2E_TESTS_MODULE }}/node_modules
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
+      - name: Download reference screenshots
+        uses: actions/download-artifact@v3
+        with:
+          name: backstopjs-references
+          path: ./tests/end-to-end/backstop_data/bitmaps_reference
+
+      - name: Visual tests - compare with reference screenshots
+        id: visualTestsCompare
+        run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-check
+        continue-on-error: true
+
+      - name: Create visual tests report
+        if: steps.visualTestsCompare.outcome == 'failure'
+        shell: bash
+        run: |
+          ./.github/scripts/ci-verify-build-read-report-failures.sh
+          sudo apt-get install -y pngquant && ./.github/scripts/ci-verify-build-provide-visual-regression-report.sh
+
+      - name: Upload visual test report
+        if: steps.visualTestsCompare.outcome == 'failure'
         uses: actions/upload-artifact@v3
         with:
           name: visual-tests-report
-          path: report.txt
+          path: artifacts/visual/
+          if-no-files-found: error
           retention-days: 1
 
-      - name: Update check run
-        uses: actions/github-script@v6
-        env:
-          ARTIFACT_URL: "http://test.com"
-          ARTIFACT_ID: 'test'
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.checks.update({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              check_run_id: ${{ steps.create-check-run.outputs.result }},
-              status: 'completed',
-              conclusion: '${{ env.ARTIFACT_ID != '' && 'action_required' || 'neutral' }}',
-              completed_at: new Date().toISOString(),
-              output: {
-                title: 'Visual regression tests',
-                summary: '${{ env.ARTIFACT_ID != '' && 'Some visual changes require review.' || 'No visual changes detected.' }}',
-                text: '${{ env.ARTIFACT_ID != '' && 'Please download BackstopJS report and check if there is no visual regression.' || '' }}',
-                images: [
-                  {
-                    alt: 'Visual regression tests',
-                    image_url: '${{ env.ARTIFACT_ID != '' && 'https://raw.githubusercontent.com/DynamicSolutions/visual-regression-tests/main/.github/assets/visual-tests-failed.png' || 'https://raw.githubusercontent.com/DynamicSolutions/visual-regression-tests/main/.github/assets/visual-tests-passed.png' }}'
-                  }
-                ],
-                actions: [
-                  {
-                    label: 'Download report',
-                    description: 'Download BackstopJS report',
-                    identifier: 'download-report',
-                    url: '${{ env.ARTIFACT_ID != '' && env.ARTIFACT_URL || '' }}'
-                  }
-                ]
-              }
-            })
+      - name: Clear snapshots before caching
+        if: always()
+        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
