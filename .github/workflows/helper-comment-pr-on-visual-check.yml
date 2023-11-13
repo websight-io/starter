@@ -42,7 +42,7 @@ jobs:
           WORKFLOW_RUN_EVENT_OBJ: ${{ toJSON(github.event.workflow_run) }}
           OWNER: ${{ github.repository_owner }}
           REPO: ${{ github.event.repository.name }}
-        run: ./.github/scripts/get-visual-test-artifact-and-pr-info.sh
+        run: ./.github/scripts/helper-visual-test-get-report-url.sh
 
       - name: Get current date
         id: currentDateStep
