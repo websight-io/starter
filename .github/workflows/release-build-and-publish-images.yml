@@ -55,19 +55,6 @@ jobs:
         with:
           fetch-depth: 0
           fetch-tags: true
-
-      - name: Configure AWS Credentials
-        uses: aws-actions/configure-aws-credentials@v1
-        with:
-          role-to-assume: ${{ secrets.AWS_CI_ROLE_TO_ASSUME }}
-          role-session-name: StarterRelease
-          aws-region: us-east-1
-
-      - name: Login to Amazon ECR Public
-        id: login-ecr-public
-        uses: aws-actions/amazon-ecr-login@v1
-        with:
-          registry-type: public
       
       - name: Authenticate to Google Cloud
         id: auth
@@ -84,7 +71,7 @@ jobs:
           username: oauth2accesstoken
           password: ${{ steps.auth.outputs.access_token }}
 
-      - name: Set up QEMU # https://github.com/docker/buildx/issues/499
+      - name: Set up QEMU
         uses: docker/setup-qemu-action@v2
   
       - name: Set up Docker Buildx
@@ -98,6 +85,3 @@ jobs:
             
       - name: Build and push CMS image to GAR
         run: docker buildx build --platform linux/amd64,linux/arm64 --push -t europe-docker.pkg.dev/websight-io/public/websight-cms-starter:${{ env.STARTER_IMAGE_TAG }} .
-
-      - name: Build and push CMS image to ECR
-        run: docker buildx build --platform linux/amd64,linux/arm64 --push -t public.ecr.aws/ds/websight-cms-starter:${{ env.STARTER_IMAGE_TAG }} .
