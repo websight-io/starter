@@ -96,7 +96,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Visual tests - create reference snapshots
-        run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-seed
+        run: ./mvnw --batch-mode clean verify -DskipITs -P e2e-visual-seed
 
       - name: Upload reference snapshots
         uses: actions/upload-artifact@v3
@@ -139,7 +139,7 @@ jobs:
 
       - name: Visual tests - compare with reference screenshots
         id: visualTestsCompare
-        run: mvn --batch-mode clean verify -DskipITs -P e2e-visual-check
+        run: ./mvnw --batch-mode clean verify -DskipITs -P e2e-visual-check
         continue-on-error: true
 
       - name: Create visual tests report

@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 #
 # Copyright (C) 2023 Dynamic Solutions
@@ -22,9 +22,8 @@
 # 3. copy only explicitly i.e. to prevent copy of potentially confident auth tokens from "engine_scripts"
 
 # config
-BASEDIR=$(dirname "$0")
 PWD=$(pwd)
-NODEDIR="$BASEDIR/tests/end-to-end"
+NODEDIR="$PWD/tests/end-to-end"
 BACKSTOPDIR="$NODEDIR/backstop_data"
 TEMP="${PWD}/artifacts-temp/visual"
 TARGET="${PWD}/artifacts/visual"
