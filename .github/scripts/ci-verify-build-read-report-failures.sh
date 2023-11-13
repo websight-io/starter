@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/bin/bash
 
 #
 # Copyright (C) 2023 Dynamic Solutions
@@ -20,9 +20,10 @@
 # exit 1 - no errors detected
 # exit 0 - some errors detected
 
-# config
-BASEDIR=$(dirname "$0")
-NODEDIR="$BASEDIR/tests/end-to-end"
+set -x
+
+PWD=$(pwd)
+NODEDIR="$PWD/tests/end-to-end"
 BACKSTOPDIR="$NODEDIR/backstop_data"
 
 # read report
@@ -34,5 +35,5 @@ if ((BACKSTOP_FAILS > 0)); then
   exit 0;
 else
   echo "OK | Backstop CI report contains 0 failed test cases"
-  exit 1; # use to break execution of next scripts in chain
+  exit 125; # use to break execution of next scripts in chain
 fi
