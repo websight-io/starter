@@ -23,7 +23,7 @@
                         sling:resourceType="howlite/components/title"
                         headingLevel="h1"
                         headingSize="hl-title__heading--size-1"
-                        title="XXXXXXXXXXXXXXXX"/>
+                        title="Our Story"/>
                     <richtext
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="howlite/components/richtext"
@@ -95,7 +95,7 @@
                             sling:resourceType="howlite/components/title"
                             headingLevel="h2"
                             headingSize="hl-title__heading--size-3"
-                            title="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                            title="We know jewellery &amp; we know our customers"/>
                         <richtext
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="howlite/components/richtext"
@@ -137,7 +137,7 @@
                             sling:resourceType="howlite/components/title"
                             headingLevel="h2"
                             headingSize="hl-title__heading--size-2"
-                            title="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                            title="A Luna Ring"/>
                         <richtext
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="howlite/components/richtext"
@@ -239,6 +239,11 @@
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="howlite/components/pagesection"
                     classes="hl-page-section--call-to-action">
+                    <image
+                        jcr:primaryType="nt:unstructured"
+                        sling:resourceType="howlite/components/image"
+                        lgImageSrc="/content/luna/assets/images/aboutus/pearl bracelet.png"
+                        openInNewTab="false"/>
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="howlite/components/title"
@@ -248,7 +253,7 @@
                         lgOffset="2"
                         mdColSize="12"
                         smColSize="12"
-                        title="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX"/>
+                        title="Luna’s Philosophy that  Beauty and Strength Exist in Both Union and Individuality"/>
                     <ctaslist
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="howlite/components/ctaslist">

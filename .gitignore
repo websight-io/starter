@@ -50,4 +50,5 @@ Thumbs.db
 
 # Project specific
 **/launcher
-
+artifacts-temp/
+artifacts/

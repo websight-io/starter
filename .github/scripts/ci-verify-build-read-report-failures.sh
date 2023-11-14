@@ -17,8 +17,8 @@
 #
 
 # exits with error code if there are fails in the Backstop CI report file
-# exit 1 - no errors detected
-# exit 0 - some errors detected
+# exit 125 - no regression detected
+# exit 0 - regression detected
 
 set -x
 
