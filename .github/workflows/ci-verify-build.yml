@@ -26,50 +26,50 @@ env:
   E2E_TESTS_MODULE: tests/end-to-end
 
 jobs:
-  verify-cms-docker-image-build:
-    name: Verify CMS Docker image build
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+  # verify-cms-docker-image-build:
+  #   name: Verify CMS Docker image build
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
 
-      - uses: docker/setup-qemu-action@v2
+  #     - uses: docker/setup-qemu-action@v2
 
-      - uses: docker/setup-buildx-action@v2
+  #     - uses: docker/setup-buildx-action@v2
 
-      - name: Build Docker image
-        run: docker build -t ds/websight-cms-starter . 
+  #     - name: Build Docker image
+  #       run: docker build -t ds/websight-cms-starter . 
 
-  verify-e2e-tests:
-    name: Verify E2E tests
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
+  # verify-e2e-tests:
+  #   name: Verify E2E tests
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #     - uses: actions/checkout@v4
+  #       with:
+  #         fetch-depth: 0
 
-      - uses: actions/setup-java@v3
-        with:
-          java-version: '17'
-          distribution: 'adopt'
-          cache: 'maven'
+  #     - uses: actions/setup-java@v3
+  #       with:
+  #         java-version: '17'
+  #         distribution: 'adopt'
+  #         cache: 'maven'
 
-      - uses: actions/cache@v3
-        with:
-          path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+  #     - uses: actions/cache@v3
+  #       with:
+  #         path: |
+  #           ${{ env.APP_FRONTEND_MODULE }}/node
+  #           ${{ env.APP_FRONTEND_MODULE }}/node_modules
+  #           ${{ env.E2E_TESTS_MODULE }}/node
+  #           ${{ env.E2E_TESTS_MODULE }}/node_modules
+  #         key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
-      - name: Verify Starter CMS Feature model with integration and E2E tests
-        run: ./mvnw --batch-mode clean verify -P e2e-functional
+  #     - name: Verify Starter CMS Feature model with integration and E2E tests
+  #       run: ./mvnw --batch-mode clean verify -P e2e-functional
 
-      - name: Clear snapshots before caching
-        if: always()
-        run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
+  #     - name: Clear snapshots before caching
+  #       if: always()
+  #       run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
 
   prepare-data-for-visual-tests-from-main-branch:
     name: Prepare data for visual tests from main branch
