@@ -224,8 +224,8 @@ docker build -t ds/websight-cms-starter .
 ```
 And running it with:
 ```bash
-docker run -p 8080:8080 --name websight-cms-ce --rm \
-  --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter
+docker run -p 8080:8080 --name websight-cms --rm \
+  --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter
 ```
 
 By default, the `tar` mode is used.
