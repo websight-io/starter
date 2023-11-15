@@ -183,9 +183,24 @@ distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
   -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
 ```
 
-Your local environment should be ready after a few seconds. To view it, open http://localhost:8080/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
+Then open http://localhost:8080/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
 
 For more details please refer to our [Developers quick start guide](https://docs.websight.io/cms/developers/quick-start/).
+
+### Run modes
+
+Running the `starter` WebSight CMS project requires selecting [OAK Node Storage](https://jackrabbit.apache.org/oak/docs/nodestore/overview.html) mode. To choose the mode, run the distribution with one of the following configuration files:
+- `feature-websight-cms-starter-tar.json` - starts the project with the `TAR` Segment NodeStore mode (uses the local file system, by default `./launcher` directory)
+- `feature-websight-cms-starter-mongo.json` - starts the project with the `MongoDB` Document NodeStore mode (requires MongoDB instance)
+    
+To run the `stater` project with MongoDB run:
+```bash
+docker run -d -p 27017:27017 --env MONGO_INITDB_ROOT_USERNAME=mongoadmin \
+  --env MONGO_INITDB_ROOT_PASSWORD=mongoadmin mongo
+  
+MONGODB_HOST=localhost && MONGODB_PORT=27017 && distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
+  -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-mongo.json
+```
 
 ## Project structure
 
@@ -193,7 +208,7 @@ For more details please refer to our [Developers quick start guide](https://docs
     - `backend` - contains application elements (components, templates, etc.) and Java code
     - `frontend` - contains frontend elements for low code template (scss, ts, fonts etc.)
 - `content` - contains sample content created with use of application
-- `distribution` - builds a distribution of the project - instance feature model and docker images for runtime components
+- `distribution` - builds a distribution (Sling OSGi Feature) of the project
 - `tests` - responsible for the automatic distribution validation
     - `content` - contains content used for end-to-end tests
     - `end-to-end` - end-to-end tests validating distribution
@@ -201,6 +216,21 @@ For more details please refer to our [Developers quick start guide](https://docs
 ## Executing end-to-end tests
 
 Check the tests [README](./tests/README.md) for more details.
+
+## Docker
+You can run a containerized version of the project by building the Docker image with the following command:
+```bash
+docker build -t ds/websight-cms-starter .
+```
+And running it with:
+```bash
+docker run -p 8080:8080 --name websight-cms-ce --rm \
+  --mount source=tar-repo,target=/websight/repository ds/websight-cms-starter
+```
+
+By default, the `tar` mode is used.
+
+You can find an example WebSight CMS Starter with MongoDB setup in the [CMS Helm Chart](https://github.com/websight-io/charts).
 
 ## Contributing
 

@@ -14,11 +14,11 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-feature_name="${1}"
-feature=$(find artifacts -name "*${feature_name}*.slingosgifeature")
+oak_store_mode="${1}"
+feature=$(find artifacts -name "*websight-cms-starter-${oak_store_mode}*.slingosgifeature")
 
 if [[ ! -f "${feature}" ]]; then
-    echo "[ERROR] Did not find any feature file matching name ${feature_name}. Aborting"
+    echo "[ERROR] Did not find any feature file matching name 'websight-cms-starter-${oak_store_mode}'. Aborting"
     exit 1
 fi
 
