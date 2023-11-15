@@ -49,6 +49,7 @@ jobs:
 
   build-and-push-images:
     runs-on: ubuntu-latest
+    needs: [ prepare-release ]
 
     steps:
       - uses: actions/checkout@v4
