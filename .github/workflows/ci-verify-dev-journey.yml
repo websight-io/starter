@@ -57,10 +57,7 @@ jobs:
       - name: Run environment
         run: |
           docker build -t ds/websight-cms-starter .
-          docker run -p 8080:8080 --name websight-cms --rm --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter &
-      
-      - name: Wait for environment to start
-        run: |
+          docker run -d -p 8080:8080 --name websight-cms --rm --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter
           echo "Waiting for the environment to be ready..."
           timeout 300 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/system/health; do echo " - waiting for the server..."; sleep 1; done'
 
