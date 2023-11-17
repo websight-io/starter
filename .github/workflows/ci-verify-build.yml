@@ -44,38 +44,16 @@ jobs:
       - name: Run CMS with custom admin credentials
         run: |
             mkdir -p .test-secrets && echo -n "customPassword" > .test-secrets/admin.password
-            mkdir repository
             docker run -d -p 8080:8080 --name websight-cms --rm \
-              -v ${{ github.workspace }}/repository:/websight/launcher/repository \
+              --mount source=segment-store-repository,target=/websight/launcher/repository \
               -v "$(pwd)/.test-secrets/admin.password:/websight/launcher/resources/secrets/admin.password:ro" \
               --env	"WS_ADMIN_USERNAME=customAdmin" \
               ds/websight-cms-starter
             echo "Waiting for the environment to be ready..."
             timeout 300 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/system/health; do echo " - waiting for the server..."; sleep 1; done'
       
-      - name: Verify custom credentials and make change
-        run: ./.github/scripts/ci-verify-docker-image.sh
-
-      - name: Verify content changes before container restart
-        run: timeout 30 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/published/luna/pages/Homepage.html; do echo " - checking Luna Homepage..."; sleep 1; done'
-
-      - name: Restart CMS container
-        run: |
-          docker volume ls && echo "--------------"
-          ls -la repository
-          docker rm -f websight-cms
-          timeout 30 bash -c 'while docker ps | grep websight-cms; do sleep 1; done'
-          docker run -d -p 8080:8080 --name websight-cms --rm \
-            -v ${{ github.workspace }}/repository:/websight/launcher/repository \
-            -v "$(pwd)/.test-secrets/admin.password:/websight/launcher/resources/secrets/admin.password:ro" \
-            --env	"WS_ADMIN_USERNAME=customAdmin" \
-            ds/websight-cms-starter
-          echo "Waiting for the environment to be ready..."
-          timeout 300 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/system/health; do echo " - waiting for the server..."; sleep 1; done'
-          docker volume ls && echo "--------------"
-
-      - name: Verify content changes after container restart
-        run: timeout 30 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/published/luna/pages/Homepage.html; do echo " - checking Luna Homepage..."; sleep 1; done'
+      - name: Verify custom credentials
+        run: ./.github/scripts/ci-verify-docker-image-with-custom-credentials.sh
 
   verify-e2e-tests:
     name: Verify E2E tests
