@@ -1,0 +1,7 @@
+{
+  "isContainer": true,
+  "group": "Luna Low Code Components",
+  "sling:resourceType": "ws:Component",
+  "allowedComponents": "/apps/luna/lowcode/components/carousel/carouselitem",
+  "title": "Carousel"
+}

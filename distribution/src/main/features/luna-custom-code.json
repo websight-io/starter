@@ -1,0 +1,12 @@
+{
+  "bundles": [
+    {
+      "id": "pl.ds.starter:luna-custom-code-backend:${starter-parent.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "pl.ds.starter:luna-custom-code-frontend:${starter-parent.version}",
+      "start-order": "25"
+    }
+  ]
+}

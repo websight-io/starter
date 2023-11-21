@@ -1,0 +1,12 @@
+{
+  "jcr:primaryType": "ws:Page",
+  "jcr:content": {
+    "jcr:primaryType": "ws:PageContent",
+    "sling:resourceType": "luna/lowcode/components/page",
+    "navbarFixedPosition": "has-navbar-fixed-top",
+    "navbarFixed": "true",
+    "pagecontainer": {
+      "sling:resourceType": "kyanite/common/components/pagecontainer"
+    }
+  }
+}

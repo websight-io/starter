@@ -68,7 +68,7 @@ jobs:
         run: ./.github/scripts/dev-journey-2-prepare-project-changes.sh
 
       - name: Install changes
-        run: ./mvnw -f ./application/backend/pom.xml clean install -P autoInstallBundle
+        run: ./mvnw -f ./applications/luna-custom-code/backend/pom.xml clean install -P autoInstallBundle
 
       - name: Validate if functional tests detect changes
         run: ./.github/scripts/dev-journey-3-validate-functional-tests.sh

@@ -4,8 +4,8 @@
     <jcr:content
         jcr:primaryType="ws:PageContent"
         jcr:title="Catalog"
-        sling:resourceType="luna/components/page"
-        ws:template="/apps/luna/templates/articlepage"
+        sling:resourceType="luna/lowcode/components/page"
+        ws:template="/apps/luna/lowcode/templates/articlepage"
         navbarFixed="true"
         navbarFixedPosition="has-navbar-fixed-top">
         <pagecontainer
@@ -149,10 +149,10 @@
                         text="&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own.&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <carousel
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="luna/components/carousel">
+                        sling:resourceType="luna/lowcode/components/carousel">
                         <carouselitem
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="luna/components/carousel/carouselitem">
+                            sling:resourceType="luna/lowcode/components/carousel/carouselitem">
                             <card
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/card"
@@ -183,7 +183,7 @@
                         </carouselitem>
                         <carouselitem_1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="luna/components/carousel/carouselitem">
+                            sling:resourceType="luna/lowcode/components/carousel/carouselitem">
                             <card
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/card"
@@ -214,7 +214,7 @@
                         </carouselitem_1>
                         <carouselitem_2
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="luna/components/carousel/carouselitem">
+                            sling:resourceType="luna/lowcode/components/carousel/carouselitem">
                             <card
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/card"
@@ -245,7 +245,7 @@
                         </carouselitem_2>
                         <carouselitem_3
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="luna/components/carousel/carouselitem">
+                            sling:resourceType="luna/lowcode/components/carousel/carouselitem">
                             <card
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/card"

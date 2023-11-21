@@ -73,7 +73,7 @@ describe('Carousel component', function () {
     )
     .its('body')
     .should('deep.eq', {
-      'sling:resourceType': 'luna/components/carousel',
+      'sling:resourceType': 'luna/lowcode/components/carousel',
       'jcr:primaryType': 'nt:unstructured',
       slidesToShow: '5'
     });

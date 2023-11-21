@@ -1,0 +1,5 @@
+{
+  "allowedChildren": ["/apps/luna/lowcode/templates/homepage", "/apps/luna/lowcode/templates/articlepage"],
+  "sling:resourceType": "ws:PagesTemplate",
+  "title": "Low Code Luna pages"
+}

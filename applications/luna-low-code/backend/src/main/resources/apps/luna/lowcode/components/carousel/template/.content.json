@@ -1,0 +1,57 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "item1": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/apps/luna/lowcode/components/carousel/carouselitem",
+    "card": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "kyanite/common/components/card",
+      "header": "Card 1"
+    }
+  },
+  "item2": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/apps/luna/lowcode/components/carousel/carouselitem",
+    "card": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "kyanite/common/components/card",
+      "header": "Card 2"
+    }
+  },
+  "item3": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/apps/luna/lowcode/components/carousel/carouselitem",
+    "card": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "kyanite/common/components/card",
+      "header": "Card 3"
+    }
+  },
+  "item4": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/apps/luna/lowcode/components/carousel/carouselitem",
+    "card": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "kyanite/common/components/card",
+      "header": "Card 4"
+    }
+  },
+  "item5": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/apps/luna/lowcode/components/carousel/carouselitem",
+    "card": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "kyanite/common/components/card",
+      "header": "Card 5"
+    }
+  },
+  "item6": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "/apps/luna/lowcode/components/carousel/carouselitem",
+    "card": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "kyanite/common/components/card",
+      "header": "Card 6"
+    }
+  }
+}

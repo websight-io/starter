@@ -4,8 +4,8 @@
     <jcr:content
         jcr:primaryType="ws:PageContent"
         jcr:title="About"
-        sling:resourceType="luna/components/page"
-        ws:template="/apps/luna/templates/articlepage"
+        sling:resourceType="luna/lowcode/components/page"
+        ws:template="/apps/luna/lowcode/templates/articlepage"
         navbarFixed="true"
         navbarFixedPosition="has-navbar-fixed-top">
         <pagecontainer

@@ -91,7 +91,7 @@ describe('Quote component', function () {
     )
     .its('body')
     .should('deep.eq', {
-      'sling:resourceType': 'luna/components/quote',
+      'sling:resourceType': 'luna/lowcode/components/quote',
       'jcr:primaryType': 'nt:unstructured',
       text: '<p>Lorem ipsum</p>',
       authorName: 'Author name',

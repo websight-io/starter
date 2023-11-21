@@ -1,5 +1,0 @@
-{
-  "allowedChildren": ["/apps/luna/templates/articlepage"],
-  "sling:resourceType": "ws:PageTemplate",
-  "title": "Article page"
-}
