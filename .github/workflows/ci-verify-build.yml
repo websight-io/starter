@@ -22,7 +22,8 @@ on:
       - main
 
 env:
-  APP_FRONTEND_MODULE: application/frontend
+  APP_LC_FRONTEND_MODULE: applications/luna-low-code/frontend
+  APP_CC_FRONTEND_MODULE: applications/luna-custom-code/frontend
   E2E_TESTS_MODULE: tests/end-to-end
 
 jobs:
@@ -72,8 +73,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
             ${{ env.E2E_TESTS_MODULE }}/node
             ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -84,6 +87,10 @@ jobs:
       - name: Clear snapshots before caching
         if: always()
         run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
+
+      - name: Clear cypress before caching
+        if: always()
+        run: rm -r ${{ env.E2E_TESTS_MODULE }}/node_modules/cypress;
 
   prepare-data-for-visual-tests-from-main-branch:
     name: Prepare data for visual tests from main branch
@@ -103,8 +110,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
             ${{ env.E2E_TESTS_MODULE }}/node
             ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -123,6 +132,10 @@ jobs:
         if: always()
         run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
 
+      - name: Clear cypress before caching
+        if: always()
+        run: rm -r ${{ env.E2E_TESTS_MODULE }}/node_modules/cypress;
+
   verify-visual-regression:
     name: Verify with visual regression tests
     runs-on: ubuntu-latest
@@ -139,8 +152,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
             ${{ env.E2E_TESTS_MODULE }}/node
             ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -175,3 +190,7 @@ jobs:
       - name: Clear snapshots before caching
         if: always()
         run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
+
+      - name: Clear cypress before caching
+        if: always()
+        run: rm -r ${{ env.E2E_TESTS_MODULE }}/node_modules/cypress;
