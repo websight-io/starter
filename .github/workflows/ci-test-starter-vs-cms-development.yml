@@ -21,8 +21,8 @@ on:
 
 env:
   AWS_REGION: "eu-central-1"
-  APP_FRONTEND_MODULE: application/frontend
-  E2E_TESTS_MODULE: tests/end-to-end
+  APP_LC_FRONTEND_MODULE: applications/luna-low-code/frontend
+  APP_CC_FRONTEND_MODULE: applications/luna-custom-code/frontend
 
 permissions:
   id-token: write
@@ -47,10 +47,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Configure AWS Credentials

@@ -24,7 +24,6 @@ on:
 env:
   APP_LC_FRONTEND_MODULE: applications/luna-low-code/frontend
   APP_CC_FRONTEND_MODULE: applications/luna-custom-code/frontend
-  E2E_TESTS_MODULE: tests/end-to-end
 
 jobs:
   verify-cms-docker-image:
@@ -77,8 +76,6 @@ jobs:
             ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
             ${{ env.APP_CC_FRONTEND_MODULE }}/node
             ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Verify Starter CMS Feature model with integration and E2E tests
@@ -87,10 +84,6 @@ jobs:
       - name: Clear snapshots before caching
         if: always()
         run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
-
-      - name: Clear cypress before caching
-        if: always()
-        run: rm -r ${{ env.E2E_TESTS_MODULE }}/node_modules/cypress;
 
   prepare-data-for-visual-tests-from-main-branch:
     name: Prepare data for visual tests from main branch
@@ -114,8 +107,6 @@ jobs:
             ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
             ${{ env.APP_CC_FRONTEND_MODULE }}/node
             ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Visual tests - create reference snapshots
@@ -131,10 +122,6 @@ jobs:
       - name: Clear snapshots before caching
         if: always()
         run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
-
-      - name: Clear cypress before caching
-        if: always()
-        run: rm -r ${{ env.E2E_TESTS_MODULE }}/node_modules/cypress;
 
   verify-visual-regression:
     name: Verify with visual regression tests
@@ -156,8 +143,6 @@ jobs:
             ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
             ${{ env.APP_CC_FRONTEND_MODULE }}/node
             ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Download reference screenshots
@@ -190,7 +175,3 @@ jobs:
       - name: Clear snapshots before caching
         if: always()
         run: find ~/.m2/repository/pl/ds -name "*-SNAPSHOT" -type d -print -prune -exec rm -r "{}" \;
-
-      - name: Clear cypress before caching
-        if: always()
-        run: rm -r ${{ env.E2E_TESTS_MODULE }}/node_modules/cypress;
