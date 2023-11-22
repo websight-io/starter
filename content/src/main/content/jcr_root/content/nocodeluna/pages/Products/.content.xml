@@ -2,10 +2,12 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="ws:Page">
     <jcr:content
+        jcr:lastModified="{Date}2023-11-21T16:29:15.899+01:00"
+        jcr:lastModifiedBy="sling-package-install"
         jcr:primaryType="ws:PageContent"
         jcr:title="Products"
         sling:resourceType="kyanite/common/components/page"
-        ws:lastModified="{Date}2023-08-23T13:27:07.194Z"
+        ws:lastModified="{Date}2023-11-22T13:14:11.684+01:00"
         ws:lastModifiedBy="wsadmin"
         ws:template="/libs/kyanite/blogs/templates/articlepage"
         navbarFixed="true"
@@ -22,6 +24,7 @@
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
+                        columnsActivationLevel="is-desktop"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -279,16 +282,6 @@
                                 <column1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/columns/column">
-                                    <image
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/image"
-                                        alt="\0"
-                                        assetReference="/content/nocodeluna/assets/images/product/ring-resizing.svg"
-                                        imageSrcType="asset"
-                                        isRounded="false"
-                                        src="/content/nocodeluna/assets/images/product/ring-resizing.svg"
-                                        style="is-96x96"
-                                        type="fixed"/>
                                     <mobileColumnStyle
                                         jcr:primaryType="nt:unstructured"
                                         isNormalColumn="true"
@@ -305,6 +298,16 @@
                                         offsetType="evenNumber"
                                         size="three"
                                         sizeType="evenNumber"/>
+                                    <image
+                                        jcr:primaryType="nt:unstructured"
+                                        sling:resourceType="kyanite/common/components/image"
+                                        alt="\0"
+                                        assetReference="/content/nocodeluna/assets/images/product/ring-resizing.svg"
+                                        imageSrcType="asset"
+                                        isRounded="false"
+                                        src="/content/nocodeluna/assets/images/product/ring-resizing.svg"
+                                        style="is-96x96"
+                                        type="fixed"/>
                                 </column1>
                             </columns>
                             <content
@@ -436,193 +439,9 @@
             <navbarreference
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/navbarreference"/>
-            <section_2_1_1_1
+            <footerreference
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
-                <container
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/container">
-                    <navbar_1
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/navbar"
-                        isTransparent="true"
-                        variant="is-light">
-                        <brand
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbarbrand">
-                            <item
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                imageSrcType="asset"
-                                label="LUNA"
-                                type="image">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    alt="\0"
-                                    assetReference="/content/nocodeluna/assets/images/LUNA.svg"
-                                    src="/content/nocodeluna/assets/images/LUNA.svg"/>
-                            </item>
-                        </brand>
-                        <menu
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbarmenu">
-                            <start
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/navbar/navbarstart">
-                                <item_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="PRICING"
-                                    type="link"/>
-                                <item_2
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="FEATURES"
-                                    type="link"/>
-                                <item
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="PRODUCTS"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/Products"/>
-                                <item_2_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="ABOUT"
-                                    type="link"
-                                    url="/content/nocodeluna/pages/About"/>
-                            </start>
-                            <end
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/navbar/navbarend">
-                                <navbaritem
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-linkedin"
-                                        isDisabled="false"
-                                        isFullWidth="false"
-                                        isInverted="true"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="false"
-                                        label="\0"
-                                        openInNewTab="false"
-                                        selectOrType="type"
-                                        showIconLeft="true"
-                                        size="is-normal"
-                                        type="button"
-                                        variant="is-ghost">
-                                        <leftIcon
-                                            jcr:primaryType="nt:unstructured"
-                                            icon="mdi-linkedin"
-                                            iconLibType="mdi"
-                                            selectOrType="type"/>
-                                    </button>
-                                </navbaritem>
-                                <navbaritem_2
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-facebook"
-                                        isFullWidth="false"
-                                        isInverted="true"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="false"
-                                        label="\0"
-                                        selectOrType="type"
-                                        showIconLeft="true"
-                                        size="is-normal"
-                                        variant="is-ghost">
-                                        <leftIcon
-                                            jcr:primaryType="nt:unstructured"
-                                            icon="mdi-facebook"
-                                            iconLibType="mdi"
-                                            selectOrType="type"/>
-                                    </button>
-                                </navbaritem_2>
-                                <navbaritem_2_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-twitter"
-                                        isFullWidth="false"
-                                        isInverted="true"
-                                        isLight="false"
-                                        isOutlined="true"
-                                        isRounded="false"
-                                        label="\0"
-                                        selectOrType="type"
-                                        showIconLeft="true"
-                                        size="is-normal"
-                                        variant="is-ghost">
-                                        <leftIcon
-                                            jcr:primaryType="nt:unstructured"
-                                            icon="mdi-twitter"
-                                            iconLibType="mdi"
-                                            selectOrType="type"/>
-                                    </button>
-                                </navbaritem_2_1>
-                                <navbaritem_2_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="Item"
-                                    type="container">
-                                    <button
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/button"
-                                        addIcon="true"
-                                        icon="fab fa-2x fa-instagram"
-                                        isFullWidth="false"
-                                        isInverted="true"
-                                        isLight="false"
-                                        isOutlined="false"
-                                        isRounded="false"
-                                        label="\0"
-                                        selectOrType="type"
-                                        showIconLeft="true"
-                                        size="is-normal"
-                                        variant="is-ghost">
-                                        <leftIcon
-                                            jcr:primaryType="nt:unstructured"
-                                            icon="mdi-instagram"
-                                            iconLibType="mdi"
-                                            selectOrType="type"/>
-                                    </button>
-                                </navbaritem_2_1_1>
-                            </end>
-                        </menu>
-                    </navbar_1>
-                    <content
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/content"
-                        text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
-                </container>
-            </section_2_1_1_1>
+                sling:resourceType="kyanite/common/components/footerreference"/>
         </pagecontainer>
     </jcr:content>
 </jcr:root>

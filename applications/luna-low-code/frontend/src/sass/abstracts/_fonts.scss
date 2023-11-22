@@ -14,15 +14,6 @@
  * limitations under the License.
  */
 
-@use 'sass:map';
-
-$font-icon: 2rem;
-$font-regular: 1.125rem;
-$font-regular-small: 1rem;
-
-$font-caption: 0.875rem;
-$font-caption-small: 0.75rem;
-
 $font-weight-xbold: 800;
 $font-weight-xxbold: 900;
 
@@ -90,88 +81,6 @@ $font-size-h1-lg: 95.37px;
 
   @media screen and (min-width: 970px) {
     font-size: 1.25rem;
-    line-height: 1.5rem;
-  }
-}
-
-@mixin font-body($font-weight: 400) {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: $font-weight;
-
-  @media screen and (min-width: 970px) {
-    font-size: 1.125rem;
-    line-height: 1.625rem;
-  }
-}
-
-
-@mixin font-body-s($font-weight: 400) {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: $font-weight;
-}
-
-@mixin font-body-bold {
-  @include font-body($font-weight-xbold);
-}
-
-@mixin font-h1-content {
-  font-size: 2.027rem;
-  line-height: 2.75rem;
-
-  @media screen and (min-width: 970px) {
-    font-size: 2.281rem;
-    line-height: 3rem;
-  }
-}
-
-@mixin font-h2-content {
-  font-size: 1.802rem;
-  line-height: 2.5rem;
-
-  @media screen and (min-width: 970px) {
-    font-size: 2.027rem;
-    line-height: 2.75rem;
-  }
-}
-
-@mixin font-h3-content {
-  font-size: 1.602rem;
-  line-height: 2rem;
-
-  @media screen and (min-width: 970px) {
-    font-size: 1.802rem;
-    line-height: 2.5rem;
-  }
-}
-
-@mixin font-h4-content {
-  font-size: 1.424rem;
-  line-height: 1.75rem;
-
-  @media screen and (min-width: 970px) {
-    font-size: 1.602rem;
-    line-height: 2rem;
-  }
-}
-
-@mixin font-h5-content {
-  font-size: 1.266rem;
-  line-height: 1.5rem;
-
-  @media screen and (min-width: 970px) {
-    font-size: 1.424rem;
-    line-height: 1.75rem;
-  }
-}
-
-@mixin font-h6-content {
-  font-size: 1.125;
-  line-height: 1.375rem;
-
-  @media screen and (min-width: 970px) {
-    font-size: 1.266rem;
     line-height: 1.5rem;
   }
 }

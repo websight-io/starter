@@ -1,5 +1,6 @@
 {
   "allowedChildren": ["/apps/luna/lowcode/templates/articlepage"],
   "sling:resourceType": "ws:PageTemplate",
+  "sling:resourceSuperType": "kyanite/common/templates/homepage",
   "title": "Home page"
 }

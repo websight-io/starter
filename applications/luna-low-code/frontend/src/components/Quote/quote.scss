@@ -13,21 +13,18 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
- @use 'sass:map';
-
- @use '../../sass/abstracts';
 
 
  .quote {
     @media screen and (min-width: 970px) {
-        padding-left: map.get(abstracts.$spacing, 'small-2');
-        padding-right: map.get(abstracts.$spacing, 'medium');
+        padding-left: var(--spacing-1);
+        padding-right: var(--spacing-4);
       }
     &__quotation-marks {
-        margin-bottom: map.get(abstracts.$spacing, 'small-3');
+        margin-bottom: var(--spacing-5);
 
         path {
-          color: var(--color-primary);
+          color: var(--color-primary--600);
         }
     }
     &__content {
@@ -38,7 +35,14 @@
             margin-top: 1rem;
             text-align: center;
             color: var(--color-default);
-            @include abstracts.font-h4;
+            font-size: 1.563rem;
+            line-height: 2rem;
+            font-weight: 900;
+
+            @media screen and (min-width: 970px) {
+              font-size: 1.953rem;
+              line-height: 2.5rem;
+            }
             @media screen and (min-width: 768px) {
                 text-align: start;
                 margin-top: 1.5rem;
@@ -46,13 +50,13 @@
         }
     }
     &__author {
-        margin-top: map.get(abstracts.$spacing, 'medium-2');
+        margin-top: var(--spacing-6);
         display: flex;
         align-items: center;
         &-image {
             max-width: 80px;
             clip-path: circle();
-            margin-right: map.get(abstracts.$spacing, 'medium');
+            margin-right: var(--spacing-5);
         }
         &-info {
             margin-top: 0;
@@ -60,7 +64,15 @@
             flex-direction: column;
         }
         &-name {
-            @include abstracts.font-h6;
+          color: var(--color-primary--600);
+          font-size: 1.125rem;
+          line-height: 1.375rem;
+          font-weight: 900;
+
+          @media screen and (min-width: 970px) {
+            font-size: 1.25rem;
+            line-height: 1.5rem;
+          }
         }
         &-description {
             display: block;

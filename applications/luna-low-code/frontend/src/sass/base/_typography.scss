@@ -16,18 +16,6 @@
 
 @use '../abstracts';
 
-@font-face {
-  font-family: 'ds-iconfonts';
-  src: url('./fonts/ds-font/ds-iconfonts.eot?v=1');
-  src: url('./fonts/ds-font/ds-iconfonts.eot?v=1#iefix')
-      format('embedded-opentype'),
-    url('./fonts/ds-font/ds-iconfonts.woff?v=1') format('woff'),
-    url('./fonts/ds-font/ds-iconfonts.ttf?v=1') format('truetype'),
-    url('./fonts/ds-font/ds-iconfonts.svg?v=1#ds-iconfonts') format('svg');
-  font-weight: normal;
-  font-style: normal;
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
 
 body {

@@ -26,7 +26,7 @@
   </parent>
 
   <artifactId>starter-applications</artifactId>
-  <name>Starter: Application</name>
+  <name>Starter: Applications</name>
   <description>Parent for application modules.</description>
   <packaging>pom</packaging>
 
