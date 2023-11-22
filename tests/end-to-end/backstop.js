@@ -54,7 +54,7 @@ const scenarios = [
 
   const scenarioConfig = {
     removeSelectors,
-    label: scenario.page,
+    label: `${scenario.space}_${scenario.page}`,
     cookiePath: 'backstop_data/engine_scripts/cookies.json',
     url: getPublishedPageUrl(scenario),
     delay: 500,
