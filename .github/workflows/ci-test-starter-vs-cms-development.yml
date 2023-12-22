@@ -70,7 +70,14 @@ jobs:
       - name: Update dependencies to the latest snapshot version
         env:
           AWS_ACCOUNT_ID: ${{ secrets.AWS_ACCOUNT_ID }}
-        run: ./mvnw versions:update-properties
+        run: |
+          export CMS_VERSION=`./mvnw versions:update-properties | grep 'Updated ${websight.cms.version}.*SNAPSHOT' | sed 's/.*Updated ${websight.cms.version} from.*to //'`
+          if [ -z '$CMS_VERSION' ]; then
+            echo 'WebSight CMS version not updated'
+            exit 1
+          else
+            echo 'WebSight CMS version updated to $CMS_VERSION'
+          fi    
 
       - name: Build and test
         env:
