@@ -147,6 +147,7 @@
   <dependencyManagement>
     <dependencies>
       <dependency>
+        <!-- required to update version by versions-maven-plugin -->
         <groupId>pl.ds.websight</groupId>
         <artifactId>websight-cms-ce-feature</artifactId>
         <version>${websight.cms.version}</version>
