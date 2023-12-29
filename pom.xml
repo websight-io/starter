@@ -66,7 +66,7 @@
     <websight.admin.omitAdminPw>true</websight.admin.omitAdminPw>
 
     <!-- WebSight CMS Version -->
-    <!-- remember to update the verion in Dockerfile too! -->
+    <!-- remember to update the version in Dockerfile too! -->
     <websight.cms.version>1.23.0</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
@@ -143,6 +143,18 @@
       </plugins>
     </pluginManagement>
   </build>
+
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <!-- required to update version by versions-maven-plugin -->
+        <groupId>pl.ds.websight</groupId>
+        <artifactId>websight-cms-ce-feature</artifactId>
+        <version>${websight.cms.version}</version>
+        <scope>provided</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
 
   <repositories>
     <repository>

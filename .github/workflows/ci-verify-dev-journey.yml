@@ -23,7 +23,6 @@ permissions:
 
 env:
   APP_FRONTEND_MODULE: application/frontend
-  E2E_TESTS_MODULE: tests/end-to-end
 
 jobs:
   verify-dev-journey:
@@ -47,8 +46,6 @@ jobs:
           path: |
             ${{ env.APP_FRONTEND_MODULE }}/node
             ${{ env.APP_FRONTEND_MODULE }}/node_modules
-            ${{ env.E2E_TESTS_MODULE }}/node
-            ${{ env.E2E_TESTS_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Build and install Nodejs, NPM, and Cypress
