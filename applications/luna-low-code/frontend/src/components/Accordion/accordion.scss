@@ -14,9 +14,6 @@
  * limitations under the License.
  */
 
-@use 'sass:map';
-@use '../../sass/abstracts';
-
 .accordion {
     &__item {
         &:not(first-child) {
@@ -24,7 +21,6 @@
         }
         border-bottom: 2px solid var(--color-neutral-200);
         &-header {
-            @include abstracts.font-h5;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -34,7 +30,16 @@
             border: 0;
             background: transparent;
             cursor: pointer;
-            color: var(--color-default);
+            color: var(--color-primary--500);
+            font-size: 1.25rem;
+            font-weight: 900;
+            line-height: 1.5rem;
+            text-transform: none;
+
+            @media screen and (min-width: 970px) {
+                font-size: 1.563rem;
+                line-height: 2rem;
+            }
         }
         &-body {
             overflow: hidden;
@@ -46,8 +51,8 @@
             }
         }
         &-icon {
-            font-size: abstracts.$font-icon;
-            margin-left: map.get(abstracts.$spacing, 'small-2');
+            font-size: 2rem;
+            margin-left: 0.5rem;
             transition: transform 0.25s ease-in-out;
             pointer-events: none;
             font-weight: normal;

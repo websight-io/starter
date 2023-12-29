@@ -14,9 +14,6 @@
  * limitations under the License.
  */
 
- @use 'sass:map';
- @use '../../sass/abstracts';
-
 .luna-carousel {
     padding-top: 50px;
     overflow: hidden;
@@ -39,11 +36,12 @@
     &__control {
         margin: 18px 5px;
         cursor: pointer;
-        @include abstracts.carousel-icon;
+        text-decoration: none;
+        border-radius: 50%;
+        display: block;
+        appearance: none;
+        background: transparent;
 
-        &.hl-icon--left {
-          transform: rotate(180deg)
-        }
         &.glide__arrow--disabled {
           cursor: default;
           pointer-events: none;

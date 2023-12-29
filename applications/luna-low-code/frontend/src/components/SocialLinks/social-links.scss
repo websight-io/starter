@@ -14,30 +14,23 @@
  * limitations under the License.
  */
 
- @use 'sass:map';
- @use '../../sass/abstracts/index';
-
  .footer {
-  .media-right {
-    display: flex;
-    gap: 1rem;
-    .button {
-      &.is-outlined.is-rounded {
-        height: 40px;
-        width: 40px;
-        i.fab, i.fa-2x {
-          font-size: 1.2rem;
-        }
-      }
-      @media screen and (max-width: 640px) {
-        &.is-outlined.is-rounded {
-          height: 34px;
-          width: 34px;
-          i.fab, i.fa-2x {
-            font-size: 0.9rem;
-          }
-        }
-      }
-    }
-  }
+   .button.is-primary.is-outlined {
+     .icon {
+       color: var(--color-primary--500) !important;
+     }
+
+     &:focus:not(:hover) {
+       .icon {
+         color: var(--color-primary--500) !important;
+       }
+     }
+
+     &:hover {
+       .icon {
+         color: #ffffff !important;
+       }
+     }
+   }
+
  }

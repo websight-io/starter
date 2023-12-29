@@ -14,18 +14,7 @@
  * limitations under the License.
  */
 
-@use './abstracts';
-
-// CSS reset
-@import './base/reset';
-
-* {
-  box-sizing: border-box;
-}
-
-a {
-  text-decoration: none;
-}
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
 
 img,
 svg {
@@ -34,15 +23,41 @@ svg {
 
 // global styles
 body {
+  font-family: var(--font-body);
   background-color: var(--color-body-background);
-  
-  @include abstracts.font-body;
 
-  &.primary-color {
-    @each $name, $color in abstracts.$primary-colors {
-      &--#{$name} {
-        --color-primary: #{$color};
+  button, a {
+    text-transform: var(--links-text-transform);
+    font-weight: 800;
+
+    &.button {
+      &.is-text, .link {
+        color: var(--color-primary--600);
+      }
+
+      &.is-primary {
+
+        &.is-outlined {
+          background-color: #ffffff !important;
+          border-color: var(--color-primary--500) !important;
+          color: var(--color-primary--500);
+
+          &:focus:not(:hover) {
+            color: var(--color-primary--500);
+          }
+
+          &:hover {
+            background-color: var(--color-primary--500) !important;
+            color: #ffffff;
+          }
+        }
+      }
+
+      &.is-rounded {
+        padding: calc(0.5em - 1px) 1em;
       }
     }
+
   }
+
 }
