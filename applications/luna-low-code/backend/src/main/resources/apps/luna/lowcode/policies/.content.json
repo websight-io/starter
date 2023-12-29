@@ -1,0 +1,16 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "common": {
+    "jcr:primaryType": "nt:unstructured",
+    "container": {
+      "jcr:primaryType": "nt:unstructured",
+      "allowedComponents": [
+        "Kyanite Columns",
+        "Kyanite Components",
+        "Kyanite Elements",
+        "Kyanite Layouts",
+        "Luna Low Code Components"
+      ]
+    }
+  }
+}

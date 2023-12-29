@@ -1,0 +1,63 @@
+/*
+ * Copyright (C) 2022 Dynamic Solutions
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *     http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Jost&display=swap');
+
+img,
+svg {
+  vertical-align: middle;
+}
+
+// global styles
+body {
+  font-family: var(--font-body);
+  background-color: var(--color-body-background);
+
+  button, a {
+    text-transform: var(--links-text-transform);
+    font-weight: 800;
+
+    &.button {
+      &.is-text, .link {
+        color: var(--color-primary--600);
+      }
+
+      &.is-primary {
+
+        &.is-outlined {
+          background-color: #ffffff !important;
+          border-color: var(--color-primary--500) !important;
+          color: var(--color-primary--500);
+
+          &:focus:not(:hover) {
+            color: var(--color-primary--500);
+          }
+
+          &:hover {
+            background-color: var(--color-primary--500) !important;
+            color: #ffffff;
+          }
+        }
+      }
+
+      &.is-rounded {
+        padding: calc(0.5em - 1px) 1em;
+      }
+    }
+
+  }
+
+}

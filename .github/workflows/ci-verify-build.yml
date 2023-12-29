@@ -22,7 +22,8 @@ on:
       - main
 
 env:
-  APP_FRONTEND_MODULE: application/frontend
+  APP_LC_FRONTEND_MODULE: applications/luna-low-code/frontend
+  APP_CC_FRONTEND_MODULE: applications/luna-custom-code/frontend
 
 jobs:
   verify-cms-docker-image:
@@ -71,8 +72,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Verify Starter CMS Feature model with integration and E2E tests
@@ -100,8 +103,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Visual tests - create reference snapshots
@@ -134,8 +139,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Download reference screenshots

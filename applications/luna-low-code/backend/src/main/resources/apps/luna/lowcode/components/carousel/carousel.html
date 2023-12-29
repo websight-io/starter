@@ -1,0 +1,46 @@
+<!--/*
+    Copyright (C) 2022 Dynamic Solutions
+
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
+
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
+*/-->
+
+<sly data-sly-use.model="pl.ds.luna.lowcode.components.models.CarouselComponent">
+    <sly data-sly-test="${resource.hasChildren}">
+        <sly data-sly-test="${!wcmmode.isEdit}">
+            <div class="luna-carousel glide" data-items-per-row="${model.slidesToShow}" data-testid="component_${resource.name}">
+                <div class="glide__track" data-glide-el="track" tabindex="0">
+                    <ul class="glide__slides">
+                        <sly data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+                    </ul>
+                </div>
+                <div data-glide-el="controls" class="luna-carousel__controls">
+                    <button id="prevButton" data-glide-dir="<" class="luna-carousel__control button is-normal is-primary is-outlined is-rounded">
+                        <span class="icon is-medium ">
+                          <i class="mdi mdi-36px mdi-chevron-left"></i>
+                        </span>
+                    </button>
+                    <button id="nextButton" data-glide-dir=">" class="luna-carousel__control button is-normal is-primary is-outlined is-rounded">
+                        <span class="icon is-medium ">
+                          <i class="mdi mdi-36px mdi-chevron-right"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </sly>
+        <sly data-sly-test="${wcmmode.isEdit}">
+            <ul class="luna-carousel columns is-multiline" data-testid="component_${resource.name}">
+              <sly data-sly-include="${'parsys.html' @ prependPath='/libs/wcm/foundation/components/parsys'}"></sly>
+            </ul>
+        </sly>
+    </sly>
+</sly>

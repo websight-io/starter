@@ -22,7 +22,8 @@ permissions:
   contents: read
 
 env:
-  APP_FRONTEND_MODULE: application/frontend
+  APP_LC_FRONTEND_MODULE: applications/luna-low-code/frontend
+  APP_CC_FRONTEND_MODULE: applications/luna-custom-code/frontend
 
 jobs:
   verify-dev-journey:
@@ -44,8 +45,10 @@ jobs:
       - uses: actions/cache@v3
         with:
           path: |
-            ${{ env.APP_FRONTEND_MODULE }}/node
-            ${{ env.APP_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node
+            ${{ env.APP_LC_FRONTEND_MODULE }}/node_modules
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node
+            ${{ env.APP_CC_FRONTEND_MODULE }}/node_modules
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Build and install Nodejs, NPM, and Cypress
@@ -65,7 +68,7 @@ jobs:
         run: ./.github/scripts/dev-journey-2-prepare-project-changes.sh
 
       - name: Install changes
-        run: ./mvnw -f ./application/backend/pom.xml clean install -P autoInstallBundle
+        run: ./mvnw -f ./applications/luna-custom-code/backend/pom.xml clean install -P autoInstallBundle
 
       - name: Validate if functional tests detect changes
         run: ./.github/scripts/dev-journey-3-validate-functional-tests.sh

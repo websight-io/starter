@@ -61,12 +61,22 @@
     </dependency>
     <dependency>
       <groupId>pl.ds.starter</groupId>
-      <artifactId>starter-backend</artifactId>
+      <artifactId>luna-custom-code-backend</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>
       <groupId>pl.ds.starter</groupId>
-      <artifactId>starter-frontend</artifactId>
+      <artifactId>luna-custom-code-frontend</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>luna-low-code-backend</artifactId>
+      <version>${project.version}</version>
+    </dependency>
+    <dependency>
+      <groupId>pl.ds.starter</groupId>
+      <artifactId>luna-low-code-frontend</artifactId>
       <version>${project.version}</version>
     </dependency>
     <dependency>

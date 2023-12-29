@@ -2,85 +2,25 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
     jcr:primaryType="ws:Page">
     <jcr:content
+        jcr:lastModified="{Date}2023-11-21T16:29:16.994+01:00"
+        jcr:lastModifiedBy="sling-package-install"
         jcr:primaryType="ws:PageContent"
         jcr:title="About"
-        sling:resourceType="luna/components/page"
-        ws:template="/apps/luna/templates/articlepage"
+        sling:resourceType="luna/lowcode/components/page"
+        ws:lastModified="{Date}2023-11-22T11:33:17.054+01:00"
+        ws:lastModifiedBy="wsadmin"
+        ws:template="/apps/luna/lowcode/templates/articlepage"
         navbarFixed="true"
         navbarFixedPosition="has-navbar-fixed-top">
         <pagecontainer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="kyanite/common/components/pagecontainer">
-            <section
+            <navbarreference
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section"
-                id="navbar">
-                <container
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/container">
-                    <navbar
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/navbar"
-                        fixedOption="is-fixed-top"
-                        isTransparent="true"
-                        variant="is-white">
-                        <brand
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbarbrand"
-                            createBurger="true">
-                            <item
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                imageSrcType="asset"
-                                label="LUNA"
-                                type="image"
-                                url="/content/lowcodeluna/pages/Homepage">
-                                <image
-                                    jcr:primaryType="nt:unstructured"
-                                    alt="\0"
-                                    assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
-                                    src="/content/lowcodeluna/assets/images/LUNA.svg"/>
-                            </item>
-                        </brand>
-                        <menu
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbarmenu">
-                            <end
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/navbar/navbarend">
-                                <item
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="PRODUCTS"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/Products"/>
-                                <item_2
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="CATALOG"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/Catalog"/>
-                                <item_2_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="ABOUT"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/About"/>
-                                <item_2_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                                    imageSrcType="asset"
-                                    label="  CONTACT US"
-                                    type="link"
-                                    url="/content/lowcodeluna/pages/Homepage"/>
-                            </end>
-                        </menu>
-                    </navbar>
-                </container>
-            </section>
+                sling:resourceType="kyanite/common/components/navbarreference"
+                containerStyle="\0"
+                fixedOption="is-fixed-top"
+                variant="\0"/>
             <section_2_2
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/section">
@@ -266,7 +206,7 @@
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
-                        columnsActivationLevel="is-desktop"
+                        columnsActivationLevel="is-tablet"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -289,6 +229,11 @@
                                 color="bw_has-text-black"
                                 size="is-medium"
                                 text="&lt;h1>&lt;/h1>&lt;p>Whether in deep or deck, diamonds level up any look, studs work in any situations. Graphic links and gold rings hold their own an look even better together.&lt;/p>&lt;p>Too muchis never enough. It’s called a good statement for a reason.&lt;/p>"/>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                size="five"
+                                sizeType="evenNumber"/>
                         </column1_1>
                         <column1
                             jcr:primaryType="nt:unstructured"
@@ -306,6 +251,13 @@
                                     src="/content/lowcodeluna/assets/images/aboutus/Jewellery set.png"
                                     type="fixed"/>
                             </block>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offset="one"
+                                offsetType="evenNumber"
+                                size="six"
+                                sizeType="evenNumber"/>
                         </column1>
                     </columns_1>
                 </container>
@@ -319,7 +271,7 @@
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
-                        columnsActivationLevel="is-desktop"
+                        columnsActivationLevel="is-tablet"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -341,6 +293,11 @@
                                     src="/content/lowcodeluna/assets/images/aboutus/Ring-creation-process.png"
                                     type="fixed"/>
                             </block>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                size="six"
+                                sizeType="evenNumber"/>
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
@@ -368,10 +325,25 @@
                                 isLight="false"
                                 isOutlined="false"
                                 isRounded="false"
-                                label="DISCOVER MORE"
+                                label="Discover more"
+                                showIconRight="true"
                                 size="is-medium"
                                 type="button"
-                                variant="is-white"/>
+                                variant="is-text">
+                                <rightIcon
+                                    jcr:primaryType="nt:unstructured"
+                                    icon="mdi-arrow-top-right"
+                                    iconLibType="mdi"
+                                    iconSize="mdi-24px"
+                                    selectOrType="type"/>
+                            </button_1>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offset="one"
+                                offsetType="evenNumber"
+                                size="five"
+                                sizeType="evenNumber"/>
                         </column1_1>
                     </columns_1>
                 </container>
@@ -385,7 +357,7 @@
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
-                        columnsActivationLevel="is-desktop"
+                        columnsActivationLevel="is-tablet"
                         desktopGapLevel="is-7"
                         isCentered="false"
                         isCustomGapLevel="true"
@@ -416,10 +388,25 @@
                                 isLight="false"
                                 isOutlined="false"
                                 isRounded="false"
-                                label="DISCOVER MORE"
+                                label="Lern more"
+                                showIconLeft="false"
+                                showIconRight="true"
                                 size="is-medium"
                                 type="button"
-                                variant="is-white"/>
+                                variant="is-text">
+                                <rightIcon
+                                    jcr:primaryType="nt:unstructured"
+                                    icon="mdi-arrow-top-right"
+                                    iconLibType="mdi"
+                                    iconSize="mdi-24px"
+                                    selectOrType="type"/>
+                            </button_1>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offsetType="evenNumber"
+                                size="five"
+                                sizeType="evenNumber"/>
                         </column1_1>
                         <column1
                             jcr:primaryType="nt:unstructured"
@@ -437,6 +424,13 @@
                                     src="/content/lowcodeluna/assets/images/aboutus/Errings.png"
                                     type="fixed"/>
                             </block>
+                            <desktopColumnStyle
+                                jcr:primaryType="nt:unstructured"
+                                isNormalColumn="true"
+                                offset="one"
+                                offsetType="evenNumber"
+                                size="six"
+                                sizeType="evenNumber"/>
                         </column1>
                     </columns_1>
                 </container>
@@ -573,69 +567,6 @@
                     </columns_1>
                 </container>
             </section_2_2_1>
-            <navbar
-                jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/navbar"
-                containerStyle="\0"
-                fixedOption="is-fixed-top"
-                variant="\0">
-                <brand_1
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/navbar/navbarbrand"
-                    createBurger="true">
-                    <item
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                        imageSrcType="asset"
-                        imageUrl="/content/lowcodeluna/pages/Homepage"
-                        isLink="true"
-                        label="LUNA"
-                        type="image"
-                        url="/content/lowcodeluna/pages/Homepage">
-                        <image
-                            jcr:primaryType="nt:unstructured"
-                            alt="\0"
-                            assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
-                            src="/content/lowcodeluna/assets/images/LUNA.svg"/>
-                    </item>
-                </brand_1>
-                <menu_1
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/navbar/navbarmenu">
-                    <end
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/navbar/navbarend">
-                        <item
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                            imageSrcType="asset"
-                            label="PRODUCTS"
-                            type="link"
-                            url="/content/lowcodeluna/pages/Products"/>
-                        <item_2
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                            imageSrcType="asset"
-                            label="CATALOG"
-                            type="link"
-                            url="/content/lowcodeluna/pages/Catalog"/>
-                        <item_2_1
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                            imageSrcType="asset"
-                            label="ABOUT"
-                            type="link"
-                            url="/content/lowcodeluna/pages/About"/>
-                        <item_2_1_1
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/navbar/navbaritem"
-                            imageSrcType="asset"
-                            label="          CONTACT US"
-                            type="link"
-                            url="/content/lowcodeluna/pages/Homepage"/>
-                    </end>
-                </menu_1>
-            </navbar>
             <section_2_1_1
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/section">
@@ -684,10 +615,10 @@
                             isLight="false"
                             isOutlined="false"
                             isRounded="true"
-                            label="NEW COLLECTION"
+                            label="New collection"
                             size="is-medium"
                             type="button"
-                            variant="is-dark"/>
+                            variant="is-primary"/>
                         <button_1
                             jcr:primaryType="nt:unstructured"
                             sling:resourceType="kyanite/common/components/button"
@@ -697,190 +628,16 @@
                             isLight="false"
                             isOutlined="false"
                             isRounded="false"
-                            label="GET IN TOUCH"
+                            label="Get in touch"
                             size="is-medium"
                             type="button"
-                            variant="is-white"/>
+                            variant="is-text"/>
                     </buttons>
                 </container>
             </section_2_1_1>
-            <footer
+            <footerreference
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/footer">
-                <container
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/container">
-                    <mediaobject
-                        jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/mediaobject">
-                        <mediaLeft
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/mediaobject/medialeft">
-                            <image
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/image"
-                                alt="\0"
-                                assetReference="/content/lowcodeluna/assets/images/LUNA.svg"
-                                imageSrcType="asset"
-                                isRounded="false"
-                                src="/content/lowcodeluna/pages/Homepage"
-                                type="fixed"/>
-                        </mediaLeft>
-                        <mediaContent
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/mediaobject/mediacontent">
-                            <buttons
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/buttons">
-                                <button1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/button"
-                                    addIcon="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="PRICING"
-                                    openInNewTab="false"
-                                    type="a"
-                                    url="/content/lowcodeluna/pages/Homepage"
-                                    variant="is-white"/>
-                                <button1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/button"
-                                    addIcon="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="CATALOG"
-                                    openInNewTab="false"
-                                    type="a"
-                                    url="/content/lowcodeluna/pages/Catalog/"
-                                    variant="is-white"/>
-                                <button1_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/button"
-                                    addIcon="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="PRODUCTS"
-                                    openInNewTab="false"
-                                    type="a"
-                                    url="/content/lowcodeluna/pages/Products/"
-                                    variant="is-white"/>
-                                <button1_1_1_1
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/button"
-                                    addIcon="false"
-                                    isFullWidth="false"
-                                    isLight="false"
-                                    isOutlined="false"
-                                    isRounded="false"
-                                    label="ABOUT"
-                                    openInNewTab="false"
-                                    type="a"
-                                    url="/content/lowcodeluna/pages/About/"
-                                    variant="is-white"/>
-                            </buttons>
-                        </mediaContent>
-                        <mediaRight
-                            jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/mediaobject/mediaright">
-                            <button
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/button"
-                                addIcon="true"
-                                icon="fab fa-2x fa-linkedin-in"
-                                isDisabled="false"
-                                isFullWidth="false"
-                                isInverted="false"
-                                isLight="false"
-                                isOutlined="true"
-                                isRounded="true"
-                                label="\0"
-                                openInNewTab="false"
-                                selectOrType="type"
-                                showIconLeft="true"
-                                size="is-small"
-                                type="button"
-                                variant="is-dark">
-                                <leftIcon
-                                    jcr:primaryType="nt:unstructured"
-                                    icon="mdi-linkedin"
-                                    iconLibType="mdi"
-                                    selectOrType="type"/>
-                            </button>
-                            <button_1
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/button"
-                                addIcon="true"
-                                icon="fab fa-2x fa-facebook-f"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="true"
-                                isRounded="true"
-                                label="\0"
-                                selectOrType="type"
-                                showIconLeft="true"
-                                size="is-small"
-                                variant="is-dark">
-                                <leftIcon
-                                    jcr:primaryType="nt:unstructured"
-                                    icon="mdi-facebook"
-                                    iconLibType="mdi"
-                                    selectOrType="type"/>
-                            </button_1>
-                            <button_2
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/button"
-                                addIcon="true"
-                                icon="fab fa-2x fa-twitter"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="true"
-                                isRounded="true"
-                                label="\0"
-                                selectOrType="type"
-                                showIconLeft="true"
-                                size="is-small"
-                                variant="is-dark">
-                                <leftIcon
-                                    jcr:primaryType="nt:unstructured"
-                                    icon="mdi-twitter"
-                                    iconLibType="mdi"
-                                    selectOrType="type"/>
-                            </button_2>
-                            <button_3
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/button"
-                                addIcon="true"
-                                icon="fab fa-2x fa-instagram"
-                                isFullWidth="false"
-                                isLight="false"
-                                isOutlined="true"
-                                isRounded="true"
-                                label="\0"
-                                selectOrType="type"
-                                showIconLeft="true"
-                                size="is-small"
-                                variant="is-dark">
-                                <leftIcon
-                                    jcr:primaryType="nt:unstructured"
-                                    icon="mdi-instagram"
-                                    iconLibType="mdi"
-                                    selectOrType="type"/>
-                            </button_3>
-                        </mediaRight>
-                    </mediaobject>
-                </container>
-                <content
-                    jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/content"
-                    text="&lt;p style=&quot;text-align: center&quot;>&lt;/p>&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
-            </footer>
+                sling:resourceType="kyanite/common/components/footerreference"/>
         </pagecontainer>
     </jcr:content>
 </jcr:root>

@@ -1,0 +1,16 @@
+{
+  "default": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "luna/lowcode/components/quote"
+  },
+  "complex": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "luna/lowcode/components/quote",
+    "text": "Text",
+    "authorName": "Author name",
+    "authorDescription": "Author description",
+    "showImage": true,
+    "authorImage": "/content/bulma/assets/images/personal/Janet.png",
+    "imageAlt": "Alt text"
+  }
+}

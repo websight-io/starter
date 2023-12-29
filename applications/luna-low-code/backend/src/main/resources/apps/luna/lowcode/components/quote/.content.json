@@ -1,0 +1,5 @@
+{
+  "group": "Luna Low Code Components",
+  "sling:resourceType": "ws:Component",
+  "title": "Quote"
+}

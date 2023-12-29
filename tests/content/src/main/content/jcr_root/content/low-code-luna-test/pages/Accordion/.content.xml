@@ -5,21 +5,21 @@
   <jcr:content
     jcr:primaryType="ws:PageContent"
     jcr:title="Accordion"
-    sling:resourceType="luna/components/page"
-    ws:template="/apps/luna/templates/basicpage">
+    sling:resourceType="luna/lowcode/components/page"
+    ws:template="/apps/luna/lowcode/templates/basicpage">
     <pagecontainer
       jcr:primaryType="nt:unstructured"
       sling:resourceType="kyanite/common/components/pagecontainer">
       <accordion
         jcr:primaryType="nt:unstructured"
-        sling:resourceType="luna/components/accordion">
+        sling:resourceType="luna/lowcode/components/accordion">
         <accordionitem
           jcr:primaryType="nt:unstructured"
-          sling:resourceType="luna/components/accordion/accordionitem"
+          sling:resourceType="luna/lowcode/components/accordion/accordionitem"
           header="Some awesome header"/>
         <accordionitem_2
           jcr:primaryType="nt:unstructured"
-          sling:resourceType="luna/components/accordion/accordionitem"
+          sling:resourceType="luna/lowcode/components/accordion/accordionitem"
           header="Some awesome header 2"/>
       </accordion>
     </pagecontainer>

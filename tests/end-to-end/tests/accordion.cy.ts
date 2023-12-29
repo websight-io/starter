@@ -60,7 +60,7 @@ describe('Accordion component', function () {
     )
     .its('body')
     .should('deep.eq', {
-      'sling:resourceType': 'luna/components/accordion/accordionitem',
+      'sling:resourceType': 'luna/lowcode/components/accordion/accordionitem',
       'jcr:primaryType': 'nt:unstructured',
       header: 'Lorem ipsum'
     });

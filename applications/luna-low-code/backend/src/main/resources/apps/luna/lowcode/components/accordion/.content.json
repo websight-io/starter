@@ -1,0 +1,7 @@
+{
+  "isContainer": true,
+  "group": "Luna Low Code Components",
+  "allowedComponents": ["/apps/luna/lowcode/components/accordion/accordionitem"],
+  "sling:resourceType": "ws:Component",
+  "title": "Accordion"
+}

@@ -18,7 +18,7 @@ FROM europe-docker.pkg.dev/websight-io/public/websight-cms-builder:1.23.0 as bui
 # Copy local code to the container image.
 WORKDIR /app
 COPY pom.xml .
-COPY application ./application
+COPY applications ./applications
 COPY content ./content
 COPY distribution ./distribution
 COPY tests ./tests

@@ -28,11 +28,11 @@ fi
 echo "Update LunaTitleComponent.java"
 sed -i '/^package pl.ds.luna.components.models;/a\
 \
-import javax.inject.Inject;' ./application/backend/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
+import javax.inject.Inject;' ./applications/luna-custom-code/backend/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
 
 sed -i '/^import org.apache.sling.api.resource.Resource;/a\
 import org.apache.sling.models.annotations.Default;\
-' ./application/backend/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
+' ./applications/luna-custom-code/backend/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
 
 sed -i '/^public class LunaTitleComponent extends TitleComponent {/a\
   \
@@ -43,31 +43,31 @@ sed -i '/^public class LunaTitleComponent extends TitleComponent {/a\
   public String getOverlineSize(){\
   return overlineSize;\
 }\
-  ' ./application/backend/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
+  ' ./applications/luna-custom-code/backend/src/main/java/pl/ds/luna/components/models/LunaTitleComponent.java
 
 echo "Update title.json"
 
 sed -i '/"headingSize": "hl-title__heading--size-1"/a\
                                   "overlineSize": "hl-title__heading--size-3",\
-  ' ./application/backend/src/test/resources/title.json
+  ' ./applications/luna-custom-code/backend/src/test/resources/title.json
 
 echo "Update LunaTitleComponentTest.java"
 
 sed -i '/assertThat(model.getHeadingSize()).isEqualTo("hl-title__heading--size-4");/a\
   assertThat(model.getOverlineSize()).isEqualTo("hl-title__heading--size-5");\
-  ' ./application/backend/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java 
+  ' ./applications/luna-custom-code/backend/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java
 
 sed -i '/assertThat(model.getHeadingSize()).isEqualTo("hl-title__heading--size-1");/a\
   assertThat(model.getOverlineSize()).isEqualTo("hl-title__heading--size-3");\
-  ' ./application/backend/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java
+  ' ./applications/luna-custom-code/backend/src/test/java/pl/ds/luna/components/models/LunaTitleComponentTest.java
 
 echo "Update lunatitle.html"
 
-sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./application/backend/src/main/resources/apps/luna/components/lunatitle/lunatitle.html
+sed -i 's/hl-title__heading--size-6/${model.overlineSize}/g' ./applications/luna-custom-code/backend/src/main/resources/apps/luna/components/lunatitle/lunatitle.html
   
 echo "Add dialog"
 
-mkdir -p ./application/backend/src/main/resources/apps/luna/components/lunatitle/dialog
+mkdir -p ./applications/luna-custom-code/backend/src/main/resources/apps/luna/components/lunatitle/dialog
 
 echo '{
   "tabs": {
@@ -93,4 +93,4 @@ echo '{
       }
     }
   }
-}' > ./application/backend/src/main/resources/apps/luna/components/lunatitle/dialog/.content.json
+}' > ./applications/luna-custom-code/backend/src/main/resources/apps/luna/components/lunatitle/dialog/.content.json

@@ -1,7 +1,0 @@
-{
-  "isContainer": true,
-  "group": "Luna Components",
-  "sling:resourceType": "ws:Component",
-  "allowedComponents": "/apps/luna/components/carousel/carouselitem",
-  "title": "Carousel"
-}

@@ -25,7 +25,7 @@
   <packaging>pom</packaging>
 
   <modules>
-    <module>application</module>
+    <module>applications</module>
     <module>content</module>
     <module>distribution</module>
     <module>tests</module>
@@ -77,6 +77,20 @@
 
   <build>
     <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-clean-plugin</artifactId>
+        <configuration>
+          <filesets>
+            <fileset>
+              <directory>${project.basedir}</directory>
+              <includes>
+                <include>launcher/**</include>
+              </includes>
+            </fileset>
+          </filesets>
+        </configuration>
+      </plugin>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-deploy-plugin</artifactId>

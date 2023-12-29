@@ -1,8 +1,0 @@
-{
-  "jcr:primaryType": "nt:unstructured",
-  "header": "Accordion header",
-  "accordioncontent": {
-    "jcr:primaryType": "nt:unstructured",
-    "sling:resourceType": "luna/components/accordion/accordioncontent"
-  }
-}
