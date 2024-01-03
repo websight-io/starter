@@ -47,13 +47,12 @@
         <groupId>org.apache.sling</groupId>
         <artifactId>htl-maven-plugin</artifactId>
         <executions>
-          <!-- https://teamds.atlassian.net/browse/WS-2977 -->
-          <!-- <execution>
+          <execution>
             <id>htl-validate</id>
             <goals>
               <goal>validate</goal>
             </goals>
-          </execution> -->
+          </execution>
         </executions>
         <configuration>
           <sourceDirectory>src/main/resources/</sourceDirectory>
