@@ -22,7 +22,7 @@ curl 'http://localhost:8080/apps/websight-authentication/j_security_check' --dat
 
 # publish Luna Homepage
 curl -X POST "http://localhost:8080/content/luna/pages.websight-pages-space-service.publish-pages.action" \
-  -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "items=Homepage" \
+  -H "accept: application/json" -H "Content-Type: multipart/form-data" -F "items=Homepage"  -F "forceAction=true" \
   --cookie websight.auth
 
 # check that Luna Homepage is published
