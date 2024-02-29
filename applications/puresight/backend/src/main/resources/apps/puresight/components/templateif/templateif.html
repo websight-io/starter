@@ -1,0 +1,9 @@
+<div data-sly-unwrap="${!wcmmode.isEdit}">
+  ${properties.if @ context = 'unsafe'}
+  <sly data-sly-repeat.paragraph="${resource.children}" data-sly-resource="${paragraph.path @ resourceType=paragraph.resourceType}"></sly>
+  <sly data-sly-test="${properties.else}">
+    {% else %}
+    ${properties.else}
+  </sly>
+  {% endif %}
+</div>

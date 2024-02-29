@@ -1,0 +1,25 @@
+{
+  "jcr:primaryType": "ws:Page",
+  "jcr:content": {
+    "jcr:primaryType": "ws:PageContent",
+    "sling:resourceType": "puresight/components/page",
+    "navbarFixed": "true",
+    "navbarFixedPosition": "has-navbar-fixed-top",
+    "pagecontainer": {
+      "sling:resourceType": "kyanite/common/components/pagecontainer",
+      "navbar": {
+        "sling:resourceType": "kyanite/common/components/navbar",
+        "fixedOption": "is-fixed-top"
+      },
+      "section": {
+        "sling:resourceType": "kyanite/common/components/section",
+        "container": {
+          "sling:resourceType": "kyanite/common/components/container"
+        }
+      },
+      "footer": {
+        "sling:resourceType": "kyanite/common/components/footer"
+      }
+    }
+  }
+}

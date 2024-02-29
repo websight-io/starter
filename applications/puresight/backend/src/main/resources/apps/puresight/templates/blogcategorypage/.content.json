@@ -1,0 +1,9 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Blog category page",
+  "description": "Empty page allows to create nested blog pages",
+  "allowedChildren": [
+    "/apps/puresight/templates/blogarticlepage",
+    "/apps/puresight/templates/blogcategorypage"
+  ]
+}

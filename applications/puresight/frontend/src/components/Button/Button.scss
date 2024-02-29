@@ -1,0 +1,5 @@
+.button {
+    > span:not(.icon) {
+        vertical-align: top;
+    }
+}

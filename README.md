@@ -1,9 +1,16 @@
-[![CI](https://github.com/websight-io/starter/actions/workflows/ci-verify-build.yml/badge.svg?branch=main)](https://github.com/websight-io/starter/actions/workflows/ci-verify-build.yml)
+[![CI](https://github.com/websight-io/websight-blueprint/actions/workflows/ci-verify-build.yml/badge.svg?branch=main)](https://github.com/websight-io/websight-blueprint/actions/workflows/ci-verify-build.yml)
 
-# WebSight Starter
+# WebSight Blueprint
 
-WebSight Starter is a sample project built on top of the [Websight CMS Community Edition](https://www.websight.io/).
-It contains a demo pages called _Luna_ built with [Howlite](https://github.com/websight-io/howlite) and [Kyanite](https://github.com/websight-io/kyanite) components and demo pages for the Kyanite.
+WebSight Blueprint is a sample project built on top of the [Websight CMS Community Edition](https://www.websight.io/).
+
+It contains demo pages:
+
+- Luna in three variants (no-code, low-code, custom-code) 
+- Puresight
+- Kyanite - personal template
+
+Those pages are built with [Howlite](https://github.com/websight-io/howlite) and [Kyanite](https://github.com/websight-io/kyanite) component libraries.
 
 ## Playground
 
@@ -204,9 +211,17 @@ MONGODB_HOST=localhost && MONGODB_PORT=27017 && distribution/target/dependency/o
 
 ## Project structure
 
-- `application` - components related code and scripts
-    - `backend` - contains application elements (components, templates, etc.) and Java code
-    - `frontend` - contains frontend elements for low code template (scss, ts, fonts etc.)
+- `applications` - components related code and scripts
+    - `luna-custom-code` - contains code related to `custom-code` version of the Luna project
+      - `backend` - contains application elements (components, templates, etc.) and Java code
+      - `frontend` - contains frontend elements (scss, ts, fonts etc.)
+    - `luna-low-code` - contains code related to `low-code` version of the Luna project
+      - `backend` - contains application elements (components, templates, etc.) and Java code
+      - `frontend` - contains frontend elements (scss, ts, fonts etc.)
+    - `puresight` - contains code related to Puresight project
+      - `backend` - contains application elements (components, templates, etc.) and Java code
+      - `frontend` - contains frontend elements (scss, ts, fonts etc.)
+      - `content` - contains initial content related to the project
 - `content` - contains sample content created with use of application
 - `distribution` - builds a distribution (Sling OSGi Feature) of the project
 - `tests` - responsible for the automatic distribution validation
@@ -240,7 +255,7 @@ Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull
 
 To support us, you may follow the project at:
 
-* feel free to star this repository, open [issues](https://github.com/websight-io/starter/issues), and start [discussions](https://github.com/websight-io/starter/discussions)
+* feel free to star this repository, open [issues](https://github.com/websight-io/websight-blueprint/issues), and start [discussions](https://github.com/websight-io/websight-blueprint/discussions)
 * [linkedin.com/company/websight-io/](https://www.linkedin.com/company/websight-io/)
 * [twitter.com/websight_io](https://twitter.com/websight_io)
 
@@ -253,6 +268,6 @@ See our dedicated repository for the [WebSight CMS documentation](https://github
 
 ## License
 
-WebSight Starter, [Kyanite components](https://github.com/websight-io/kyanite) and [Howlite components](https://github.com/websight-io/howlite) are `open-source` with `Apache License 2.0` license.
+WebSight Blueprint, [Kyanite components](https://github.com/websight-io/kyanite) and [Howlite components](https://github.com/websight-io/howlite) are `open-source` with `Apache License 2.0` license.
 
 WebSight CMS Community Edition is free to use for everyone ([terms of use](https://docs.websight.io/terms-of-use/)).

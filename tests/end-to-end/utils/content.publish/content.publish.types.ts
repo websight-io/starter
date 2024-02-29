@@ -27,6 +27,7 @@ export enum CONTENT_SPACE {
     LUNA = 'luna',
     LUNA_NO_CODE = 'nocodeluna',
     LUNA_LOW_CODE = 'lowcodeluna',
+    PURESIGHT = 'puresight'
 }
 
 export interface ResponseGetAssets {

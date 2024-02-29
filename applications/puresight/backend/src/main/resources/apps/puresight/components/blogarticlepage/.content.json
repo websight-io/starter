@@ -1,0 +1,6 @@
+{
+  "sling:resourceType": "ws:Component",
+  "sling:resourceSuperType": "/libs/kyanite/blogs/components/blogarticlepage",
+  "title": "Page",
+  "group": ".hidden"
+}

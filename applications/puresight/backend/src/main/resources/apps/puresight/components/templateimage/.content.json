@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Template image",
+  "group": "PureSight Template Components"
+}

@@ -1,0 +1,65 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "tabs": {
+    "sling:resourceType": "wcm/dialogs/components/tabs",
+    "generalTab": {
+      "sling:resourceType": "wcm/dialogs/components/tab",
+      "label": "General",
+      "size": {
+        "sling:resourceType": "wcm/dialogs/components/include",
+        "path": "/libs/kyanite/common/components/hero/attributes/size"
+      },
+      "backgroundColor": {
+        "sling:resourceType": "wcm/dialogs/components/select",
+        "name": "backgroundColor",
+        "label": "Background color",
+        "teak": {
+          "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+          "label": "Teak",
+          "value": "teak"
+        },
+        "oxfordBlue": {
+          "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+          "label": "Oxford Blue",
+          "value": "oxford-blue"
+        }
+      },
+      "variant": {
+        "sling:resourceType": "wcm/dialogs/components/include",
+        "path": "kyanite/common/components/hero/attributes/variant"
+      },
+      "background": {
+        "sling:resourceType": "wcm/dialogs/components/radio",
+        "name": "background",
+        "label": "Background",
+        "nobackground": {
+          "sling:resourceType": "wcm/dialogs/components/radio/option",
+          "label": "No background",
+          "value": ""
+        },
+        "circles": {
+          "sling:resourceType": "wcm/dialogs/components/radio/option",
+          "label": "Circles",
+          "value": "hero--bg-circles"
+        },
+        "imageBackground": {
+          "sling:resourceType": "wcm/dialogs/components/radio/option",
+          "label": "Image",
+          "value": "hero-background-image"
+        }
+      },
+      "backgroundImage": {
+        "sling:resourceType": "wcm/dialogs/components/pathpicker",
+        "name": "backgroundImage",
+        "label": "Background Image",
+        "rootPath": "/content",
+        "ws:display": {
+          "condition": {
+            "sourceName": "background",
+            "values": "hero-background-image"
+          }
+        }
+      }
+    }
+  }
+}

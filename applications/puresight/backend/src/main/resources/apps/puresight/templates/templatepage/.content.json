@@ -1,0 +1,8 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Template page",
+  "description": "Template used to generate pages",
+  "allowedChildren": [
+    "/apps/puresight/templates/templatepage"
+  ]
+}

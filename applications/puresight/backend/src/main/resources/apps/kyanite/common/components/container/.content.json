@@ -1,0 +1,11 @@
+{
+    "sling:resourceType": "ws:Component",
+    "sling:resourceSuperType": "/libs/kyanite/common/components/container",
+    "title": "Container",
+    "allowedComponents": [
+      "Kyanite Columns",
+      "Kyanite Components",
+      "Kyanite Elements",
+      "Kyanite Layouts"
+    ]
+}

@@ -32,7 +32,7 @@
     <!-- properties that are replaced in the feature files -->
     <starter-parent.version>${project.version}</starter-parent.version>
     <it.installed.packages.starter.group>pl.ds.starter</it.installed.packages.starter.group>
-    <it.installed.packages.starter.count>1</it.installed.packages.starter.count>
+    <it.installed.packages.starter.count>2</it.installed.packages.starter.count>
     <it.installed.packages.kyanite.group>pl.ds.kyanite</it.installed.packages.kyanite.group>
     <it.installed.packages.kyanite.count>1</it.installed.packages.kyanite.count>
     <it.ws.ready.timeout>60</it.ws.ready.timeout>
@@ -111,12 +111,16 @@
         <extensions>true</extensions>
         <configuration>
           <replacePropertyVariables>
-            starter-parent.version,howlite.version,kyanite.version
+            starter-parent.version,howlite.version,kyanite.version,streamx.ingestion-client.version,
+            streamx.connector.sling.version,streamx.connector.websight.version
           </replacePropertyVariables>
           <aggregates>
             <aggregate>
               <classifier>websight-cms-starter-mongo</classifier>
               <title>WebSight CMS with Starter Project project with MongoDB</title>
+              <artifactsOverrides>
+                <artifactsOverride>*:*:HIGHEST</artifactsOverride>
+              </artifactsOverrides>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>
@@ -136,6 +140,9 @@
             <aggregate>
               <classifier>websight-cms-starter-tar</classifier>
               <title>WebSight CMS with Starter Project project</title>
+              <artifactsOverrides>
+                <artifactsOverride>*:*:HIGHEST</artifactsOverride>
+              </artifactsOverrides>
               <includeArtifact>
                 <groupId>pl.ds.websight</groupId>
                 <artifactId>websight-cms-ce-feature</artifactId>

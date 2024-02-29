@@ -1,0 +1,126 @@
+@use "./splide";
+
+$extraSmall: 45px !important;
+$small: 80px !important;
+$medium: 100px !important;
+$large: 140px !important;
+
+.is-edit-mode {
+    .splide {
+        visibility: visible;
+
+        .splide__list {
+            gap: 10px;
+        }
+
+        .splide__slide {
+            width: calc(100%);
+            transform: translateX(0%);
+        }
+    }
+}
+
+.splide__slide {
+    opacity: 0.6;
+    border: none !important;
+
+    &.is-extra-small-size {
+        width: $extraSmall;
+        height: $extraSmall;
+    }
+
+    &.is-small-size {
+        width: $small;
+        height: $small;
+    }
+
+    &.is-medium-size {
+        width: $medium;
+        height: $medium;
+    }
+
+    &.is-large-size {
+        width: $large;
+        height: $large;
+    }
+
+    &.is-active {
+        opacity: 1;
+    }
+
+    .image {
+        margin: 0;
+
+        img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+}
+
+//TODO: below is the css that needs to be refactored
+.product-container {
+    .columns > .column {
+        //first column with images
+        &:first-child {
+            .tile.is-parent {
+                .tile.is-child {
+
+                    //row with the list of preview images
+                    &:last-child {
+                        >.columns {
+                            display: flex;
+                            justify-content: center;
+
+                            > .column {
+                                flex: unset;
+                            }
+                        }
+
+                        .image.is-square {
+                            padding-top: 0;
+                        }
+        
+                        img {
+                            position: static;
+                            max-height: var(--spacing-6_3);
+                            max-width: var(--spacing-6_3);
+                            width: 100%;
+                            height: 100%;
+                        }
+                    }
+                }
+            }
+        }
+
+        //second column with details about the product.
+        &:last-child {
+            > .container:first-child {
+                > .content {
+                    margin: 0;
+                }
+
+                .icon {
+                    color: var(--color-grey--500);
+                }
+            }
+
+            //element with price
+            .level {
+                gap: var(--spacing-2);
+                padding-top: var(--spacing-4);
+                padding-bottom: var(--spacing-4);
+
+                .level-item {
+                    flex: initial;
+                }
+            }
+
+            //buy now button
+            .button {
+                margin-bottom: var(--spacing-4);
+            }
+        }
+    }
+}

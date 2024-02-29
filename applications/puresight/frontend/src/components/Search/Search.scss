@@ -1,0 +1,84 @@
+.aa-Autocomplete {
+  .aa-DetachedSearchButton {
+    border-color: var(--color-grey--300);
+    border-radius: var(--border-radius-2);
+
+    &:focus {
+      border-color: rgba(var(--color-primary--600), 1);
+      box-shadow: color-mix(in srgb, var(--color-primary--600) 20%, white) 0 0 0
+          3px,
+        inset color-mix(in srgb, var(--color-primary--600) 20%, white) 0 0 0 2px;
+    }
+  }
+
+  .aa-SubmitIcon {
+    color: var(--color-grey--500);
+  }
+}
+
+.aa-DetachedOverlay {
+  .aa-Form:focus-within {
+    border-color: var(--color-primary--600);
+    box-shadow: color-mix(in srgb, var(--color-primary--600) 20%, white) 0 0 0
+        2px,
+      inset color-mix(in srgb, var(--color-primary--600) 20%, white) 0 0 0 2px;
+  }
+
+  .aa-SubmitIcon {
+    color: var(--color-grey--500);
+  }
+
+  .aa-DetachedCancelButton {
+    background-color: var(--color-additional-1--800);
+    color: var(--base-color-white);
+    font-weight: var(--font-weight-600);
+  }
+
+  .aa-SourceHeaderTitle {
+    color: var(--color-grey--500);
+  }
+
+  .aa-SourceHeaderLine {
+    border-bottom-color: var(--color-grey--500);
+  }
+
+  .aa-ItemLink {
+    justify-content: stretch;
+  }
+
+  .aa-ItemContent {
+    grid-template-columns: auto auto 1fr;
+  }
+
+  .aa-ItemContentTitle {
+    font-weight: var(--font-weight-600);
+
+    b {
+      color: var(--color-primary--600);
+    }
+  }
+
+  .aa-ItemActionButton {
+    visibility: hidden;
+  }
+
+  .aa-ItemContentDescription {
+    b {
+      color: var(--color-primary--600);
+    }
+  }
+
+  .aa-Item:hover {
+    .aa-ItemContentTitle {
+      b {
+        text-decoration: underline;
+      }
+    }
+
+    .aa-ItemContentDescription {
+      b {
+        text-decoration: underline;
+      }
+    }
+  }
+}

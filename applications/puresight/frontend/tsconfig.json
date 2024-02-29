@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es6",
+        "baseUrl": "../frontend",
+        "removeComments": true,
+        "allowJs": true,
+        "preserveConstEnums": true,
+        "allowSyntheticDefaultImports": true,
+        "sourceMap": true,
+        "moduleResolution": "node"
+    },
+    "include": [ "./src/**/*.ts" ]
+}

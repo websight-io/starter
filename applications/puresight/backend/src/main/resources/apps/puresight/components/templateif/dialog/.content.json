@@ -1,0 +1,20 @@
+{
+    "sling:resourceType": "wcm/dialogs/dialog",
+    "tabs": {
+        "sling:resourceType": "wcm/dialogs/components/tabs",
+        "generalTab": {
+            "sling:resourceType": "wcm/dialogs/components/tab",
+            "label": "General",
+            "if": {
+                "sling:resourceType": "wcm/dialogs/components/textfield",
+                "name": "if",
+                "label": "If"
+            },
+            "else": {
+                "sling:resourceType": "wcm/dialogs/components/textfield",
+                "name": "else",
+                "label": "Else"
+            }
+        }
+    }
+}

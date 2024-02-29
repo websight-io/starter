@@ -1,0 +1,10 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "sling:resourceSuperType": "/libs/kyanite/common/templates/homepage",
+  "title": "Home Page",
+  "description": "Template for the main page",
+  "allowedChildren": [
+    "/apps/puresight/templates/basicpage",
+    "/apps/puresight/templates/structurepage"
+  ]
+}

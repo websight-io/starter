@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Separator",
+  "group": "PureSight Components"
+}

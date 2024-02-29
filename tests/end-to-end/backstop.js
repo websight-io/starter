@@ -48,7 +48,12 @@ const scenarios = [
   { space: 'lowcodeluna', page: 'Homepage' },
   { space: 'lowcodeluna', page: 'Products' },
   { space: 'lowcodeluna', page: 'About' },
-  { space: 'lowcodeluna', page: 'Catalog' }
+  { space: 'lowcodeluna', page: 'Catalog' },
+  { space: 'puresight', page: 'homepage' },
+  { space: 'puresight', page: 'products' },
+  { space: 'puresight', page: 'blog/simplify-your-space' },
+  { space: 'puresight', page: 'blog' },
+  { space: 'puresight', page: 'templates/product' },
 ].map((scenario) => {
   const removeSelectors = ['script', 'noscript', selectors.cookie_banner];
 

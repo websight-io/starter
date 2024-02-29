@@ -1,0 +1,17 @@
+<!--/*
+  Copyright (c) 2023 Dynamic Solutions sp. z o.o. sp. k.
+  Use of this software is governed by the Business Source License included
+  in the LICENSE file.
+*/-->
+
+<sly data-sly-use.extra="pl.ds.starter.puresight.cms.models.PageComponent"></sly>
+<sly data-sly-test="${wcmmode.preview && extra.hasTemplateData}">
+  ${extra.renderedHtml @ context='unsafe'}
+</sly>
+<sly data-sly-test="${!(wcmmode.preview && extra.hasTemplateData)}">
+  <!DOCTYPE HTML>
+  <html data-sly-attribute.lang="${currentPage.language.toLanguageTag}">
+  <sly data-sly-include="head.html"></sly>
+  <sly data-sly-include="body.html"></sly>
+  </html>
+</sly>

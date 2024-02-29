@@ -1,0 +1,6 @@
+{
+  "sling:resourceType": "puresight/components/imagecarousel",
+  "jcr:primaryType": "nt:unstructured",
+  "thumbnailSize": "is-small-size"
+}
+

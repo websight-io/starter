@@ -1,0 +1,86 @@
+.carousel {
+    .card {
+        background-color: var(--color-primary--200);
+        border-radius: 0;
+        box-shadow: none;
+
+        @media (min-width: 1024px) {
+            display: flex;
+            align-items: center;
+        }
+
+        &-image {              
+            .image {
+                img { 
+                    border-radius: 0;
+
+                    @media (min-width: 1024px) {
+                        position: initial;
+                    } 
+                }
+
+                @media (min-width: 1024px) {
+                    padding-top: 0;
+                    margin-bottom: 0 !important;
+                } 
+            }
+
+            @media (min-width: 1024px) {
+                flex: 60%;
+            } 
+        }
+
+        &-content {
+            @media (min-width: 1024px) {
+                flex: 40%;
+            } 
+
+            .content {
+                font-size: var(--font-size-20);
+                font-weight: var(--font-weight-700);
+                margin-bottom: 0;
+                color: var(--color-grey--900);
+
+                @media (min-width: 1024px) {
+                    font-size: var(--font-size-24);
+                } 
+            }
+
+            .rating {
+                margin-bottom: var(--spacing-5);
+                display: inline-block;
+                width: 48%;
+
+                @media (min-width: 1024px) {
+                    display: block;
+                    width: 100%;
+                    text-align: start;
+                } 
+            }
+
+            .rating + .content {
+                color: var(--color-primary--600);
+                margin-bottom: var(--spacing-5);
+                text-align: end;
+                display: inline-block;
+                width: 50%;
+
+                @media (min-width: 1024px) {
+                    display: block;
+                    width: 100%;
+                    text-align: start;
+                } 
+            }
+
+
+            .button {
+                display: block;
+                width: 100%;
+
+                @media (min-width: 1024px) {
+                    width: auto;
+                } 
+            }
+        }
+    }
+}

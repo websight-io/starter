@@ -1,0 +1,10 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Blog listing page",
+  "description": "Template allows to create page with list of the blog articles",
+  "sling:resourceSuperType": "/libs/kyanite/blogs/templates/bloglistingpage",
+  "allowedChildren": [
+    "/apps/puresight/templates/blogcategorypage",
+    "/apps/puresight/templates/blogarticlepage"
+  ]
+}

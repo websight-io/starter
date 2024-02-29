@@ -1,0 +1,11 @@
+{
+  "sling:resourceType": "ws:Component",
+  "sling:resourceSuperType": "/libs/kyanite/common/components/hero",
+  "title": "Hero",
+  "allowedComponents": [
+    "Kyanite Columns",
+    "Kyanite Components",
+    "Kyanite Elements",
+    "Kyanite Layouts"
+  ]
+}

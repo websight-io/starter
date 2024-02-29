@@ -1,0 +1,14 @@
+.section {
+    padding-top: var(--spacing-5_2);
+    padding-bottom: var(--spacing-5_2);
+
+    @media (min-width: 768px) {
+        padding-top: var(--spacing-5_4);
+        padding-bottom: var(--spacing-5_4);
+    }
+
+    @media (min-width: 1024px) {
+        padding-top: var(--spacing-6_2);
+        padding-bottom: var(--spacing-6_2);
+    }
+}

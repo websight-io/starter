@@ -1,0 +1,8 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Experience fragments structure",
+  "description": "Empty page allows to create nested pages with experience fragments",
+  "allowedChildren": [
+    "/apps/puresight/templates/fragmentspage",
+    "/apps/puresight/templates/fragmentpage"]
+}

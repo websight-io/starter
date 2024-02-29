@@ -1,0 +1,12 @@
+{
+  "sling:resourceType": "ws:PagesTemplate",
+  "title": "PureSight website Pages",
+  "allowedChildren": [
+    "/apps/puresight/templates/homepage",
+    "/apps/puresight/templates/basicpage",
+    "/apps/puresight/templates/structurepage",
+    "/apps/puresight/templates/bloglistingpage",
+    "/apps/puresight/templates/fragmentspage",
+    "/apps/puresight/templates/templatesrootpage"
+  ]
+}

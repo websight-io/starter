@@ -1,0 +1,13 @@
+<sly data-sly-use.model="pl.ds.starter.puresight.cms.models.NewsletterComponent">
+  <form action="${model.newsletterUrl}" method="post">
+    <div class="field is-grouped">
+      <p class="control is-expanded">
+        <input class="input" type="email" name="email"
+               placeholder="${model.placeholder}">
+      </p>
+      <p class="control">
+        <button class="button is-dark" type="submit">${model.buttonText}</button>
+      </p>
+    </div>
+  </form>
+</sly>

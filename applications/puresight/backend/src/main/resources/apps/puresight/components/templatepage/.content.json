@@ -1,0 +1,6 @@
+{
+  "sling:resourceType": "ws:Component",
+  "sling:resourceSuperType": "puresight/components/page",
+  "title": "Template Page",
+  "group": ".hidden"
+}

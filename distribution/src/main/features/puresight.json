@@ -1,0 +1,15 @@
+{
+  "bundles": [
+    {
+      "id": "pl.ds.starter:puresight-backend:${starter-parent.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "pl.ds.starter:puresight-frontend:${starter-parent.version}",
+      "start-order": "25"
+    }
+  ],
+  "content-packages:ARTIFACTS|true": [
+    "pl.ds.starter:puresight-content:zip:${starter-parent.version}"
+  ]
+}

@@ -1,0 +1,162 @@
+{
+  "sling:resourceType": "kyanite/common/components/tiles",
+  "jcr:primaryType": "nt:unstructured",
+  "tileparent": {
+    "jcr:primaryType": "nt:unstructured",
+    "sling:resourceType": "kyanite/common/components/tiles/tileparent",
+    "isVertical": true,
+    "templateiterator": {
+      "jcr:primaryType": "nt:unstructured",
+      "sling:resourceType": "puresight/components/templateiterator",
+      "for": "{% for review in reviews %}",
+      "tilechild": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "kyanite/common/components/tiles/tilechild",
+        "type": "box",
+        "variant": "0",
+        "container": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kyanite/common/components/container",
+          "columns": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/columns",
+            "column1": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "kyanite/common/components/columns/column",
+              "desktopColumnStyle": {
+                "jcr:primaryType": "nt:unstructured",
+                "alignment": "0",
+                "isNormalColumn": true,
+                "offset": "empty",
+                "offsetType": "evenNumber",
+                "size": "empty",
+                "sizeType": "evenNumber"
+              },
+              "tabletColumnStyle": {
+                "jcr:primaryType": "nt:unstructured",
+                "alignment": "0",
+                "isNormalColumn": true,
+                "offset": "empty",
+                "offsetType": "evenNumber",
+                "size": "empty",
+                "sizeType": "evenNumber"
+              },
+              "mobileColumnStyle": {
+                "jcr:primaryType": "nt:unstructured",
+                "alignment": "0",
+                "isNormalColumn": true,
+                "offset": "empty",
+                "offsetType": "evenNumber",
+                "size": "empty",
+                "sizeType": "evenNumber"
+              },
+              "container": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "kyanite/common/components/container",
+                "templateiterator1": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "puresight/components/templateiterator",
+                  "for": "{% for iconBlack in range(1, review.stars) %}",
+                  "icon": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "kyanite/common/components/icon",
+                    "addText": false,
+                    "elementType": "span",
+                    "hidden": "{Boolean}true",
+                    "icon": "mdi-star",
+                    "iconLibType": "mdi",
+                    "iconSize": "mdi-18px",
+                    "selectOrType": "type",
+                    "textVariant": "0"
+                  }
+                },
+                "templateiterator2": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "sling:resourceType": "puresight/components/templateiterator",
+                  "for": "{% for iconWhite in range(review.stars, 4) %}",
+                  "icon": {
+                    "jcr:primaryType": "nt:unstructured",
+                    "sling:resourceType": "kyanite/common/components/icon",
+                    "addText": false,
+                    "elementType": "span",
+                    "hidden": "{Boolean}true",
+                    "icon": "mdi-star-outline",
+                    "iconLibType": "mdi",
+                    "iconSize": "mdi-18px",
+                    "selectOrType": "type",
+                    "textVariant": "0"
+                  }
+                }
+              },
+              "content": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "kyanite/common/components/content",
+                "color": "rest_has-text-grey",
+                "size": "is-small",
+                "text": "<p><strong>{{review.title}}</strong></p>",
+                "rest": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "shade": "700"
+                }
+              }
+            },
+            "column2": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "kyanite/common/components/columns/column",
+              "desktopColumnStyle": {
+                "jcr:primaryType": "nt:unstructured",
+                "alignment": "0",
+                "isNormalColumn": true,
+                "offset": "empty",
+                "offsetType": "evenNumber",
+                "size": "empty",
+                "sizeType": "evenNumber"
+              },
+              "tabletColumnStyle": {
+                "jcr:primaryType": "nt:unstructured",
+                "alignment": "0",
+                "isNormalColumn": true,
+                "offset": "empty",
+                "offsetType": "evenNumber",
+                "size": "empty",
+                "sizeType": "evenNumber"
+              },
+              "mobileColumnStyle": {
+                "jcr:primaryType": "nt:unstructured",
+                "alignment": "0",
+                "isNormalColumn": true,
+                "offset": "empty",
+                "offsetType": "evenNumber",
+                "size": "empty",
+                "sizeType": "evenNumber"
+              },
+              "content_2": {
+                "jcr:primaryType": "nt:unstructured",
+                "sling:resourceType": "kyanite/common/components/content",
+                "color": "rest_has-text-grey",
+                "size": "is-small",
+                "text": "<p style='text-align: right'>{{review.author}}</p><p style='text-align: right'>{{review.date}}</p>",
+                "rest": {
+                  "jcr:primaryType": "nt:unstructured",
+                  "shade": "700"
+                }
+              }
+            }
+          },
+          "content_1": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/content",
+            "color": "rest_has-text-grey",
+            "size": "is-small",
+            "text": "<p>{{review.content}}</p>",
+            "rest": {
+              "jcr:primaryType": "nt:unstructured",
+              "shade": "700"
+            }
+          }
+        }
+      }
+    }
+  }
+}
+

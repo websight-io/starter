@@ -1,0 +1,8 @@
+{
+  "jcr:primaryType": "ws:Page",
+  "jcr:content": {
+    "jcr:primaryType": "ws:PageContent",
+    "sling:resourceType": "puresight/components/page",
+    "pagecontainer": {"sling:resourceType": "kyanite/common/components/container/fixedcontainer"}
+  }
+}

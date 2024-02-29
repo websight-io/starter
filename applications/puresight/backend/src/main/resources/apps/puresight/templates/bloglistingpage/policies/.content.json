@@ -1,0 +1,123 @@
+{
+  "jcr:primaryType": "ws:Page",
+  "jcr:content": {
+    "jcr:primaryType": "ws:PageContent",
+    "sling:resourceType": "puresight/components/page",
+    "kyanite": {
+      "jcr:primaryType": "nt:unstructured",
+      "common": {
+        "jcr:primaryType": "nt:unstructured",
+        "components": {
+          "jcr:primaryType": "nt:unstructured",
+          "block": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "box": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "card": {
+            "jcr:primaryType": "nt:unstructured",
+            "cardcontent": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "carousel": {
+            "jcr:primaryType": "nt:unstructured",
+            "carouselitem": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "columns": {
+            "jcr:primaryType": "nt:unstructured",
+            "column": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "container": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "footer": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "hero": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "level": {
+            "jcr:primaryType": "nt:unstructured",
+            "levelitem": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "mediaobject": {
+            "jcr:primaryType": "nt:unstructured",
+            "mediacontent": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            },
+            "medialeft": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            },
+            "mediaright": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "modal": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "modalcard": {
+            "jcr:primaryType": "nt:unstructured",
+            "modalcardcontent": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            },
+            "modalcardfooter": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "navbar": {
+            "jcr:primaryType": "nt:unstructured",
+            "navbaritem": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "pagecontainer": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "panel": {
+            "jcr:primaryType": "nt:unstructured",
+            "panelblock": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          },
+          "section": {
+            "jcr:primaryType": "nt:unstructured",
+            "policy": "puresight/policies/common/container"
+          },
+          "tiles": {
+            "jcr:primaryType": "nt:unstructured",
+            "tilechild": {
+              "jcr:primaryType": "nt:unstructured",
+              "policy": "puresight/policies/common/container"
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,15 @@
+.navbar {
+  .navbar-menu .navbar-end {
+    @media (min-width: 1024px) {
+      align-items: center;
+    }
+  }
+
+  #autocomplete {
+    width: 256px;
+  }
+
+  .navbar-item {
+    margin-bottom: -3px; // compansate the margin from .navbar-item::after
+  }
+}
