@@ -73,9 +73,22 @@
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.19</howlite.version>
     <kyanite.version>0.4.2</kyanite.version>
+
+    <!-- StreamX -->
+    <streamx.ingestion-client.version>0.0.12</streamx.ingestion-client.version>
+    <streamx.connector.sling.version>0.0.3</streamx.connector.sling.version>
+    <streamx.connector.websight.version>0.0.1</streamx.connector.websight.version>
   </properties>
 
   <build>
+    <extensions>
+      <extension>
+        <groupId>com.google.cloud.artifactregistry</groupId>
+        <artifactId>artifactregistry-maven-wagon</artifactId>
+        <version>2.2.1</version>
+      </extension>
+    </extensions>
+
     <plugins>
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
