@@ -1,4 +1,4 @@
-[![CI](https://github.com/websight-io/starter/actions/workflows/ci-verify-build.yml/badge.svg?branch=main)](https://github.com/websight-io/starter/actions/workflows/ci-verify-build.yml)
+[![CI](https://github.com/websight-io/websight-blueprint/actions/workflows/ci-verify-build.yml/badge.svg?branch=main)](https://github.com/websight-io/websight-blueprint/actions/workflows/ci-verify-build.yml)
 
 # WebSight Blueprint
 
@@ -255,7 +255,7 @@ Please read our [Contributing Guide](./CONTRIBUTING.md) before submitting a Pull
 
 To support us, you may follow the project at:
 
-* feel free to star this repository, open [issues](https://github.com/websight-io/starter/issues), and start [discussions](https://github.com/websight-io/starter/discussions)
+* feel free to star this repository, open [issues](https://github.com/websight-io/websight-blueprint/issues), and start [discussions](https://github.com/websight-io/websight-blueprint/discussions)
 * [linkedin.com/company/websight-io/](https://www.linkedin.com/company/websight-io/)
 * [twitter.com/websight_io](https://twitter.com/websight_io)
 
