@@ -1,0 +1,70 @@
+{
+  "bundles": [
+    {
+      "id": "org.jsoup:jsoup:1.16.1",
+      "start-order": "25"
+    },
+    {
+      "id": "org.apache.commons:commons-compress:1.25.0",
+      "start-order": "25"
+    },
+    {
+      "id": "org.apache.avro:avro:1.11.3",
+      "start-order": "25"
+    },
+    {
+      "id":"com.fasterxml.jackson.core:jackson-annotations:2.15.3",
+      "start-order":"20"
+    },
+    {
+      "id":"com.fasterxml.jackson.core:jackson-core:2.15.3",
+      "start-order":"20"
+    },
+    {
+      "id": "com.fasterxml.jackson.core:jackson-databind:2.15.3",
+      "start-order": "20"
+    },
+    {
+      "id":"org.apache.commons:commons-lang3:3.14.0",
+      "start-order":"25"
+    },
+    {
+      "id":"org.jboss.logging:jboss-logging:3.5.3.Final",
+      "start-order":"25"
+    },
+    {
+      "id": "dev.streamx:ingestion-client:${streamx.ingestion-client.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "dev.streamx:streamx-connector-sling:${streamx.connector.sling.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "dev.streamx:streamx-connector-websight:${streamx.connector.websight.version}",
+      "start-order": "25"
+    },
+    {
+      "id": "dev.streamx:streamx-connector-websight-blueprints:${streamx.connector.websight.version}",
+      "start-order": "25"
+    }
+  ],
+  "configurations": {
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-websight-blueprints": {
+      "user.mapping": [
+        "streamx-connector-websight-blueprints=[streamx-connector-websight-blueprints]"
+      ]
+    },
+    "dev.streamx.sling.connector.impl.StreamxPublicationServiceImpl": {
+      "enabled": "$[env:STREAMX_PUBLICATION_ENABLE;default=false]"
+    },
+    "dev.streamx.sling.connector.impl.StreamxClientFactoryImpl": {
+      "streamxUrl": "$[env:STREAMX_PUBLICATION_SERVER_URL]",
+      "authToken": "$[env:STREAMX_PUBLICATION_AUTH_TOKEN]"
+    },
+    "dev.streamx.connector.websight.blueprint.impl.PageDataServiceImpl": {
+      "shorten.content.paths": false
+    }
+  },
+  "repoinit:TEXT|true": "@file"
+}
