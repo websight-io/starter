@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+  <parent>
+    <groupId>pl.ds.starter</groupId>
+    <artifactId>puresight</artifactId>
+    <version>1.24.1-SNAPSHOT</version>
+    <relativePath>../pom.xml</relativePath>
+  </parent>
+
+  <artifactId>puresight-content</artifactId>
+  <name>WebSight - PureSight - Content</name>
+  <description>Contains sample initial content for PureSight application</description>
+  <packaging>content-package</packaging>
+
+  <properties>
+    <sling.install.package.username>${websight.admin.username}</sling.install.package.username>
+    <sling.install.package.password>${websight.admin.password}</sling.install.package.password>
+    <sling.install.package.host>localhost</sling.install.package.host>
+    <sling.install.package.port>8080</sling.install.package.port>
+    <sling.install.package.path>/apps/websight-package-manager-service/bin/install</sling.install.package.path>
+  </properties>
+
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.jackrabbit</groupId>
+        <artifactId>filevault-package-maven-plugin</artifactId>
+        <extensions>true</extensions>
+        <version>1.1.2</version>
+        <configuration>
+          <packageType>content</packageType>
+          <validatorsSettings>
+            <jackrabbit-filter>
+              <options>
+                <validRoots>/content</validRoots>
+              </options>
+            </jackrabbit-filter>
+          </validatorsSettings>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>com.day.jcr.vault</groupId>
+        <artifactId>content-package-maven-plugin</artifactId>
+        <version>1.0.4</version>
+        <configuration>
+          <targetURL>
+            http://${sling.install.package.host}:${sling.install.package.port}/apps/websight-package-manager-service/bin/install
+          </targetURL>
+          <verbose>true</verbose>
+          <failOnError>true</failOnError>
+          <userId>${sling.install.package.username}</userId>
+          <password>${sling.install.package.password}</password>
+        </configuration>
+      </plugin>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-install-plugin</artifactId>
+        <version>3.0.1</version>
+        <executions>
+          <execution>
+            <id>install-for-sling-feature</id>
+            <phase>package</phase>
+            <goals>
+              <goal>install</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
+
+  <profiles>
+    <profile>
+      <id>autoInstallPackage</id>
+      <activation>
+        <activeByDefault>false</activeByDefault>
+      </activation>
+      <build>
+        <pluginManagement>
+          <plugins>
+            <plugin>
+              <groupId>com.day.jcr.vault</groupId>
+              <artifactId>content-package-maven-plugin</artifactId>
+              <executions>
+                <execution>
+                  <id>install-package</id>
+                  <goals>
+                    <goal>install</goal>
+                  </goals>
+                </execution>
+              </executions>
+            </plugin>
+          </plugins>
+        </pluginManagement>
+      </build>
+    </profile>
+  </profiles>
+
+</project>

@@ -1,0 +1,14 @@
+<sly data-sly-test="${wcmmode.isEdit}">
+  <figure class="image">
+    <svg class="image-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="5.5" cy="7.5" r="2.5" fill="#C1C7D0"/>
+      <path d="M5.5 12.5L11 18.5H0L5.5 12.5Z" fill="#C1C7D0"/>
+      <path d="M15 8.5L24 18.5H6L15 8.5Z" fill="#C1C7D0"/>
+    </svg>
+  </figure>
+</sly>
+<sly data-sly-test="${!wcmmode.isEdit}">
+  <figure class="image">
+    <img data-sly-test="${properties.imageplaceholder}" src="${properties.imageplaceholder @ context='unsafe'}">
+  </figure>
+</sly>

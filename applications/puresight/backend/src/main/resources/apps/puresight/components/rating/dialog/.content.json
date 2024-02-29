@@ -1,0 +1,18 @@
+{
+    "sling:resourceType": "wcm/dialogs/dialog",
+    "tabs": {
+        "sling:resourceType": "wcm/dialogs/components/tabs",
+        "generalTab": {
+            "sling:resourceType": "wcm/dialogs/components/tab",
+            "label": "General",
+            "iconSize": {
+                "sling:resourceType": "wcm/dialogs/components/include",
+                "path": "puresight/components/rating/iconsize/materialdesign"
+            },
+            "colorVariant": {
+                "sling:resourceType": "wcm/dialogs/components/include",
+                "path": "puresight/components/rating/colorvariant"
+            }
+        }
+    }
+}

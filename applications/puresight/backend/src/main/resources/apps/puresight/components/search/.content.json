@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Search",
+  "group": "PureSight Components"
+}

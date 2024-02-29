@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Experience fragment page",
+  "description": "Template for the experinece fragment page"
+}

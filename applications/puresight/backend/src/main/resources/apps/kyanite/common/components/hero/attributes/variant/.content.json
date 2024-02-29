@@ -1,0 +1,34 @@
+{
+  "sling:resourceType": "wcm/dialogs/components/include",
+  "name": "variant",
+  "label": "Variant of hero banner",
+  "include": {
+    "sling:resourceSuperType": "/libs/kyanite/common/components/common/variant",
+    "light": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Light",
+      "value": "is-light"
+    },
+    "dark": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Dark",
+      "value": "is-dark"
+    },
+    "grey-900": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Grey-900",
+      "value": "is-grey-900"
+    },                
+    "side-image": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Side image",
+      "value": "has-side-image"
+    },
+    "banner": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Banner",
+      "value": "is-banner"
+    }
+  }
+}
+

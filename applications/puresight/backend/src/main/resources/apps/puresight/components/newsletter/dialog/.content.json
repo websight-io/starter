@@ -1,0 +1,20 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "tabs": {
+    "sling:resourceType": "wcm/dialogs/components/tabs",
+    "generalTab": {
+      "sling:resourceType": "wcm/dialogs/components/tab",
+      "label": "General",
+      "placeholder": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "placeholder",
+        "label": "Placeholder"
+      },
+      "buttonText": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "buttonText",
+        "label": "Button Text"
+      }
+    }
+  }
+}

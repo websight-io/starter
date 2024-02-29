@@ -1,0 +1,350 @@
+{
+  "sling:resourceType": "kyanite/common/components/container",
+  "jcr:primaryType": "nt:unstructured",
+  "cssClassName": "vendors-list-modal",
+  "modalcard": {
+    "sling:resourceType": "kyanite/common/components/modalcard",
+    "jcr:primaryType": "nt:unstructured",
+    "header": "Where to buy it?",
+    "id": "modal_vendors_template",
+    "modalcardcontent": {
+      "sling:resourceType": "kyanite/common/components/modalcard/modalcardcontent",
+      "jcr:primaryType": "nt:unstructured",
+      "columns": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "kyanite/common/components/columns",
+        "columnsActivationLevel": "is-mobile",
+        "isMultiline": "true",
+        "isVerticallyCentered": "true",
+        "column1": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kyanite/common/components/columns/column",
+          "desktopColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "three",
+            "sizeType": "evenNumber"
+          },
+          "tabletColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "three",
+            "sizeType": "evenNumber"
+          },
+          "mobileColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "four",
+            "sizeType": "evenNumber"
+          },
+          "content": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/content",
+            "color": "bw_has-text-black",
+            "size": "is-small",
+            "text": "<p><strong>Vendor</strong></p>",
+            "rest": {
+              "jcr:primaryType": "nt:unstructured",
+              "shade": "700"
+            }
+          }
+        },
+        "column2": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kyanite/common/components/columns/column",
+          "desktopColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "five",
+            "sizeType": "evenNumber"
+          },
+          "tabletColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "four",
+            "sizeType": "evenNumber"
+          },
+          "mobileColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "six",
+            "sizeType": "evenNumber"
+          },
+          "content": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/content",
+            "color": "bw_has-text-black",
+            "size": "is-small",
+            "text": "<p><strong>Delivery time</strong></p>",
+            "rest": {
+              "jcr:primaryType": "nt:unstructured",
+              "shade": "700"
+            }
+          }
+        },
+        "column3": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kyanite/common/components/columns/column",
+          "desktopColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "one",
+            "sizeType": "evenNumber"
+          },
+          "tabletColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "two",
+            "sizeType": "evenNumber"
+          },
+          "mobileColumnStyle": {
+            "jcr:primaryType": "nt:unstructured",
+            "alignment": "",
+            "isNormalColumn": "true",
+            "offset": "empty",
+            "offsetType": "evenNumber",
+            "size": "two",
+            "sizeType": "evenNumber"
+          },
+          "content": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/content",
+            "color": "bw_has-text-black",
+            "size": "is-small",
+            "text": "<p><strong>Price</strong></p>",
+            "rest": {
+              "jcr:primaryType": "nt:unstructured",
+              "shade": "700"
+            }
+          }
+        }
+      },
+      "templateiterator": {
+        "jcr:primaryType": "nt:unstructured",
+        "sling:resourceType": "puresight/components/templateiterator",
+        "for": "{% for vendor in vendors %}",
+        "columns": {
+          "jcr:primaryType": "nt:unstructured",
+          "sling:resourceType": "kyanite/common/components/columns",
+          "columnsActivationLevel": "is-mobile",
+          "isCentered": "false",
+          "isCustomGapLevel": "false",
+          "isMultiline": "true",
+          "isVerticallyCentered": "true",
+          "column1" : {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/columns/column",
+            "desktopColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "three",
+              "sizeType": "evenNumber"
+            },
+            "tabletColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "three",
+              "sizeType": "evenNumber"
+            },
+            "mobileColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "four",
+              "sizeType": "evenNumber"
+            },
+            "image": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "puresight/components/templateimage",
+              "imageplaceholder": "{{vendor.image}}"
+            }
+          },
+          "column2": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/columns/column",
+            "desktopColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "five",
+              "sizeType": "evenNumber"
+            },
+            "tabletColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "four",
+              "sizeType": "evenNumber"
+            },
+            "mobileColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "six",
+              "sizeType": "evenNumber"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "kyanite/common/components/content",
+              "color": "bw_has-text-black",
+              "size": "is-small",
+              "text": "<p>{{vendor.deliveryTime}}</p>",
+              "rest": {
+                "jcr:primaryType": "nt:unstructured",
+                "shade": "700"
+              }
+            }
+          },
+          "column3": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/columns/column",
+            "desktopColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "one",
+              "sizeType": "evenNumber"
+            },
+            "tabletColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "two",
+              "sizeType": "evenNumber"
+            },
+            "mobileColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "two",
+              "sizeType": "evenNumber"
+            },
+            "content": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "kyanite/common/components/content",
+              "color": "bw_has-text-black",
+              "size": "is-small",
+              "text": "<p><strong>{{vendor.price}}</strong></p>",
+              "rest": {
+                "jcr:primaryType": "nt:unstructured",
+                "shade": "700"
+              }
+            }
+          },
+          "column4": {
+            "jcr:primaryType": "nt:unstructured",
+            "sling:resourceType": "kyanite/common/components/columns/column",
+            "desktopColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "three",
+              "sizeType": "evenNumber"
+            },
+            "tabletColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "three",
+              "sizeType": "evenNumber"
+            },
+            "mobileColumnStyle": {
+              "jcr:primaryType": "nt:unstructured",
+              "alignment": "",
+              "isNormalColumn": "true",
+              "offset": "empty",
+              "offsetType": "evenNumber",
+              "size": "twelve",
+              "sizeType": "evenNumber"
+            },
+            "button": {
+              "jcr:primaryType": "nt:unstructured",
+              "sling:resourceType": "kyanite/common/components/button",
+              "actionType": "",
+              "isDisabled": "false",
+              "isFullWidth": "true",
+              "isInverted": "false",
+              "isLight": "false",
+              "isMailto": "false",
+              "isOutlined": "false",
+              "isRounded": "false",
+              "label": "Buy now",
+              "openModal": "open-modal",
+              "showIconLeft": "{Boolean}false",
+              "showIconRight": "true",
+              "size": "is-normal",
+              "type": "button",
+              "variant": "is-secondary",
+              "leftIcon": {
+                "jcr:primaryType": "nt:unstructured",
+                "icon": "mdi-home-outline",
+                "iconLibType": "mdi",
+                "iconSize": "fa-lg",
+                "selectOrType": "select"
+              },
+              "rightIcon": {
+                "jcr:primaryType": "nt:unstructured",
+                "icon": "mdi-cart-outline",
+                "iconLibType": "mdi",
+                "iconSize": "fa-lg",
+                "selectOrType": "type"
+              }
+            }
+          }
+        }
+      }
+    },
+    "modalcardfooter": {
+      "sling:resourceType": "kyanite/common/components/modalcard/modalcardfooter",
+      "jcr:primaryType": "nt:unstructured"
+    }
+  }
+}

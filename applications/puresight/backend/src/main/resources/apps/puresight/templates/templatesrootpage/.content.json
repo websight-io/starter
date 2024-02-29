@@ -1,0 +1,8 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Templates root page",
+  "description": "Templates can be created under this page. Should be created at 'All pages' root and named 'templates'",
+  "allowedChildren": [
+    "/apps/puresight/templates/templatepage"
+  ]
+}

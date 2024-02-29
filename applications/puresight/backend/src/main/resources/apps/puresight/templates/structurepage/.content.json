@@ -1,0 +1,13 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Structure Page",
+  "description": "Empty page allows to create nested pages",
+  "sling:resourceSuperType": "/libs/kyanite/common/templates/structurepage",
+  "allowedChildren": [
+    "/apps/puresight/templates/homepage",
+    "/apps/puresight/templates/basicpage",
+    "/apps/puresight/templates/structurepage",
+    "/apps/puresight/templates/bloglistingpage",
+    "/apps/puresight/templates/fragmentspage"
+  ]
+}

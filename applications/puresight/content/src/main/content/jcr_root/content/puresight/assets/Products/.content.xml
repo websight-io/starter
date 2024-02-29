@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <bed1.png/>
+    <bed2.png/>
+    <bed3.png/>
+    <bed4.png/>
+    <bed5.png/>
+    <bigBed.png/>
+    <bed-small1.png/>
+    <bed-small2.png/>
+    <bed-small3.png/>
+    <bed-small4.png/>
+    <bed-small5.png/>
+    <bed-small6.png/>
+    <bed-small7.png/>
+    <bed-small8.png/>
+    <bed-small9.png/>
+    <bed-small10.png/>
+    <chair-free.jpg/>
+    <chair2-free.jpg/>
+    <chair3-free.jpeg/>
+    <living-room-free.jpeg/>
+    <lamp-free.jpeg/>
+    <lamp2-free.jpeg/>
+    <lamp3-free.jpeg/>
+    <table-free.jpeg/>
+    <tabl2-free.jpeg/>
+    <plant2-free.jpeg/>
+    <plant-free.jpeg/>
+    <desk-free.jpeg/>
+    <Wayfair-Logo.png/>
+    <hero4.png/>
+    <hero3.png/>
+    <vendors/>
+</jcr:root>

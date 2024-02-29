@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:nt="http://www.jcp.org/jcr/nt/1.0" xmlns:ws="http://ds.pl/websight" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="ws:Page">
+    <product/>
+    <jcr:content
+        jcr:lastModified="{Date}2023-09-12T14:50:29.909Z"
+        jcr:lastModifiedBy="sling-package-install"
+        jcr:primaryType="ws:PageContent"
+        jcr:title="Templates"
+        sling:resourceType="puresight/components/page"
+        ws:template="/apps/puresight/templates/templatesrootpage"
+        description="\0"
+        title="\0">
+        <pagecontainer
+            jcr:primaryType="nt:unstructured"
+            sling:resourceType="kyanite/common/components/container/fixedcontainer"/>
+    </jcr:content>
+</jcr:root>

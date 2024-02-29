@@ -1,0 +1,17 @@
+{
+  "tabs": {
+    "metadata": {
+      "hasTemplateData": {
+        "sling:resourceType": "wcm/dialogs/components/toggle",
+        "name": "hasTemplateData",
+        "label": "Template data",
+        "checkedByDefault": "false"
+      },
+      "data": {
+        "sling:resourceType": "wcm/dialogs/components/textarea",
+        "name": "data",
+        "label": "TemplateData"
+      }
+    }
+  }
+}

@@ -1,0 +1,5 @@
+<link href="/apps/puresight/webroot/main.css" rel="stylesheet" type="text/css">
+
+<script defer data-sly-test="${wcmmode.isDisabled && project.version}" src="/apps/puresight/webroot/${project.version}/main.js"></script>
+<script defer data-sly-test="${wcmmode.isDisabled && !project.version}" src="/apps/puresight/webroot/main.js"></script>
+<script defer data-sly-test="${!wcmmode.isDisabled}" src="/apps/puresight/webroot/main.js"></script>

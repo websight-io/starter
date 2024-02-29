@@ -1,0 +1,5 @@
+Manifest-Version: 1.0
+Content-Package-Id: pl.ds.kyanite:webflighs_homepage_content:1.0
+Content-Package-Roots: /content/puresight
+Content-Package-Type: content
+

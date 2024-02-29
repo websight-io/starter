@@ -1,0 +1,47 @@
+{
+  "jcr:primaryType": "nt:unstructured",
+  "common": {
+    "jcr:primaryType": "nt:unstructured",
+    "container": {
+      "jcr:primaryType": "nt:unstructured",
+      "allowedComponents": [
+        "Kyanite Columns",
+        "Kyanite Components",
+        "Kyanite Elements",
+        "Kyanite Layouts",
+        "PureSight Components"
+      ]
+    }
+  },
+  "template": {
+    "jcr:primaryType": "nt:unstructured",
+    "container": {
+      "jcr:primaryType": "nt:unstructured",
+      "allowedComponents": [
+        "Kyanite Columns",
+        "Kyanite Components",
+        "Kyanite Elements",
+        "Kyanite Layouts",
+        "PureSight Components",
+        "PureSight Template Components"
+      ]
+    }
+  },
+  "blog": {
+    "jcr:primaryType": "nt:unstructured",
+    "article": {
+      "jcr:primaryType": "nt:unstructured",
+      "container": {
+        "jcr:primaryType": "nt:unstructured",
+        "allowedComponents": [
+          "Kyanite Columns",
+          "Kyanite Components",
+          "Kyanite Elements",
+          "Kyanite Layouts",
+          "Kyanite Blog Article Components",
+          "PureSight Components"
+        ]
+      }
+    }
+  }
+}

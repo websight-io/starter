@@ -1,0 +1,7 @@
+{
+  "group": "Kyanite Elements",
+  "sling:resourceType": "ws:Component",
+  "title": "Image Carousel",
+  "isContainer": true,
+  "allowedComponents": "/apps/kyanite/common/components/image"
+}

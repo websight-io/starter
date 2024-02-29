@@ -1,0 +1,30 @@
+{
+    "sling:resourceType": "wcm/dialogs/components/select",
+    "name": "padding",
+    "label": "Padding",
+    "noStyle": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "none",
+      "value": "spacing-0"
+    },
+    "space-1": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Extra small",
+      "value": "spacing-1"
+    },
+    "space-2": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Small",
+      "value": "spacing-2"
+    },
+    "space-4": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Medium",
+      "value": "spacing-4"
+    },
+    "space-5": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Big",
+      "value": "spacing-5"
+    }
+  }

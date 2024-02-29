@@ -1,0 +1,12 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Template if",
+  "group": "PureSight Template Components",
+  "isContainer": true,
+  "allowedComponents": [
+    "Kyanite Columns",
+    "Kyanite Components",
+    "Kyanite Elements",
+    "Kyanite Layouts"
+  ]
+}

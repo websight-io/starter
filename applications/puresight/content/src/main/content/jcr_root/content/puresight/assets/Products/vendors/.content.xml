@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <image_x0020_8-1.png/>
+    <image_x0020_8-2.png/>
+    <image_x0020_8-3.png/>
+    <image_x0020_8.png/>
+</jcr:root>

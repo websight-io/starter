@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:sling="http://sling.apache.org/jcr/sling/1.0"
+    jcr:primaryType="sling:OrderedFolder">
+    <PureSight_x0020_logo_x0020_-_x0020_logo_x0020_icon_x0020_no_x0020_margin.png/>
+    <PureSight_x0020_logo_x0020_-_x0020_no_x0020_margin_x0020_-_x0020_on_x0020_light.png/>
+    <pokoj.png/>
+    <blue-chair.png/>
+    <greenChair.png/>
+    <black-chair.png/>
+    <card-image.png/>
+    <img1.png/>
+    <img2.png/>
+    <img3.png/>
+    <img4.png/>
+    <img5.png/>
+    <img6.png/>
+    <img8.png/>
+    <card-image19.png/>
+    <img7.png/>
+</jcr:root>

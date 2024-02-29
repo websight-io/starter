@@ -1,0 +1,54 @@
+.vendors-list-modal {
+
+    .modal-card-foot, 
+    .modal-card-head {
+        background-color: var(--base-color-white);
+    }
+    .modal-card-head,
+    .modal-card-body,
+    .modal-card-foot {
+        padding: var(--spacing-5);
+    }
+
+    .modal-card-head {
+        border-bottom: none;
+        border-top-right-radius: var(--border-radius-3);
+        border-top-left-radius: var(--border-radius-3);
+
+        .delete {
+            background-color: transparent;
+            min-width: var(--spacing-5_4);
+            max-width: var(--spacing-5_4);
+            min-height: var(--spacing-5_4);
+            max-height: var(--spacing-5_4);
+            height: var(--spacing-5_4);
+
+            &:before,
+            &:after {
+                background-color: var(--base-color-black);
+            }
+        }
+    }
+
+    .modal-card-title {
+        font-size: var(--font-size-32);
+    }
+
+    .modal-card-body {
+        border-bottom-right-radius: var(--border-radius-3);
+        border-bottom-left-radius: var(--border-radius-3);
+
+        .column {
+            padding: var(--spacing-5) var(--spacing-4);
+            font-size: var(--font-size-16);
+        }
+
+        .image {
+            margin-bottom: 0px !important;
+        }
+
+        .button {
+            margin-bottom: 0;
+        }
+    }
+}

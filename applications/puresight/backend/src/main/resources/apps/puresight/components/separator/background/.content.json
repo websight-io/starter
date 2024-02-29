@@ -1,0 +1,65 @@
+{
+    "sling:resourceType": "wcm/dialogs/components/select",
+    "name": "background",
+    "label": "Background",
+    "none": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "None",
+      "value": ""
+    },
+    "primary": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Primary",
+      "value": "has-background-primary"
+    },
+    "link": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Link",
+      "value": "has-background-link"
+    },
+    "info": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Info",
+      "value": "has-background-info"
+    },
+    "success": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Success",
+      "value": "has-background-success"
+    },
+    "warning": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Warning",
+      "value": "has-background-warning"
+    },
+    "danger": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Danger",
+      "value": "has-background-danger"
+    },
+    "white": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "White",
+      "value": "has-background-white"
+    },
+    "light": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Light",
+      "value": "has-background-light"
+    },
+    "grey": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Grey",
+      "value": "has-background-grey"
+    },
+    "dark": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Dark",
+      "value": "has-background-dark"
+    },
+    "black": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "Black",
+      "value": "has-background-black"
+    }
+  }

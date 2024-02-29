@@ -1,0 +1,17 @@
+.newsletter {
+    padding-top: var(--spacing-4);
+    padding-bottom: var(--spacing-4); 
+
+    @media (min-width: 1024px) {
+        padding-top: var(--spacing-5_4);
+        padding-bottom: var(--spacing-5_4);
+      }
+
+    .columns {
+        &:first-child {
+            .hero .hero-body .container & {
+                margin-bottom: var(--spacing-4) !important ;
+            }  
+        }
+    }
+}

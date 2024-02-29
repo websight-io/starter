@@ -1,0 +1,6 @@
+{
+  "sling:resourceType": "ws:PageTemplate",
+  "title": "Blog article page",
+  "description": "Template for the blog article page",
+  "sling:resourceSuperType": "/libs/kyanite/blogs/templates/blogarticlepage"
+}

@@ -27,7 +27,8 @@ const main = async () => {
             .all([
                 publishAllContent(CONTENT_SPACE.LUNA),
                 publishAllContent(CONTENT_SPACE.LUNA_LOW_CODE),
-                publishAllContent(CONTENT_SPACE.LUNA_NO_CODE)
+                publishAllContent(CONTENT_SPACE.LUNA_NO_CODE),
+                publishAllContent(CONTENT_SPACE.PURESIGHT)
             ]);
 
         console.log('OK');

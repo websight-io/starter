@@ -1,0 +1,25 @@
+{
+    "sling:resourceType": "wcm/dialogs/components/select",
+    "name": "thickness",
+    "label": "Thickness",
+    "height-1": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "1",
+      "value": "height-1"
+    },
+    "height-2": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "2",
+      "value": "height-2"
+    },
+    "height-3": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "3",
+      "value": "height-3"
+    },
+    "height-4": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "label": "4",
+      "value": "height-4"
+    }
+  }

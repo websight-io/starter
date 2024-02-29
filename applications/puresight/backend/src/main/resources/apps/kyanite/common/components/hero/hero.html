@@ -1,0 +1,16 @@
+<sly data-sly-use.model="pl.ds.starter.puresight.cms.models.HeroComponent">
+  <sly data-sly-set.classes="hero ${properties.backgroundColor} ${model.heroClasses @ join=' '}"></sly>
+  <sly data-sly-test="${resource.hasChildren}">
+    <section class="${classes}" style="${model.backgroundStyle @ context='text'}">
+      <div class="hero-body">
+        <sly data-sly-list="${resource.children}">
+          <sly data-sly-resource="${item}"></sly>
+        </sly>
+      </div>
+    </section>
+  </sly>
+</sly>
+<sly data-sly-test="${!resource.hasChildren}">
+  <sly data-sly-use.lib="/libs/wcm/foundation/components/commons/templates.html"
+       data-sly-call="${lib.placeholder @ classes=classes}"></sly>
+</sly>

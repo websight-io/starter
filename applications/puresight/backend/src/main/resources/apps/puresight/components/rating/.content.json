@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Rating",
+  "group": "PureSight Components"
+}

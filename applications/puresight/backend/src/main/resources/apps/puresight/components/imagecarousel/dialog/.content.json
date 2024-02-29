@@ -1,0 +1,47 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "tabs": {
+    "sling:resourceType": "wcm/dialogs/components/tabs",
+    "generalTab": {
+      "sling:resourceType": "wcm/dialogs/components/tab",
+      "label": "General",
+      "thumbnailSize": {
+        "sling:resourceType": "wcm/dialogs/components/select",
+        "name": "thumbnailSize",
+        "label": "Fixed size of slide (image)",
+        "extraSmall": {
+          "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+          "value": "is-extra-small-size",
+          "label": "Extra small"
+        },
+        "small": {
+          "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+          "value": "is-small-size",
+          "label": "Small"
+        },
+        "medium": {
+          "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+          "value": "is-medium-size",
+          "label": "Medium"
+        },
+        "large": {
+          "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+          "value": "is-large-size",
+          "label": "Large"
+        }
+      },
+      "images": {
+        "sling:resourceType": "wcm/dialogs/components/multifield",
+        "name": "images",
+        "label": "Images",
+        "assetReference": {
+          "sling:resourceType": "wcm/dialogs/components/assetreference",
+          "mimeTypes": ["image/*"],
+          "name": "assetReference",
+          "description": "Default image source",
+          "label": "Choose image"
+        }
+      }
+    }
+  }
+}

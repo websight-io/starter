@@ -1,0 +1,8 @@
+{
+  "sling:resourceType": "ws:Component",
+  "isContainer": true,
+  "isLayout": true,
+  "group": "PureSight Components",
+  "instanceResourceType": "kyanite/common/components/container",
+  "title": "Vendors List Modal"
+}
