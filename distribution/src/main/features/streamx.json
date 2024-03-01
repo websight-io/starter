@@ -61,9 +61,6 @@
     "dev.streamx.sling.connector.impl.StreamxClientFactoryImpl": {
       "streamxUrl": "$[env:STREAMX_PUBLICATION_SERVER_URL]",
       "authToken": "$[env:STREAMX_PUBLICATION_AUTH_TOKEN]"
-    },
-    "dev.streamx.connector.websight.blueprint.impl.PageDataServiceImpl": {
-      "shorten.content.paths": false
     }
   },
   "repoinit:TEXT|true": "@file"
