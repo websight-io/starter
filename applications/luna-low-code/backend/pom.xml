@@ -21,7 +21,7 @@
   <parent>
     <groupId>pl.ds.starter</groupId>
     <artifactId>luna-low-code</artifactId>
-    <version>1.24.2</version>
+    <version>1.24.3-SNAPSHOT</version>
     <relativePath>../pom.xml</relativePath>
   </parent>
 
