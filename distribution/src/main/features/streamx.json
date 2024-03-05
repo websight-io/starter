@@ -59,8 +59,8 @@
       "enabled": "$[env:STREAMX_PUBLICATION_ENABLE;default=false]"
     },
     "dev.streamx.sling.connector.impl.StreamxClientFactoryImpl": {
-      "streamxUrl": "$[env:STREAMX_PUBLICATION_SERVER_URL]",
-      "authToken": "$[env:STREAMX_PUBLICATION_AUTH_TOKEN]"
+      "streamxUrl": "$[env:STREAMX_REST_INGESTION_HOST]",
+      "authToken": "$[env:STREAMX_REST_INGESTION_AUTH_TOKEN]"
     }
   },
   "repoinit:TEXT|true": "@file"
