@@ -77,6 +77,7 @@
       <div class="separator ">
         <hr class=" ">
       </div>
+      {% if price.value is not empty %}
       <div class="container  ">
         <div class="level level-with-gaps is-align-items-center ">
           <div class="level-item is-justify-content-flex-start has-text-left is-align-items-center ">
@@ -88,11 +89,12 @@
           </div>
           <div class="level-item is-justify-content-flex-start has-text-left is-align-items-flex-start ">
             <h5 style="text-align: ;" class="title is-5 has-text-grey-900">
-              <span class="has-text-primary">450€</span>
+              <span class="has-text-primary">{{ price.value }}€</span>
             </h5>
           </div>
         </div>
       </div>
+      {% endif %}
       <button class="button js-modal-trigger is-normal is-dark is-fullwidth" data-target="modal_vendors_template">
         <span>Buy now</span>
         <span class="icon  ">

@@ -85,5 +85,8 @@
       "author": "Jessica Lee",
       "date": "May 2, 2023"
     }
-  ]
+  ],
+  "price": {
+    "value": "499"
+  }
 }

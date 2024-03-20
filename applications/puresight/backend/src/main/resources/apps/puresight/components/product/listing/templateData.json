@@ -4,49 +4,73 @@
       "id":"B071FMSYNH",
       "name":"Hoffman Down-Filled Performance Fabric Living Room Sectional Sofa Couch, 127\"W, Ecru",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/A1/A1kNj5aPzdL.jpg",
-      "urlSafeName" : "hoffman-down-filled-performance-fabric-living-room-sectional-sofa-couch-127-w-ecru-b071fmsynh"
+      "urlSafeName" : "hoffman-down-filled-performance-fabric-living-room-sectional-sofa-couch-127-w-ecru-b071fmsynh",
+      "price": {
+        "value": "499"
+      }
     },
     {
       "id":"B07P7NVGFL",
       "name":"Rivet Sloane Mid-Century Modern Sofa with Tufted Back, 79.9\"W, Storm",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/A1/A1R13eYKKKL.jpg",
-      "urlSafeName" : "rivet-sloane-mid-century-modern-sofa-with-tufted-back-79-9-w-storm-b07p7nvgfl"
+      "urlSafeName" : "rivet-sloane-mid-century-modern-sofa-with-tufted-back-79-9-w-storm-b07p7nvgfl",
+      "price": {
+        "value": "399"
+      }
     },
     {
       "id":"B075X4VWHG",
       "name":"Leila Velvet Tufted Chair, 44\"W, Navy Blue",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/91/914PIFu8oeL.jpg",
-      "urlSafeName" : "leila-velvet-tufted-chair-44-w-navy-blue-b075x4vwhg"
+      "urlSafeName" : "leila-velvet-tufted-chair-44-w-navy-blue-b075x4vwhg",
+      "price": {
+        "value": "239"
+      }
     },
     {
       "id":"B075X4VWFH",
       "name":"Leila Tufted Chair, 44\" W, Sandstone",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/A1/A1VU-cBgyYL.jpg",
-      "urlSafeName" : "leila-tufted-chair-44-w-sandstone-b075x4vwfh"
+      "urlSafeName" : "leila-tufted-chair-44-w-sandstone-b075x4vwfh",
+      "price": {
+        "value": "699"
+      }
     },
     {
       "id":"B075X4VWFB",
       "name":"Leila Tufted Chair, 44\" W, Smoky Teal",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/A1/A1e+te01d6L.jpg",
-      "urlSafeName" : "leila-tufted-chair-44-w-smoky-teal-b075x4vwfb"
+      "urlSafeName" : "leila-tufted-chair-44-w-smoky-teal-b075x4vwfb",
+      "price": {
+        "value": "199"
+      }
     },
     {
       "id":"B07P8SRZS1",
       "name":"Rivet Sloane Mid-Century Modern Loveseat with Tufted Back, 64.2\"W, Storm",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/A1/A1vpJx61s8L.jpg",
-      "urlSafeName" : "rivet-sloane-mid-century-modern-loveseat-with-tufted-back-64-2-w-storm-b07p8srzs1"
+      "urlSafeName" : "rivet-sloane-mid-century-modern-loveseat-with-tufted-back-64-2-w-storm-b07p8srzs1",
+      "price": {
+        "value": "599"
+      }
     },
     {
       "id":"B075X4VR52",
       "name":"Leila Velvet Tufted Sofa, 69\"W, Navy Blue",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/91/91KW2xJXY5L.jpg",
-      "urlSafeName" : "leila-velvet-tufted-sofa-69-w-navy-blue-b075x4vr52"
+      "urlSafeName" : "leila-velvet-tufted-sofa-69-w-navy-blue-b075x4vr52",
+      "price": {
+        "value": "99"
+      }
     },
     {
       "id":"B071ZLXZQ7",
       "name":"Hoffman Down-Filled Performance Fabric Oversized Arm Chair, 59\"W, Ecru",
       "mainImage":"https://storage.googleapis.com/puresight-pim-images/original/B1/B1QJINggHqS.jpg",
-      "urlSafeName" : "hoffman-down-filled-performance-fabric-oversized-arm-chair-59-w-ecru-b071zlxzq7"
+      "urlSafeName" : "hoffman-down-filled-performance-fabric-oversized-arm-chair-59-w-ecru-b071zlxzq7",
+      "price": {
+        "value": "799"
+      }
     }
   ]
 }

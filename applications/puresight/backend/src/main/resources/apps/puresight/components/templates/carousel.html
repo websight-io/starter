@@ -33,9 +33,11 @@
                 <i class="mdi mdi-star " aria-hidden="true"></i>
                 <i class="mdi mdi-star-outline " aria-hidden="true"></i>
               </div>
+              {% if values[i].price.value is not empty %}
               <div class="content is-medium  has-text-primary-700">
-                <p>from 450€</p>
+                <p>from {{ values[i].price.value }}€</p>
               </div>
+              {% endif %}
               <a href="products/{{ values[i].urlSafeName }}.html" class="button is-normal is-dark">
                 <span>Buy Now</span>
                 <span class="icon  ">
