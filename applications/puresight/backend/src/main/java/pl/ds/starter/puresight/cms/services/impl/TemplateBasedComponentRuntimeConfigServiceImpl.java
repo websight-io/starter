@@ -9,7 +9,7 @@ import org.osgi.service.metatype.annotations.ObjectClassDefinition;
 import pl.ds.starter.puresight.cms.services.TemplateBasedComponentRuntimeConfigService;
 
 @Component(service = TemplateBasedComponentRuntimeConfigService.class)
-@Designate(ocd = NewsletterConfigServiceImpl.Config.class)
+@Designate(ocd = TemplateBasedComponentRuntimeConfigServiceImpl.Config.class)
 public class TemplateBasedComponentRuntimeConfigServiceImpl implements
     TemplateBasedComponentRuntimeConfigService {
 
