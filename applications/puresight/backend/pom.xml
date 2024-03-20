@@ -97,6 +97,10 @@
       <artifactId>org.osgi.annotation.versioning</artifactId>
     </dependency>
     <dependency>
+      <groupId>dev.streamx</groupId>
+      <artifactId>streamx-connector-sling</artifactId>
+    </dependency>
+    <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
     </dependency>

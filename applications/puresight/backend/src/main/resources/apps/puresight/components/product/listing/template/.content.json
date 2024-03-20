@@ -1,0 +1,5 @@
+{
+  "template": "/apps/puresight/components/templates/tiles.html",
+  "fragmentIdPrefix": "collected:products:cheapest-by-category:"
+}
+

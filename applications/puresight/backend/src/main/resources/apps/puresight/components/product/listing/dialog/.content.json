@@ -1,0 +1,298 @@
+{
+  "sling:resourceType": "wcm/dialogs/dialog",
+  "category": {
+    "sling:resourceType": "wcm/dialogs/components/select",
+    "name": "category",
+    "label": "Products category",
+    "category0": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Mattresses__Box_Springs",
+      "label": "Mattresses and Box Springs"
+    },
+    "category1": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bedroom_Armoires",
+      "label": "Bedroom Armoires"
+    },
+    "category2": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Vanities__Vanity_Benches",
+      "label": "Vanities and Vanity Benches"
+    },
+    "category3": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Entryway_Furniture",
+      "label": "Entryway Furniture"
+    },
+    "category4": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Home_Office_Furniture",
+      "label": "Home Office Furniture"
+    },
+    "category5": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bookcases",
+      "label": "Bookcases"
+    },
+    "category6": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Ottomans",
+      "label": "Ottomans"
+    },
+    "category7": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Furniture",
+      "label": "Furniture"
+    },
+    "category8": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Home_Office_Chairs",
+      "label": "Home Office Chairs"
+    },
+    "category9": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Nesting_Tables",
+      "label": "Nesting Tables"
+    },
+    "category10": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Home_Bar_Furniture",
+      "label": "Home Bar Furniture"
+    },
+    "category11": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Media_Storage",
+      "label": "Media Storage"
+    },
+    "category12": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Coffee_Tables",
+      "label": "Coffee Tables"
+    },
+    "category13": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Storage_Cabinets",
+      "label": "Storage Cabinets"
+    },
+    "category14": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Gliders",
+      "label": "Gliders"
+    },
+    "category15": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Home_Office_Desks",
+      "label": "Home Office Desks"
+    },
+    "category16": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Home_Office_Cabinets",
+      "label": "Home Office Cabinets"
+    },
+    "category17": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Table_Benches",
+      "label": "Table Benches"
+    },
+    "category18": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Storage_Benches",
+      "label": "Storage Benches"
+    },
+    "category19": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Headboards",
+      "label": "Headboards"
+    },
+    "category20": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Nightstands",
+      "label": "Nightstands"
+    },
+    "category21": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Living_Room_Furniture",
+      "label": "Living Room Furniture"
+    },
+    "category22": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Beds_Frames__Bases",
+      "label": "Beds, Frames and Bases"
+    },
+    "category23": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Buffets__Sideboards",
+      "label": "Buffets and Sideboards"
+    },
+    "category24": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Video_Game_Chairs",
+      "label": "Video Game Chairs"
+    },
+    "category25": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Barstools",
+      "label": "Barstools"
+    },
+    "category26": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Folding_Chairs",
+      "label": "Folding Chairs"
+    },
+    "category27": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Beds",
+      "label": "Beds"
+    },
+    "category28": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "China_Cabinets",
+      "label": "China Cabinets"
+    },
+    "category29": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Box_Springs",
+      "label": "Box Springs"
+    },
+    "category30": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Recliners",
+      "label": "Recliners"
+    },
+    "category31": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bookcases_Cabinets__Shelves",
+      "label": "Bookcases, Cabinets and Shelves"
+    },
+    "category32": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Vanities",
+      "label": "Vanities"
+    },
+    "category33": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bar_Sets",
+      "label": "Bar Sets"
+    },
+    "category34": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "End_Tables",
+      "label": "End Tables"
+    },
+    "category35": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Living_Room_Sets",
+      "label": "Living Room Sets"
+    },
+    "category36": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bar__Serving_Carts",
+      "label": "Bar and Serving Carts"
+    },
+    "category37": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Storage_Chests",
+      "label": "Storage Chests"
+    },
+    "category38": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Table__Chair_Sets",
+      "label": "Table and Chair Sets"
+    },
+    "category39": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Sofa__Console_Tables",
+      "label": "Sofa and Console Tables"
+    },
+    "category40": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Accent_Furniture",
+      "label": "Accent Furniture"
+    },
+    "category41": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Kitchen__Dining_Room_Furniture",
+      "label": "Kitchen and Dining Room Furniture"
+    },
+    "category42": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Dressers",
+      "label": "Dressers"
+    },
+    "category43": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Chairs",
+      "label": "Chairs"
+    },
+    "category44": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Kitchen_Islands__Carts",
+      "label": "Kitchen Islands and Carts"
+    },
+    "category45": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Chaise_Lounges",
+      "label": "Chaise Lounges"
+    },
+    "category46": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Television_Stands__Entertainment_Centers",
+      "label": "Television Stands and Entertainment Centers"
+    },
+    "category48": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Sofas",
+      "label": "Sofas"
+    },
+    "category49": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Tables",
+      "label": "Tables"
+    },
+    "category50": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Mattresses",
+      "label": "Mattresses"
+    },
+    "category51": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bar_Cabinets",
+      "label": "Bar Cabinets"
+    },
+    "category52": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bedroom_Furniture",
+      "label": "Bedroom Furniture"
+    },
+    "category53": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Folding_Tables",
+      "label": "Folding Tables"
+    },
+    "category54": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Vanity_Benches",
+      "label": "Vanity Benches"
+    },
+    "category55": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Sofas__Couches",
+      "label": "Sofas and Couches"
+    },
+    "category56": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Kids_Furniture",
+      "label": "Kids Furniture"
+    },
+    "category57": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Bed_Frames",
+      "label": "Bed Frames"
+    },
+    "category58": {
+      "sling:resourceType": "wcm/dialogs/components/select/selectitem",
+      "value": "Home_Office_Desk_Chairs",
+      "label": "Home Office Desk Chairs"
+    }
+  }
+}

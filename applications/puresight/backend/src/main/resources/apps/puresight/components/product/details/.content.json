@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Product details",
+  "group": "PureSight Components"
+}

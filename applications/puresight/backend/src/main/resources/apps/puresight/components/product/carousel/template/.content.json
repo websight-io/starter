@@ -1,0 +1,5 @@
+{
+  "template": "/apps/puresight/components/templates/carousel.html",
+  "fragmentIdPrefix": "collected:products:cheapest-by-category:"
+}
+

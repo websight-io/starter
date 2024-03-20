@@ -9,7 +9,14 @@
       "start-order": "25"
     }
   ],
+  "configurations": {
+    "pl.ds.starter.puresight.cms.services.impl.TemplateBasedComponentRuntimeConfigServiceImpl": {
+      "fragmentsBaseDir": "$[env:PURESIGHT_FRAGMENTS_BASE_DIR;default=/published/puresight/pages/_fragments/]",
+      "productBasePath": "$[env:PURESIGHT_PRODUCT_BASE_PATH;default=/published/puresight/pages/products/{{urlSafeName}}.]"
+    }
+  },
   "content-packages:ARTIFACTS|true": [
     "pl.ds.starter:puresight-content:zip:${starter-parent.version}"
   ]
 }
+
