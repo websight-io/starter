@@ -1,3 +1,4 @@
+create service user streamx-connector-puresight with path system/puresight
 create service user streamx-connector-websight-blueprints with path system/websight
 
 set ACL for streamx-connector-websight-blueprints

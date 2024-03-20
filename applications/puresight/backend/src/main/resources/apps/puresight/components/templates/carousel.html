@@ -1,0 +1,53 @@
+<div class="carousel glide" data-items-per-row-sm="1" data-items-per-row-md="2" data-items-per-row-lg="2">
+  <div data-glide-el="controls" class="buttons is-right">
+    <button data-glide-dir="<" class="button">
+			<span class="icon">
+				<i class="mdi mdi-arrow-left"></i>
+			</span>
+    </button>
+    <button data-glide-dir=">" class="button">
+			<span class="icon">
+				<i class="mdi mdi-arrow-right"></i>
+			</span>
+    </button>
+  </div>
+  <div class="glide__track" data-glide-el="track" tabindex="0">
+    <ul class="glide__slides">
+      {% for i in range(0, values|length - 1) %}
+      <li>
+        <div class="card ">
+          <div class="card-image">
+            <figure class="image is-3by4">
+              <img src="{{ values[i].mainImage }}">
+            </figure>
+          </div>
+          <div class="card-content">
+            <div class="container  ">
+              <div class="content is-medium  has-text-grey-700">
+                <p>{{ values[i].name | abbreviate(20)}}</p>
+              </div>
+              <div class="rating ">
+                <i class="mdi mdi-star " aria-hidden="true"></i>
+                <i class="mdi mdi-star " aria-hidden="true"></i>
+                <i class="mdi mdi-star " aria-hidden="true"></i>
+                <i class="mdi mdi-star " aria-hidden="true"></i>
+                <i class="mdi mdi-star-outline " aria-hidden="true"></i>
+              </div>
+              <div class="content is-medium  has-text-primary-700">
+                <p>from 450€</p>
+              </div>
+              <a href="products/{{ values[i].urlSafeName }}.html" class="button is-normal is-dark">
+                <span>Buy Now</span>
+                <span class="icon  ">
+										<i class="mdi mdi-24px mdi-cart-outline" aria-hidden="false"></i>
+									</span>
+              </a>
+            </div>
+          </div>
+          <footer class="card-footer"></footer>
+        </div>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

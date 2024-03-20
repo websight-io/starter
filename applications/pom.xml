@@ -196,6 +196,12 @@
         <version>1.4.0</version>
         <scope>provided</scope>
       </dependency>
+      <dependency>
+        <groupId>dev.streamx</groupId>
+        <artifactId>streamx-connector-sling</artifactId>
+        <version>${streamx.connector.sling.version}</version>
+        <scope>provided</scope>
+      </dependency>
 
       <dependency>
         <groupId>org.apache.commons</groupId>

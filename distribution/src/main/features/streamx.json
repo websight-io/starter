@@ -50,17 +50,25 @@
     }
   ],
   "configurations": {
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-puresight": {
+      "user.mapping": [
+        "puresight-backend=[streamx-connector-puresight]"
+      ]
+    },
     "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-websight-blueprints": {
       "user.mapping": [
         "streamx-connector-websight-blueprints=[streamx-connector-websight-blueprints]"
       ]
     },
+    "dev.streamx.connector.websight.blueprint.impl.PageDataServiceImpl": {
+      "shorten.content.paths": "$[env:STREAMX_PUBLICATION_PAGE_SHORTEN_PATHS;default=true]"
+    },
     "dev.streamx.sling.connector.impl.StreamxPublicationServiceImpl": {
       "enabled": "$[env:STREAMX_PUBLICATION_ENABLE;default=false]"
     },
     "dev.streamx.sling.connector.impl.StreamxClientFactoryImpl": {
-      "streamxUrl": "$[env:STREAMX_REST_INGESTION_HOST]",
-      "authToken": "$[env:STREAMX_REST_INGESTION_AUTH_TOKEN]"
+      "streamxUrl": "$[env:STREAMX_REST_INGESTION_HOST;default=http://localhost:8080]",
+      "authToken": "$[env:STREAMX_REST_INGESTION_AUTH_TOKEN;default=;type=String]"
     }
   },
   "repoinit:TEXT|true": "@file"

@@ -1,0 +1,5 @@
+{
+  "sling:resourceType": "ws:Component",
+  "title": "Products carousel",
+  "group": "PureSight Components"
+}

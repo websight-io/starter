@@ -1,0 +1,13 @@
+<sly
+    data-sly-use.runtime="pl.ds.starter.puresight.cms.models.TemplateBasedProductDetailsComponentRuntimeModel"></sly>
+<sly data-sly-test="${wcmmode.disabled}">
+  <sly data-sly-test="${runtime.fragmentPath}">
+    <!--# block name="fail" --><!--# endblock -->
+    <!--# include virtual="${runtime.fragmentPath}" stub="fail" -->
+  </sly>
+</sly>
+<sly data-sly-test="${!wcmmode.disabled && runtime.fragmentPath}">
+  <sly data-sly-use.preview="pl.ds.starter.puresight.cms.models.TemplateBasedComponentPreviewModel">
+    ${preview.renderedHtml @ context='unsafe'}
+  </sly>
+</sly>

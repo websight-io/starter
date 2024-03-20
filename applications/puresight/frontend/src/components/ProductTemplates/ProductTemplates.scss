@@ -1,0 +1,30 @@
+.dynamicproductlist .product-tiles {
+  --product-tiles-number: 4;
+
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 40px;
+  column-gap: 24px;
+  padding: 20px 12px;
+}
+
+.dynamicproductlist .product-tiles .card {
+  width: calc((100% - 24px * (var(--product-tiles-number) - 1)) / var(--product-tiles-number));
+}
+
+.carousel .glide__slides > li {
+  display: flex;
+}
+
+.carousel .card {
+  flex-grow: 1;
+}
+
+.carousel .card-image,
+.carousel .card-image .image {
+  height: 100%;
+}
+
+.carousel .card-image .image img {
+  object-fit: cover;
+}
