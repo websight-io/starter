@@ -1,11 +1,23 @@
 .dynamicproductlist .product-tiles {
-  --product-tiles-number: 4;
+  --product-tiles-number: 1;
 
   display: flex;
   flex-wrap: wrap;
   row-gap: 40px;
   column-gap: 24px;
   padding: 20px 12px;
+}
+
+@media screen and (min-width: 768px) {
+  .dynamicproductlist .product-tiles {
+    --product-tiles-number: 2;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .dynamicproductlist .product-tiles {
+    --product-tiles-number: 4;
+  }
 }
 
 .dynamicproductlist .product-tiles .card {
@@ -20,9 +32,11 @@
   flex-grow: 1;
 }
 
-.carousel .card-image,
-.carousel .card-image .image {
-  height: 100%;
+@media screen and (min-width: 1024px) {
+  .carousel .card-image,
+  .carousel .card-image .image {
+    height: 100%;
+  }
 }
 
 .carousel .card-image .image img {
