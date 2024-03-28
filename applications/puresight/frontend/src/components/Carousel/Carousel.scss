@@ -1,6 +1,7 @@
 .carousel {
     .card {
         background-color: var(--color-primary--200);
+        border: 1px solid var(--color-primary--200);
         border-radius: 0;
         box-shadow: none;
 
@@ -9,10 +10,14 @@
             align-items: center;
         }
 
-        &-image {              
+        &-image {           
             .image {
+                background-color: white;
+                max-height: 380px;
                 img { 
                     border-radius: 0;
+                    object-fit: contain;
+                    height: 100%;
 
                     @media (min-width: 1024px) {
                         position: initial;
