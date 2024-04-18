@@ -1,4 +1,7 @@
 .button {
+    &.is-outlined:hover {
+        --kyanite-button-border-width: 0;
+    }
     > span:not(.icon) {
         vertical-align: top;
     }
