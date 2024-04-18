@@ -2016,7 +2016,7 @@
                                         actionType="\0"
                                         isDisabled="false"
                                         isFullWidth="false"
-                                        isInverted="true"
+                                        isInverted="false"
                                         isLight="false"
                                         isMailto="false"
                                         isOutlined="true"
@@ -2028,7 +2028,7 @@
                                         size="is-normal"
                                         type="a"
                                         url="/content/puresight/pages/blog"
-                                        variant="is-white">
+                                        variant="is-black">
                                         <leftIcon
                                             jcr:primaryType="nt:unstructured"
                                             icon="mdi-home-outline"
