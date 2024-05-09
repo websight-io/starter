@@ -10,11 +10,7 @@
         ws:lastModified="{Date}2023-09-07T09:41:53.906Z"
         ws:lastModifiedBy="wsadmin"
         ws:template="/apps/puresight/templates/blogarticlepage"
-        authorDescription="Sarah Mitchell is an experienced interior designer and clean-living enthusiast with a passion for transforming spaces into serene havens of simplicity. With a keen eye for detail and a deep understanding of minimalist design principles, she has helped numerous clients declutter and organize their homes. Through her thoughtful and practical advice, Sarah inspires others to embrace the art of minimalism for a more peaceful and sustainable lifestyle."
-        authorName="Sarah Mitchell"
-        authorPhoto="/content/puresight/assets/Blogs/SofiaSilva (1).jpg/"
         authorPhotoAlt="\0"
-        authorRole="Interior Designer"
         description="\0"
         heroImage="/content/puresight/assets/Blogs/spacejoy-umAXneH4GhA-unsplash.jpg"
         heroImageAlt="\0"
@@ -31,18 +27,18 @@
                 sling:resourceType="kyanite/common/components/navbarreference"/>
             <section
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section/fixedsection">
                 <container
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/container">
+                    sling:resourceType="kyanite/common/components/container/fixedcontainer">
                     <columns1
                         jcr:primaryType="nt:unstructured"
-                        sling:resourceType="kyanite/common/components/columns"
+                        sling:resourceType="kyanite/common/components/columns/fixedcolumns"
                         columnsActivationLevel="is-desktop"
                         isMultiline="true">
                         <column1
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/columns/column"
+                            sling:resourceType="kyanite/common/components/columns/column/fixedcolumn"
                             customClass="sticky-container">
                             <desktopColumnStyle
                                 jcr:primaryType="nt:unstructured"
@@ -66,7 +62,7 @@
                         </column1>
                         <column2
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/columns/column">
+                            sling:resourceType="kyanite/common/components/columns/column/fixedcolumn">
                             <desktopColumnStyle
                                 jcr:primaryType="nt:unstructured"
                                 isNormalColumn="true"
@@ -85,11 +81,15 @@
                                 sizeType="evenNumber"/>
                             <blogarticleheader
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/blogs/components/blogarticleheader"/>
+                                sling:resourceType="kyanite/blogs/components/blogarticleheader">
+                                <author
+                                    jcr:primaryType="nt:unstructured"
+                                    authorInfoSource="parentPage"/>
+                            </blogarticleheader>
                         </column2>
                         <column3
                             jcr:primaryType="nt:unstructured"
-                            sling:resourceType="kyanite/common/components/columns/column"
+                            sling:resourceType="kyanite/common/components/columns/column/fixedcolumn"
                             customClass="sticky-container">
                             <desktopColumnStyle
                                 jcr:primaryType="nt:unstructured"
@@ -134,13 +134,8 @@
                             <content_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>In an ever-changing world, where life's pace often feels like a frenzied sprint, the minimalism movement has gained momentum. This trend towards simplifying life, both physically and mentally, has found its place in the hearts and homes of many. Join me on a journey to discover the art of decluttering and how it can transform your living spaces into havens of peace and serenity.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content_1>
+                                text="&lt;p>In an ever-changing world, where life's pace often feels like a frenzied sprint, the minimalism movement has gained momentum. This trend towards simplifying life, both physically and mentally, has found its place in the hearts and homes of many. Join me on a journey to discover the art of decluttering and how it can transform your living spaces into havens of peace and serenity.&lt;/p>"/>
                             <title
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
@@ -151,13 +146,8 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>Minimalism, as a lifestyle, is not a new concept. It has its roots in various philosophies and cultures throughout history, emphasizing the value of living with less. From ancient Eastern practices of Zen Buddhism to the mid-20th-century architectural marvels of the Bauhaus movement, minimalism has continually shaped our understanding of space and design.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content>
+                                text="&lt;p>Minimalism, as a lifestyle, is not a new concept. It has its roots in various philosophies and cultures throughout history, emphasizing the value of living with less. From ancient Eastern practices of Zen Buddhism to the mid-20th-century architectural marvels of the Bauhaus movement, minimalism has continually shaped our understanding of space and design.&lt;/p>"/>
                             <title_1_4
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
@@ -168,13 +158,8 @@
                             <content_2
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>To embark on a decluttering journey, start with a clear vision. Consider what truly matters to you and what you want your space to reflect. Begin with the basics: sorting through possessions and letting go of items that no longer serve a purpose. The &quot;less is more&quot; mantra becomes your guiding principle as you free your living area from excess.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content_2>
+                                text="&lt;p>To embark on a decluttering journey, start with a clear vision. Consider what truly matters to you and what you want your space to reflect. Begin with the basics: sorting through possessions and letting go of items that no longer serve a purpose. The &quot;less is more&quot; mantra becomes your guiding principle as you free your living area from excess.&lt;/p>"/>
                             <title_1_3
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
@@ -185,13 +170,8 @@
                             <content_3
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>Organizing your space efficiently is the next step towards achieving a clutter-free environment. Invest in practical storage solutions that maximize your available space. Under-bed storage, floating shelves, and multifunctional furniture pieces are great additions to your arsenal. Keep in mind that every item should have its designated place, reducing the chances of clutter creeping back in.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content_3>
+                                text="&lt;p>Organizing your space efficiently is the next step towards achieving a clutter-free environment. Invest in practical storage solutions that maximize your available space. Under-bed storage, floating shelves, and multifunctional furniture pieces are great additions to your arsenal. Keep in mind that every item should have its designated place, reducing the chances of clutter creeping back in.&lt;/p>"/>
                             <title_1_2
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
@@ -202,13 +182,8 @@
                             <content_4
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>Decluttering can feel overwhelming, so tackle one room at a time. Start with areas that are often the most cluttered, like the kitchen or home office. In the kitchen, clear countertops of unused appliances and utensils, creating an open, inviting space for meal preparation. In your home office, digitalize documents to eliminate paper clutter. As you move through your home, make conscious decisions about each item's importance and utility.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content_4>
+                                text="&lt;p>Decluttering can feel overwhelming, so tackle one room at a time. Start with areas that are often the most cluttered, like the kitchen or home office. In the kitchen, clear countertops of unused appliances and utensils, creating an open, inviting space for meal preparation. In your home office, digitalize documents to eliminate paper clutter. As you move through your home, make conscious decisions about each item's importance and utility.&lt;/p>"/>
                             <title_1_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
@@ -219,13 +194,8 @@
                             <content_5
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>Minimalism is not just about reducing physical clutter; it also champions sustainability. Consider donating or recycling items instead of sending them to the landfill. Seek out eco-friendly cleaning products to maintain your fresh, minimalist space. Sustainable living is an integral part of the minimalist lifestyle.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content_5>
+                                text="&lt;p>Minimalism is not just about reducing physical clutter; it also champions sustainability. Consider donating or recycling items instead of sending them to the landfill. Seek out eco-friendly cleaning products to maintain your fresh, minimalist space. Sustainable living is an integral part of the minimalist lifestyle.&lt;/p>"/>
                             <title_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
@@ -236,16 +206,15 @@
                             <content_5_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="rest_has-text-grey"
                                 size="is-medium"
-                                text="&lt;p>Decluttering your home is a journey that goes beyond simply tidying up. It's about cultivating a space that reflects your values and priorities. Embrace minimalism as a lifestyle, and you'll discover the benefits of reduced stress, increased focus, and a deeper connection to the things that truly matter. Remember, decluttering is not a one-time task; it's an ongoing practice. Regularly assess your living spaces and continue to edit your possessions. By doing so, you'll ensure that your home remains a sanctuary of simplicity in a complex world.&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="700"/>
-                            </content_5_1>
+                                text="&lt;p>Decluttering your home is a journey that goes beyond simply tidying up. It's about cultivating a space that reflects your values and priorities. Embrace minimalism as a lifestyle, and you'll discover the benefits of reduced stress, increased focus, and a deeper connection to the things that truly matter. Remember, decluttering is not a one-time task; it's an ongoing practice. Regularly assess your living spaces and continue to edit your possessions. By doing so, you'll ensure that your home remains a sanctuary of simplicity in a complex world.&lt;/p>"/>
                             <blogarticleauthorbio
                                 jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/blogs/components/blogarticleauthorbio"/>
+                                sling:resourceType="kyanite/blogs/components/blogarticleauthorbio">
+                                <author
+                                    jcr:primaryType="nt:unstructured"
+                                    authorInfoSource="parentPage"/>
+                            </blogarticleauthorbio>
                         </column4>
                     </columns1>
                 </container>
@@ -254,5 +223,12 @@
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/footerreference"/>
         </pagecontainer>
+        <author
+            jcr:primaryType="nt:unstructured"
+            authorDescription="Sarah Mitchell is an experienced interior designer and clean-living enthusiast with a passion for transforming spaces into serene havens of simplicity. With a keen eye for detail and a deep understanding of minimalist design principles, she has helped numerous clients declutter and organize their homes. Through her thoughtful and practical advice, Sarah inspires others to embrace the art of minimalism for a more peaceful and sustainable lifestyle."
+            authorInfoSource="ownProperties"
+            authorName="Sarah Mitchell"
+            authorPhoto="/content/puresight/assets/Blogs/SofiaSilva (1).jpg/"
+            authorRole="Interior Designer"/>
     </jcr:content>
 </jcr:root>

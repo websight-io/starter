@@ -72,7 +72,7 @@
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
     <howlite.version>1.0.19</howlite.version>
-    <kyanite.version>0.4.2</kyanite.version>
+    <kyanite.version>0.5.0</kyanite.version>
 
     <!-- StreamX -->
     <streamx.ingestion-client.version>0.0.12</streamx.ingestion-client.version>

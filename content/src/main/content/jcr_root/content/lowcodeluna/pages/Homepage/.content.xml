@@ -113,7 +113,8 @@
             </navbar>
             <section_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -140,7 +141,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 size="is-large"
                                 text="&lt;p>Our jewellery designers are happy to assist you in&lt;br>the creation of your perfect gold jewel.&lt;/p>"/>
                             <buttons
@@ -384,7 +385,8 @@
             </section_1>
             <section_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -392,17 +394,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
                         anchorId="\0"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Meet our New Grand Luxor Jewelry&lt;br>Collection&lt;/p>&lt;p>&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Meet our New Grand Luxor Jewelry&lt;br>Collection&lt;/p>&lt;p>&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
@@ -438,7 +435,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>"/>
                             <link
                                 jcr:primaryType="nt:unstructured"
@@ -490,7 +487,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 text="&lt;p>&lt;/p>&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse varius enim in eros elementum tristique. Duis cursus, mi quis viverra ornare, eros dolor interdum nulla, ut commodo diam libero vitae.&lt;/p>&lt;p>&lt;/p>"/>
                             <link
                                 jcr:primaryType="nt:unstructured"
@@ -519,7 +516,8 @@
             </section_2>
             <section_2_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -567,17 +565,12 @@
                             <title
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
-                                color="rest_has-text-grey"
                                 element="h2"
                                 isSpaced="{Boolean}false"
                                 size="is-4"
                                 subtitle="Subtitle"
-                                subtitleColor="bw_has-text-black"
-                                text="&lt;p>About Luna&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="900"/>
-                            </title>
+                                subtitleColor="has-text-black"
+                                text="&lt;p>About Luna&lt;/p>"/>
                         </column1>
                         <column1_1
                             jcr:primaryType="nt:unstructured"
@@ -585,7 +578,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 text="&lt;p>&lt;/p>&lt;p>Founded In 1986, Luna Owned &amp;amp; Operated Business Has Become A House-Hold Name In States All Over The USA As Well As Countries All Over The World.&lt;/p>&lt;p>For those that rather the full immersion of the in store experience we welcome your company and look forward to meeting you face to face. Being located in the 47 street diamond district, known to be the largest diamond.&lt;/p>&lt;p>Based in the heart of New York’s Diamond District, also known as the NYC diamond district, Luna has some of the most competitively priced in the market. It is our goal to supply our clients.&lt;/p>"/>
                         </column1_1>
                     </columns_1>
@@ -593,28 +586,24 @@
             </section_2_1>
             <section_2_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Discover our Bestsellers&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Discover our Bestsellers&lt;/p>"/>
                     <content
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/content"
-                        color="bw_has-text-black"
+                        color="has-text-black"
                         size="is-large"
                         text="&lt;p style=&quot;text-align: center&quot;>Explore what others have created and find inspiration for your own&lt;/p>&lt;p style=&quot;text-align: center&quot;>&lt;/p>"/>
                     <carousel
@@ -643,7 +632,7 @@
                                     <content
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="bw_has-text-black"
+                                        color="has-text-black"
                                         text="&lt;p>&lt;/p>&lt;p>Tiffany round diamonds catch the light and make it dance. Bracelet in 18k rose gold with a round brilliant diamond. 7″ long.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"
                                         textWeight="has-text-weight-normal"/>
                                 </cardcontent>
@@ -675,7 +664,7 @@
                                     <content
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="bw_has-text-black"
+                                        color="has-text-black"
                                         text="&lt;p>&lt;/p>&lt;p>Featuring v-shaped details, the nesting band ring is the perfect complement to all Tiffany engagement ring styles.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,900&lt;/strong>&lt;/p>"/>
                                 </cardcontent>
                                 <image
@@ -706,7 +695,7 @@
                                     <content
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="bw_has-text-black"
+                                        color="has-text-black"
                                         text="&lt;p>&lt;/p>&lt;p>Fine jewelry deserves fair prices. And so do you. All of our jewelry is born, raised, and handmade in NYC.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
                                 </cardcontent>
                                 <image
@@ -737,7 +726,7 @@
                                     <content
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="bw_has-text-black"
+                                        color="has-text-black"
                                         text="&lt;p>&lt;/p>&lt;p>Diamonds dazzle against the leaves in a design inspired by the olive branch, a symbol of peace and abundance.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$1,400&lt;/strong>&lt;/p>"/>
                                 </cardcontent>
                                 <image
@@ -768,7 +757,7 @@
                                     <content
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="bw_has-text-black"
+                                        color="has-text-black"
                                         text="&lt;p>&lt;/p>&lt;p>Inspired by the olive branch, a symbol of peace and abundance. In 18k gold with a round brilliant diamond.&lt;/p>&lt;p>  &lt;/p>&lt;p>&lt;strong>$2,100&lt;/strong>&lt;/p>"/>
                                 </cardcontent>
                                 <image
@@ -782,7 +771,8 @@
             </section_2_2>
             <section_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -831,7 +821,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 size="is-medium"
                                 text="&lt;p>&lt;/p>&lt;p>Whether in deep or deck, diamonds level up any look, studs work in any situations. Graphic links and gold rings hold their own an look even better together.&lt;/p>&lt;p>Too muchis never enough. It’s called a good statement for a reason.&lt;/p>"/>
                             <desktopColumnStyle
@@ -847,24 +837,20 @@
             </section_1_1>
             <section_1_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Shape of Gemstone&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Shape of Gemstone&lt;/p>"/>
                     <columns
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
@@ -1093,24 +1079,20 @@
             </section_1_2>
             <section_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Custom Made Engagement Rings&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Custom Made Engagement Rings&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
@@ -1133,7 +1115,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 text="&lt;h2>&lt;/h2>&lt;p>Book a meeting to share your engagement ring ideas, timeline and budget. Financing available.&lt;/p>&lt;p>&lt;/p>"/>
                             <title_1
                                 jcr:primaryType="nt:unstructured"
@@ -1145,7 +1127,7 @@
                             <content_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 text="&lt;h2>&lt;/h2>&lt;p>See sketched designs and estimates and give us feedback. We’ll revise until we’ve nailed the design and source additional stones if needed.&lt;/p>&lt;p>&lt;/p>&lt;h2>&lt;/h2>"/>
                             <title_2
                                 jcr:primaryType="nt:unstructured"
@@ -1157,7 +1139,7 @@
                             <content_1_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 text="&lt;h2>&lt;/h2>&lt;p>Your ring is architected and precisely engineered with CAD, cast in metal, and the stones are set by hand.&lt;/p>"/>
                             <desktopColumnStyle
                                 jcr:primaryType="nt:unstructured"
@@ -1194,24 +1176,20 @@
             </section_1_1_1>
             <section_1_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Frequently Asked Questions&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Frequently Asked Questions&lt;/p>"/>
                     <accordion
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="luna/lowcode/components/accordion">
@@ -1285,7 +1263,8 @@
             </section_1_1_1_1>
             <section_1_1_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container_1
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -1302,7 +1281,8 @@
             </section_1_1_1_1_1>
             <section_2_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -1323,17 +1303,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
                         anchorId="\0"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>"/>
                     <buttons
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/buttons"
@@ -1629,12 +1604,8 @@
                 <content
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/content"
-                    color="bw_has-text-black"
-                    text="&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>">
-                    <rest
-                        jcr:primaryType="nt:unstructured"
-                        shade="\0"/>
-                </content>
+                    color="has-text-black"
+                    text="&lt;p style=&quot;text-align: center&quot;>© 2022 BrandName. All rights reserved.&lt;/p>"/>
             </footer>
         </pagecontainer>
     </jcr:content>

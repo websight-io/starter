@@ -7,7 +7,7 @@
         jcr:primaryType="ws:PageContent"
         jcr:title="404"
         sling:resourceType="puresight/components/page"
-        ws:lastModified="{Date}2023-09-18T13:53:50.407Z"
+        ws:lastModified="{Date}2024-05-09T14:54:59.214+02:00"
         ws:lastModifiedBy="wsadmin"
         ws:template="/apps/puresight/templates/basicpage"
         description="\0"
@@ -22,10 +22,11 @@
                 sling:resourceType="kyanite/common/components/navbarreference"/>
             <hero
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/hero"
+                sling:resourceType="kyanite/common/components/section"
                 background="\0"
                 backgroundColor="teak"
                 backgroundImage="\0"
+                renderAsHero="true"
                 size="is-large"
                 variant="has-side-image">
                 <container1

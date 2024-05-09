@@ -2,6 +2,6 @@
 <jcr:root xmlns:jcr="http://www.jcp.org/jcr/1.0" xmlns:ws="http://ds.pl/websight"
     jcr:primaryType="ws:PagesSpace"
     jcr:title="Luna - custom code">
-  <pages/>
-  <assets/>
+    <pages/>
+    <assets/>
 </jcr:root>
