@@ -615,7 +615,7 @@
                                                 isInverted="false"
                                                 isLight="false"
                                                 isMailto="false"
-                                                isOutlined="false"
+                                                isOutlined="true"
                                                 isRounded="false"
                                                 label="Buy now"
                                                 openModal="open-modal"
@@ -623,7 +623,7 @@
                                                 showIconRight="true"
                                                 size="is-normal"
                                                 type="button"
-                                                variant="is-secondary">
+                                                variant="is-dark">
                                                 <leftIcon
                                                     jcr:primaryType="nt:unstructured"
                                                     icon="mdi-home-outline"
@@ -758,10 +758,10 @@
                                             actionType="\0"
                                             isDisabled="false"
                                             isFullWidth="false"
-                                            isInverted="true"
+                                            isInverted="false"
                                             isLight="false"
                                             isMailto="false"
-                                            isOutlined="false"
+                                            isOutlined="true"
                                             isRounded="false"
                                             label="Rate product"
                                             openModal="open-modal"
@@ -769,7 +769,7 @@
                                             showIconRight="false"
                                             size="is-normal"
                                             type="button"
-                                            variant="is-secondary">
+                                            variant="is-dark">
                                             <leftIcon
                                                 jcr:primaryType="nt:unstructured"
                                                 icon="mdi-home-outline"

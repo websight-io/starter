@@ -24,7 +24,7 @@
         margin-bottom: var(--spacing-5);
 
         path {
-          color: var(--color-primary--600);
+          color: var(--kyanite-primary);
         }
     }
     &__content {
@@ -64,7 +64,7 @@
             flex-direction: column;
         }
         &-name {
-          color: var(--color-primary--600);
+          color: var(--kyanite-primary);
           font-size: 1.125rem;
           line-height: 1.375rem;
           font-weight: 900;
