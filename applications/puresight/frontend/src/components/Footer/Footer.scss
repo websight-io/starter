@@ -1,5 +1,12 @@
 @use '../../colors';
 
+.theme-light {
+    .footer {
+        --kyanite-footer-background-color: #{colors.$blue-800};
+        --kyanite-footer-color: var(--kyanite-gray-70);
+    }
+}
+
 .footer {
     --kyanite-footer-background-color: #{colors.$blue-800};
     --kyanite-footer-color: var(--kyanite-gray-70);
