@@ -358,8 +358,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/A1/A1vpJx61s8L.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1vpJx61s8L.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1vpJx61s8L.jpg"/>
                             </card>
                         </carouselitem_3>
                         <carouselitem_2
@@ -428,8 +427,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg"/>
                             </card>
                         </carouselitem_2>
                         <carouselitem_1
@@ -498,8 +496,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/91/91v4dFyZ1TL.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/91/91v4dFyZ1TL.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/91/91v4dFyZ1TL.jpg"/>
                             </card>
                         </carouselitem_1>
                         <carouselitem
@@ -568,8 +565,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/B1/B1QJINggHqS.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/B1/B1QJINggHqS.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/B1/B1QJINggHqS.jpg"/>
                             </card>
                         </carouselitem>
                         <carouselitem1
@@ -638,8 +634,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/91/914PIFu8oeL.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/91/914PIFu8oeL.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/91/914PIFu8oeL.jpg"/>
                             </card>
                         </carouselitem1>
                         <carouselitem2
@@ -708,8 +703,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/A1/A1kNj5aPzdL.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1kNj5aPzdL.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1kNj5aPzdL.jpg"/>
                             </card>
                         </carouselitem2>
                         <carouselitem3
@@ -778,8 +772,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/A1/A1e+te01d6L.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1e+te01d6L.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1e+te01d6L.jpg"/>
                             </card>
                         </carouselitem3>
                         <carouselitem4
@@ -848,8 +841,7 @@
                                     jcr:primaryType="nt:unstructured"
                                     alt="\0"
                                     assetReference="https://storage.googleapis.com/puresight-pim-images/original/A1/A1D0wxYGe7L.jpg"
-                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1D0wxYGe7L.jpg"
-                                    style="is-3by4"/>
+                                    src="https://storage.googleapis.com/puresight-pim-images/original/A1/A1D0wxYGe7L.jpg"/>
                             </card>
                         </carouselitem4>
                     </carousel>
