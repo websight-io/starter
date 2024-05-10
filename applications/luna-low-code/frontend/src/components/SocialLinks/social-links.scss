@@ -17,12 +17,12 @@
  .footer {
    .button.is-primary.is-outlined {
      .icon {
-       color: var(--color-primary--500) !important;
+       color: var(--color-default) !important;
      }
 
      &:focus:not(:hover) {
        .icon {
-         color: var(--color-primary--500) !important;
+         color: var(--color-default) !important;
        }
      }
 
