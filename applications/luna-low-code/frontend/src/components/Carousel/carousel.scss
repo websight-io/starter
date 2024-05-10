@@ -38,9 +38,9 @@
         cursor: pointer;
         text-decoration: none;
         border-radius: 50%;
-        display: block;
         appearance: none;
         background: transparent;
+        --kyanite-button-padding-horizontal: 0.5em;
 
         &.glide__arrow--disabled {
           cursor: default;
