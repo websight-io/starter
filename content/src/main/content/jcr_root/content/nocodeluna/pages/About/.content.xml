@@ -17,24 +17,20 @@
             sling:resourceType="kyanite/common/components/pagecontainer">
             <section_2_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h1"
                         isSpaced="{Boolean}false"
                         size="is-2"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Our Story&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Our Story&lt;/p>"/>
                     <content
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/content"
@@ -57,7 +53,8 @@
             </section_2_2>
             <section_2_2_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -74,17 +71,12 @@
                             <title
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
-                                color="rest_has-text-grey"
                                 element="h2"
                                 isSpaced="{Boolean}false"
                                 size="is-4"
                                 subtitle="Subtitle"
-                                subtitleColor="bw_has-text-black"
-                                text="&lt;p style=&quot;text-align: center&quot;>Where It All Began&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="900"/>
-                            </title>
+                                subtitleColor="has-text-black"
+                                text="&lt;p style=&quot;text-align: center&quot;>Where It All Began&lt;/p>"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
@@ -177,7 +169,8 @@
             </section_2_2_1_1>
             <section_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -229,7 +222,8 @@
             </section_1_1_1>
             <section_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -281,10 +275,12 @@
             </section_1_1>
             <section_2_2_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <section_1_1_2
                     jcr:primaryType="nt:unstructured"
-                    sling:resourceType="kyanite/common/components/section">
+                    sling:resourceType="kyanite/common/components/section"
+                    renderAsHero="false">
                     <container
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/container">
@@ -341,17 +337,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
                         anchorId="\0"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-3"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Why People Choose Us&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Why People Choose Us&lt;/p>"/>
                 </container_1>
                 <container
                     jcr:primaryType="nt:unstructured"
@@ -507,7 +498,8 @@
             </section_2_2_1>
             <section_2_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -528,17 +520,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
                         anchorId="\0"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>"/>
                     <buttons
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/buttons"

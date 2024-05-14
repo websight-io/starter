@@ -26,7 +26,7 @@ const selectors = {
 
 const viewports = [
   { label: 'md-mini', width: 360, height: 480 },
-  { label: 'md', width: 768, height: 1024 },
+  { label: 'md', width: 769, height: 1024 },
   { label: 'lg', width: 1025, height: 768 },
   { label: 'xl', width: 1216, height: 1024 },
   { label: 'mx', width: 1408, height: 900 }
@@ -63,7 +63,7 @@ const scenarios = [
     cookiePath: 'backstop_data/engine_scripts/cookies.json',
     url: getPublishedPageUrl(scenario),
     delay: 500,
-    postInteractionWait: 0,
+    postInteractionWait: 200,
     selectorExpansion: true,
     expect: 0,
     /*

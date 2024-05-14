@@ -23,9 +23,10 @@
                 sling:resourceType="kyanite/common/components/navbarreference"/>
             <hero
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/hero"
+                sling:resourceType="kyanite/common/components/section"
                 background="\0"
                 backgroundColor="oxford-blue"
+                renderAsHero="true"
                 size="is-small"
                 variant="has-side-image">
                 <container
@@ -66,22 +67,18 @@
                             <section
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/section"
+                                renderAsHero="false"
                                 size="is-normal">
                                 <title
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/title"
                                     anchorId="\0"
-                                    color="rest_has-text-grey"
                                     element="h3"
                                     isSpaced="{Boolean}false"
                                     size="is-3"
                                     subtitle="Subtitle"
-                                    subtitleColor="bw_has-text-black"
-                                    text="&lt;p>&lt;span class=&quot;has-text-white&quot;>Inspiring ideas for you&lt;/span>&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="900"/>
-                                </title>
+                                    subtitleColor="has-text-black"
+                                    text="&lt;p>&lt;span class=&quot;has-text-white&quot;>Inspiring ideas for you&lt;/span>&lt;/p>"/>
                                 <button
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/button"
@@ -163,6 +160,7 @@
             <section_12
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false"
                 size="is-normal">
                 <container
                     jcr:primaryType="nt:unstructured"
@@ -172,17 +170,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
                         anchorId="\0"
-                        color="rest_has-text-grey"
                         element="h6"
                         isSpaced="{Boolean}false"
                         size="is-6"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p>Popular products&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p>Popular products&lt;/p>"/>
                     <columns
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns">
@@ -227,26 +220,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>&lt;span class=&quot;has-text-dark&quot;>Marin Loveseat&lt;/span>&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>&lt;span class=&quot;has-text-dark&quot;>Marin Loveseat&lt;/span>&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>450€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>450€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -302,26 +286,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>4300€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>4300€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -377,26 +352,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Leila Couch&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Leila Couch&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>4500€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>4500€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -462,26 +428,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Sofa&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Sofa&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>6700€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>6700€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -537,26 +494,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Leila Couch&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Leila Couch&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>2500€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>2500€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -612,26 +560,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Leather&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Leather&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>6700€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>6700€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -697,26 +636,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Rivet Sloane&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Rivet Sloane&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>3990€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>3990€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -772,26 +702,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>1900€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>1900€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -847,26 +768,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>3990€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>3990€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -950,26 +862,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Studded&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>12500€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>12500€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -1025,26 +928,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Leila Ottoman&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Leila Ottoman&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>1200€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>1200€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -1100,26 +994,17 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Marin Recliner&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Marin Recliner&lt;/strong>&lt;/p>"/>
                                         <rating
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="puresight/components/rating"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-primary"
+                                            color="has-text-primary"
                                             size="is-medium"
-                                            text="&lt;p>12500€&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>12500€&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -1167,9 +1052,10 @@
             </section_12>
             <hero_3
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/hero"
+                sling:resourceType="kyanite/common/components/section"
                 background="\0"
                 backgroundColor="teak"
+                renderAsHero="true"
                 size="is-small"
                 variant="has-side-image">
                 <container1
@@ -1208,6 +1094,7 @@
                             <section
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/section"
+                                renderAsHero="false"
                                 size="is-normal">
                                 <title1
                                     jcr:primaryType="nt:unstructured"
@@ -1281,6 +1168,7 @@
             <section_23
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false"
                 size="is-normal">
                 <container_1
                     jcr:primaryType="nt:unstructured"
@@ -1319,39 +1207,30 @@
                             <section
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/section"
+                                renderAsHero="false"
                                 size="is-normal">
                                 <title
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/title"
                                     anchorId="\0"
-                                    color="rest_has-text-grey"
                                     element="h6"
                                     isSpaced="{Boolean}false"
                                     size="is-6"
                                     subtitle="Subtitle"
-                                    subtitleColor="bw_has-text-black"
-                                    text="&lt;p>Articles&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="900"/>
-                                </title>
+                                    subtitleColor="has-text-black"
+                                    text="&lt;p>Articles&lt;/p>"/>
                                 <content
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-medium"
-                                    text="&lt;p>Blogs to make shopping beneficial. Knowledge of your financial freedom and current market trends helps you live better - these blogs are for you.&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content>
+                                    text="&lt;p>Blogs to make shopping beneficial. Knowledge of your financial freedom and current market trends helps you live better - these blogs are for you.&lt;/p>"/>
                                 <button
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/button"
                                     actionType="\0"
                                     isDisabled="false"
                                     isFullWidth="false"
-                                    isInverted="true"
+                                    isInverted="false"
                                     isLight="false"
                                     isMailto="false"
                                     isOutlined="true"
@@ -1363,7 +1242,7 @@
                                     size="is-normal"
                                     type="a"
                                     url="/content/puresight/pages/blog"
-                                    variant="is-white">
+                                    variant="is-black">
                                     <leftIcon
                                         jcr:primaryType="nt:unstructured"
                                         icon="mdi-home-outline"
@@ -1437,33 +1316,18 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Make it feel like home&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Make it feel like home&lt;/strong>&lt;/p>"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-small"
-                                            text="&lt;p>Everything in your student room should bring you comfort. Choose a desk and bed that you’re happy to spend lots of time with, and display your trinkets proudly!&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>Everything in your student room should bring you comfort. Choose a desk and bed that you’re happy to spend lots of time with, and display your trinkets proudly!&lt;/p>"/>
                                         <content_2
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-small"
-                                            text="&lt;p>Sarah Mitchell Jul 21 3 min read&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_2>
+                                            text="&lt;p>Sarah Mitchell Jul 21 3 min read&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -1544,33 +1408,18 @@
                                         <content
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-medium"
-                                            text="&lt;p>&lt;strong>Make it feel like home&lt;/strong>&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content>
+                                            text="&lt;p>&lt;strong>Make it feel like home&lt;/strong>&lt;/p>"/>
                                         <content_1
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-small"
-                                            text="&lt;p>Everything in your student room should bring you comfort. Choose a desk and bed that you’re happy to spend lots of time with, and display your trinkets proudly!&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_1>
+                                            text="&lt;p>Everything in your student room should bring you comfort. Choose a desk and bed that you’re happy to spend lots of time with, and display your trinkets proudly!&lt;/p>"/>
                                         <content_2
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/content"
-                                            color="rest_has-text-grey"
                                             size="is-small"
-                                            text="&lt;p>Sarah Mitchell Jul 21 3 min read&lt;/p>">
-                                            <rest
-                                                jcr:primaryType="nt:unstructured"
-                                                shade="700"/>
-                                        </content_2>
+                                            text="&lt;p>Sarah Mitchell Jul 21 3 min read&lt;/p>"/>
                                         <button
                                             jcr:primaryType="nt:unstructured"
                                             sling:resourceType="kyanite/common/components/button"
@@ -1613,6 +1462,7 @@
             <section234
                 jcr:primaryType="nt:unstructured"
                 sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false"
                 size="is-normal">
                 <container
                     jcr:primaryType="nt:unstructured"
@@ -1642,24 +1492,14 @@
                                 <content
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-medium"
-                                    text="&lt;p>&lt;strong>Finance&lt;/strong>&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content>
+                                    text="&lt;p>&lt;strong>Finance&lt;/strong>&lt;/p>"/>
                                 <content_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-small"
                                     text="&lt;p>Get 0% APR credit on purchases over €99&lt;/p>"
-                                    textWeight="has-text-weight-light">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content_1>
+                                    textWeight="has-text-weight-light"/>
                             </container>
                         </levelitem>
                         <levelitem_3
@@ -1684,23 +1524,13 @@
                                 <content
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-medium"
-                                    text="&lt;p>&lt;strong>Delivery&lt;br>&lt;/strong>&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content>
+                                    text="&lt;p>&lt;strong>Delivery&lt;br>&lt;/strong>&lt;/p>"/>
                                 <content_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-small"
-                                    text="&lt;p>We offer delivery methods for all your purchases&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content_1>
+                                    text="&lt;p>We offer delivery methods for all your purchases&lt;/p>"/>
                             </container>
                         </levelitem_3>
                         <levelitem_2
@@ -1725,23 +1555,13 @@
                                 <content
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-medium"
-                                    text="&lt;p>&lt;strong>Free Click and Collect&lt;/strong>&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content>
+                                    text="&lt;p>&lt;strong>Free Click and Collect&lt;/strong>&lt;/p>"/>
                                 <content_1
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
-                                    color="rest_has-text-grey"
                                     size="is-small"
-                                    text="&lt;p>Orders that you can pickup up yourself&lt;/p>">
-                                    <rest
-                                        jcr:primaryType="nt:unstructured"
-                                        shade="700"/>
-                                </content_1>
+                                    text="&lt;p>Orders that you can pickup up yourself&lt;/p>"/>
                             </container>
                         </levelitem_2>
                         <levelitem_1
@@ -1769,23 +1589,13 @@
                                     <content
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="rest_has-text-grey"
                                         size="is-medium"
-                                        text="&lt;p>&lt;strong>Pre-loved furnitures&lt;/strong>&lt;/p>">
-                                        <rest
-                                            jcr:primaryType="nt:unstructured"
-                                            shade="700"/>
-                                    </content>
+                                        text="&lt;p>&lt;strong>Pre-loved furnitures&lt;/strong>&lt;/p>"/>
                                     <content_1
                                         jcr:primaryType="nt:unstructured"
                                         sling:resourceType="kyanite/common/components/content"
-                                        color="rest_has-text-grey"
                                         size="is-small"
-                                        text="&lt;p>Get second-hand furniture for less&lt;/p>">
-                                        <rest
-                                            jcr:primaryType="nt:unstructured"
-                                            shade="700"/>
-                                    </content_1>
+                                        text="&lt;p>Get second-hand furniture for less&lt;/p>"/>
                                 </container>
                             </container>
                         </levelitem_1>
@@ -1794,8 +1604,9 @@
             </section234>
             <hero_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/hero"
+                sling:resourceType="kyanite/common/components/section"
                 background="\0"
+                renderAsHero="true"
                 size="is-small"
                 variant="is-primary">
                 <container1
@@ -1937,8 +1748,8 @@
                             <newsletter
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="puresight/components/newsletter"
-                                placeholder = "Type your e-mail..."
-                                buttonText = "Sign in"/>
+                                buttonText="Sign in"
+                                placeholder="Type your e-mail..."/>
                         </column2>
                     </columns>
                 </container1>

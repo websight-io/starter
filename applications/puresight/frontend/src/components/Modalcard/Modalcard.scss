@@ -2,7 +2,7 @@
 
     .modal-card-foot, 
     .modal-card-head {
-        background-color: var(--base-color-white);
+        background-color: var(--kyanite-white);
     }
     .modal-card-head,
     .modal-card-body,
@@ -25,7 +25,7 @@
 
             &:before,
             &:after {
-                background-color: var(--base-color-black);
+                background-color: var(--kyanite-black);
             }
         }
     }

@@ -4,13 +4,14 @@
   in the LICENSE file.
 */-->
 
+<sly data-sly-use.model="pl.ds.kyanite.common.components.models.PagesSpaceComponent"></sly>
 <sly data-sly-use.extra="pl.ds.starter.puresight.cms.models.PageComponent"></sly>
 <sly data-sly-test="${wcmmode.preview && extra.hasTemplateData}">
   ${extra.renderedHtml @ context='unsafe'}
 </sly>
 <sly data-sly-test="${!(wcmmode.preview && extra.hasTemplateData)}">
   <!DOCTYPE HTML>
-  <html data-sly-attribute.lang="${currentPage.language.toLanguageTag}">
+  <html data-sly-attribute.lang="${currentPage.language.toLanguageTag}" class="${model.themeClass}">
   <sly data-sly-include="head.html"></sly>
   <sly data-sly-include="body.html"></sly>
   </html>

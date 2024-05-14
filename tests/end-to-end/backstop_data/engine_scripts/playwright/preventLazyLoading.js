@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2022 Dynamic Solutions
+ * Copyright (C) 2024 Dynamic Solutions
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,19 +14,10 @@
  * limitations under the License.
  */
 
- .footer {
-   .button.is-primary.is-outlined {
-     .icon {
-       color: var(--color-default) !important;
-     }
-
-     &:focus:not(:hover) {
-       .icon {
-         color: var(--color-default) !important;
-       }
-     }
-
-     --kyanite-button-padding-horizontal: 0.5em
-   }
-
- }
+module.exports = async (page) => {
+  page.evaluate(async () => {
+    document.querySelectorAll('[loading="lazy"]').forEach((elem) => {
+      elem.removeAttribute('loading');
+    });
+  });
+};

@@ -1,15 +1,20 @@
+@use '../../colors';
+
 .hero {
   &.teak {
-    background-color: var(--color-additional-2--200);
+    background-color: colors.$pampas-200;
   }
 
   &.oxford-blue {
-    background-color: var(--color-additional-1--800);
+    background-color: colors.$blue-800;
   }
 
   &.is-primary {
-    background-color: var(--color-primary--600);
-    color: var(--base-color-white);
+    background-color: var(--kyanite-primary);
+    color: var(--kyanite-white);
+    .content {
+      color: var(--kyanite-white);
+    }
   }
 }
 

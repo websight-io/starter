@@ -23,28 +23,24 @@
                 variant="\0"/>
             <section_2_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h1"
                         isSpaced="{Boolean}false"
                         size="is-1"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Our Story&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Our Story&lt;/p>"/>
                     <content
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/content"
-                        color="bw_has-text-black"
+                        color="has-text-black"
                         size="is-large"
                         text="&lt;p style=&quot;text-align: center&quot;>Stunning, stylish and within reach&lt;/p>"/>
                     <block
@@ -64,7 +60,8 @@
             </section_2_2>
             <section_2_2_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -81,21 +78,16 @@
                             <title
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/title"
-                                color="rest_has-text-grey"
                                 element="h2"
                                 isSpaced="{Boolean}false"
                                 size="is-4"
                                 subtitle="Subtitle"
-                                subtitleColor="bw_has-text-black"
-                                text="&lt;p style=&quot;text-align: center&quot;>Where It All Began&lt;/p>">
-                                <rest
-                                    jcr:primaryType="nt:unstructured"
-                                    shade="900"/>
-                            </title>
+                                subtitleColor="has-text-black"
+                                text="&lt;p style=&quot;text-align: center&quot;>Where It All Began&lt;/p>"/>
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 size="is-medium"
                                 text="&lt;p style=&quot;text-align: center&quot;>Founded In 1986, Luna Owned &amp;amp; Operated Business Has Become A House-Hold Name In States All Over The USA As Well As Countries All Over The World.&lt;/p>&lt;p style=&quot;text-align: center&quot;>For those that rather the full immersion of the in store experience we welcome your company and look forward to meeting you face to face. Being located in the 47 street diamond district, known to be the largest diamond.&lt;/p>&lt;p style=&quot;text-align: center&quot;>Based in the heart of New York’s Diamond District, also known as the NYC diamond district, Luna has some of the most competitively priced in the market. It is our goal to supply our clients.&lt;/p>"/>
                             <mobileColumnStyle
@@ -185,24 +177,20 @@
             </section_2_2_1_1>
             <section_1_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Custom Made Engagement Rings&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Custom Made Engagement Rings&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
@@ -226,7 +214,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 size="is-medium"
                                 text="&lt;h1>&lt;/h1>&lt;p>Whether in deep or deck, diamonds level up any look, studs work in any situations. Graphic links and gold rings hold their own an look even better together.&lt;/p>&lt;p>Too muchis never enough. It’s called a good statement for a reason.&lt;/p>"/>
                             <desktopColumnStyle
@@ -264,7 +252,8 @@
             </section_1_1_1>
             <section_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -313,7 +302,7 @@
                             <content
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/content"
-                                color="bw_has-text-black"
+                                color="has-text-black"
                                 size="is-medium"
                                 text="&lt;h2>&lt;/h2>&lt;p>Every Luna ring is the result of artistic passion and technical precision. Our nearly 1,500 in-house master artisans personally ensure your diamond is crafted to the absolute highest standards.&lt;/p>&lt;p>&lt;/p>"/>
                             <button_1
@@ -350,7 +339,8 @@
             </section_1_1>
             <section_1_1_2
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -437,24 +427,20 @@
             </section_1_1_2>
             <section_2_2_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
                     <title
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Why People Choose Us&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Why People Choose Us&lt;/p>"/>
                     <columns_1
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/columns"
@@ -569,7 +555,8 @@
             </section_2_2_1>
             <section_2_1_1
                 jcr:primaryType="nt:unstructured"
-                sling:resourceType="kyanite/common/components/section">
+                sling:resourceType="kyanite/common/components/section"
+                renderAsHero="false">
                 <container
                     jcr:primaryType="nt:unstructured"
                     sling:resourceType="kyanite/common/components/container">
@@ -590,17 +577,12 @@
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/title"
                         anchorId="\0"
-                        color="rest_has-text-grey"
                         element="h2"
                         isSpaced="{Boolean}false"
                         size="is-4"
                         subtitle="Subtitle"
-                        subtitleColor="bw_has-text-black"
-                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>">
-                        <rest
-                            jcr:primaryType="nt:unstructured"
-                            shade="900"/>
-                    </title>
+                        subtitleColor="has-text-black"
+                        text="&lt;p style=&quot;text-align: center&quot;>Luna’s Philosophy that  Beauty and &lt;br>Strength Exist in Both Union and &lt;br>Individuality&lt;/p>"/>
                     <buttons
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/buttons"

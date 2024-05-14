@@ -32,29 +32,7 @@ body {
 
     &.button {
       &.is-text, .link {
-        color: var(--color-primary--600);
-      }
-
-      &.is-primary {
-
-        &.is-outlined {
-          background-color: #ffffff !important;
-          border-color: var(--color-primary--500) !important;
-          color: var(--color-primary--500);
-
-          &:focus:not(:hover) {
-            color: var(--color-primary--500);
-          }
-
-          &:hover {
-            background-color: var(--color-primary--500) !important;
-            color: #ffffff;
-          }
-        }
-      }
-
-      &.is-rounded {
-        padding: calc(0.5em - 1px) 1em;
+        color: var(--kyanite-primary);
       }
     }
 

@@ -6,9 +6,9 @@
     }
 
     a {
-        color: var(--color-grey--900);
+        color: var(--kyanite-gray-15);
         font-size: var(--font-size-14);
-        font-weight: var(--font-weight-500);
+        font-weight: var(--kyanite-weight-medium);
         line-height: var(--line-height-155);
 
         padding-right: var(--spacing-2);
@@ -16,10 +16,10 @@
 
 
         &:hover {
-            color: var(--color-grey--900);
+            color: var(--kyanite-gray-15);
             
             span {
-                box-shadow: 0 var(--border-weight-2) var(--color-grey--900);
+                box-shadow: 0 var(--border-weight-2) var(--kyanite-gray-15);
             }
         }
     }

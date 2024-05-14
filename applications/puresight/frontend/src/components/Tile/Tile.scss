@@ -24,20 +24,21 @@
 
                 .content {
                     font-size: var(--font-size-16);
-                    font-weight: var(--font-weight-700);
+                    font-weight: var(--kyanite-weight-bold);
                     margin-bottom: 0;
-                    color: var(--color-grey--900);
+                    color: var(--kyanite-gray-15);
                     flex: 1 0 50%;
 
                 }
     
                 .rating + .content {
-                    color: var(--color-primary--600);
+                    color: var(--kyanite-primary);
                 }
     
                 .button {
                     display: block;
                     margin-left: auto;
+                    line-height: 1;
                 }
             }
         }

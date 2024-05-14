@@ -18,14 +18,18 @@
  */
 
 :root {
-    --color-primary--500: #1D1F31;
-    --color-primary--600: #0F154A;
+    --kyanite-primary-h: 234deg;
+    --kyanite-primary-s: 66%;
+    --kyanite-primary-l: 17%;
+
+    --kyanite-primary-90-l: 92%;
+    --kyanite-navbar-height: 6.25rem;
 
     --color-default: #1D1F31;
-    --color-body-background: #FFFFFF;
     --color-neutral-800: #151515;
     --color-neutral-500: #727272;
     --color-neutral-200: #F0F0F0;
+    --color-body-background: #FFFFFF;
 
     --font-headings: 'Jost', 'Montserrat', sans-serif;
     --font-body: 'Avenir', 'Montserrat', sans-serif;

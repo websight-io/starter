@@ -1,6 +1,16 @@
+@use '../../colors';
+
+.theme-light {
+    .footer {
+        --kyanite-footer-background-color: #{colors.$blue-800};
+        --kyanite-footer-color: var(--kyanite-gray-70);
+    }
+}
+
 .footer {
-    border-top: var(--border-weight-3) solid var(--color-primary--600);
-    background-color: var(--color-additional-1--800) !important;
+    --kyanite-footer-background-color: #{colors.$blue-800};
+    --kyanite-footer-color: var(--kyanite-gray-70);
+    border-top: var(--border-weight-3) solid var(--kyanite-primary);
     text-align: left;
 
     @media (min-width: 768px) {
@@ -19,19 +29,18 @@
     }
 
     .content {
-        color: var(--color-grey--400) !important;
         font-size: var(--font-size-12);
 
         strong {
-            color: var(--color-grey--400) !important;
+            color: var(--kyanite-gray-70);
             font-size: var(--font-size-16);
-            font-weight: var(--font-weight-normal);
+            font-weight: var(--kyanite-weight-normal);
         }
 
         p {
             margin-bottom: 0;
             padding-top: var(--spacing-5);
-            font-weight: var(--font-weight-normal);
+            font-weight: var(--kyanite-weight-normal);
 
             &:last-child {
                 margin: 0;
@@ -44,7 +53,7 @@
         .container > .link,
         .link {
             padding-bottom: var(--spacing-5);
-            font-weight: var(--font-weight-medium);
+            font-weight: var(--kyanite-weight-medium);
         }
     }
 
