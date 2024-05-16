@@ -66,9 +66,14 @@
     "dev.streamx.sling.connector.impl.StreamxPublicationServiceImpl": {
       "enabled": "$[env:STREAMX_PUBLICATION_ENABLE;default=false]"
     },
-    "dev.streamx.sling.connector.impl.StreamxClientFactoryImpl": {
-      "streamxUrl": "$[env:STREAMX_REST_INGESTION_HOST;default=http://localhost:8080]",
-      "authToken": "$[env:STREAMX_REST_INGESTION_AUTH_TOKEN;default=;type=String]"
+    "dev.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight": {
+      "name": "puresight",
+      "streamxUrl": "$[env:PURESIGHT_STREAMX_REST_INGESTION_HOST;default=http://localhost:8080]",
+      "authToken": "$[env:PURESIGHT_STREAMX_REST_INGESTION_AUTH_TOKEN;default=;type=String]",
+      "resourcePathPatterns": [
+        "/.*/puresight/.*",
+        "/.*/kyanite/.*"
+      ]
     }
   },
   "repoinit:TEXT|true": "@file"
