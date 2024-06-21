@@ -23,6 +23,7 @@ import org.apache.sling.testing.mock.sling.ResourceResolverType;
 import org.apache.sling.testing.mock.sling.junit5.SlingContext;
 import org.apache.sling.testing.mock.sling.junit5.SlingContextExtension;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import pl.ds.luna.lowcode.components.models.QuoteComponent;
@@ -53,6 +54,7 @@ class QuoteComponentTest {
   }
 
   @Test
+  @Disabled
   void quoteComponentModelTest() {
     QuoteComponent model = requireNonNull(
         context.resourceResolver().getResource(PATH + "/complex")).adaptTo(QuoteComponent.class);

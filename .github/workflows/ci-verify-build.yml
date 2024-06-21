@@ -21,6 +21,10 @@ on:
     branches:
       - main
 
+permissions:
+  id-token: write
+  contents: read
+
 env:
   APP_LC_FRONTEND_MODULE: applications/luna-low-code/frontend
   APP_CC_FRONTEND_MODULE: applications/luna-custom-code/frontend
@@ -34,13 +38,18 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: docker/setup-qemu-action@v2
-
-      - uses: docker/setup-buildx-action@v2
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WEBSIGHT_RELEASES_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_WEBSIGHT_SNAPSHOTS_SNAPSHOT_READ_SA }}
 
       - name: Build Docker image
-        run: docker build -t ds/websight-cms-starter .
-
+        uses: docker/build-push-action@v6
+        with:
+          load: true
+          tags: ds/websight-cms-starter:latest
+      
       - name: Run CMS with custom admin credentials
         run: |
             mkdir -p .test-secrets && echo -n "customPassword" > .test-secrets/admin.password
@@ -48,7 +57,7 @@ jobs:
               --mount source=segment-store-repository,target=/websight/launcher/repository \
               -v "$(pwd)/.test-secrets/admin.password:/websight/launcher/resources/secrets/admin.password:ro" \
               --env	"WS_ADMIN_USERNAME=customAdmin" \
-              ds/websight-cms-starter
+              ds/websight-cms-starter:latest
             echo "Waiting for the environment to be ready..."
             timeout 300 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/system/health; do echo " - waiting for the server..."; sleep 1; done'
       
@@ -62,6 +71,12 @@ jobs:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WEBSIGHT_RELEASES_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_WEBSIGHT_SNAPSHOTS_SNAPSHOT_READ_SA }}
 
       - uses: actions/setup-java@v3
         with:
@@ -93,6 +108,12 @@ jobs:
         with:
           fetch-depth: 0
           ref: ${{ github.event.pull_request.base.ref }} # main branch
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WEBSIGHT_RELEASES_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_WEBSIGHT_SNAPSHOTS_SNAPSHOT_READ_SA }}
 
       - uses: actions/setup-java@v3
         with:
@@ -129,6 +150,14 @@ jobs:
     needs: [ prepare-data-for-visual-tests-from-main-branch ]
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WEBSIGHT_RELEASES_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_WEBSIGHT_SNAPSHOTS_SNAPSHOT_READ_SA }}
 
       - uses: actions/setup-java@v3
         with:
