@@ -1,3 +1,8 @@
 body {
   padding-top: var(--kyanite-navbar-height);
 }
+
+.navbar-brand .navbar-item img {
+  height: 66px;
+  aspect-ratio: 82/33;
+}
