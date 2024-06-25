@@ -67,7 +67,7 @@
 
     <!-- WebSight CMS Version -->
     <!-- remember to update the version in Dockerfile too! -->
-    <websight.cms.version>1.24.1</websight.cms.version>
+    <websight.cms.version>1.24.2</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
