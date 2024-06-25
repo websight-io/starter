@@ -54,7 +54,6 @@ class QuoteComponentTest {
   }
 
   @Test
-  @Disabled
   void quoteComponentModelTest() {
     QuoteComponent model = requireNonNull(
         context.resourceResolver().getResource(PATH + "/complex")).adaptTo(QuoteComponent.class);
@@ -64,7 +63,7 @@ class QuoteComponentTest {
     assertThat(model.getAuthorName()).isEqualTo("Author name");
     assertThat(model.getAuthorDescription()).isEqualTo("Author description");
     assertThat(model.isShowImage()).isTrue();
-    assertThat(model.getAuthorImage()).isEqualTo("http:///content/bulma/assets/images/personal/Janet.png");
+    assertThat(model.getAuthorImage()).isEqualTo("/content/bulma/assets/images/personal/Janet.png");
     assertThat(model.getImageAlt()).isEqualTo("Alt text");
 
   }
