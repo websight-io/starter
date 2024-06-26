@@ -20,7 +20,7 @@
 
   <groupId>pl.ds.starter</groupId>
   <artifactId>starter-parent</artifactId>
-  <version>1.24.12</version>
+  <version>1.24.13-SNAPSHOT</version>
   <name>Starter Project Parent</name>
   <packaging>pom</packaging>
 
@@ -42,7 +42,7 @@
     <connection>scm:git:git://github.com/websight-io/websight-blueprint.git</connection>
     <developerConnection>scm:git:git@github.com:websight-io/websight-blueprint.git</developerConnection>
     <url>https://github.com/websight-io/websight-blueprint</url>
-    <tag>v1.24.12</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <organization>
