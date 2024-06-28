@@ -35,6 +35,12 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          workload_identity_provider: ${{ secrets.GCP_WEBSIGHT_RELEASES_WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ secrets.GCP_WEBSIGHT_SNAPSHOTS_SNAPSHOT_READ_SA }}
+
       - name: Set up JDK 17
         uses: actions/setup-java@v3
         with:
@@ -54,10 +60,15 @@ jobs:
       - name: Build and install Nodejs, NPM, and Cypress
         run: ./mvnw --batch-mode clean package -De2e.skip=false
 
+      - name: Build Docker image
+        uses: docker/build-push-action@v6
+        with:
+          load: true
+          tags: ds/websight-cms-starter:latest
+
       - name: Run environment
         run: |
-          docker build -t ds/websight-cms-starter .
-          docker run -d -p 8080:8080 --name websight-cms --rm --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter
+          docker run -d -p 8080:8080 --name websight-cms --rm --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter:latest
           echo "Waiting for the environment to be ready..."
           timeout 300 bash -c 'until curl -s -f -o /dev/null -w "%{http_code}" http://localhost:8080/system/health; do echo " - waiting for the server..."; sleep 1; done'
 

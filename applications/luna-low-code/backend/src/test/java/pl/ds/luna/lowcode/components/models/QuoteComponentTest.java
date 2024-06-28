@@ -23,6 +23,7 @@ import org.apache.sling.testing.mock.sling.ResourceResolverType;
 import org.apache.sling.testing.mock.sling.junit5.SlingContext;
 import org.apache.sling.testing.mock.sling.junit5.SlingContextExtension;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import pl.ds.luna.lowcode.components.models.QuoteComponent;
@@ -62,7 +63,7 @@ class QuoteComponentTest {
     assertThat(model.getAuthorName()).isEqualTo("Author name");
     assertThat(model.getAuthorDescription()).isEqualTo("Author description");
     assertThat(model.isShowImage()).isTrue();
-    assertThat(model.getAuthorImage()).isEqualTo("http:///content/bulma/assets/images/personal/Janet.png");
+    assertThat(model.getAuthorImage()).isEqualTo("/content/bulma/assets/images/personal/Janet.png");
     assertThat(model.getImageAlt()).isEqualTo("Alt text");
 
   }

@@ -20,7 +20,7 @@
 
   <groupId>pl.ds.starter</groupId>
   <artifactId>starter-parent</artifactId>
-  <version>1.24.12-SNAPSHOT</version>
+  <version>1.24.13-SNAPSHOT</version>
   <name>Starter Project Parent</name>
   <packaging>pom</packaging>
 
@@ -67,12 +67,12 @@
 
     <!-- WebSight CMS Version -->
     <!-- remember to update the version in Dockerfile too! -->
-    <websight.cms.version>1.24.0</websight.cms.version>
+    <websight.cms.version>1.24.2</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
-    <howlite.version>1.0.19</howlite.version>
-    <kyanite.version>0.5.0</kyanite.version>
+    <howlite.version>1.0.23</howlite.version>
+    <kyanite.version>0.7.1</kyanite.version>
 
     <!-- StreamX -->
     <streamx.ingestion-client.version>0.0.12</streamx.ingestion-client.version>
@@ -185,14 +185,17 @@
 
   <repositories>
     <repository>
-      <id>websight-repo</id>
-      <url>https://repo.websight.io/maven/</url>
+      <id>artifact-registry</id>
+      <url>artifactregistry://europe-west1-maven.pkg.dev/websight-io/websight-maven-releases</url>
+      <releases>
+        <enabled>true</enabled>
+      </releases>
       <snapshots>
         <enabled>false</enabled>
       </snapshots>
     </repository>
     <repository>
-      <id>artifact-registry</id>
+      <id>artifact-registry-streamx</id>
       <url>
         artifactregistry://europe-west1-maven.pkg.dev/streamx-releases/streamx-maven-public-releases
       </url>
