@@ -7,14 +7,8 @@ import {
   getQueenSizeBedResults,
 } from "./service";
 
-const PATH_TO_REMOVE = "published/puresight/pages";
-
-const getAutocompleteItemUrl = (item: Page) => {
-  return item.path.replace(PATH_TO_REMOVE, "");
-};
-
 const getItemTemplate = (html: HTMLTemplate, item: Page) => {
-  return html`<a class="aa-ItemLink" href=${getAutocompleteItemUrl(item)}>
+  return html`<a class="aa-ItemLink" href=${item.path}>
     <div class="aa-ItemContent">
       <div class="aa-ItemIcon aa-ItemIcon--alignTop">
         <svg
@@ -81,7 +75,7 @@ autocomplete<Page>({
           return pages.items;
         },
         getItemUrl({ item }) {
-          return getAutocompleteItemUrl(item);
+          return item.path;
         },
         templates: {
           item({ item, html }) {
@@ -106,7 +100,7 @@ autocomplete<Page>({
           return response.items;
         },
         getItemUrl({ item }) {
-          return getAutocompleteItemUrl(item);
+          return item.path;
         },
         templates: {
           header({ html }) {
@@ -135,7 +129,7 @@ autocomplete<Page>({
           return response.items;
         },
         getItemUrl({ item }) {
-          return getAutocompleteItemUrl(item);
+          return item.path;
         },
         templates: {
           header({ html }) {
@@ -162,7 +156,7 @@ autocomplete<Page>({
           return response.items;
         },
         getItemUrl({ item }) {
-          return getAutocompleteItemUrl(item);
+          return item.path;
         },
         templates: {
           header({ html }) {
