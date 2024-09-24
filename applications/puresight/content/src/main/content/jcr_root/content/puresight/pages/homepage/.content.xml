@@ -280,6 +280,12 @@
                         subtitle="Subtitle"
                         subtitleColor="has-text-black"
                         text="&lt;p>New arrivals&lt;/p>"/>
+                    <listing
+                      jcr:primaryType="nt:unstructured"
+                      sling:resourceType="puresight/components/product/listing"
+                      category="Accent_Furniture"
+                      fragmentIdPrefix="collected:products:cheapest-by-category:"
+                      template="/apps/puresight/components/templates/tiles.html"/>
                     <carousel
                         jcr:primaryType="nt:unstructured"
                         sling:resourceType="kyanite/common/components/carousel">

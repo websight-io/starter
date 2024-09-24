@@ -11,6 +11,16 @@
         "sling:resourceType": "wcm/dialogs/components/textarea",
         "name": "data",
         "label": "TemplateData"
+      },
+      "dataKeyMatchPattern": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "dataKeyMatchPattern",
+        "label": "Data key match pattern"
+      },
+      "outputKeyTemplate": {
+        "sling:resourceType": "wcm/dialogs/components/textfield",
+        "name": "outputKeyTemplate",
+        "label": "Output key template"
       }
     }
   }
