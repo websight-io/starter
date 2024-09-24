@@ -17,7 +17,7 @@
       "start-order":"20"
     },
     {
-      "id":"com.fasterxml.jackson.core:jackson-core:2.15.3",
+      "id":"com.fasterxml.jackson.core:jackson-core:2.16.1",
       "start-order":"20"
     },
     {
@@ -50,11 +50,6 @@
     }
   ],
   "configurations": {
-    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-puresight": {
-      "user.mapping": [
-        "puresight-backend=[streamx-connector-puresight]"
-      ]
-    },
     "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-websight-blueprints": {
       "user.mapping": [
         "streamx-connector-websight-blueprints=[streamx-connector-websight-blueprints]"

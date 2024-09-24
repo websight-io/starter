@@ -21,7 +21,9 @@
         twitterDescription="\0"
         twitterImageAlt="\0"
         twitterSite="\0"
-        twitterTitle="\0">
+        twitterTitle="\0"
+        dataKeyMatchPattern="product:.*"
+        outputKeyTemplate="/published/puresight/pages/products/{{urlSafeName}}.html">
         <pagecontainer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="kyanite/common/components/pagecontainer">
@@ -309,7 +311,7 @@
                                             size="is-5"
                                             subtitle="Subtitle"
                                             subtitleColor="has-text-black"
-                                            text="&lt;p>&lt;span class=&quot;has-text-primary&quot;>450€&lt;/span>&lt;/p>"/>
+                                            text="&lt;p>&lt;span class=&quot;has-text-primary&quot;>{{ price.value }}€&lt;/span>&lt;/p>"/>
                                     </levelitem_1>
                                 </level>
                             </container_1>
