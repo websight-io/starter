@@ -7,10 +7,10 @@ import {
   getQueenSizeBedResults,
 } from "./service";
 
-const PATH_TO_REMOVE = "published/puresight/pages";
+const PATH_TO_REMOVE = "/published/puresight/pages";
 
 const getAutocompleteItemUrl = (item: Page) => {
-  return item.path.replace(PATH_TO_REMOVE, "");
+  return (item && item.path) ? item.path.replace(PATH_TO_REMOVE, "") : "";
 };
 
 const getItemTemplate = (html: HTMLTemplate, item: Page) => {

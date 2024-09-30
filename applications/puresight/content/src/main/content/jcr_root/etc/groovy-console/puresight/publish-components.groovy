@@ -22,7 +22,7 @@ def publishComponents() {
       RenderingContext.OutputType.FRAGMENT
     ))
     publishRenderingContext(client, "products-tiles", new RenderingContext(
-      "/apps/puresight/components/templates/carousel.html",
+      "/apps/puresight/components/templates/tiles.html",
       "collected:products:.*",
       "/published/puresight/pages/_fragments/{{key}}.tiles.html",
       RenderingContext.OutputType.FRAGMENT
