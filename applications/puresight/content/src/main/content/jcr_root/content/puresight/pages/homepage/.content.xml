@@ -179,7 +179,7 @@
                                     size="is-3"
                                     subtitle="Subtitle"
                                     subtitleColor="has-text-black"
-                                    text="&lt;p>New Collection 2023&lt;/p>"/>
+                                    text="&lt;p>New Collection&lt;/p>"/>
                                 <content
                                     jcr:primaryType="nt:unstructured"
                                     sling:resourceType="kyanite/common/components/content"
