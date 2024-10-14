@@ -23,7 +23,7 @@
         twitterSite="\0"
         twitterTitle="\0"
         dataKeyMatchPattern="product:.*"
-        outputKeyTemplate="/published/puresight/pages/products/{{urlSafeName}}.html">
+        outputKeyTemplate="/products/{{urlSafeName}}.html">
         <pagecontainer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="kyanite/common/components/pagecontainer">
