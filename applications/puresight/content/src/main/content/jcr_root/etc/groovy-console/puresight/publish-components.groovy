@@ -18,13 +18,13 @@ def publishComponents() {
     publishRenderingContext(client, "products-carousel", new RenderingContext(
       "/apps/puresight/components/templates/carousel.html",
       "collected:products:.*",
-      "/published/puresight/pages/_fragments/{{key}}.carousel.html",
+      "/_fragments/{{key}}.carousel.html",
       RenderingContext.OutputType.FRAGMENT
     ))
     publishRenderingContext(client, "products-tiles", new RenderingContext(
       "/apps/puresight/components/templates/tiles.html",
       "collected:products:.*",
-      "/published/puresight/pages/_fragments/{{key}}.tiles.html",
+      "/_fragments/{{key}}.tiles.html",
       RenderingContext.OutputType.FRAGMENT
     ))
   } finally {
