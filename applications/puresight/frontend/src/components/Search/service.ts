@@ -30,11 +30,13 @@ interface ApiResponse {
       _id: string;
       _score: number;
       _source: {
-        title: string;
+        payload: {
+          title: string;
+        }
       };
       highlight?: {
-        title?: string[];
-        content?: string[];
+        "payload.title"?: string[];
+        "payload.content"?: string[];
       };
     }>;
   };
@@ -44,7 +46,7 @@ const SEARCH_RESULTS_COUNT = 40;
 const PREDEFINED_RESULTS_COUNT = 2;
 
 const buildUrl = (query: string, limit: number) => {
-  return `/search/byQuery?size=${limit}&query=${query}`;
+  return `/search/byQuery?size=${limit}&query=${query}*`;
 };
 
 const getMockResponse = (items: Page[]) => {
@@ -77,8 +79,8 @@ const mapToPagesResponse = async (response: Response): Promise<GetPagesResponse>
 const mapToPage = (hit: ApiResponse["hits"]["hits"][0]): Page => {
   const path = hit._id;
   const score = hit._score;
-  const title = hit.highlight?.title?.[0] || hit._source.title;
-  const bestFragment = hit.highlight?.content?.[0] || "";
+  const title = hit.highlight?.["payload.title"]?.[0] || hit._source.payload.title;
+  const bestFragment = hit.highlight?.["payload.content"]?.[0] || title || "";
 
   return {
     path,
