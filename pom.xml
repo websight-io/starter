@@ -20,7 +20,7 @@
 
   <groupId>pl.ds.starter</groupId>
   <artifactId>starter-parent</artifactId>
-  <version>1.24.17-SNAPSHOT</version>
+  <version>1.25.0-SNAPSHOT</version>
   <name>Starter Project Parent</name>
   <packaging>pom</packaging>
 
@@ -67,7 +67,7 @@
 
     <!-- WebSight CMS Version -->
     <!-- remember to update the version in Dockerfile too! -->
-    <websight.cms.version>1.24.2</websight.cms.version>
+    <websight.cms.version>1.25.0</websight.cms.version>
 
     <timestamp>${maven.build.timestamp}</timestamp>
     <maven.build.timestamp.format>yyyyMMddHHmm</maven.build.timestamp.format>
@@ -75,9 +75,9 @@
     <kyanite.version>0.7.1</kyanite.version>
 
     <!-- StreamX -->
-    <streamx.ingestion-client.version>0.0.42</streamx.ingestion-client.version>
-    <streamx.connector.sling.version>0.2.1</streamx.connector.sling.version>
-    <streamx.connector.websight.version>0.0.6</streamx.connector.websight.version>
+    <streamx.ingestion-client.version>0.0.12</streamx.ingestion-client.version>
+    <streamx.connector.sling.version>0.1.0</streamx.connector.sling.version>
+    <streamx.connector.websight.version>0.0.2</streamx.connector.websight.version>
   </properties>
 
   <build>
