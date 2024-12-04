@@ -10,7 +10,7 @@
         ws:lastModified="{Date}2023-10-09T07:43:45.561Z"
         ws:lastModifiedBy="wsadmin"
         ws:template="/apps/puresight/templates/templatepage"
-        data="&#xa;{&#xa;       &quot;id&quot;:&quot;B075X4VWF9&quot;,&#xa;       &quot;name&quot;:&quot;Leila Tufted Living Room Sofa Couch, 88\\&quot;W, Smoky Teal&quot;,&#xa;       &quot;mainImage&quot;:&quot;https://storage.googleapis.com/puresight-pim-images/original/91/91UMjSs5XgL.jpg&quot;,&#xa;       &quot;images&quot;:[&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/91/91LlW4o+tXL.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/B1/B17PiPFEdfS.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/B1/B17PiPFEdfS.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/A1/A1I1JSeKUkL.jpg&quot;&#xa;       ],&#xa;       &quot;height&quot;:&quot;31.0&quot;,&#xa;       &quot;width&quot;:&quot;88.0&quot;,&#xa;       &quot;length&quot;:&quot;36.0&quot;,&#xa;       &quot;dimensionUnit&quot;:&quot;inches&quot;,&#xa;       &quot;weight&quot;:&quot;165.0&quot;,&#xa;       &quot;weightUnit&quot;:&quot;pounds&quot;,&#xa;       &quot;bulletPoints&quot;:[&#xa;          &quot;This item is made to order just for you&quot;,&#xa;          &quot;88\\&quot;W x 36\\&quot;D x 31\\&quot;H&quot;,&#xa;          &quot;Solid wood frame and legs with durable fabric upholstery.&quot;,&#xa;          &quot;The tight, fixed back and removable/reversible cushions ensure durability and comfort.&quot;,&#xa;          &quot;Treat yourself to luxury in this striking, vintage look sofa. With solid wood legs in a dark walnut finish, plush upholstery and a low, curved tufted back, it exudes opulence. Three removable/reversible seat cushions ensure many years of use.&quot;,&#xa;          &quot;Assemble in 15 minutes or less. Vacuum or wipe with a soft, dry cloth.&quot;,&#xa;          &quot;Free returns for 30 days. 3-year warranty.&quot;&#xa;       ],&#xa;       &quot;keywords&quot;:[&#xa;          &quot;Stone &amp; beam&quot;,&#xa;          &quot;Chair&quot;,&#xa;          &quot;Blue&quot;,&#xa;          &quot;88\\&quot; sofa&quot;,&#xa;          &quot;Couch&quot;,&#xa;          &quot;Accent chair&quot;,&#xa;          &quot;Sectional couch&quot;,&#xa;          &quot;Sofa&quot;,&#xa;          &quot;Sofa bed&quot;,&#xa;          &quot;Sleeper sofa&quot;,&#xa;          &quot;Futon&quot;,&#xa;          &quot;Farmhouse&quot;,&#xa;          &quot;Sofa sets for living room&quot;,&#xa;          &quot;Living room furniture&quot;,&#xa;          &quot;Sofas&quot;,&#xa;          &quot;Loveseat&quot;,&#xa;          &quot;Smoky teal&quot;,&#xa;          &quot;Sectional sofa&quot;,&#xa;          &quot;Stone and beam&quot;,&#xa;          &quot;Recliner chair&quot;&#xa;       ],&#xa;       &quot;category&quot;:&quot;Accent Furniture&quot;,&#xa;       &quot;type&quot;:&quot;Home furniture and decor&quot;,&#xa;       &quot;reviews&quot;: [&#xa;         {&#xa;           &quot;title&quot;: &quot;A Dreamy Slumber&quot;,&#xa;           &quot;content&quot;: &quot;This bed has been a game-changer for my sleep quality. The comfort level is unmatched, and it feels like I'm sleeping on a cloud. I wake up refreshed and ready to tackle the day. Worth every penny!&quot;,&#xa;           &quot;stars&quot;: 5,&#xa;           &quot;author&quot;: &quot;Sarah Johnson&quot;,&#xa;           &quot;date&quot;: &quot;July 15, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Cozy and Supportive&quot;,&#xa;           &quot;content&quot;: &quot;The bed provides a cozy nest-like feeling, and the support is excellent for my back. While it's a bit pricier than I'd like, the comfort it offers makes it a solid investment for a good night's sleep.&quot;,&#xa;           &quot;stars&quot;: 4,&#xa;           &quot;author&quot;: &quot;Michael Thompson&quot;,&#xa;           &quot;date&quot;: &quot;August 3, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Mixed Feelings&quot;,&#xa;           &quot;content&quot;: &quot;This bed is alright, but it hasn't quite lived up to my expectations. The initial comfort is decent, but after a while, I've noticed some sagging in certain areas. It's an okay choice for the price point.&quot;,&#xa;           &quot;stars&quot;: 5,&#xa;           &quot;author&quot;: &quot;Emily Roberts&quot;,&#xa;           &quot;date&quot;: &quot;June 21, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Sleek Design, Restful Sleep&quot;,&#xa;           &quot;content&quot;: &quot;The minimalist design of this bed caught my eye, and it complements my bedroom decor perfectly. As for comfort, it's mostly satisfying, though I wish the mattress were slightly softer. Overall, a solid purchase.&quot;,&#xa;           &quot;stars&quot;: 4,&#xa;           &quot;author&quot;: &quot;David Anderson&quot;,&#xa;           &quot;date&quot;: &quot;September 8, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Above Average Bed&quot;,&#xa;           &quot;content&quot;: &quot;I've had this bed for a few months now, and it's definitely better than my previous one. The quality is noticeable, and I find myself tossing and turning less during the night. While it's not flawless, it's a step up in terms of sleep comfort.&quot;,&#xa;           &quot;stars&quot;: 3,&#xa;           &quot;author&quot;: &quot;Jessica Lee&quot;,&#xa;           &quot;date&quot;: &quot;May 2, 2023&quot;&#xa;         }&#xa;       ],&#xa;       &quot;vendors&quot;: [&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         },&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8-1.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         },&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8-2.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         },&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8-3.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         }&#xa;       ]&#xa;    }&#xa;"
+        data="&#xa;{&#xa;       &quot;price&quot;: {&#xa;           &quot;value&quot;: &quot;450&quot;&#xa;        },&#xa;       &quot;id&quot;:&quot;B075X4VWF9&quot;,&#xa;       &quot;name&quot;:&quot;Leila Tufted Living Room Sofa Couch, 88\\&quot;W, Smoky Teal&quot;,&#xa;       &quot;mainImage&quot;:&quot;https://storage.googleapis.com/puresight-pim-images/original/91/91UMjSs5XgL.jpg&quot;,&#xa;       &quot;images&quot;:[&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/91/91LlW4o+tXL.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/B1/B17PiPFEdfS.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/A1/A11i7JV5oxL.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/B1/B17PiPFEdfS.jpg&quot;,&#xa;          &quot;https://storage.googleapis.com/puresight-pim-images/original/A1/A1I1JSeKUkL.jpg&quot;&#xa;       ],&#xa;       &quot;height&quot;:&quot;31.0&quot;,&#xa;       &quot;width&quot;:&quot;88.0&quot;,&#xa;       &quot;length&quot;:&quot;36.0&quot;,&#xa;       &quot;dimensionUnit&quot;:&quot;inches&quot;,&#xa;       &quot;weight&quot;:&quot;165.0&quot;,&#xa;       &quot;weightUnit&quot;:&quot;pounds&quot;,&#xa;       &quot;bulletPoints&quot;:[&#xa;          &quot;This item is made to order just for you&quot;,&#xa;          &quot;88\\&quot;W x 36\\&quot;D x 31\\&quot;H&quot;,&#xa;          &quot;Solid wood frame and legs with durable fabric upholstery.&quot;,&#xa;          &quot;The tight, fixed back and removable/reversible cushions ensure durability and comfort.&quot;,&#xa;          &quot;Treat yourself to luxury in this striking, vintage look sofa. With solid wood legs in a dark walnut finish, plush upholstery and a low, curved tufted back, it exudes opulence. Three removable/reversible seat cushions ensure many years of use.&quot;,&#xa;          &quot;Assemble in 15 minutes or less. Vacuum or wipe with a soft, dry cloth.&quot;,&#xa;          &quot;Free returns for 30 days. 3-year warranty.&quot;&#xa;       ],&#xa;       &quot;keywords&quot;:[&#xa;          &quot;Stone &amp; beam&quot;,&#xa;          &quot;Chair&quot;,&#xa;          &quot;Blue&quot;,&#xa;          &quot;88\\&quot; sofa&quot;,&#xa;          &quot;Couch&quot;,&#xa;          &quot;Accent chair&quot;,&#xa;          &quot;Sectional couch&quot;,&#xa;          &quot;Sofa&quot;,&#xa;          &quot;Sofa bed&quot;,&#xa;          &quot;Sleeper sofa&quot;,&#xa;          &quot;Futon&quot;,&#xa;          &quot;Farmhouse&quot;,&#xa;          &quot;Sofa sets for living room&quot;,&#xa;          &quot;Living room furniture&quot;,&#xa;          &quot;Sofas&quot;,&#xa;          &quot;Loveseat&quot;,&#xa;          &quot;Smoky teal&quot;,&#xa;          &quot;Sectional sofa&quot;,&#xa;          &quot;Stone and beam&quot;,&#xa;          &quot;Recliner chair&quot;&#xa;       ],&#xa;       &quot;category&quot;:&quot;Accent Furniture&quot;,&#xa;       &quot;type&quot;:&quot;Home furniture and decor&quot;,&#xa;       &quot;reviews&quot;: [&#xa;         {&#xa;           &quot;title&quot;: &quot;A Dreamy Slumber&quot;,&#xa;           &quot;content&quot;: &quot;This bed has been a game-changer for my sleep quality. The comfort level is unmatched, and it feels like I'm sleeping on a cloud. I wake up refreshed and ready to tackle the day. Worth every penny!&quot;,&#xa;           &quot;stars&quot;: 5,&#xa;           &quot;author&quot;: &quot;Sarah Johnson&quot;,&#xa;           &quot;date&quot;: &quot;July 15, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Cozy and Supportive&quot;,&#xa;           &quot;content&quot;: &quot;The bed provides a cozy nest-like feeling, and the support is excellent for my back. While it's a bit pricier than I'd like, the comfort it offers makes it a solid investment for a good night's sleep.&quot;,&#xa;           &quot;stars&quot;: 4,&#xa;           &quot;author&quot;: &quot;Michael Thompson&quot;,&#xa;           &quot;date&quot;: &quot;August 3, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Mixed Feelings&quot;,&#xa;           &quot;content&quot;: &quot;This bed is alright, but it hasn't quite lived up to my expectations. The initial comfort is decent, but after a while, I've noticed some sagging in certain areas. It's an okay choice for the price point.&quot;,&#xa;           &quot;stars&quot;: 5,&#xa;           &quot;author&quot;: &quot;Emily Roberts&quot;,&#xa;           &quot;date&quot;: &quot;June 21, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Sleek Design, Restful Sleep&quot;,&#xa;           &quot;content&quot;: &quot;The minimalist design of this bed caught my eye, and it complements my bedroom decor perfectly. As for comfort, it's mostly satisfying, though I wish the mattress were slightly softer. Overall, a solid purchase.&quot;,&#xa;           &quot;stars&quot;: 4,&#xa;           &quot;author&quot;: &quot;David Anderson&quot;,&#xa;           &quot;date&quot;: &quot;September 8, 2023&quot;&#xa;         },&#xa;         {&#xa;           &quot;title&quot;: &quot;Above Average Bed&quot;,&#xa;           &quot;content&quot;: &quot;I've had this bed for a few months now, and it's definitely better than my previous one. The quality is noticeable, and I find myself tossing and turning less during the night. While it's not flawless, it's a step up in terms of sleep comfort.&quot;,&#xa;           &quot;stars&quot;: 3,&#xa;           &quot;author&quot;: &quot;Jessica Lee&quot;,&#xa;           &quot;date&quot;: &quot;May 2, 2023&quot;&#xa;         }&#xa;       ],&#xa;       &quot;vendors&quot;: [&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         },&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8-1.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         },&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8-2.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         },&#xa;         {&#xa;           &quot;image&quot;: &quot;/content/puresight/assets/Products/vendors/image 8-3.png&quot;,&#xa;           &quot;deliveryTime&quot;: &quot;Delivery by the day&quot;,&#xa;           &quot;price&quot;: &quot;22€&quot;&#xa;         }&#xa;       ]&#xa;    }&#xa;"
         description="\0"
         hasTemplateData="true"
         navbarFixed="false"
@@ -21,7 +21,9 @@
         twitterDescription="\0"
         twitterImageAlt="\0"
         twitterSite="\0"
-        twitterTitle="\0">
+        twitterTitle="\0"
+        dataKeyMatchPattern="product:.*"
+        outputKeyTemplate="/products/{{urlSafeName}}.html">
         <pagecontainer
             jcr:primaryType="nt:unstructured"
             sling:resourceType="kyanite/common/components/pagecontainer">
@@ -275,44 +277,49 @@
                             <separator_1
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="puresight/components/separator"/>
-                            <container_1
-                                jcr:primaryType="nt:unstructured"
-                                sling:resourceType="kyanite/common/components/container">
-                                <level
-                                    jcr:primaryType="nt:unstructured"
-                                    sling:resourceType="kyanite/common/components/level"
-                                    spacing="level-with-gaps"
-                                    verticalAlignment="is-align-items-center">
-                                    <levelitem
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/level/levelitem"
-                                        alignment="is-left"
-                                        alignmentVertical="is-centered"
-                                        classes="\0">
-                                        <content
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="kyanite/common/components/content"
-                                            size="is-medium"
-                                            text="&lt;p>&lt;strong>from&lt;/strong>&lt;/p>"/>
-                                    </levelitem>
-                                    <levelitem_1
-                                        jcr:primaryType="nt:unstructured"
-                                        sling:resourceType="kyanite/common/components/level/levelitem"
-                                        alignment="is-left"
-                                        alignmentVertical="is-top">
-                                        <title
-                                            jcr:primaryType="nt:unstructured"
-                                            sling:resourceType="kyanite/common/components/title"
-                                            anchorId="\0"
-                                            element="h5"
-                                            isSpaced="{Boolean}false"
-                                            size="is-5"
-                                            subtitle="Subtitle"
-                                            subtitleColor="has-text-black"
-                                            text="&lt;p>&lt;span class=&quot;has-text-primary&quot;>450€&lt;/span>&lt;/p>"/>
-                                    </levelitem_1>
-                                </level>
-                            </container_1>
+                            <templateif
+                              jcr:primaryType="nt:unstructured"
+                              sling:resourceType="puresight/components/templateif"
+                              if="\{% if price.value is not empty %}">
+                                <container_1
+                                  jcr:primaryType="nt:unstructured"
+                                  sling:resourceType="kyanite/common/components/container">
+                                    <level
+                                      jcr:primaryType="nt:unstructured"
+                                      sling:resourceType="kyanite/common/components/level"
+                                      spacing="level-with-gaps"
+                                      verticalAlignment="is-align-items-center">
+                                        <levelitem
+                                          jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="kyanite/common/components/level/levelitem"
+                                          alignment="is-left"
+                                          alignmentVertical="is-centered"
+                                          classes="\0">
+                                            <content
+                                              jcr:primaryType="nt:unstructured"
+                                              sling:resourceType="kyanite/common/components/content"
+                                              size="is-medium"
+                                              text="&lt;p>&lt;strong>from&lt;/strong>&lt;/p>"/>
+                                        </levelitem>
+                                        <levelitem_1
+                                          jcr:primaryType="nt:unstructured"
+                                          sling:resourceType="kyanite/common/components/level/levelitem"
+                                          alignment="is-left"
+                                          alignmentVertical="is-top">
+                                            <title
+                                              jcr:primaryType="nt:unstructured"
+                                              sling:resourceType="kyanite/common/components/title"
+                                              anchorId="\0"
+                                              element="h5"
+                                              isSpaced="{Boolean}false"
+                                              size="is-5"
+                                              subtitle="Subtitle"
+                                              subtitleColor="has-text-black"
+                                              text="&lt;p>&lt;span class=&quot;has-text-primary&quot;>{{ price.value }}€&lt;/span>&lt;/p>"/>
+                                        </levelitem_1>
+                                    </level>
+                                </container_1>
+                            </templateif>
                             <button
                                 jcr:primaryType="nt:unstructured"
                                 sling:resourceType="kyanite/common/components/button"

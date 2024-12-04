@@ -192,6 +192,8 @@ distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
 
 Then open http://localhost:8080/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
 
+Change port using parameter `-D org.osgi.service.http.port=8080`.
+
 For more details please refer to our [Developers quick start guide](https://docs.websight.io/cms/developers/quick-start/).
 
 ### Run modes

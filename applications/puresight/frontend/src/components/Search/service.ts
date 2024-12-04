@@ -23,11 +23,30 @@ export interface GetPagesResponse {
   executionTimeMs: number;
 }
 
+interface ApiResponse {
+  took: number;
+  hits: {
+    hits?: Array<{
+      _id: string;
+      _score: number;
+      _source: {
+        payload: {
+          title: string;
+        }
+      };
+      highlight?: {
+        "payload.title"?: string[];
+        "payload.content"?: string[];
+      };
+    }>;
+  };
+}
+
 const SEARCH_RESULTS_COUNT = 40;
 const PREDEFINED_RESULTS_COUNT = 2;
 
 const buildUrl = (query: string, limit: number) => {
-  return `/search?limit=${limit}&query=${query}*`;
+  return `/search/byQuery?size=${limit}&query=${query}*`;
 };
 
 const getMockResponse = (items: Page[]) => {
@@ -37,7 +56,7 @@ const getMockResponse = (items: Page[]) => {
   };
 };
 
-export const getPages = async (query: string) => {
+export const getPages = async (query: string): Promise<GetPagesResponse> => {
   if (MOCK_BACKEND_ENABLED) {
     return new Promise<GetPagesResponse>((resolve) => {
       resolve(getMockResponse(MOCK_BACKEND_NO_RESULTS ? [] : ITEMS));
@@ -45,7 +64,30 @@ export const getPages = async (query: string) => {
   }
 
   const response = await fetch(buildUrl(query, SEARCH_RESULTS_COUNT));
-  return response.json() as Promise<GetPagesResponse>;
+  return mapToPagesResponse(response);
+};
+
+const mapToPagesResponse = async (response: Response): Promise<GetPagesResponse> => {
+  const jsonResponse: ApiResponse = await response.json();
+  const items: Page[] = jsonResponse.hits.hits ? jsonResponse.hits.hits.map(mapToPage) : [];
+  return {
+    items: items,
+    executionTimeMs: jsonResponse.took
+  };
+}
+
+const mapToPage = (hit: ApiResponse["hits"]["hits"][0]): Page => {
+  const path = hit._id;
+  const score = hit._score;
+  const title = hit.highlight?.["payload.title"]?.[0] || hit._source.payload.title;
+  const bestFragment = hit.highlight?.["payload.content"]?.[0] || title || "";
+
+  return {
+    path,
+    title,
+    bestFragment,
+    score
+  };
 };
 
 export const getCoffeeTableResults = async () => {
@@ -58,7 +100,7 @@ export const getCoffeeTableResults = async () => {
   const response = await fetch(
     buildUrl("coffee table", PREDEFINED_RESULTS_COUNT)
   );
-  return response.json() as Promise<GetPagesResponse>;
+  return mapToPagesResponse(response);
 };
 
 export const getBeigeChairResults = async () => {
@@ -71,7 +113,7 @@ export const getBeigeChairResults = async () => {
   const response = await fetch(
     buildUrl("beige chair", PREDEFINED_RESULTS_COUNT)
   );
-  return response.json() as Promise<GetPagesResponse>;
+  return mapToPagesResponse(response);
 };
 
 export const getQueenSizeBedResults = async () => {
@@ -84,5 +126,5 @@ export const getQueenSizeBedResults = async () => {
   const response = await fetch(
     buildUrl("queen size bed", PREDEFINED_RESULTS_COUNT)
   );
-  return response.json() as Promise<GetPagesResponse>;
+  return mapToPagesResponse(response);
 };

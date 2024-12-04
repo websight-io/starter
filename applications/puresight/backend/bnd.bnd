@@ -1,3 +1,2 @@
 Sling-Bundle-Resources: /apps/puresight,/apps/kyanite
 Include-Resource: pebble-[0-9.]*.jar;lib:=true,unbescape-*.jar;lib:=true,jakarta.servlet-api-*.jar;lib:=true,caffeine-*.jar;lib:=true
-WebSight-Apps-WebRoot: /apps/puresight/components/templates
