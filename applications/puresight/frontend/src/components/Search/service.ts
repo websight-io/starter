@@ -46,7 +46,7 @@ const SEARCH_RESULTS_COUNT = 40;
 const PREDEFINED_RESULTS_COUNT = 2;
 
 const buildUrl = (query: string, limit: number) => {
-  return `/search/byQuery?size=${limit}&query=${query}*`;
+  return `/search/query?size=${limit}&query=${query}`;
 };
 
 const getMockResponse = (items: Page[]) => {
