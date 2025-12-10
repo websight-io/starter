@@ -1,67 +1,90 @@
-import dev.streamx.clients.ingestion.StreamxClient;
+// This script can be tested after starting the application using http://localhost:[port]/apps/groovy
 
-import dev.streamx.blueprints.data.Renderer;
-import dev.streamx.blueprints.data.RenderingContext;
+import com.fasterxml.jackson.databind.ObjectMapper
+import com.streamx.blueprints.data.Renderer
+import com.streamx.blueprints.data.RenderingContext
+import com.streamx.clients.ingestion.StreamxClient
+import io.cloudevents.CloudEvent
+import io.cloudevents.core.v1.CloudEventBuilder
+import io.cloudevents.jackson.JsonCloudEventData
 
-import org.apache.commons.lang3.StringUtils;
-import java.nio.ByteBuffer;
-
+import java.time.OffsetDateTime
+import java.time.ZoneOffset
 
 publishComponents()
 
-def publishComponents() {
-  StreamxClient client = getClient()
-  try {
-    publishRenderer(client, "/apps/puresight/components/templates/carousel.html")
-    publishRenderer(client, "/apps/puresight/components/templates/tiles.html")
+void publishComponents() {
+  log.info("Publishing components")
 
-    publishRenderingContext(client, "products-carousel", new RenderingContext(
-      "/apps/puresight/components/templates/carousel.html",
-      "collected:products:.*",
-      "/_fragments/{{key}}.carousel.html",
-      RenderingContext.OutputType.FRAGMENT
-    ))
-    publishRenderingContext(client, "products-tiles", new RenderingContext(
-      "/apps/puresight/components/templates/tiles.html",
-      "collected:products:.*",
-      "/_fragments/{{key}}.tiles.html",
-      RenderingContext.OutputType.FRAGMENT
-    ))
-  } finally {
-    if (client != null) {
-      client.close()
-    }
-  }
+  def config = getConfig()
+  StreamxClient client = getStreamxClient(config)
+  String eventSource = config.eventSource as String
+
+  publishRenderer(client, eventSource, "/apps/puresight/components/templates/carousel.html")
+  publishRenderer(client, eventSource, "/apps/puresight/components/templates/tiles.html")
+
+  publishRenderingContext(client, eventSource, "products-carousel", new RenderingContext(
+    "/apps/puresight/components/templates/carousel.html",
+    "collected:products:.*",
+    null,
+    "/_fragments/{{key}}.carousel.html",
+    null,
+    RenderingContext.OutputFormat.FRAGMENT
+  ))
+  publishRenderingContext(client, eventSource, "products-tiles", new RenderingContext(
+    "/apps/puresight/components/templates/tiles.html",
+    "collected:products:.*",
+    null,
+    "/_fragments/{{key}}.tiles.html",
+    null,
+    RenderingContext.OutputFormat.FRAGMENT
+  ))
 }
 
-def publishRenderingContext(StreamxClient client, String key, RenderingContext context) {
-  logPublishSuccess(
-    client.newPublisher("rendering-contexts", RenderingContext.class)
-      .publish(key, context)
+StreamxClient getStreamxClient(def config) {
+  return StreamxClient.create(
+    config.streamxUrl as String,
+    config.authToken?.isBlank() ? null : config.authToken
   )
 }
 
-def publishRenderer(StreamxClient client, String path) {
-  logPublishSuccess(
-    client.newPublisher("renderers", Renderer.class)
-      .publish(path, getRenderer(path))
-  )
+void publishRenderingContext(StreamxClient client, String eventSource, String path, RenderingContext context) {
+  CloudEvent event = cloudEvent(path, eventSource, RenderingContext.TYPE_PUBLISHED, context)
+  CloudEvent result = client.newPublisher().send(event)
+  logPublishResult(result)
 }
 
-def logPublishSuccess(success) {
-  println "Published (" + success.eventTime + ") " + success.key 
+void publishRenderer(StreamxClient client, String eventSource, String path) {
+  CloudEvent event = cloudEvent(path, eventSource, Renderer.TYPE_PUBLISHED, getRenderer(path))
+  CloudEvent result = client.newPublisher().send(event)
+  logPublishResult(result)
 }
 
-def getRenderer(String path) throws IOException {
+static CloudEvent cloudEvent(String key, String eventSource, String eventType, Object data) {
+  return new CloudEventBuilder()
+    .withId(UUID.randomUUID().toString())
+    .withSource(URI.create(eventSource))
+    .withSubject(key)
+    .withType(eventType)
+    .withTime(OffsetDateTime.now(ZoneOffset.UTC))
+    .withData(
+      "application/json",
+      JsonCloudEventData.wrap(new ObjectMapper().valueToTree(data)))
+    .build()
+}
+
+void logPublishResult(CloudEvent result) {
+  log.info("Published (" + result.time + ") " + result.subject)
+}
+
+Renderer getRenderer(String path) throws IOException {
   Resource resource = getResource(path)
   if (resource != null) {
     InputStream inputStream = resource.adaptTo(InputStream.class)
-    try {
-      if (inputStream != null) {
-        return new Renderer(ByteBuffer.wrap(inputStream.readAllBytes()));
-      }
-    } finally {
-      if (inputStream != null) {
+    if (inputStream != null) {
+      try {
+        return new Renderer(inputStream.readAllBytes())
+      } finally {
         inputStream.close()
       }
     }
@@ -69,17 +92,10 @@ def getRenderer(String path) throws IOException {
   throw new IllegalStateException("No renderer " + path)
 }
 
-def getClient() {
-  def config = getConfig()
-  return StreamxClient.builder( (String) config.getStreamxUrl())
-    .setAuthToken(!StringUtils.isBlank(config.getAuthToken()) ? config.getAuthToken() : null)
-    .build()
-}
-
 def getConfig() {
-  def services = getServices("dev.streamx.sling.connector.impl.StreamxClientConfig", "(name=puresight)")
-  if (services != null && services.size() == 1) {
-    return services[0]
+  def services = getServices("com.streamx.sling.connector.impl.StreamxClientConfig", "(name=puresight)")
+  if (services?.size() == 1) {
+    return services.first()
   }
   throw new IllegalStateException("No client config")
 }

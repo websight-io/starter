@@ -9,7 +9,7 @@
       "start-order": "25"
     },
     {
-      "id": "org.apache.avro:avro:1.11.3",
+      "id": "org.apache.sling:org.apache.sling.servlet-helpers:jar:1.4.6",
       "start-order": "25"
     },
     {
@@ -33,19 +33,19 @@
       "start-order":"25"
     },
     {
-      "id": "dev.streamx:ingestion-client:${streamx.ingestion-client.version}",
+      "id": "com.streamx:ingestion-client:${streamx.ingestion-client.version}",
       "start-order": "25"
     },
     {
-      "id": "dev.streamx:streamx-connector-sling:${streamx.connector.sling.version}",
+      "id": "com.streamx:streamx-connector-sling:${streamx.connector.sling.version}",
       "start-order": "25"
     },
     {
-      "id": "dev.streamx:streamx-connector-websight:${streamx.connector.websight.version}",
+      "id": "com.streamx:streamx-connector-websight:${streamx.connector.websight.version}",
       "start-order": "25"
     },
     {
-      "id": "dev.streamx:streamx-connector-websight-blueprints:${streamx.connector.websight.version}",
+      "id": "com.streamx:streamx-connector-websight-blueprints:${streamx.connector.websight.version}",
       "start-order": "25"
     }
   ],
@@ -55,16 +55,22 @@
         "streamx-connector-websight-blueprints=[streamx-connector-websight-blueprints]"
       ]
     },
-    "dev.streamx.connector.websight.blueprint.impl.PageDataServiceImpl": {
+    "org.apache.sling.jcr.base.internal.LoginAdminWhitelist~streamx-connector-sling": {
+      "whitelist.bundles.regexp": [
+        "streamx-connector-sling"
+      ]
+    },
+    "com.streamx.connector.websight.blueprint.impl.PageDataServiceImpl": {
       "shorten.content.paths": "$[env:STREAMX_PUBLICATION_PAGE_SHORTEN_PATHS;default=true]"
     },
-    "dev.streamx.sling.connector.impl.StreamxPublicationServiceImpl": {
+    "com.streamx.sling.connector.impl.StreamxPublicationServiceImpl": {
       "enabled": "$[env:STREAMX_PUBLICATION_ENABLE;default=false]"
     },
-    "dev.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight": {
+    "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight": {
       "name": "puresight",
       "streamxUrl": "$[env:PURESIGHT_STREAMX_REST_INGESTION_HOST;default=http://localhost:8080]",
       "authToken": "$[env:PURESIGHT_STREAMX_REST_INGESTION_AUTH_TOKEN;default=;type=String]",
+      "eventSource": "$[env:PURESIGHT_STREAMX_REST_INGESTION_EVENT_SOURCE;default=websight-io-starter;type=String]",
       "resourcePathPatterns": [
         "/.*/puresight/.*",
         "/.*/kyanite/.*"

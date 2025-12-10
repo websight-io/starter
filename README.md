@@ -22,7 +22,7 @@ curl https://docs.websight.io/scripts/get.sh | sh
 
 and then see the results on [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
 
-![Luna screenshot](/assets/luna-screenshot.png "Luna screenshot")
+![Luna screenshot](./assets/luna-screenshot.png "Luna screenshot")
 
 For more details see our [Authoring Quick Start Guide](https://docs.websight.io/cms/quick-start/).
 
@@ -241,13 +241,21 @@ docker build -t ds/websight-cms-starter .
 ```
 And running it with:
 ```bash
-docker run -p 8080:8080 --name websight-cms --rm \
+docker run -p 8888:8080 --name websight-cms --rm \
   --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter
 ```
 
 By default, the `tar` mode is used.
 
 You can find an example WebSight CMS Starter with MongoDB setup in the [CMS Helm Chart](https://github.com/websight-io/charts).
+
+## StreamX
+
+To set up ingestion from Websight started in the above step to your running StreamX instance, perform the following steps:
+1. Add both Docker containers for StreamX Ingestion and Websight to the same Docker network, by executing the [script](scripts/add-websight-cms-to-streamx-network.sh)
+2. Navigate to Apache Felix console at http://localhost:8888/system/console/configMgr and perform the following changes:
+3. In "com.streamx.sling.connector.impl.StreamxPublicationServiceImpl", change `enabled` to `true`
+4. In "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight", change `streamxUrl` to `http://rest-ingestion.service:8080` and adjust the `authToken`
 
 ## Contributing
 

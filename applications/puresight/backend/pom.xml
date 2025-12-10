@@ -97,7 +97,7 @@
       <artifactId>org.osgi.annotation.versioning</artifactId>
     </dependency>
     <dependency>
-      <groupId>dev.streamx</groupId>
+      <groupId>com.streamx</groupId>
       <artifactId>streamx-connector-sling</artifactId>
     </dependency>
     <dependency>

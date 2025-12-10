@@ -1,7 +1,7 @@
 {
   "sling:resourceType": "ws:PageTemplate",
   "description": "Template for the regular page",
-  "title": "Atricle page",
+  "title": "Article page",
   "allowedChildren": [
     "/apps/puresight/templates/basicpage",
     "/apps/puresight/templates/structurepage"
