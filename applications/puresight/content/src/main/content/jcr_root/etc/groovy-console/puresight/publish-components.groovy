@@ -20,25 +20,31 @@ void publishComponents() {
   StreamxClient client = getStreamxClient(config)
   String eventSource = config.eventSource as String
 
-  publishRenderer(client, eventSource, "/apps/puresight/components/templates/carousel.html")
-  publishRenderer(client, eventSource, "/apps/puresight/components/templates/tiles.html")
+  try {
+    publishRenderer(client, eventSource, "/apps/puresight/components/templates/carousel.html")
+    publishRenderer(client, eventSource, "/apps/puresight/components/templates/tiles.html")
 
-  publishRenderingContext(client, eventSource, "products-carousel", new RenderingContext(
-    "/apps/puresight/components/templates/carousel.html",
-    "collected:products:.*",
-    null,
-    "/_fragments/{{key}}.carousel.html",
-    null,
-    RenderingContext.OutputFormat.FRAGMENT
-  ))
-  publishRenderingContext(client, eventSource, "products-tiles", new RenderingContext(
-    "/apps/puresight/components/templates/tiles.html",
-    "collected:products:.*",
-    null,
-    "/_fragments/{{key}}.tiles.html",
-    null,
-    RenderingContext.OutputFormat.FRAGMENT
-  ))
+    publishRenderingContext(client, eventSource, "products-carousel", new RenderingContext(
+      "/apps/puresight/components/templates/carousel.html",
+      "collected:products:.*",
+      null,
+      "/_fragments/{{key}}.carousel.html",
+      null,
+      RenderingContext.OutputFormat.FRAGMENT
+    ))
+    publishRenderingContext(client, eventSource, "products-tiles", new RenderingContext(
+      "/apps/puresight/components/templates/tiles.html",
+      "collected:products:.*",
+      null,
+      "/_fragments/{{key}}.tiles.html",
+      null,
+      RenderingContext.OutputFormat.FRAGMENT
+    ))
+  } finally {
+    if (client != null) {
+      client.close()
+    }
+  }
 }
 
 StreamxClient getStreamxClient(def config) {
