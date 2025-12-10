@@ -175,7 +175,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Download reference screenshots
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: backstopjs-references
           path: ./tests/end-to-end/backstop_data/bitmaps_reference
