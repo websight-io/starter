@@ -251,11 +251,24 @@ You can find an example WebSight CMS Starter with MongoDB setup in the [CMS Helm
 
 ## StreamX
 
-To set up ingestion from Websight started in the above step to your running StreamX instance, perform the following steps:
+The WebSight Blueprint integrates seamlessly with [StreamX](https://www.streamx.dev/guides/index.html).
+To launch a StreamX instance, use the [StreamX CLI](https://www.streamx.dev/guides/streamx-command-line-interface-reference.html)
+with a `mesh.yaml` configuration file.
+You can find a reference configuration in the [StreamX Commerce Accelerator GitHub repository](https://github.com/streamx-com/streamx-commerce-accelerator/blob/main/mesh/mesh.yaml).
+
+When you have both WebSight and StreamX up and running, you can set up ingestion from WebSight to StreamX:
 1. Add both Docker containers for StreamX Ingestion and Websight to the same Docker network, by executing the [script](scripts/add-websight-cms-to-streamx-network.sh)
 2. Navigate to Apache Felix console at http://localhost:8888/system/console/configMgr and perform the following changes:
 3. In "com.streamx.sling.connector.impl.StreamxPublicationServiceImpl", change `enabled` to `true`
-4. In "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight", change `streamxUrl` to `http://rest-ingestion.service:8080` and adjust the `authToken`
+4. In "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight", change `streamxUrl` to `http://rest-ingestion.proxy:8080`
+
+Publish sample page to test communication
+1. Go to http://localhost:8888/apps/websight
+2. Open the `Puresight` space
+3. Open the `Homepage` page
+4. In the top-right corner, click `Publish`
+5. On the `Unpublished references detected` popup, click `Publish`
+6. Verify the page is published to StreamX by visiting http://localhost:8084/homepage.html
 
 ## Contributing
 
