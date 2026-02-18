@@ -183,9 +183,12 @@ To build the project, run:
 ./mvnw clean package
 ```
 
-To start a local instance, run:
+To start a local instance (with debugging enabled on port 7777), run:
 
 ```bash
+JAVA_DEBUG_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:7777"
+export JAVA_OPTS="${JAVA_OPTS} ${JAVA_DEBUG_OPTS}"
+
 distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
   -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json \
   -D org.osgi.service.http.port=8888
