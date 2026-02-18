@@ -187,12 +187,13 @@ To start a local instance, run:
 
 ```bash
 distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
-  -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
+  -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json \
+  -D org.osgi.service.http.port=8888
 ```
 
-Then open http://localhost:8080/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
+The logs will be available at `launcher/logs` directory.
 
-Change port using parameter `-D org.osgi.service.http.port=8080`.
+Then open http://localhost:8888/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
 
 For more details please refer to our [Developers quick start guide](https://docs.websight.io/cms/developers/quick-start/).
 
