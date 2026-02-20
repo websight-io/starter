@@ -22,7 +22,7 @@ curl https://docs.websight.io/scripts/get.sh | sh
 
 and then see the results on [localhost:8080/apps/websight/index.html/content::spaces](http://localhost:8080/apps/websight/index.html/content::spaces) (credentials are `wsadmin`/`wsadmin`).
 
-![Luna screenshot](/assets/luna-screenshot.png "Luna screenshot")
+![Luna screenshot](./assets/luna-screenshot.png "Luna screenshot")
 
 For more details see our [Authoring Quick Start Guide](https://docs.websight.io/cms/quick-start/).
 
@@ -183,16 +183,20 @@ To build the project, run:
 ./mvnw clean package
 ```
 
-To start a local instance, run:
+To start a local instance (with debugging enabled on port 7777), run:
 
 ```bash
+JAVA_DEBUG_OPTS="-agentlib:jdwp=transport=dt_socket,server=y,suspend=n,address=*:7777"
+export JAVA_OPTS="${JAVA_OPTS} ${JAVA_DEBUG_OPTS}"
+
 distribution/target/dependency/org.apache.sling.feature.launcher/bin/launcher \
-  -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json
+  -f distribution/target/slingfeature-tmp/feature-websight-cms-starter-tar.json \
+  -D org.osgi.service.http.port=8888
 ```
 
-Then open http://localhost:8080/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
+The logs will be available at `launcher/logs` directory.
 
-Change port using parameter `-D org.osgi.service.http.port=8080`.
+Then open http://localhost:8888/ in a Web browser and log in using the credentials `wsadmin`/`wsadmin`.
 
 For more details please refer to our [Developers quick start guide](https://docs.websight.io/cms/developers/quick-start/).
 
@@ -241,13 +245,51 @@ docker build -t ds/websight-cms-starter .
 ```
 And running it with:
 ```bash
-docker run -p 8080:8080 --name websight-cms --rm \
+docker run -p 8888:8080 --name websight-cms --rm \
   --mount source=segment-store-repository,target=/websight/launcher/repository ds/websight-cms-starter
 ```
 
 By default, the `tar` mode is used.
 
 You can find an example WebSight CMS Starter with MongoDB setup in the [CMS Helm Chart](https://github.com/websight-io/charts).
+
+## StreamX
+
+The WebSight Blueprint integrates seamlessly with [StreamX](https://www.streamx.dev/guides/index.html).
+To launch a StreamX instance, use the [StreamX CLI](https://www.streamx.dev/guides/streamx-command-line-interface-reference.html)
+with a `mesh.yaml` configuration file.
+You can find a reference configuration in the [StreamX Commerce Accelerator GitHub repository](https://github.com/streamx-com/streamx-commerce-accelerator/blob/main/mesh/mesh.yaml).
+
+**Note**: WebSight Starter is pre-configured to shorten paths within published page content.
+However, for this to function, a mandatory matching configuration must be added to the
+`mesh/configs/rest-ingestion.properties` file in your cloned StreamX Commerce Accelerator repository.
+The feature requires both sides to be configured correctly to work.
+
+**Important**: Do not commit these changes to the repository.
+
+```properties
+streamx.proxy.config.subject-regex-rewrite.types.pages.types=com.streamx.blueprints.page.published.v1,com.streamx.blueprints.page.unpublished.v1
+streamx.proxy.config.subject-regex-rewrite.types.pages.patterns.config1.match-pattern=^(:?)/published/puresight/pages/(.*)
+streamx.proxy.config.subject-regex-rewrite.types.pages.patterns.config1.rewrite-pattern=$1/$2
+
+streamx.proxy.config.subject-regex-rewrite.types.assets.types=com.streamx.blueprints.asset.published.v1,com.streamx.blueprints.asset.unpublished.v1
+streamx.proxy.config.subject-regex-rewrite.types.assets.patterns.config1.match-pattern=^(:)?/published/puresight/assets/(.*)
+streamx.proxy.config.subject-regex-rewrite.types.assets.patterns.config1.rewrite-pattern=$1/assets/$2
+```
+
+When you have both WebSight and StreamX up and running, you can set up ingestion from WebSight to StreamX:
+1. Add both Docker containers for StreamX Ingestion and Websight to the same Docker network, by executing the [script](scripts/add-websight-cms-to-streamx-network.sh)
+2. Navigate to Apache Felix console at http://localhost:8888/system/console/configMgr and perform the following changes:
+3. In "com.streamx.sling.connector.impl.StreamxPublicationServiceImpl", change `enabled` to `true`
+4. In "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight", change `streamxUrl` to `http://rest-ingestion.proxy:8080`
+
+Publish sample page to test communication
+1. Go to http://localhost:8888/apps/websight
+2. Open the `Puresight` space
+3. Open the `Homepage` page
+4. In the top-right corner, click `Publish`
+5. On the `Unpublished references detected` popup, click `Publish`
+6. Verify the page is published to StreamX by visiting http://localhost:8084/homepage.html
 
 ## Contributing
 

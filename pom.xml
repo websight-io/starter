@@ -75,9 +75,9 @@
     <kyanite.version>0.7.1</kyanite.version>
 
     <!-- StreamX -->
-    <streamx.ingestion-client.version>1.0.0</streamx.ingestion-client.version>
-    <streamx.connector.sling.version>0.2.2</streamx.connector.sling.version>
-    <streamx.connector.websight.version>0.0.6</streamx.connector.websight.version>
+    <streamx.ingestion-client.version>2.0.10</streamx.ingestion-client.version>
+    <streamx.connector.sling.version>3.2.3</streamx.connector.sling.version>
+    <streamx.connector.websight.version>2.0.1</streamx.connector.websight.version>
   </properties>
 
   <build>
@@ -186,7 +186,7 @@
   <repositories>
     <repository>
       <id>artifact-registry</id>
-      <url>artifactregistry://europe-west1-maven.pkg.dev/websight-io/websight-maven-releases</url>
+      <url>https://europe-west1-maven.pkg.dev/websight-io/websight-maven-releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>
@@ -196,9 +196,7 @@
     </repository>
     <repository>
       <id>artifact-registry-streamx</id>
-      <url>
-        artifactregistry://europe-west1-maven.pkg.dev/streamx-releases/streamx-maven-public-releases
-      </url>
+      <url>https://europe-west1-maven.pkg.dev/streamx-releases/streamx-maven-public-releases</url>
       <releases>
         <enabled>true</enabled>
       </releases>

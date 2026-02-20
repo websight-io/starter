@@ -81,7 +81,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'temurin'
           cache: 'maven'
 
       - uses: actions/cache@v3
@@ -118,7 +118,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'temurin'
           cache: 'maven'
 
       - uses: actions/cache@v3
@@ -134,7 +134,7 @@ jobs:
         run: ./mvnw --batch-mode clean verify -DskipITs -P e2e-visual-seed
 
       - name: Upload reference snapshots
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: backstopjs-references
           path: ./tests/end-to-end/backstop_data/bitmaps_reference
@@ -162,7 +162,7 @@ jobs:
       - uses: actions/setup-java@v3
         with:
           java-version: '17'
-          distribution: 'adopt'
+          distribution: 'temurin'
           cache: 'maven'
 
       - uses: actions/cache@v3
@@ -175,7 +175,7 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Download reference screenshots
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: backstopjs-references
           path: ./tests/end-to-end/backstop_data/bitmaps_reference
@@ -194,7 +194,7 @@ jobs:
 
       - name: Upload visual test report
         if: steps.visualTestsCompare.outcome == 'failure'
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: visual-tests-report
           path: artifacts/visual/
