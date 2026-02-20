@@ -260,6 +260,23 @@ To launch a StreamX instance, use the [StreamX CLI](https://www.streamx.dev/guid
 with a `mesh.yaml` configuration file.
 You can find a reference configuration in the [StreamX Commerce Accelerator GitHub repository](https://github.com/streamx-com/streamx-commerce-accelerator/blob/main/mesh/mesh.yaml).
 
+**Note**: WebSight Starter is pre-configured to shorten paths within published page content.
+However, for this to function, a mandatory matching configuration must be added to the
+`mesh/configs/rest-ingestion.properties` file in your cloned StreamX Commerce Accelerator repository.
+The feature requires both sides to be configured correctly to work.
+
+**Important**: Do not commit these changes to the repository.
+
+```properties
+streamx.proxy.config.subject-regex-rewrite.types.pages.types=com.streamx.blueprints.page.published.v1,com.streamx.blueprints.page.unpublished.v1
+streamx.proxy.config.subject-regex-rewrite.types.pages.patterns.config1.match-pattern=^(:?)/published/puresight/pages/(.*)
+streamx.proxy.config.subject-regex-rewrite.types.pages.patterns.config1.rewrite-pattern=$1/$2
+
+streamx.proxy.config.subject-regex-rewrite.types.assets.types=com.streamx.blueprints.asset.published.v1,com.streamx.blueprints.asset.unpublished.v1
+streamx.proxy.config.subject-regex-rewrite.types.assets.patterns.config1.match-pattern=^(:)?/published/puresight/assets/(.*)
+streamx.proxy.config.subject-regex-rewrite.types.assets.patterns.config1.rewrite-pattern=$1/assets/$2
+```
+
 When you have both WebSight and StreamX up and running, you can set up ingestion from WebSight to StreamX:
 1. Add both Docker containers for StreamX Ingestion and Websight to the same Docker network, by executing the [script](scripts/add-websight-cms-to-streamx-network.sh)
 2. Navigate to Apache Felix console at http://localhost:8888/system/console/configMgr and perform the following changes:
