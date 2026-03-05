@@ -76,8 +76,8 @@
 
     <!-- StreamX -->
     <streamx.ingestion-client.version>2.0.10</streamx.ingestion-client.version>
-    <streamx.connector.sling.version>3.2.3</streamx.connector.sling.version>
-    <streamx.connector.websight.version>2.0.1</streamx.connector.websight.version>
+    <streamx.connector.sling.version>3.2.4</streamx.connector.sling.version>
+    <streamx.connector.websight.version>2.0.2-SNAPSHOT</streamx.connector.websight.version> <!-- TODO update -->
   </properties>
 
   <build>
