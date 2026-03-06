@@ -38,7 +38,7 @@ RUN mkdir /websight && \
     mkdir /websight/org.apache.sling.feature.launcher && \
     mkdir /websight/launcher && \
     mkdir /websight/artifacts && \
-    mkdir /var/websight \
+    mkdir /var/websight
 USER 185
 
 COPY --chown=185 --from=builder /app/distribution/src/main/container/bin /websight/bin
