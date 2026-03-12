@@ -31,20 +31,26 @@ FROM registry.access.redhat.com/ubi9/openjdk-17:1.23
 
 EXPOSE 8080
 
-VOLUME /websight/launcher/repository
-
 USER root
-RUN mkdir /websight && \
+
+RUN mkdir -p /websight && \
     mkdir /websight/org.apache.sling.feature.launcher && \
     mkdir /websight/launcher && \
+    mkdir /websight/launcher/logs && \
+    mkdir /websight/launcher/repository && \
     mkdir /websight/artifacts && \
     mkdir /var/websight
-USER 185
+
+RUN chown -R 185:0 /websight && \
+    chmod -R g+rwX /websight
+
+VOLUME /websight/launcher/repository
 
 COPY --chown=185 --from=builder /app/distribution/src/main/container/bin /websight/bin
 COPY --chown=185 --from=builder /app/distribution/target/dependency/org.apache.sling.feature.launcher /websight/org.apache.sling.feature.launcher
 COPY --chown=185 --from=builder /app/distribution/target/artifacts/ /websight/artifacts/
 RUN ["chmod", "+x", "/websight/bin/launch.sh"]
+USER 185
 
 HEALTHCHECK --interval=15s --timeout=3s --start-period=5s CMD curl --fail http://localhost:8080/system/health || exit 1
 
