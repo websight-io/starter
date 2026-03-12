@@ -1,4 +1,9 @@
+create service user streamx-connector-websight with path system/websight
 create service user streamx-connector-websight-blueprints with path system/websight
+
+set ACL for streamx-connector-websight
+    allow   jcr:read    on /content,/published
+end
 
 set ACL for streamx-connector-websight-blueprints
     allow   jcr:read    on /content,/published

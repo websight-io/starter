@@ -52,10 +52,10 @@ jobs:
       
       - name: Run CMS with custom admin credentials
         run: |
-            mkdir -p .test-secrets && echo -n "customPassword" > .test-secrets/admin.password
+            mkdir -p test-secrets && echo -n "customPassword" > test-secrets/admin.password
             docker run -d -p 8080:8080 --name websight-cms --rm \
               --mount source=segment-store-repository,target=/websight/launcher/repository \
-              -v "$(pwd)/.test-secrets/admin.password:/websight/launcher/resources/secrets/admin.password:ro" \
+              -v "$(pwd)/test-secrets/admin.password:/websight/launcher/resources/secrets/admin.password:ro" \
               --env	"WS_ADMIN_USERNAME=customAdmin" \
               ds/websight-cms-starter:latest
             echo "Waiting for the environment to be ready..."

@@ -50,6 +50,11 @@
     }
   ],
   "configurations": {
+    "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-websight": {
+      "user.mapping": [
+        "streamx-connector-websight=[streamx-connector-websight]"
+      ]
+    },
     "org.apache.sling.serviceusermapping.impl.ServiceUserMapperImpl.amended~streamx-connector-websight-blueprints": {
       "user.mapping": [
         "streamx-connector-websight-blueprints=[streamx-connector-websight-blueprints]"
@@ -75,6 +80,14 @@
         "/.*/puresight/.*",
         "/.*/kyanite/.*"
       ]
+    },
+    "com.streamx.sling.connector.selectors.content.ResourceContentRelatedResourcesSelector~pages": {
+      "resource.required-path.regex": "^/published/puresight/pages/.*",
+      "resource.required-primary-node-type.regex": "ws:Page",
+      "resource-path.postfix-to-append": ".html",
+      "references.search-regexes": "$[env:STREAMX_REFERENCES_SEARCH_REGEXES;type=String[];delimiter=,;default=(/(apps|libs)/(puresight|kyanite)/webroot/.+\\.(css|js)),url\\((.*?fonts/[^\\#?]+).*?\\)]",
+      "references.exclude-from-result.regex": "",
+      "related-resource.processable-path.regex": ".+\\.css$"
     }
   },
   "repoinit:TEXT|true": "@file"

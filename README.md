@@ -278,10 +278,12 @@ streamx.proxy.config.subject-regex-rewrite.types.assets.patterns.config1.rewrite
 ```
 
 When you have both WebSight and StreamX up and running, you can set up ingestion from WebSight to StreamX:
+1. Navigate to Apache Felix console at http://localhost:8888/system/console/configMgr and perform the following changes:
+2. In "com.streamx.sling.connector.impl.StreamxPublicationServiceImpl", change `enabled` to `true`
+
+If you started WebSight in dockerized mode (as opposed to starting from `distribution/target`), perform these additional steps:
 1. Add both Docker containers for StreamX Ingestion and Websight to the same Docker network, by executing the [script](scripts/add-websight-cms-to-streamx-network.sh)
-2. Navigate to Apache Felix console at http://localhost:8888/system/console/configMgr and perform the following changes:
-3. In "com.streamx.sling.connector.impl.StreamxPublicationServiceImpl", change `enabled` to `true`
-4. In "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight", change `streamxUrl` to `http://rest-ingestion.proxy:8080`
+2. In the Felix console, open "com.streamx.sling.connector.impl.StreamxClientConfigImpl~puresight" and change `streamxUrl` to `http://rest-ingestion.proxy:8080`
 
 Publish sample page to test communication
 1. Go to http://localhost:8888/apps/websight
