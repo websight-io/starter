@@ -38,6 +38,8 @@ RUN mkdir -p /websight && \
     mkdir /websight/launcher && \
     mkdir /websight/launcher/logs && \
     mkdir /websight/launcher/repository && \
+    mkdir /websight/launcher/resources && \
+    mkdir /websight/launcher/resources/secrets && \
     mkdir /websight/artifacts && \
     mkdir /var/websight
 
